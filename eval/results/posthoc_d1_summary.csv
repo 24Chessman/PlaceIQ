@@ -1,0 +1,7 @@
+metric,value
+"Mean score, paraphrased-qualified (pooled)",81.3
+"Mean score, non-qualified (pooled)",29.5
+"Mean score, stuffed_weak non-qualified",42.8
+"ROC AUC, mean of per-requirement AUCs [95% CI over requirements]","0.886 [0.844, 0.928]"
+"ROC AUC, all candidates pooled",0.879
+Paraphrased-qualified in the top 10 of their candidate set,49/51 (96%)

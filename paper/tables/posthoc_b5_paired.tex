@@ -1,0 +1,19 @@
+% POST-HOC EXPLORATORY (designed after seeing the test results)
+\begin{tabular}{llccc}
+\toprule
+Comparison & Metric & Mean diff [CI] & W/L/T & Verdict \\
+\midrule
+B5 vs B4 & nDCG@10 & 0.022 [-0.047, 0.094] & 5/5/0 & not distinguishable \\
+B5 vs B4 & MRR & 0.000 [0.000, 0.000] & 0/0/10 & not distinguishable \\
+B5 vs B4 & Recall@10 (capped) & 0.100 [-0.000, 0.210] & 6/1/3 & not distinguishable \\
+B5 vs B4 & FRR@20 & -0.187 [-0.242, -0.131] & 0/10/0 & worse \\
+B5 vs B3b & nDCG@10 & 0.053 [0.000, 0.107] & 6/2/2 & better \\
+B5 vs B3b & MRR & 0.100 [0.000, 0.250] & 2/0/8 & not distinguishable \\
+B5 vs B3b & Recall@10 (capped) & 0.060 [0.020, 0.100] & 5/0/5 & better \\
+B5 vs B3b & FRR@20 & 0.000 [0.000, 0.000] & 0/0/10 & not distinguishable \\
+B5 vs B1c & nDCG@10 & 0.133 [0.073, 0.194] & 9/1/0 & better \\
+B5 vs B1c & MRR & 0.150 [0.000, 0.300] & 3/0/7 & not distinguishable \\
+B5 vs B1c & Recall@10 (capped) & 0.130 [0.040, 0.220] & 7/1/2 & better \\
+B5 vs B1c & FRR@20 & -0.024 [-0.123, 0.052] & 3/2/5 & not distinguishable \\
+\bottomrule
+\end{tabular}

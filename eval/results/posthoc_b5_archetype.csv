@@ -1,0 +1,25 @@
+method,archetype,found_in_pool,qualified
+B4 (dense pool),standard,47,77
+B4 (dense pool),paraphrased,3,51
+B4 (dense pool),implied,14,18
+B4 (dense pool),abbreviated_noisy,11,21
+B4 (dense pool),sparse_strong,9,11
+B4 (dense pool),ineligible_strong,1,1
+B4 (dense pool),generalist_average,4,8
+B4 (dense pool),stuffed_weak,0,3
+B3b hybrid ranking (no LLM),standard,72,77
+B3b hybrid ranking (no LLM),paraphrased,2,51
+B3b hybrid ranking (no LLM),implied,17,18
+B3b hybrid ranking (no LLM),abbreviated_noisy,12,21
+B3b hybrid ranking (no LLM),sparse_strong,11,11
+B3b hybrid ranking (no LLM),ineligible_strong,1,1
+B3b hybrid ranking (no LLM),generalist_average,7,8
+B3b hybrid ranking (no LLM),stuffed_weak,0,3
+B5 (hybrid pool),standard,72,77
+B5 (hybrid pool),paraphrased,2,51
+B5 (hybrid pool),implied,17,18
+B5 (hybrid pool),abbreviated_noisy,12,21
+B5 (hybrid pool),sparse_strong,11,11
+B5 (hybrid pool),ineligible_strong,1,1
+B5 (hybrid pool),generalist_average,7,8
+B5 (hybrid pool),stuffed_weak,0,3

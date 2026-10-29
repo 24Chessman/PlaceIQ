@@ -1,0 +1,38 @@
+﻿[b5] warm-up 1.2s, 15 requirements
+python.exe : 
+At line:1 char:348
++ ... ONUTF8='1'; & .\.venv\Scripts\python.exe eval\posthoc.py *> eval\logs ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights:  38%|███▊      | 75/199 [00:00<00:00, 742.11it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 1726.98it/s]
+[b5] R01 done in 12s (4 new calls)
+[b5] R04 done in 12s (4 new calls)
+[b5] R07 done in 14s (5 new calls)
+[b5] R09 done in 14s (6 new calls)
+[b5] R12 done in 30s (9 new calls)
+[b5] R02 done in 6s (2 new calls)
+[b5] R03 done in 4s (1 new calls)
+[b5] R05 done in 1s (0 new calls)
+[b5] R06 done in 0s (0 new calls)
+[b5] R08 done in 3s (1 new calls)
+[b5] R10 done in 1s (0 new calls)
+[b5] R11 done in 0s (0 new calls)
+[b5] R13 done in 3s (1 new calls)
+[b5] R14 done in 6s (2 new calls)
+[b5] R15 done in 1s (0 new calls)
+[d1] warm-up 0.2s, 10 requirements
+[d1] R02 done in 42s (4 paraphrased-qualified, 15 non-qualified)
+[d1] R03 done in 49s (5 paraphrased-qualified, 15 non-qualified)
+[d1] R05 done in 40s (6 paraphrased-qualified, 15 non-qualified)
+[d1] R06 done in 44s (3 paraphrased-qualified, 15 non-qualified)
+[d1] R08 done in 46s (7 paraphrased-qualified, 15 non-qualified)
+[d1] R10 done in 43s (6 paraphrased-qualified, 15 non-qualified)
+[d1] R11 done in 33s (3 paraphrased-qualified, 15 non-qualified)
+[d1] R13 done in 50s (7 paraphrased-qualified, 15 non-qualified)
+[d1] R14 done in 41s (5 paraphrased-qualified, 15 non-qualified)
+[d1] R15 done in 42s (5 paraphrased-qualified, 15 non-qualified)
+new calls: {'b5': 35, 'd1': 172}; total 562s

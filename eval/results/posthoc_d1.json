@@ -1,0 +1,1630 @@
+{
+ "R02": [
+  {
+   "id": "S168",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.320703900000808
+  },
+  {
+   "id": "S239",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 60,
+   "cached": false,
+   "latency": 2.5337026000015612
+  },
+  {
+   "id": "S281",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 85,
+   "cached": false,
+   "latency": 2.7625929999994696
+  },
+  {
+   "id": "S408",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 90,
+   "cached": false,
+   "latency": 2.714578800001618
+  },
+  {
+   "id": "S008",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 9,
+   "cached": false,
+   "latency": 2.7684043000008387
+  },
+  {
+   "id": "S016",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 9,
+   "cached": false,
+   "latency": 2.490932900000189
+  },
+  {
+   "id": "S086",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 80,
+   "cached": false,
+   "latency": 2.8458797999992385
+  },
+  {
+   "id": "S087",
+   "qualified": 0,
+   "archetype": "abbreviated_noisy",
+   "score": 100,
+   "cached": true,
+   "latency": 2.8030722999974387
+  },
+  {
+   "id": "S096",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 100,
+   "cached": true,
+   "latency": 2.379437900002813
+  },
+  {
+   "id": "S101",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 0,
+   "cached": false,
+   "latency": 2.8308504999986326
+  },
+  {
+   "id": "S179",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 40,
+   "cached": false,
+   "latency": 2.756007399999362
+  },
+  {
+   "id": "S197",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 85,
+   "cached": true,
+   "latency": 2.174618699998973
+  },
+  {
+   "id": "S251",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 85,
+   "cached": false,
+   "latency": 2.777902699999686
+  },
+  {
+   "id": "S328",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 9,
+   "cached": false,
+   "latency": 2.452729200002068
+  },
+  {
+   "id": "S394",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 40,
+   "cached": false,
+   "latency": 2.5255171000026166
+  },
+  {
+   "id": "S420",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 10,
+   "cached": false,
+   "latency": 2.602709999999206
+  },
+  {
+   "id": "S438",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 60,
+   "cached": false,
+   "latency": 2.5891153999982635
+  },
+  {
+   "id": "S450",
+   "qualified": 0,
+   "archetype": "generalist_average",
+   "score": 9,
+   "cached": false,
+   "latency": 2.25207969999974
+  },
+  {
+   "id": "S482",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 0,
+   "cached": false,
+   "latency": 2.5676599999969767
+  }
+ ],
+ "R03": [
+  {
+   "id": "S205",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 3.302153600001475
+  },
+  {
+   "id": "S295",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 40,
+   "cached": false,
+   "latency": 2.8274744000009377
+  },
+  {
+   "id": "S368",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 40,
+   "cached": false,
+   "latency": 2.685822300001746
+  },
+  {
+   "id": "S385",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 65,
+   "cached": false,
+   "latency": 2.911469799997576
+  },
+  {
+   "id": "S451",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 65,
+   "cached": false,
+   "latency": 2.198073100000329
+  },
+  {
+   "id": "S002",
+   "qualified": 0,
+   "archetype": "sparse_strong",
+   "score": 9,
+   "cached": false,
+   "latency": 2.392999300001975
+  },
+  {
+   "id": "S006",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 40,
+   "cached": false,
+   "latency": 2.9948149000010744
+  },
+  {
+   "id": "S057",
+   "qualified": 0,
+   "archetype": "implied",
+   "score": 40,
+   "cached": true,
+   "latency": 2.2908385999980965
+  },
+  {
+   "id": "S076",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 40,
+   "cached": false,
+   "latency": 2.706583299997874
+  },
+  {
+   "id": "S098",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 40,
+   "cached": false,
+   "latency": 2.7990108000012697
+  },
+  {
+   "id": "S139",
+   "qualified": 0,
+   "archetype": "sparse_strong",
+   "score": 9,
+   "cached": false,
+   "latency": 2.657921500001976
+  },
+  {
+   "id": "S173",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 10,
+   "cached": false,
+   "latency": 2.624430300002132
+  },
+  {
+   "id": "S240",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 9,
+   "cached": false,
+   "latency": 2.3066885999978695
+  },
+  {
+   "id": "S277",
+   "qualified": 0,
+   "archetype": "implied",
+   "score": 0,
+   "cached": false,
+   "latency": 2.430819600001996
+  },
+  {
+   "id": "S348",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 0,
+   "cached": false,
+   "latency": 2.7143087000004016
+  },
+  {
+   "id": "S399",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 10,
+   "cached": false,
+   "latency": 2.7272768000002543
+  },
+  {
+   "id": "S420",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 10,
+   "cached": false,
+   "latency": 2.407466000000568
+  },
+  {
+   "id": "S427",
+   "qualified": 0,
+   "archetype": "implied",
+   "score": 20,
+   "cached": true,
+   "latency": 2.6409558999985165
+  },
+  {
+   "id": "S482",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 10,
+   "cached": false,
+   "latency": 2.856368900000234
+  },
+  {
+   "id": "S487",
+   "qualified": 0,
+   "archetype": "implied",
+   "score": 9,
+   "cached": false,
+   "latency": 2.6550590000006196
+  }
+ ],
+ "R05": [
+  {
+   "id": "S014",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 85,
+   "cached": true,
+   "latency": 2.335459699999774
+  },
+  {
+   "id": "S107",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.4371643000013137
+  },
+  {
+   "id": "S209",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.4796916999985115
+  },
+  {
+   "id": "S245",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.19627330000003
+  },
+  {
+   "id": "S444",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": true,
+   "latency": 2.6372180999969714
+  },
+  {
+   "id": "S448",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 85,
+   "cached": false,
+   "latency": 2.3416273000002548
+  },
+  {
+   "id": "S064",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 0,
+   "cached": false,
+   "latency": 2.630452700002934
+  },
+  {
+   "id": "S074",
+   "qualified": 0,
+   "archetype": "abbreviated_noisy",
+   "score": 9,
+   "cached": false,
+   "latency": 2.45837450000181
+  },
+  {
+   "id": "S086",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 50,
+   "cached": false,
+   "latency": 2.619930100001511
+  },
+  {
+   "id": "S096",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 9,
+   "cached": false,
+   "latency": 2.11249350000071
+  },
+  {
+   "id": "S098",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 40,
+   "cached": false,
+   "latency": 2.3988505999986955
+  },
+  {
+   "id": "S125",
+   "qualified": 0,
+   "archetype": "implied",
+   "score": 9,
+   "cached": false,
+   "latency": 2.3037619999995513
+  },
+  {
+   "id": "S169",
+   "qualified": 0,
+   "archetype": "sparse_strong",
+   "score": 9,
+   "cached": false,
+   "latency": 2.243883300001471
+  },
+  {
+   "id": "S179",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 100,
+   "cached": true,
+   "latency": 2.0932436999974016
+  },
+  {
+   "id": "S246",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 0,
+   "cached": false,
+   "latency": 2.116234600001917
+  },
+  {
+   "id": "S254",
+   "qualified": 0,
+   "archetype": "generalist_average",
+   "score": 100,
+   "cached": true,
+   "latency": 2.3418787000009615
+  },
+  {
+   "id": "S294",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 100,
+   "cached": false,
+   "latency": 2.455835600001592
+  },
+  {
+   "id": "S331",
+   "qualified": 0,
+   "archetype": "abbreviated_noisy",
+   "score": 9,
+   "cached": false,
+   "latency": 2.183087000001251
+  },
+  {
+   "id": "S340",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 9,
+   "cached": false,
+   "latency": 2.1901030000008177
+  },
+  {
+   "id": "S443",
+   "qualified": 0,
+   "archetype": "abbreviated_noisy",
+   "score": 40,
+   "cached": false,
+   "latency": 2.285971100001916
+  },
+  {
+   "id": "S489",
+   "qualified": 0,
+   "archetype": "generalist_average",
+   "score": 9,
+   "cached": false,
+   "latency": 2.1375994000009086
+  }
+ ],
+ "R06": [
+  {
+   "id": "S001",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 80,
+   "cached": false,
+   "latency": 2.8835380999989866
+  },
+  {
+   "id": "S094",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": true,
+   "latency": 1.8137740999991365
+  },
+  {
+   "id": "S233",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 75,
+   "cached": false,
+   "latency": 2.6096742000008817
+  },
+  {
+   "id": "S004",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 9,
+   "cached": false,
+   "latency": 2.389441399998759
+  },
+  {
+   "id": "S008",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.3448907999991206
+  },
+  {
+   "id": "S014",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 9,
+   "cached": false,
+   "latency": 2.3902837999994517
+  },
+  {
+   "id": "S056",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 60,
+   "cached": false,
+   "latency": 2.7289736999991874
+  },
+  {
+   "id": "S068",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.1730373999998847
+  },
+  {
+   "id": "S093",
+   "qualified": 0,
+   "archetype": "implied",
+   "score": 9,
+   "cached": false,
+   "latency": 2.17396170000211
+  },
+  {
+   "id": "S126",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 40,
+   "cached": false,
+   "latency": 2.4916343000004417
+  },
+  {
+   "id": "S173",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 65,
+   "cached": false,
+   "latency": 3.7578307000003406
+  },
+  {
+   "id": "S179",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 40,
+   "cached": false,
+   "latency": 2.240288799999689
+  },
+  {
+   "id": "S298",
+   "qualified": 0,
+   "archetype": "sparse_strong",
+   "score": 9,
+   "cached": false,
+   "latency": 2.277775599999586
+  },
+  {
+   "id": "S327",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 85,
+   "cached": false,
+   "latency": 2.7784945000021253
+  },
+  {
+   "id": "S328",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 60,
+   "cached": false,
+   "latency": 2.1593888999996125
+  },
+  {
+   "id": "S340",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 60,
+   "cached": false,
+   "latency": 2.414570500000991
+  },
+  {
+   "id": "S487",
+   "qualified": 0,
+   "archetype": "implied",
+   "score": 60,
+   "cached": false,
+   "latency": 3.132933500000945
+  },
+  {
+   "id": "S493",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 9,
+   "cached": false,
+   "latency": 2.871997600002942
+  }
+ ],
+ "R08": [
+  {
+   "id": "S018",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.391899199999898
+  },
+  {
+   "id": "S124",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.6660460000020976
+  },
+  {
+   "id": "S183",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.4420448999990185
+  },
+  {
+   "id": "S199",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.3482836000002862
+  },
+  {
+   "id": "S239",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.128413799997361
+  },
+  {
+   "id": "S357",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 60,
+   "cached": false,
+   "latency": 2.211558300001343
+  },
+  {
+   "id": "S411",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.5135707999979786
+  },
+  {
+   "id": "S063",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 40,
+   "cached": true,
+   "latency": 2.3762659999993048
+  },
+  {
+   "id": "S103",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 0,
+   "cached": false,
+   "latency": 2.4152589999976044
+  },
+  {
+   "id": "S114",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 0,
+   "cached": false,
+   "latency": 2.319242999998096
+  },
+  {
+   "id": "S126",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 60,
+   "cached": true,
+   "latency": 2.264160400001856
+  },
+  {
+   "id": "S132",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 40,
+   "cached": false,
+   "latency": 2.5032829999981914
+  },
+  {
+   "id": "S163",
+   "qualified": 0,
+   "archetype": "implied",
+   "score": 0,
+   "cached": false,
+   "latency": 2.1546259999995527
+  },
+  {
+   "id": "S170",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 40,
+   "cached": false,
+   "latency": 2.4993214000023727
+  },
+  {
+   "id": "S179",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 40,
+   "cached": false,
+   "latency": 2.5832894999985
+  },
+  {
+   "id": "S284",
+   "qualified": 0,
+   "archetype": "sparse_strong",
+   "score": 0,
+   "cached": true,
+   "latency": 2.2291965000003984
+  },
+  {
+   "id": "S297",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 10,
+   "cached": false,
+   "latency": 2.479592399999092
+  },
+  {
+   "id": "S332",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 10,
+   "cached": false,
+   "latency": 2.72738709999976
+  },
+  {
+   "id": "S382",
+   "qualified": 0,
+   "archetype": "generalist_average",
+   "score": 0,
+   "cached": false,
+   "latency": 2.1672717000001285
+  },
+  {
+   "id": "S430",
+   "qualified": 0,
+   "archetype": "abbreviated_noisy",
+   "score": 10,
+   "cached": false,
+   "latency": 2.5001609999999346
+  },
+  {
+   "id": "S443",
+   "qualified": 0,
+   "archetype": "abbreviated_noisy",
+   "score": 0,
+   "cached": false,
+   "latency": 2.5884790000018256
+  },
+  {
+   "id": "S486",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 0,
+   "cached": false,
+   "latency": 2.1575699000022723
+  }
+ ],
+ "R10": [
+  {
+   "id": "S039",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.3991624000009324
+  },
+  {
+   "id": "S068",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 65,
+   "cached": false,
+   "latency": 3.1872507000007317
+  },
+  {
+   "id": "S196",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 65,
+   "cached": false,
+   "latency": 3.1066714999979013
+  },
+  {
+   "id": "S261",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.2771413999980723
+  },
+  {
+   "id": "S393",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 85,
+   "cached": false,
+   "latency": 2.1980857999988075
+  },
+  {
+   "id": "S409",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 85,
+   "cached": false,
+   "latency": 2.472953200001939
+  },
+  {
+   "id": "S108",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 65,
+   "cached": true,
+   "latency": 2.3413306000002194
+  },
+  {
+   "id": "S145",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 40,
+   "cached": true,
+   "latency": 2.0538014999983716
+  },
+  {
+   "id": "S170",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 9,
+   "cached": false,
+   "latency": 2.5388731000020925
+  },
+  {
+   "id": "S173",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 45,
+   "cached": false,
+   "latency": 2.4063633999976446
+  },
+  {
+   "id": "S216",
+   "qualified": 0,
+   "archetype": "sparse_strong",
+   "score": 0,
+   "cached": false,
+   "latency": 2.284964400001627
+  },
+  {
+   "id": "S219",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 85,
+   "cached": false,
+   "latency": 2.3397497000005387
+  },
+  {
+   "id": "S225",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 100,
+   "cached": false,
+   "latency": 1.9991079999999783
+  },
+  {
+   "id": "S242",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 40,
+   "cached": true,
+   "latency": 2.7677497000004223
+  },
+  {
+   "id": "S246",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 0,
+   "cached": false,
+   "latency": 2.1365409000027284
+  },
+  {
+   "id": "S252",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 45,
+   "cached": false,
+   "latency": 2.6148033999998006
+  },
+  {
+   "id": "S320",
+   "qualified": 0,
+   "archetype": "implied",
+   "score": 9,
+   "cached": false,
+   "latency": 2.326012900000933
+  },
+  {
+   "id": "S348",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 40,
+   "cached": false,
+   "latency": 2.81558109999969
+  },
+  {
+   "id": "S438",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 9,
+   "cached": false,
+   "latency": 2.958856299999752
+  },
+  {
+   "id": "S443",
+   "qualified": 0,
+   "archetype": "abbreviated_noisy",
+   "score": 0,
+   "cached": false,
+   "latency": 2.056082699997205
+  },
+  {
+   "id": "S476",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 40,
+   "cached": true,
+   "latency": 2.55067710000003
+  }
+ ],
+ "R11": [
+  {
+   "id": "S061",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 60,
+   "cached": false,
+   "latency": 2.2156403999979375
+  },
+  {
+   "id": "S151",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.2296996000004583
+  },
+  {
+   "id": "S171",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.4167615000005753
+  },
+  {
+   "id": "S010",
+   "qualified": 0,
+   "archetype": "abbreviated_noisy",
+   "score": 0,
+   "cached": true,
+   "latency": 2.004734300000564
+  },
+  {
+   "id": "S029",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 0,
+   "cached": false,
+   "latency": 2.620753200000763
+  },
+  {
+   "id": "S062",
+   "qualified": 0,
+   "archetype": "sparse_strong",
+   "score": 9,
+   "cached": false,
+   "latency": 2.1129278000007616
+  },
+  {
+   "id": "S113",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 9,
+   "cached": true,
+   "latency": 2.0119362000004912
+  },
+  {
+   "id": "S153",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 60,
+   "cached": false,
+   "latency": 2.374921099999483
+  },
+  {
+   "id": "S157",
+   "qualified": 0,
+   "archetype": "abbreviated_noisy",
+   "score": 9,
+   "cached": false,
+   "latency": 2.5699009999989357
+  },
+  {
+   "id": "S173",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 65,
+   "cached": true,
+   "latency": 1.9754988999993657
+  },
+  {
+   "id": "S179",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 10,
+   "cached": true,
+   "latency": 2.13724910000019
+  },
+  {
+   "id": "S267",
+   "qualified": 0,
+   "archetype": "ineligible_strong",
+   "score": 10,
+   "cached": false,
+   "latency": 3.3167237999987265
+  },
+  {
+   "id": "S340",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 9,
+   "cached": false,
+   "latency": 2.4904792999986967
+  },
+  {
+   "id": "S353",
+   "qualified": 0,
+   "archetype": "implied",
+   "score": 9,
+   "cached": false,
+   "latency": 2.3965508000001137
+  },
+  {
+   "id": "S384",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 0,
+   "cached": false,
+   "latency": 2.8760392000003776
+  },
+  {
+   "id": "S445",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 40,
+   "cached": false,
+   "latency": 2.5831058000003395
+  },
+  {
+   "id": "S454",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 60,
+   "cached": false,
+   "latency": 2.886508800002048
+  },
+  {
+   "id": "S472",
+   "qualified": 0,
+   "archetype": "abbreviated_noisy",
+   "score": 45,
+   "cached": true,
+   "latency": 2.1311184000005596
+  }
+ ],
+ "R13": [
+  {
+   "id": "S008",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 40,
+   "cached": false,
+   "latency": 2.9104557999999088
+  },
+  {
+   "id": "S040",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 60,
+   "cached": false,
+   "latency": 2.5017265000024054
+  },
+  {
+   "id": "S101",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 75,
+   "cached": false,
+   "latency": 2.7433429999982764
+  },
+  {
+   "id": "S240",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 10,
+   "cached": false,
+   "latency": 2.9255608999992546
+  },
+  {
+   "id": "S359",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 40,
+   "cached": false,
+   "latency": 2.351850999999442
+  },
+  {
+   "id": "S438",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 40,
+   "cached": false,
+   "latency": 2.5199289999982284
+  },
+  {
+   "id": "S469",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 80,
+   "cached": true,
+   "latency": 2.236714899998333
+  },
+  {
+   "id": "S045",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 10,
+   "cached": false,
+   "latency": 2.8136158999986947
+  },
+  {
+   "id": "S086",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 80,
+   "cached": false,
+   "latency": 2.6436342999986664
+  },
+  {
+   "id": "S104",
+   "qualified": 0,
+   "archetype": "sparse_strong",
+   "score": 10,
+   "cached": false,
+   "latency": 2.7436946999987413
+  },
+  {
+   "id": "S136",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 0,
+   "cached": false,
+   "latency": 2.504906600002869
+  },
+  {
+   "id": "S236",
+   "qualified": 0,
+   "archetype": "sparse_strong",
+   "score": 40,
+   "cached": true,
+   "latency": 2.390654099999665
+  },
+  {
+   "id": "S239",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 9,
+   "cached": false,
+   "latency": 2.435456699997303
+  },
+  {
+   "id": "S259",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 10,
+   "cached": false,
+   "latency": 2.9260203000012552
+  },
+  {
+   "id": "S265",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 9,
+   "cached": false,
+   "latency": 3.2979889000016556
+  },
+  {
+   "id": "S266",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 60,
+   "cached": true,
+   "latency": 2.5067667000002984
+  },
+  {
+   "id": "S317",
+   "qualified": 0,
+   "archetype": "abbreviated_noisy",
+   "score": 0,
+   "cached": false,
+   "latency": 2.3475237999991805
+  },
+  {
+   "id": "S409",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 9,
+   "cached": false,
+   "latency": 2.1246113999986846
+  },
+  {
+   "id": "S420",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 9,
+   "cached": false,
+   "latency": 2.628762199998164
+  },
+  {
+   "id": "S440",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 0,
+   "cached": false,
+   "latency": 3.013235300000815
+  },
+  {
+   "id": "S445",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 100,
+   "cached": false,
+   "latency": 2.2400592000012693
+  },
+  {
+   "id": "S446",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 40,
+   "cached": false,
+   "latency": 2.319744200001878
+  }
+ ],
+ "R14": [
+  {
+   "id": "S014",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": true,
+   "latency": 2.002154400001018
+  },
+  {
+   "id": "S032",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.20848759999717
+  },
+  {
+   "id": "S033",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": true,
+   "latency": 2.1703601999979583
+  },
+  {
+   "id": "S278",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.0300762000006216
+  },
+  {
+   "id": "S444",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": true,
+   "latency": 2.059307399998943
+  },
+  {
+   "id": "S009",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 9,
+   "cached": false,
+   "latency": 2.367023099999642
+  },
+  {
+   "id": "S037",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 85,
+   "cached": false,
+   "latency": 2.369547300000704
+  },
+  {
+   "id": "S045",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 100,
+   "cached": false,
+   "latency": 2.7681731000011496
+  },
+  {
+   "id": "S080",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 0,
+   "cached": false,
+   "latency": 2.26521490000232
+  },
+  {
+   "id": "S098",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 40,
+   "cached": false,
+   "latency": 2.4493552000021737
+  },
+  {
+   "id": "S177",
+   "qualified": 0,
+   "archetype": "implied",
+   "score": 0,
+   "cached": false,
+   "latency": 2.6034233999998833
+  },
+  {
+   "id": "S240",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.476123699998425
+  },
+  {
+   "id": "S273",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 9,
+   "cached": false,
+   "latency": 2.3749179000005824
+  },
+  {
+   "id": "S295",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 0,
+   "cached": false,
+   "latency": 2.267532599998958
+  },
+  {
+   "id": "S328",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 60,
+   "cached": false,
+   "latency": 2.461996000001818
+  },
+  {
+   "id": "S342",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 9,
+   "cached": false,
+   "latency": 2.513364599999477
+  },
+  {
+   "id": "S377",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 0,
+   "cached": false,
+   "latency": 2.345314400001371
+  },
+  {
+   "id": "S394",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 60,
+   "cached": false,
+   "latency": 2.1592387999990024
+  },
+  {
+   "id": "S400",
+   "qualified": 0,
+   "archetype": "abbreviated_noisy",
+   "score": 9,
+   "cached": false,
+   "latency": 2.4174746999997296
+  },
+  {
+   "id": "S401",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 9,
+   "cached": false,
+   "latency": 2.2894644000007247
+  }
+ ],
+ "R15": [
+  {
+   "id": "S064",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.207446500000515
+  },
+  {
+   "id": "S100",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 9,
+   "cached": false,
+   "latency": 2.416287600000942
+  },
+  {
+   "id": "S313",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.1153826999980083
+  },
+  {
+   "id": "S435",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.0652155999996467
+  },
+  {
+   "id": "S456",
+   "qualified": 1,
+   "archetype": "paraphrased",
+   "score": 100,
+   "cached": false,
+   "latency": 2.2245078000014473
+  },
+  {
+   "id": "S047",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 40,
+   "cached": false,
+   "latency": 2.3908669000011287
+  },
+  {
+   "id": "S053",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 40,
+   "cached": false,
+   "latency": 2.2491197000017564
+  },
+  {
+   "id": "S092",
+   "qualified": 0,
+   "archetype": "paraphrased",
+   "score": 9,
+   "cached": false,
+   "latency": 2.0661144999976386
+  },
+  {
+   "id": "S098",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 0,
+   "cached": true,
+   "latency": 2.093580299999303
+  },
+  {
+   "id": "S203",
+   "qualified": 0,
+   "archetype": "sparse_strong",
+   "score": 9,
+   "cached": false,
+   "latency": 1.9091924999993353
+  },
+  {
+   "id": "S258",
+   "qualified": 0,
+   "archetype": "ineligible_strong",
+   "score": 9,
+   "cached": false,
+   "latency": 2.4193066000007093
+  },
+  {
+   "id": "S320",
+   "qualified": 0,
+   "archetype": "implied",
+   "score": 10,
+   "cached": false,
+   "latency": 2.188267300000007
+  },
+  {
+   "id": "S323",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 9,
+   "cached": false,
+   "latency": 2.0888913000017055
+  },
+  {
+   "id": "S345",
+   "qualified": 0,
+   "archetype": "generalist_average",
+   "score": 40,
+   "cached": false,
+   "latency": 1.8536947000029613
+  },
+  {
+   "id": "S400",
+   "qualified": 0,
+   "archetype": "abbreviated_noisy",
+   "score": 100,
+   "cached": false,
+   "latency": 2.3672117999994953
+  },
+  {
+   "id": "S429",
+   "qualified": 0,
+   "archetype": "abbreviated_noisy",
+   "score": 9,
+   "cached": false,
+   "latency": 2.065891800000827
+  },
+  {
+   "id": "S453",
+   "qualified": 0,
+   "archetype": "standard",
+   "score": 9,
+   "cached": false,
+   "latency": 2.1784060999998474
+  },
+  {
+   "id": "S460",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 40,
+   "cached": false,
+   "latency": 2.2448488000009093
+  },
+  {
+   "id": "S464",
+   "qualified": 0,
+   "archetype": "stuffed_weak",
+   "score": 0,
+   "cached": false,
+   "latency": 2.0146333999982744
+  },
+  {
+   "id": "S489",
+   "qualified": 0,
+   "archetype": "generalist_average",
+   "score": 9,
+   "cached": false,
+   "latency": 2.185333499997796
+  }
+ ]
+}

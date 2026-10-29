@@ -201,3 +201,87 @@ New (uncached) re-rank calls per run in this evaluation: {"b4_k20": 200, "b4_k50
 - The fairness test covers names only, not college prestige or other proxies.
 - **Bug fix after the freeze tag (src/llm.py only).** In the fairness OFF stage one swapped resume (R02 / S087, control swap) made the model loop inside the unbounded `matched_skills` array until the 4096-token context was full (finish reason `length`, invalid JSON), which crashed the stage. `chat_json` now retries once with every schema array capped at 8 items and `num_predict=700`, stored under the ORIGINAL cache key. It was needed for exactly 1 call out of 1716 cached calls; all earlier calls (every main, ablation and fairness-ON result) completed without it, so no previously successful result changed. Fairness OFF was resumed from the saved partial results (20 rows) and the final report regenerated. Prompts, schemas of normal calls, K, model and temperature are unchanged; `git diff frozen-main-config -- src` shows only this change.
 - GPU use was checked through the Ollama API after every requirement (`size_vram == size`); it stayed 100% GPU.
+
+## Post-hoc exploratory (designed after seeing test results)
+
+**These two analyses were designed AFTER the test results were known. They are exploratory, were not pre-declared, and do not change any frozen main result (B1-B4, ablations, fairness).** Nothing under `src/` was modified; the code is `eval/posthoc.py`. Commit: POSTHOC_COMMIT (frozen tag `frozen-main-config` is untouched).
+
+New (uncached) LLM calls: B5 35, D1 172. Wall time of this run: 562 s (0 if everything came from the cache; see the log in `eval/logs/posthoc.log` for the original timings).
+
+### B5 (post-hoc exploratory): hybrid retrieval + unchanged LLM re-ranker
+
+| Method | nDCG@10 | MRR | P@10 | Recall@10 (capped) | FRR@10 | FRR@20 |
+|---|---|---|---|---|---|---|
+| B5 hybrid + LLM re-rank, dev (n=5) | 0.724 [0.574, 0.838] | 1.000 [1.000, 1.000] | 0.740 [0.540, 0.920] | 0.740 [0.540, 0.920] | 0.260 [0.080, 0.460] | 0.393 [0.290, 0.477] |
+| B5 hybrid + LLM re-rank, test (n=10) | 0.772 [0.707, 0.824] | 1.000 [1.000, 1.000] | 0.860 [0.790, 0.930] | 0.860 [0.790, 0.930] | 0.140 [0.070, 0.210] | 0.314 [0.233, 0.384] |
+
+Pool = top-20 of the RRF (k=60) fusion of BM25 and dense over eligible students; ranking = LLM score, ties by RRF score. Mean with 95% bootstrap CI over requirements (10,000 resamples, seed 42); with n=5 the dev CIs are very wide.
+
+### B5 paired differences on test (post-hoc exploratory; B5 minus baseline; FRR: negative = B5 better)
+
+| Comparison | Metric | Mean diff [CI] | Win/loss/tie of B5 | Verdict |
+|---|---|---|---|---|
+| B5 vs B4 | nDCG@10 | 0.022 [-0.047, 0.094] | 5/5/0 | not distinguishable |
+| B5 vs B4 | MRR | 0.000 [0.000, 0.000] | 0/0/10 | not distinguishable |
+| B5 vs B4 | Recall@10 (capped) | 0.100 [-0.000, 0.210] | 6/1/3 | not distinguishable |
+| B5 vs B4 | FRR@20 | -0.187 [-0.242, -0.131] | 0/10/0 | worse |
+| B5 vs B3b | nDCG@10 | 0.053 [0.000, 0.107] | 6/2/2 | better |
+| B5 vs B3b | MRR | 0.100 [0.000, 0.250] | 2/0/8 | not distinguishable |
+| B5 vs B3b | Recall@10 (capped) | 0.060 [0.020, 0.100] | 5/0/5 | better |
+| B5 vs B3b | FRR@20 | 0.000 [0.000, 0.000] | 0/0/10 | not distinguishable |
+| B5 vs B1c | nDCG@10 | 0.133 [0.073, 0.194] | 9/1/0 | better |
+| B5 vs B1c | MRR | 0.150 [0.000, 0.300] | 3/0/7 | not distinguishable |
+| B5 vs B1c | Recall@10 (capped) | 0.130 [0.040, 0.220] | 7/1/2 | better |
+| B5 vs B1c | FRR@20 | -0.024 [-0.123, 0.052] | 3/2/5 | not distinguishable |
+
+### Qualified students in the top-20 pool, test (post-hoc exploratory)
+
+| Req | Qualified | B4 (dense pool) | B5 (hybrid pool) |
+|---|---|---|---|
+| R02 | 16 | 5 | 9 |
+| R03 | 15 | 7 | 9 |
+| R05 | 24 | 11 | 13 |
+| R06 | 19 | 10 | 15 |
+| R08 | 29 | 14 | 19 |
+| R10 | 16 | 9 | 10 |
+| R11 | 14 | 6 | 10 |
+| R13 | 18 | 9 | 10 |
+| R14 | 21 | 10 | 16 |
+| R15 | 18 | 8 | 11 |
+| Total | 190 | 81 | 111 |
+
+B4 pool total 81/190; B5 pool total 111/190.
+
+### Share of qualified students in the pool by archetype, test (post-hoc exploratory)
+
+| Pool | standard | paraphrased | implied | abbreviated_noisy | sparse_strong | ineligible_strong | generalist_average | stuffed_weak |
+|---|---|---|---|---|---|---|---|---|
+| B4 (dense pool) | 61% (47/77) | 6% (3/51) | 78% (14/18) | 52% (11/21) | 82% (9/11) | 100% (1/1) | 50% (4/8) | 0% (0/3) |
+| B3b hybrid ranking (no LLM) | 94% (72/77) | 4% (2/51) | 94% (17/18) | 57% (12/21) | 100% (11/11) | 100% (1/1) | 88% (7/8) | 0% (0/3) |
+| B5 (hybrid pool) | 94% (72/77) | 4% (2/51) | 94% (17/18) | 57% (12/21) | 100% (11/11) | 100% (1/1) | 88% (7/8) | 0% (0/3) |
+
+### D1 (post-hoc exploratory): LLM judging of paraphrased resumes with retrieval bypassed
+
+Candidate set per test requirement: every eligible, qualified `paraphrased` student plus 15 eligible non-qualified students (5 from stuffed_weak where available, the rest from other archetypes; sampled with seed 42). Ties in the top-10 share are broken by student id.
+
+| Req | Paraphrased qualified | Non-qualified | Mean score qualified | Mean score non-qualified | AUC | Qualified in top 10 |
+|---|---|---|---|---|---|---|
+| R02 | 4 | 15 | 83.8 | 42.4 | 0.808 | 4/4 |
+| R03 | 5 | 15 | 62.0 | 17.1 | 0.947 | 5/5 |
+| R05 | 6 | 15 | 95.0 | 32.9 | 0.867 | 6/6 |
+| R06 | 3 | 15 | 85.0 | 47.7 | 0.844 | 3/3 |
+| R08 | 7 | 15 | 94.3 | 16.7 | 0.995 | 7/7 |
+| R10 | 6 | 15 | 83.3 | 35.1 | 0.900 | 6/6 |
+| R11 | 3 | 15 | 86.7 | 22.3 | 0.956 | 3/3 |
+| R13 | 7 | 15 | 49.3 | 25.7 | 0.767 | 6/7 |
+| R14 | 5 | 15 | 100.0 | 32.7 | 0.933 | 5/5 |
+| R15 | 5 | 15 | 81.8 | 22.2 | 0.847 | 4/5 |
+
+| Pooled | Value |
+|---|---|
+| Mean score, paraphrased-qualified (pooled) | 81.3 |
+| Mean score, non-qualified (pooled) | 29.5 |
+| Mean score, stuffed_weak non-qualified | 42.8 |
+| ROC AUC, mean of per-requirement AUCs [95% CI over requirements] | 0.886 [0.844, 0.928] |
+| ROC AUC, all candidates pooled | 0.879 |
+| Paraphrased-qualified in the top 10 of their candidate set | 49/51 (96%) |
