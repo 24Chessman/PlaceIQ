@@ -1,0 +1,68 @@
+﻿python.exe : 2026-10-29 17:57:31.551 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 
+'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+At line:1 char:348
++ ... ONUTF8='1'; & .\.venv\Scripts\python.exe scripts\test_demo.py --live  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (2026-10-29 17:5...g in bare mode.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights:  60%|█████▉    | 119/199 [00:00<00:00, 1180.60it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 1859.01it/s]
+PASS  app loads without exception
+PASS  4 tabs render (['Shortlist', 'Keyword ATS vs Ours', 'Evidence', 'Fairness and limits'])
+PASS  status badge is shown
+PASS  empty state before the first run
+PASS  picker built
+PASS  picker lists the 15 samples
+first options: ['Recommended demo: Full Stack Developer (R03)', 'Recommended demo: Associate Business Analyst (R12)', 'Recommended demo: ML Engineer (R05)', 'Recommended demo: Data Analyst (R04)']
+PASS  sample Recommended demo: Full Stack Developer (R03) hybrid: renders 10 cards in 0.68s
+PASS  sample Recommended demo: Full Stack Developer (R03) dense: renders 10 cards in 0.56s
+PASS  sample Recommended demo: Associate Business Analyst (R12) hybrid: renders 10 cards in 0.55s
+PASS  sample Recommended demo: Associate Business Analyst (R12) dense: renders 10 cards in 0.52s
+PASS  sample Recommended demo: ML Engineer (R05) hybrid: renders 10 cards in 0.52s
+PASS  sample Recommended demo: ML Engineer (R05) dense: renders 10 cards in 0.52s
+PASS  sample Recommended demo: Data Analyst (R04) hybrid: renders 10 cards in 0.61s
+PASS  sample Recommended demo: Data Analyst (R04) dense: renders 10 cards in 0.56s
+PASS  sample Junior Backend Engineer (R01) hybrid: renders 10 cards in 0.57s
+PASS  sample Junior Backend Engineer (R01) dense: renders 10 cards in 0.51s
+PASS  sample Frontend Developer (R02) hybrid: renders 10 cards in 0.55s
+PASS  sample Frontend Developer (R02) dense: renders 10 cards in 0.51s
+PASS  sample Data Engineer (R06) hybrid: renders 10 cards in 0.54s
+PASS  sample Data Engineer (R06) dense: renders 10 cards in 0.53s
+PASS  sample DevOps Trainee (R07) hybrid: renders 10 cards in 0.58s
+PASS  sample DevOps Trainee (R07) dense: renders 10 cards in 0.53s
+PASS  sample QA Engineer (R08) hybrid: renders 10 cards in 0.54s
+PASS  sample QA Engineer (R08) dense: renders 10 cards in 0.52s
+PASS  sample Mobile App Developer (R09) hybrid: renders 10 cards in 0.61s
+PASS  sample Mobile App Developer (R09) dense: renders 10 cards in 0.52s
+PASS  sample Security Analyst Trainee (R10) hybrid: renders 10 cards in 0.52s
+PASS  sample Security Analyst Trainee (R10) dense: renders 10 cards in 0.50s
+PASS  sample Embedded/IoT Trainee (R11) hybrid: renders 10 cards in 0.49s
+PASS  sample Embedded/IoT Trainee (R11) dense: renders 10 cards in 0.50s
+PASS  sample Java Backend Developer (R13) hybrid: renders 10 cards in 0.52s
+PASS  sample Java Backend Developer (R13) dense: renders 10 cards in 0.52s
+PASS  sample NLP Engineer Trainee (R14) hybrid: renders 10 cards in 0.53s
+PASS  sample NLP Engineer Trainee (R14) dense: renders 10 cards in 0.78s
+PASS  sample Web Developer (R15) hybrid: renders 10 cards in 0.57s
+PASS  sample Web Developer (R15) dense: renders 10 cards in 0.56s
+cached sample run+render: mean 0.55s, max 0.78s
+PASS  ground-truth toggle shows badges and ATS rejection counts
+PASS  ATS tab marks rescued candidates
+PASS  ATS tab explains why the ATS rejected a candidate
+PASS  Evidence tab has the post-hoc section
+PASS  Fairness tab caption present
+PASS  toggle exists for samples
+2026-10-29 17:58:14.148 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in 
+bare mode.
+PASS  llm_status() reports offline
+PASS  custom Run is disabled with a clear message when the LLM is offline
+PASS  samples still run from the cache while offline
+2026-10-29 17:58:16.321 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in 
+bare mode.
+PASS  live custom requirement ran in 52s
+PASS  live run under 90 s
+live custom run: 52.4s
+new LLM cache entries during these tests: 21
+FAILED CHECKS: 0
