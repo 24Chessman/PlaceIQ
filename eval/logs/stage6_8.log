@@ -1,0 +1,74 @@
+﻿[b4_k50] warm-up 0.9s, 10 requirement(s) to run
+python.exe : 
+At line:1 char:348
++ ... ONUTF8='1'; & .\.venv\Scripts\python.exe eval\run_all.py ablate fair_ ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights:  26%|██▌       | 51/199 [00:00<00:00, 489.11it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 1818.92it/s]
+[b4_k50] R02 done in 91s (parse 3.3s, rerank 115.4s, 50 cand)
+[b4_k50] R03 done in 78s (parse 2.9s, rerank 128.6s, 50 cand)
+[b4_k50] R05 done in 73s (parse 2.6s, rerank 124.3s, 50 cand)
+[b4_k50] R06 done in 78s (parse 2.8s, rerank 126.5s, 50 cand)
+[b4_k50] R08 done in 69s (parse 2.6s, rerank 112.5s, 50 cand)
+[b4_k50] R10 done in 70s (parse 2.7s, rerank 118.3s, 50 cand)
+[b4_k50] R11 done in 66s (parse 2.5s, rerank 112.8s, 50 cand)
+[b4_k50] R13 done in 71s (parse 2.4s, rerank 120.0s, 50 cand)
+[b4_k50] R14 done in 68s (parse 2.5s, rerank 115.5s, 50 cand)
+[b4_k50] R15 done in 71s (parse 2.2s, rerank 115.0s, 50 cand)
+[b4_oracle] warm-up 0.4s, 10 requirement(s) to run
+[b4_oracle] R02 done in 1s (parse 3.3s, rerank 47.3s, 20 cand)
+[b4_oracle] R03 done in 1s (parse 2.9s, rerank 51.4s, 20 cand)
+[b4_oracle] R05 done in 1s (parse 2.6s, rerank 51.2s, 20 cand)
+[b4_oracle] R06 done in 1s (parse 2.8s, rerank 49.0s, 20 cand)
+[b4_oracle] R08 done in 1s (parse 2.6s, rerank 44.3s, 20 cand)
+[b4_oracle] R10 done in 0s (parse 2.7s, rerank 48.2s, 20 cand)
+[b4_oracle] R11 done in 1s (parse 2.5s, rerank 45.5s, 20 cand)
+[b4_oracle] R13 done in 1s (parse 2.4s, rerank 49.7s, 20 cand)
+[b4_oracle] R14 done in 0s (parse 2.5s, rerank 47.6s, 20 cand)
+[b4_oracle] R15 done in 0s (parse 2.2s, rerank 47.2s, 20 cand)
+== stage ablate finished in 743s
+[fair_on] 100 pairs, 400 swapped resumes
+[fair_on] done, 400 new LLM calls
+== stage fair_on finished in 985s
+[b4_off] warm-up 0.4s, 10 requirement(s) to run
+[b4_off] R02 done in 47s (parse 3.3s, rerank 46.0s, 20 cand)
+[b4_off] R03 done in 52s (parse 2.9s, rerank 51.1s, 20 cand)
+[b4_off] R05 done in 51s (parse 2.6s, rerank 51.0s, 20 cand)
+[b4_off] R06 done in 46s (parse 2.8s, rerank 45.1s, 20 cand)
+[b4_off] R08 done in 48s (parse 2.6s, rerank 47.3s, 20 cand)
+[b4_off] R10 done in 52s (parse 2.7s, rerank 51.5s, 20 cand)
+[b4_off] R11 done in 46s (parse 2.5s, rerank 45.4s, 20 cand)
+[b4_off] R13 done in 51s (parse 2.4s, rerank 50.3s, 20 cand)
+[b4_off] R14 done in 47s (parse 2.5s, rerank 47.0s, 20 cand)
+[b4_off] R15 done in 47s (parse 2.2s, rerank 46.8s, 20 cand)
+[fair_off] 100 pairs, 400 swapped resumes
+Traceback (most recent call last):
+  File "D:\placement-matcher\eval\run_all.py", line 506, in <module>
+    main()
+  File "D:\placement-matcher\eval\run_all.py", line 497, in main
+    stage_fair(D, "off")
+  File "D:\placement-matcher\eval\run_all.py", line 169, in stage_fair
+    rows = fair.run_condition(variants, sims, pools, parsed, D["text"], flag, RES / f"fairness_{cond}.json")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\placement-matcher\eval\fairness.py", line 131, in run_condition
+    out, info = score_candidate(texts[v["rid"]], parsed_by_rid[v["rid"]], v["text"], fairness_instruction)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\placement-matcher\src\rerank.py", line 51, in score_candidate
+    return chat_json(build_messages(requirement_text, parsed, resume_text, fairness_instruction), SCHEMA)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\placement-matcher\src\llm.py", line 53, in chat_json
+    result = json.loads(r.message.content)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Naitik\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Naitik\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 338, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Naitik\AppData\Local\Programs\Python\Python312\Lib\json\decoder.py", line 356, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 609 column 20 (char 11656)

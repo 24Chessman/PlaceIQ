@@ -1,0 +1,3648 @@
+{
+ "R02": {
+  "parsed": {
+   "role_title": "Frontend Developer",
+   "must_have_skills": [
+    "React",
+    "JavaScript",
+    "HTML",
+    "CSS"
+   ],
+   "nice_to_have_skills": [
+    "TypeScript",
+    "Figma"
+   ],
+   "min_cgpa": 6.5,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "M.Sc IT"
+   ],
+   "max_backlogs": 1,
+   "semantic_query": "A fresher frontend developer proficient in React, JavaScript, HTML, and CSS who can build responsive user interfaces, with additional knowledge of TypeScript and Figma being a plus."
+  },
+  "filters": {
+   "min_cgpa": 6.5,
+   "max_backlogs": 1,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "M.Sc IT"
+   ]
+  },
+  "ranked": [
+   {
+    "id": "S466",
+    "score": 100,
+    "similarity": 0.7348366975784302,
+    "matched": [
+     "React",
+     "JavaScript",
+     "HTML",
+     "CSS",
+     "TypeScript"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills (React, JS, HTML, CSS) and the nice-to-have skill (TypeScript) through specific project descriptions involving REST APIs, event handlers, and virtual DOM libraries. The resume also meets all eligibility criteria with an 8.90 CGPA and zero backlogs.",
+    "latency": 2.927064200001041,
+    "cached": false
+   },
+   {
+    "id": "S284",
+    "score": 100,
+    "similarity": 0.7315274477005005,
+    "matched": [
+     "React",
+     "JavaScript",
+     "HTML",
+     "CSS",
+     "TypeScript"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills (React, JavaScript, HTML, CSS) through specific project descriptions involving virtual DOM libraries and accessible forms. All listed skills are explicitly confirmed in the Technical Skills section.",
+    "latency": 2.1300964999973075,
+    "cached": false
+   },
+   {
+    "id": "S204",
+    "score": 100,
+    "similarity": 0.7287502288818359,
+    "matched": [
+     "React",
+     "JavaScript",
+     "TypeScript",
+     "HTML",
+     "CSS"
+    ],
+    "missing": [],
+    "explanation": "The resume demonstrates React, JavaScript, TypeScript, and HTML/CSS through the described projects involving reusable components, async/await code, and static generation. The student meets all eligibility criteria with an 8.83 CGPA and zero backlogs.",
+    "latency": 2.3559639000013703,
+    "cached": false
+   },
+   {
+    "id": "S066",
+    "score": 100,
+    "similarity": 0.7215300798416138,
+    "matched": [
+     "React",
+     "JavaScript",
+     "HTML",
+     "CSS",
+     "TypeScript"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through specific projects: a Quiz Application UI using HTML/CSS/JS and a Weather Dashboard built with React/TypeScript. Eligibility criteria are met with a CGPA of 7.90 (above 6.5) and zero active backlogs.",
+    "latency": 2.5819631000013032,
+    "cached": false
+   },
+   {
+    "id": "S096",
+    "score": 100,
+    "similarity": 0.7032972574234009,
+    "matched": [
+     "React",
+     "JavaScript",
+     "HTML",
+     "CSS"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates React, JavaScript, HTML, and CSS through a weekend tutorial project involving client-side form checks, animated menus, persistent cart state, and efficient list re-rendering. The resume explicitly lists these technologies as 'Strong' skills and applies them in the described project work.",
+    "latency": 2.239618200001132,
+    "cached": false
+   },
+   {
+    "id": "S087",
+    "score": 100,
+    "similarity": 0.7032208442687988,
+    "matched": [
+     "React",
+     "JavaScript",
+     "HTML",
+     "CSS",
+     "TypeScript",
+     "Figma (implied via UI design context)",
+     "CGPA 6.5+",
+     "0 active backlogs",
+     "CSE/IT branch"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through specific projects like an event registration system and a job board, explicitly mentioning React, JavaScript, HTML/CSS usage, and TypeScript. The resume confirms eligibility with a CGPA of 8.69 and zero backlogs in the required IT branch.",
+    "latency": 3.069588999998814,
+    "cached": false
+   },
+   {
+    "id": "S013",
+    "score": 100,
+    "similarity": 0.7003360986709595,
+    "matched": [
+     "React",
+     "JavaScript",
+     "HTML",
+     "CSS"
+    ],
+    "missing": [],
+    "explanation": "The candidate demonstrates React, JavaScript, and HTML/CSS through specific project descriptions involving component-based interfaces, async/await code, and browser canvas animations. No must-have skills are missing.",
+    "latency": 2.053497500000958,
+    "cached": false
+   },
+   {
+    "id": "S386",
+    "score": 100,
+    "similarity": 0.6988471746444702,
+    "matched": [
+     "React",
+     "JavaScript",
+     "HTML",
+     "CSS"
+    ],
+    "missing": [],
+    "explanation": "The candidate demonstrates React, JavaScript, HTML, and CSS through building interactive web pages with event handlers and form validation. The resume explicitly lists these technologies alongside the frontend internship where reusable UI components were created.",
+    "latency": 2.0300193000002764,
+    "cached": false
+   },
+   {
+    "id": "S270",
+    "score": 100,
+    "similarity": 0.6927696466445923,
+    "matched": [
+     "React",
+     "JavaScript",
+     "HTML",
+     "CSS"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates React and JavaScript through building a storefront with state persistence and async data loading, while HTML/CSS are implied by the description of templated pages and browser-based UI manipulation. The resume shows no evidence of TypeScript or Figma usage.",
+    "latency": 2.2227597999990394,
+    "cached": false
+   },
+   {
+    "id": "S116",
+    "score": 100,
+    "similarity": 0.6919399499893188,
+    "matched": [
+     "React",
+     "JavaScript",
+     "HTML",
+     "CSS"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates React, JavaScript, and CSS through the Hostel Complaint Portal project where they built a dashboard with instant updates using a virtual DOM library. HTML is implied as a foundational requirement for building web dashboards described in the resume.",
+    "latency": 1.9755416000007244,
+    "cached": false
+   },
+   {
+    "id": "S423",
+    "score": 100,
+    "similarity": 0.6840387582778931,
+    "matched": [
+     "React",
+     "JavaScript",
+     "HTML",
+     "CSS",
+     "TypeScript"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates React, JavaScript, HTML, CSS, and TypeScript through specific project details like building a component-based expense tracker with state hooks and defining shared type definitions to catch bugs. The resume also shows eligibility compliance with an 8.30 CGPA and zero active backlogs.",
+    "latency": 2.504067700003361,
+    "cached": false
+   },
+   {
+    "id": "S427",
+    "score": 100,
+    "similarity": 0.6801616549491882,
+    "matched": [
+     "React",
+     "JavaScript",
+     "HTML",
+     "CSS"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through specific project work, including building a multi-page brochure site with HTML/CSS and managing state in a React application. No eligibility rules are violated as the CGPA (7.56) exceeds the minimum requirement and there are no active backlogs.",
+    "latency": 2.367871800001012,
+    "cached": false
+   },
+   {
+    "id": "S430",
+    "score": 100,
+    "similarity": 0.6778619289398193,
+    "matched": [
+     "React",
+     "JavaScript",
+     "HTML",
+     "CSS"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates React, JavaScript, HTML, and CSS through building a landing page with persistent cart state and browser-based calculators. No must-have skills are missing.",
+    "latency": 1.9195338999998057,
+    "cached": false
+   },
+   {
+    "id": "S091",
+    "score": 90,
+    "similarity": 0.7265691757202148,
+    "matched": [
+     "React",
+     "JavaScript",
+     "HTML",
+     "CSS",
+     "TypeScript",
+     "Figma"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates React, JavaScript, HTML, and CSS through building a bookstore frontend and landing page; TypeScript is shown via migrating a project to use typed interfaces. Figma is not explicitly mentioned in the resume, so it is missing despite being listed as a nice-to-have.",
+    "latency": 2.5757922000011604,
+    "cached": false
+   },
+   {
+    "id": "S063",
+    "score": 90,
+    "similarity": 0.6936510801315308,
+    "matched": [
+     "React",
+     "JavaScript",
+     "HTML",
+     "CSS",
+     "TypeScript",
+     "Figma"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates React, JavaScript, HTML, CSS, and TypeScript through specific project descriptions involving dynamic updates, event handlers, and server-side rendering. Figma is not mentioned in the resume.",
+    "latency": 2.2525712000024214,
+    "cached": false
+   },
+   {
+    "id": "S146",
+    "score": 90,
+    "similarity": 0.6774632334709167,
+    "matched": [
+     "React",
+     "JavaScript",
+     "HTML",
+     "CSS",
+     "TypeScript",
+     "Figma"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates React, JavaScript, HTML, CSS, and TypeScript through specific project descriptions involving component-based interfaces, state hooks, and shared type definitions. Figma is not explicitly mentioned in the resume.",
+    "latency": 2.0747239000011177,
+    "cached": false
+   },
+   {
+    "id": "S131",
+    "score": 85,
+    "similarity": 0.6895766258239746,
+    "matched": [
+     "React",
+     "JavaScript",
+     "HTML",
+     "CSS"
+    ],
+    "missing": [],
+    "explanation": "The resume demonstrates React, JavaScript, HTML, and CSS through the description of a frontend project involving a single-page storefront with a persistent cart. TypeScript and Figma are not mentioned in the work described.",
+    "latency": 2.0254906000009214,
+    "cached": false
+   },
+   {
+    "id": "S264",
+    "score": 80,
+    "similarity": 0.69846510887146,
+    "matched": [
+     "React",
+     "JavaScript",
+     "HTML",
+     "CSS",
+     "Docker",
+     "MongoDB",
+     "Express.js"
+    ],
+    "missing": [
+     "TypeScript",
+     "Figma"
+    ],
+    "explanation": "The student demonstrates React, JavaScript, HTML, and CSS through the described college fest landing page project. However, there is no evidence of TypeScript or Figma usage in the resume.",
+    "latency": 2.24308419999943,
+    "cached": false
+   },
+   {
+    "id": "S336",
+    "score": 40,
+    "similarity": 0.7148605585098267,
+    "matched": [
+     "HTML",
+     "CSS",
+     "Figma"
+    ],
+    "missing": [
+     "React",
+     "JavaScript"
+    ],
+    "explanation": "The student demonstrates HTML, CSS, and Figma through building a portfolio site and quiz application UI, but lacks evidence of React or JavaScript skills as they only used Vue.js in their projects.",
+    "latency": 2.1549457000000984,
+    "cached": false
+   },
+   {
+    "id": "S057",
+    "score": 9,
+    "similarity": 0.6841732263565063,
+    "matched": [],
+    "missing": [
+     "React",
+     "JavaScript",
+     "HTML",
+     "CSS"
+    ],
+    "explanation": "The resume demonstrates React Native and REST API usage but provides no evidence of web-specific skills like React, JavaScript, HTML, or CSS required for the frontend role. The student's academic CGPA (8.07) meets the requirement, but they lack the core technical competencies listed in the must-have category.",
+    "latency": 2.2869028999994043,
+    "cached": false
+   }
+  ],
+  "timing": {
+   "parse_s": 3.294067000002542,
+   "retrieve_s": 0.4508010999998078,
+   "rerank_s": 45.9910972000107,
+   "rerank_per_candidate_s": 2.299554860000535,
+   "wall_s": 46.464071700000204,
+   "parse_cached": true,
+   "n_candidates": 20
+  }
+ },
+ "R03": {
+  "parsed": {
+   "role_title": "Full Stack Developer",
+   "must_have_skills": [
+    "Node.js",
+    "Express",
+    "React",
+    "MongoDB"
+   ],
+   "nice_to_have_skills": [
+    "REST APIs",
+    "Authentication",
+    "Docker"
+   ],
+   "min_cgpa": 6.5,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "M.Sc IT"
+   ],
+   "max_backlogs": 0,
+   "semantic_query": "A full stack developer proficient in building backend services with Node.js and Express, creating responsive frontends using React, and managing data with MongoDB, ideally with experience in designing REST APIs, implementing login systems, and containerizing applications with Docker."
+  },
+  "filters": {
+   "min_cgpa": 6.5,
+   "max_backlogs": 0,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "M.Sc IT"
+   ]
+  },
+  "ranked": [
+   {
+    "id": "S311",
+    "score": 100,
+    "similarity": 0.7201722860336304,
+    "matched": [
+     "Node.js",
+     "Express",
+     "MongoDB",
+     "Docker"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Node.js and Express through the Job Board project, MongoDB via the Inventory Management Service, and Docker through multi-stage builds in the Release Automation Project. All must-have skills are clearly evidenced by described work.",
+    "latency": 1.953857299999072,
+    "cached": false
+   },
+   {
+    "id": "S377",
+    "score": 100,
+    "similarity": 0.6967169046401978,
+    "matched": [
+     "Node.js",
+     "Express",
+     "React",
+     "MongoDB",
+     "REST APIs",
+     "Authentication"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through the Student Marks Service (Node.js, MongoDB, REST APIs) and Restaurant Menu Website (React, Authentication). Eligibility rules are met with a CGPA of 8.57 and zero active backlogs.",
+    "latency": 2.494528799998079,
+    "cached": false
+   },
+   {
+    "id": "S125",
+    "score": 80,
+    "similarity": 0.7354389429092407,
+    "matched": [
+     "Node.js",
+     "Express",
+     "React",
+     "MongoDB",
+     "Authentication",
+     "REST APIs"
+    ],
+    "missing": [
+     "Docker"
+    ],
+    "explanation": "The student demonstrates Node.js, Express, React, MongoDB, and Authentication through specific project descriptions involving backend services, frontend components, and secure login flows. However, there is no evidence of Docker usage in any project or skill list.",
+    "latency": 2.5789197999984026,
+    "cached": false
+   },
+   {
+    "id": "S013",
+    "score": 75,
+    "similarity": 0.728350043296814,
+    "matched": [
+     "Node.js",
+     "React",
+     "MongoDB",
+     "REST APIs",
+     "Authentication"
+    ],
+    "missing": [
+     "Express",
+     "Docker"
+    ],
+    "explanation": "The student demonstrates Node.js, React, and MongoDB through specific project descriptions but lacks evidence of using Express as a framework or Docker for containerization. Authentication is implied by the middleware work described in the internship.",
+    "latency": 2.502153099998395,
+    "cached": false
+   },
+   {
+    "id": "S398",
+    "score": 65,
+    "similarity": 0.7069425582885742,
+    "matched": [
+     "Node.js",
+     "React",
+     "MongoDB",
+     "REST APIs",
+     "Authentication"
+    ],
+    "missing": [
+     "Express",
+     "Docker"
+    ],
+    "explanation": "The student demonstrates Node.js, React, and MongoDB through the Event Registration System project, and shows REST API usage via token-based authentication in the Hostel Complaint Portal. However, Express is only listed as a familiarity without specific implementation evidence, and Docker has no mention in projects or experience.",
+    "latency": 2.79180130000168,
+    "cached": false
+   },
+   {
+    "id": "S210",
+    "score": 45,
+    "similarity": 0.7327584624290466,
+    "matched": [
+     "Node.js",
+     "Express",
+     "React",
+     "MongoDB",
+     "REST APIs",
+     "Docker"
+    ],
+    "missing": [
+     "Authentication"
+    ],
+    "explanation": "The student demonstrates Node.js, Express, MongoDB, REST APIs, and Docker through the Fee Payment Tracker project, but provides no evidence of implementing login or authentication mechanisms. The resume also lacks any mention of React development.",
+    "latency": 2.550723199998174,
+    "cached": false
+   },
+   {
+    "id": "S146",
+    "score": 45,
+    "similarity": 0.7307666540145874,
+    "matched": [
+     "React",
+     "REST APIs",
+     "Authentication",
+     "Docker"
+    ],
+    "missing": [
+     "Node.js",
+     "Express",
+     "MongoDB"
+    ],
+    "explanation": "The student demonstrates React, REST APIs, Authentication, and Docker through projects using Next.js and PostgreSQL, but lacks evidence of Node.js, Express, or MongoDB usage. The resume explicitly lists PostgreSQL instead of MongoDB for data storage.",
+    "latency": 2.612225799999578,
+    "cached": false
+   },
+   {
+    "id": "S066",
+    "score": 45,
+    "similarity": 0.7290540337562561,
+    "matched": [
+     "Node.js",
+     "React",
+     "MongoDB",
+     "REST APIs"
+    ],
+    "missing": [
+     "Express",
+     "Authentication",
+     "Docker"
+    ],
+    "explanation": "The student demonstrates Node.js, React, MongoDB, and REST APIs through coursework projects but lacks evidence of using Express frameworks, implementing login/auth systems, or containerizing applications with Docker.",
+    "latency": 2.5534040999991703,
+    "cached": false
+   },
+   {
+    "id": "S204",
+    "score": 40,
+    "similarity": 0.7338076233863831,
+    "matched": [
+     "React",
+     "Docker",
+     "JavaScript (as Node.js)",
+     "TypeScript (as Express)"
+    ],
+    "missing": [
+     "Node.js",
+     "Express",
+     "MongoDB",
+     "REST APIs",
+     "Authentication"
+    ],
+    "explanation": "The student demonstrates React and Docker through building a blog platform with static generation and containerized deployment, but lacks evidence of Node.js, Express, MongoDB, or authentication implementation. The resume describes frontend-focused work (Next.js) and basic Linux skills without backend database or API integration.",
+    "latency": 2.79855889999817,
+    "cached": false
+   },
+   {
+    "id": "S466",
+    "score": 40,
+    "similarity": 0.7252626419067383,
+    "matched": [
+     "React",
+     "REST APIs"
+    ],
+    "missing": [
+     "Node.js",
+     "Express",
+     "MongoDB"
+    ],
+    "explanation": "The student demonstrates React and REST API usage through building a portfolio site and an online bookstore backend, but lacks evidence of Node.js, Express, or MongoDB implementation in the described projects. The resume does not mention any backend framework other than generic 'HTTP service' or specific database technologies.",
+    "latency": 2.6893263999991177,
+    "cached": false
+   },
+   {
+    "id": "S344",
+    "score": 40,
+    "similarity": 0.712684690952301,
+    "matched": [
+     "Node.js",
+     "Express",
+     "React",
+     "MongoDB"
+    ],
+    "missing": [
+     "React",
+     "REST APIs",
+     "Authentication",
+     "Docker"
+    ],
+    "explanation": "The student demonstrates Node.js, Express, and MongoDB through the hostel complaint portal project but lacks evidence of React usage; instead, they used JavaScript for a weather dashboard. No authentication implementation or Docker containerization is described in their projects.",
+    "latency": 2.68839780000053,
+    "cached": false
+   },
+   {
+    "id": "S284",
+    "score": 40,
+    "similarity": 0.7116045355796814,
+    "matched": [
+     "React",
+     "REST APIs"
+    ],
+    "missing": [
+     "Node.js",
+     "Express",
+     "MongoDB"
+    ],
+    "explanation": "The resume demonstrates React usage through a dashboard project but lacks any evidence of Node.js, Express, or MongoDB implementation. The student's described work focuses exclusively on frontend technologies (HTML/CSS/JS) and does not show full-stack development capabilities.",
+    "latency": 2.5145899999988615,
+    "cached": false
+   },
+   {
+    "id": "S430",
+    "score": 40,
+    "similarity": 0.7085789442062378,
+    "matched": [
+     "Node.js",
+     "MongoDB",
+     "React"
+    ],
+    "missing": [
+     "Express",
+     "REST APIs",
+     "Authentication",
+     "Docker"
+    ],
+    "explanation": "The student built a backend using Node.js and MongoDB but did not specify Express as the framework or mention REST API design, authentication mechanisms, or Docker containerization. The resume lacks evidence for these four must-have skills.",
+    "latency": 2.5777077000020654,
+    "cached": false
+   },
+   {
+    "id": "S087",
+    "score": 40,
+    "similarity": 0.7060937881469727,
+    "matched": [
+     "React",
+     "Docker"
+    ],
+    "missing": [
+     "Node.js",
+     "Express",
+     "MongoDB"
+    ],
+    "explanation": "The student demonstrates React and Docker usage through Next.js and multi-service projects, but lacks evidence of Node.js, Express, or MongoDB as they used PostgreSQL and vanilla JS/Next.js instead.",
+    "latency": 2.229789000000892,
+    "cached": false
+   },
+   {
+    "id": "S116",
+    "score": 40,
+    "similarity": 0.7014285922050476,
+    "matched": [
+     "Node.js",
+     "React",
+     "MongoDB",
+     "JavaScript"
+    ],
+    "missing": [
+     "Express",
+     "REST APIs",
+     "Authentication",
+     "Docker"
+    ],
+    "explanation": "The student demonstrates Node.js, React, and MongoDB through the Hostel Complaint Portal project but lacks evidence of Express frameworks, REST API design, authentication systems, or Docker containerization. The resume contains no described work involving these specific technologies.",
+    "latency": 2.5100921999983257,
+    "cached": false
+   },
+   {
+    "id": "S220",
+    "score": 40,
+    "similarity": 0.7005786895751953,
+    "matched": [
+     "Node.js",
+     "Express",
+     "React",
+     "MongoDB"
+    ],
+    "missing": [
+     "React"
+    ],
+    "explanation": "The student demonstrates Node.js, Express, and MongoDB through the Hostel Complaint Portal project but only mentions JavaScript for a canvas-based quiz UI, with no evidence of building a React frontend.",
+    "latency": 2.184526299999561,
+    "cached": false
+   },
+   {
+    "id": "S131",
+    "score": 40,
+    "similarity": 0.6994137167930603,
+    "matched": [
+     "React",
+     "JavaScript",
+     "REST APIs"
+    ],
+    "missing": [
+     "Node.js",
+     "Express",
+     "MongoDB"
+    ],
+    "explanation": "The student demonstrates React and REST API skills through building a storefront and complaint portal, but the resume explicitly lists Java/Spring for backend work rather than Node.js/Express. There is no evidence of MongoDB usage; all database projects described use PostgreSQL or SQL.",
+    "latency": 2.5758697999990545,
+    "cached": false
+   },
+   {
+    "id": "S091",
+    "score": 10,
+    "similarity": 0.7717247009277344,
+    "matched": [
+     "React",
+     "Authentication"
+    ],
+    "missing": [
+     "Node.js",
+     "Express",
+     "MongoDB",
+     "REST APIs",
+     "Docker"
+    ],
+    "explanation": "The student demonstrates React and Authentication through specific project descriptions but lacks evidence for Node.js, Express, MongoDB, REST APIs, or Docker. The resume mentions Docker only as a general skill without describing its use in building the required backend services.",
+    "latency": 3.0258087999973213,
+    "cached": false
+   },
+   {
+    "id": "S063",
+    "score": 10,
+    "similarity": 0.7051814794540405,
+    "matched": [
+     "React",
+     "Docker",
+     "TypeScript"
+    ],
+    "missing": [
+     "Node.js",
+     "Express",
+     "MongoDB",
+     "REST APIs",
+     "Authentication"
+    ],
+    "explanation": "The student lacks evidence of Node.js, Express, MongoDB, REST APIs, or Authentication; their projects used Python/PostgreSQL and Next.js instead. They demonstrate React and Docker but do not meet the core MERN stack requirements.",
+    "latency": 2.7411232000013115,
+    "cached": false
+   },
+   {
+    "id": "S097",
+    "score": 10,
+    "similarity": 0.7023687362670898,
+    "matched": [
+     "Docker",
+     "REST APIs"
+    ],
+    "missing": [
+     "Node.js",
+     "Express",
+     "React",
+     "MongoDB"
+    ],
+    "explanation": "The student has no evidence of using Node.js, Express, React, or MongoDB; all described projects utilized Django and PostgreSQL. The resume demonstrates Docker and REST APIs through containerization tasks and token-based endpoint design.",
+    "latency": 2.571107799998572,
+    "cached": false
+   }
+  ],
+  "timing": {
+   "parse_s": 2.8814757999971334,
+   "retrieve_s": 0.05181529999754275,
+   "rerank_s": 51.144511299986334,
+   "rerank_per_candidate_s": 2.5572255649993165,
+   "wall_s": 51.21365720000176,
+   "parse_cached": true,
+   "n_candidates": 20
+  }
+ },
+ "R05": {
+  "parsed": {
+   "role_title": "ML Engineer",
+   "must_have_skills": [
+    "Python",
+    "Machine Learning",
+    "scikit-learn"
+   ],
+   "nice_to_have_skills": [
+    "PyTorch",
+    "Deep Learning"
+   ],
+   "min_cgpa": 7,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "ECE",
+    "M.Sc IT"
+   ],
+   "max_backlogs": 0,
+   "semantic_query": "An ML engineer intern or fresher with strong Python skills and a solid grasp of machine learning fundamentals using scikit-learn, ideally capable of implementing deep learning models with PyTorch."
+  },
+  "filters": {
+   "min_cgpa": 7,
+   "max_backlogs": 0,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "ECE",
+    "M.Sc IT"
+   ]
+  },
+  "ranked": [
+   {
+    "id": "S389",
+    "score": 100,
+    "similarity": 0.7655889987945557,
+    "matched": [
+     "Python",
+     "Machine Learning",
+     "scikit-learn",
+     "PyTorch",
+     "Deep Learning"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all required skills through specific project work: training multi-layer models with backpropagation on a GPU, building preprocessing pipelines for random forest classifiers, and comparing algorithms using cross-validation. The resume explicitly lists Python, scikit-learn, PyTorch, and deep learning as used skills.",
+    "latency": 2.766427399998065,
+    "cached": false
+   },
+   {
+    "id": "S496",
+    "score": 100,
+    "similarity": 0.7330831289291382,
+    "matched": [
+     "Python",
+     "Machine Learning",
+     "scikit-learn",
+     "PyTorch",
+     "Deep Learning"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all required skills through specific project work, including Python usage for scripts and ML libraries like scikit-learn and PyTorch for model training. The resume explicitly lists these technologies as 'Strong' or 'Working knowledge' skills.",
+    "latency": 2.494105600002513,
+    "cached": false
+   },
+   {
+    "id": "S106",
+    "score": 100,
+    "similarity": 0.7198504209518433,
+    "matched": [
+     "Python",
+     "Machine Learning",
+     "scikit-learn",
+     "PyTorch",
+     "Deep Learning"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all required skills through specific project descriptions involving Python, scikit-learn, and PyTorch-based deep learning models. There is no evidence of missing must-have skills as every requirement is clearly backed by the resume content.",
+    "latency": 2.4594534000025305,
+    "cached": false
+   },
+   {
+    "id": "S360",
+    "score": 100,
+    "similarity": 0.713667631149292,
+    "matched": [
+     "Python",
+     "Machine Learning",
+     "scikit-learn",
+     "PyTorch",
+     "Deep Learning"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all required skills through specific project work: using Python for the House Price Estimator, applying machine learning concepts with scikit-learn on a medical dataset, and utilizing PyTorch for tensor operations in the sentiment classifier. The resume also shows evidence of deep learning via GPU usage and mixed precision training.",
+    "latency": 2.678284599998733,
+    "cached": false
+   },
+   {
+    "id": "S476",
+    "score": 100,
+    "similarity": 0.713614821434021,
+    "matched": [
+     "Python",
+     "Machine Learning",
+     "scikit-learn",
+     "PyTorch",
+     "Deep Learning"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all required skills through specific project work: using Python for backend services, implementing ML models with scikit-learn in the Loan Default Predictor project, and building deep learning architectures with PyTorch for digit recognition.",
+    "latency": 2.244695400000637,
+    "cached": false
+   },
+   {
+    "id": "S274",
+    "score": 100,
+    "similarity": 0.7108528017997742,
+    "matched": [
+     "Python",
+     "Machine Learning",
+     "scikit-learn"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Python, Machine Learning, and scikit-learn through building a recommendation feature that learns from user behavior using notebooks for data analysis. No must-have skills are missing.",
+    "latency": 1.8714829999989888,
+    "cached": false
+   },
+   {
+    "id": "S254",
+    "score": 100,
+    "similarity": 0.7047110795974731,
+    "matched": [
+     "Python",
+     "Machine Learning",
+     "scikit-learn"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Python, Machine Learning, and scikit-learn through the Quiz Application project where they trained multi-layer models on a GPU and tuned hyperparameters. The resume explicitly lists these skills and describes work involving model training, data splitting, and performance metrics (precision/recall), satisfying all must-have requirements.",
+    "latency": 2.4472896000006585,
+    "cached": false
+   },
+   {
+    "id": "S442",
+    "score": 100,
+    "similarity": 0.7016427516937256,
+    "matched": [
+     "Python",
+     "Machine Learning",
+     "scikit-learn",
+     "PyTorch",
+     "Deep Learning"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all required skills through specific projects: Python is used in the Fee Payment Tracker; Machine Learning and scikit-learn are explicitly listed as working knowledge and applied in the Sales Performance Review. PyTorch and Deep Learning are demonstrated via the Sentiment Classifier project where she defined model classes and optimizers in a tensor library.",
+    "latency": 2.8383702999999514,
+    "cached": false
+   },
+   {
+    "id": "S444",
+    "score": 100,
+    "similarity": 0.698910117149353,
+    "matched": [
+     "Python",
+     "Machine Learning",
+     "scikit-learn"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Python, Machine Learning, and scikit-learn through the AI Research Internship involving mixed precision training and classical model pipelines, as well as projects using hyper-parameter tuning and regularization. All must-have skills are clearly evidenced by described work; no eligibility rules were violated.",
+    "latency": 2.4232092999991437,
+    "cached": false
+   },
+   {
+    "id": "S343",
+    "score": 100,
+    "similarity": 0.6949317455291748,
+    "matched": [
+     "Python",
+     "Machine Learning",
+     "scikit-learn",
+     "PyTorch",
+     "Deep Learning"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all required skills through specific projects: using Python for the Student Marks Service, applying scikit-learn for hyperparameter tuning in the Sentiment Classifier, and utilizing PyTorch for custom training loops in the AI Research Internship. Academic eligibility is met with an 8.62 CGPA and zero backlogs.",
+    "latency": 2.796675100002176,
+    "cached": false
+   },
+   {
+    "id": "S265",
+    "score": 100,
+    "similarity": 0.6929104328155518,
+    "matched": [
+     "Python",
+     "Machine Learning",
+     "scikit-learn (implied by 'learns from labelled examples' and 'regularisation' context)",
+     "PyTorch",
+     "Deep Learning"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all required skills through specific project work involving labeled data, regularization, and PyTorch tensor debugging. The resume shows no evidence of scikit-learn usage explicitly, but the description of building a spam filter from labeled examples and applying regularization strongly implies ML fundamentals.",
+    "latency": 2.9100033000031544,
+    "cached": false
+   },
+   {
+    "id": "S202",
+    "score": 100,
+    "similarity": 0.6914050579071045,
+    "matched": [
+     "Python",
+     "Machine Learning",
+     "scikit-learn",
+     "PyTorch",
+     "Deep Learning"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through specific projects: a House Price Estimator using scikit-learn's random forest, and a Resume Screening Assistant built with PyTorch. Their training at Orbit Digital further confirms practical experience with preprocessing pipelines and ML classifiers.",
+    "latency": 2.498374099999637,
+    "cached": false
+   },
+   {
+    "id": "S335",
+    "score": 100,
+    "similarity": 0.6902793645858765,
+    "matched": [
+     "Python",
+     "Machine Learning",
+     "scikit-learn",
+     "PyTorch",
+     "Deep Learning"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all required skills through specific project work: using Python for unit-tested code, implementing ML models via scikit-learn in a House Price Estimator, and applying Deep Learning with PyTorch to reproduce an architecture. The resume explicitly lists these technologies alongside evidence of their application in coursework and weekend projects.",
+    "latency": 2.756922799999302,
+    "cached": false
+   },
+   {
+    "id": "S388",
+    "score": 100,
+    "similarity": 0.6844280958175659,
+    "matched": [
+     "Python",
+     "Machine Learning",
+     "scikit-learn"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Python, Machine Learning, and scikit-learn through the described work on sentiment classification and document summarization projects. No must-have skills are missing.",
+    "latency": 2.041673899999296,
+    "cached": false
+   },
+   {
+    "id": "S424",
+    "score": 85,
+    "similarity": 0.6898277997970581,
+    "matched": [
+     "Python",
+     "Machine Learning",
+     "scikit-learn"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Python, Machine Learning, and scikit-learn through the 'Resume Screening Assistant' project which explicitly mentions NLP, TensorFlow (a deep learning framework), and building a recommendation feature that learns from user behavior. The resume shows no evidence of using scikit-learn specifically, but the described work with TensorFlow and intent-based chatbots clearly fulf",
+    "latency": 3.000804100000096,
+    "cached": false
+   },
+   {
+    "id": "S215",
+    "score": 45,
+    "similarity": 0.6872293949127197,
+    "matched": [
+     "Python",
+     "Machine Learning",
+     "Deep Learning",
+     "C++",
+     "NLP",
+     "MQTT"
+    ],
+    "missing": [
+     "scikit-learn",
+     "PyTorch"
+    ],
+    "explanation": "The student demonstrates Python, Machine Learning, and Deep Learning through projects involving stacked neural networks and NLP tasks, but lacks evidence of using scikit-learn or PyTorch specifically. The resume shows no described work requiring these specific tools.",
+    "latency": 2.5160116000006383,
+    "cached": false
+   },
+   {
+    "id": "S420",
+    "score": 45,
+    "similarity": 0.6839917302131653,
+    "matched": [
+     "Python",
+     "Machine Learning"
+    ],
+    "missing": [
+     "scikit-learn"
+    ],
+    "explanation": "The resume lists Python and general machine learning concepts but provides no specific project evidence demonstrating scikit-learn usage, which is a must-have skill. The student's internship involved only observation and documentation rather than hands-on coding or model building.",
+    "latency": 2.1801118000003044,
+    "cached": false
+   },
+   {
+    "id": "S164",
+    "score": 40,
+    "similarity": 0.6877004504203796,
+    "matched": [
+     "Python",
+     "Machine Learning"
+    ],
+    "missing": [
+     "scikit-learn",
+     "PyTorch",
+     "Deep Learning"
+    ],
+    "explanation": "The student demonstrates Python and general machine learning concepts through data analysis projects, but lacks specific evidence of using scikit-learn or PyTorch. The resume shows no described work involving deep learning models.",
+    "latency": 2.401622100001987,
+    "cached": false
+   },
+   {
+    "id": "S288",
+    "score": 40,
+    "similarity": 0.6868823766708374,
+    "matched": [
+     "Python",
+     "Machine Learning (implied by data analytics projects)",
+     "scikit-learn (not demonstrated)"
+    ],
+    "missing": [
+     "Machine Learning",
+     "scikit-learn",
+     "PyTorch",
+     "Deep Learning"
+    ],
+    "explanation": "The student demonstrates Python proficiency through backend and data pipeline projects but lacks any described work involving machine learning algorithms or scikit-learn. No evidence of deep learning or PyTorch exists in the resume.",
+    "latency": 2.5531528999999864,
+    "cached": false
+   },
+   {
+    "id": "S224",
+    "score": 10,
+    "similarity": 0.6985395550727844,
+    "matched": [
+     "Python",
+     "Machine Learning (implied by 'classic algorithms' mention)",
+     "scikit-learn (implied by 'classic algorithms' mention)"
+    ],
+    "missing": [
+     "Deep learning with PyTorch",
+     "Machine Learning (demonstrated only via generic algorithm names, not a specific ML project or model training)",
+     "scikit-learn (no evidence of usage)"
+    ],
+    "explanation": "The student lists Python and mentions 'classic algorithms' but provides no concrete project involving machine learning models, scikit-learn, or PyTorch. The internship focused on database optimization rather than data science tasks.",
+    "latency": 3.085233000001608,
+    "cached": false
+   }
+  ],
+  "timing": {
+   "parse_s": 2.604763899998943,
+   "retrieve_s": 0.10634949999803212,
+   "rerank_s": 50.963903300009406,
+   "rerank_per_candidate_s": 2.5481951650004704,
+   "wall_s": 51.08769659999962,
+   "parse_cached": true,
+   "n_candidates": 20
+  }
+ },
+ "R06": {
+  "parsed": {
+   "role_title": "Data Engineer",
+   "must_have_skills": [
+    "SQL",
+    "ETL"
+   ],
+   "nice_to_have_skills": [
+    "Apache Spark",
+    "Airflow",
+    "Kafka",
+    "AWS"
+   ],
+   "min_cgpa": 7,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "M.Sc IT"
+   ],
+   "max_backlogs": 0,
+   "semantic_query": "A data engineer capable of moving and preparing large datasets using SQL and building ETL pipelines, with hands-on experience in Apache Spark. Ideally, the candidate should also have exposure to Airflow, Kafka, and AWS cloud services."
+  },
+  "filters": {
+   "min_cgpa": 7,
+   "max_backlogs": 0,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "M.Sc IT"
+   ]
+  },
+  "ranked": [
+   {
+    "id": "S143",
+    "score": 100,
+    "similarity": 0.7496721744537354,
+    "matched": [
+     "SQL",
+     "ETL",
+     "Apache Spark",
+     "AWS"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates SQL, ETL, Apache Spark, and AWS through specific project details involving partitioned data frames, columnar files, and cloud-hosted applications. No must-have skills are missing.",
+    "latency": 2.07599990000017,
+    "cached": false
+   },
+   {
+    "id": "S443",
+    "score": 100,
+    "similarity": 0.7216079235076904,
+    "matched": [
+     "SQL",
+     "ETL",
+     "Apache Spark",
+     "Airflow",
+     "Kafka"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills (SQL, ETL) and every nice-to-have skill through specific project descriptions involving joins/aggregations, Airflow/Kafka/Spark pipelines, and data transformation workflows.",
+    "latency": 2.305383399998391,
+    "cached": false
+   },
+   {
+    "id": "S499",
+    "score": 100,
+    "similarity": 0.6982914805412292,
+    "matched": [
+     "SQL",
+     "ETL",
+     "Apache Spark",
+     "Airflow"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills (SQL, ETL) and nice-to-haves (Spark, Airflow) through specific project descriptions involving data extraction, transformation, and loading. The resume meets all eligibility criteria with a CGPA of 7.69 and zero backlogs.",
+    "latency": 2.5094668999990972,
+    "cached": false
+   },
+   {
+    "id": "S453",
+    "score": 100,
+    "similarity": 0.6781263947486877,
+    "matched": [
+     "SQL",
+     "ETL",
+     "Apache Spark",
+     "AWS"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates SQL through window functions and CTEs in a hospital system project, and ETL via incremental data movement using change timestamps. She also shows Apache Spark usage for distributed dataset processing and AWS deployment of a three-tier application.",
+    "latency": 2.273960899998201,
+    "cached": false
+   },
+   {
+    "id": "S010",
+    "score": 100,
+    "similarity": 0.6776837706565857,
+    "matched": [
+     "SQL",
+     "ETL",
+     "Apache Spark",
+     "Airflow"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates SQL, ETL, Apache Spark, and Airflow through specific project descriptions involving data pipelines, window functions, and distributed dataset processing. All must-have skills are clearly evidenced by the described work.",
+    "latency": 2.1977221999986796,
+    "cached": false
+   },
+   {
+    "id": "S303",
+    "score": 100,
+    "similarity": 0.6734558343887329,
+    "matched": [
+     "SQL",
+     "ETL"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates SQL through writing joins, subqueries, and aggregations in a project, and ETL skills via row-count reconciliation and validation checks in an internship. All must-have skills are clearly demonstrated with no eligibility violations.",
+    "latency": 1.9419328000003588,
+    "cached": false
+   },
+   {
+    "id": "S223",
+    "score": 100,
+    "similarity": 0.6677601337432861,
+    "matched": [
+     "SQL",
+     "ETL"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrated SQL through writing joins, subqueries, and aggregations in the internship role, and showed ETL capabilities by optimizing slow reports via indexing and rewriting nested lookups. All must-have skills are clearly evidenced; no eligibility rules were violated.",
+    "latency": 2.1028791000026104,
+    "cached": false
+   },
+   {
+    "id": "S277",
+    "score": 100,
+    "similarity": 0.6663393974304199,
+    "matched": [
+     "SQL",
+     "ETL"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates SQL proficiency by writing update/delete statements and pulling grouped data, and shows ETL capabilities through cleaning duplicates and fixing inconsistent records in a database. No must-have skills are missing.",
+    "latency": 1.8334982999986096,
+    "cached": false
+   },
+   {
+    "id": "S097",
+    "score": 100,
+    "similarity": 0.6653671264648438,
+    "matched": [
+     "SQL",
+     "ETL"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates SQL through normalizing tables and cleaning records in their projects, and shows ETL capabilities by cleaning duplicates and fixing inconsistent data records. All must-have skills are clearly demonstrated with no missing requirements.",
+    "latency": 2.008463699999993,
+    "cached": false
+   },
+   {
+    "id": "S231",
+    "score": 100,
+    "similarity": 0.6646219491958618,
+    "matched": [
+     "SQL",
+     "ETL",
+     "Apache Spark",
+     "Airflow"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates SQL through database cleanup tasks and ETL via the distributed job rewrite at Vertex Infosoft. They also show experience with Apache Spark and Airflow in both their internship and academic projects.",
+    "latency": 2.0993177000018477,
+    "cached": false
+   },
+   {
+    "id": "S237",
+    "score": 90,
+    "similarity": 0.6743618845939636,
+    "matched": [
+     "SQL",
+     "ETL",
+     "Apache Spark"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates SQL through writing stored procedures, joins, and aggregations in coursework projects; ETL via building jobs to clean and reshape raw files during an internship; and Apache Spark by tuning shuffles and partitions on a cluster. No must-have skills are missing.",
+    "latency": 2.1489709000015864,
+    "cached": false
+   },
+   {
+    "id": "S094",
+    "score": 85,
+    "similarity": 0.660110592842102,
+    "matched": [
+     "SQL",
+     "ETL",
+     "Apache Spark"
+    ],
+    "missing": [
+     "Airflow",
+     "Kafka",
+     "AWS"
+    ],
+    "explanation": "The student demonstrates SQL and ETL skills through designing normalized tables, writing joins/aggregations, and moving data incrementally using change timestamps. They show Apache Spark exposure via a unified engine for batch/streaming analytics but lack evidence of Airflow, Kafka, or AWS usage.",
+    "latency": 2.3641644999988785,
+    "cached": false
+   },
+   {
+    "id": "S023",
+    "score": 65,
+    "similarity": 0.6980244517326355,
+    "matched": [
+     "SQL",
+     "ETL",
+     "AWS"
+    ],
+    "missing": [
+     "Apache Spark",
+     "Airflow",
+     "Kafka"
+    ],
+    "explanation": "The student demonstrates SQL and ETL capabilities through designing normalized tables with constraints in PostgreSQL, but lacks evidence of Apache Spark, Airflow, or Kafka. AWS exposure is shown via using object storage and CDN for file serving.",
+    "latency": 2.203439899996738,
+    "cached": false
+   },
+   {
+    "id": "S145",
+    "score": 65,
+    "similarity": 0.6898702383041382,
+    "matched": [
+     "SQL",
+     "ETL",
+     "Apache Spark"
+    ],
+    "missing": [
+     "Airflow",
+     "Kafka",
+     "AWS"
+    ],
+    "explanation": "The student demonstrates SQL, ETL, and Apache Spark through a project involving distributed data processing and nightly reporting. However, there is no evidence of experience with Airflow, Kafka, or AWS.",
+    "latency": 2.3683643999975175,
+    "cached": false
+   },
+   {
+    "id": "S071",
+    "score": 60,
+    "similarity": 0.6959531307220459,
+    "matched": [
+     "SQL",
+     "ETL (implied by data reconciliation and report optimization)",
+     "Apache Spark",
+     "AWS",
+     "CI/CD",
+     "Docker",
+     "Linux",
+     "Java",
+     "Data Visualization",
+     "Excel",
+     "Power BI"
+    ],
+    "missing": [
+     "Airflow",
+     "Kafka"
+    ],
+    "explanation": "The student demonstrates SQL proficiency through window functions and CTEs, and AWS usage via object storage and CDN serving. While the internship involved build pipelines, there is no evidence of ETL job construction or experience with Airflow/Kafka.",
+    "latency": 3.083671600001253,
+    "cached": false
+   },
+   {
+    "id": "S478",
+    "score": 40,
+    "similarity": 0.7000448703765869,
+    "matched": [
+     "Apache Kafka",
+     "SQL (via PostgreSQL)"
+    ],
+    "missing": [
+     "ETL"
+    ],
+    "explanation": "The student demonstrates SQL through database backups and Apache Kafka by replaying log messages, but lacks evidence of building ETL jobs or using Spark/Airflow. The resume does not describe any work involving data extraction, transformation, or loading pipelines at scale.",
+    "latency": 2.2985837000014726,
+    "cached": false
+   },
+   {
+    "id": "S286",
+    "score": 40,
+    "similarity": 0.662187933921814,
+    "matched": [
+     "SQL",
+     "AWS"
+    ],
+    "missing": [
+     "ETL",
+     "Apache Spark",
+     "Airflow",
+     "Kafka"
+    ],
+    "explanation": "The student demonstrates basic SQL usage and AWS exposure through a coursework project but lacks evidence of building ETL jobs or using Apache Spark, Airflow, or Kafka. The internship focused on business analysis rather than data engineering tasks.",
+    "latency": 2.4386120999988634,
+    "cached": false
+   },
+   {
+    "id": "S201",
+    "score": 40,
+    "similarity": 0.6589104533195496,
+    "matched": [
+     "SQL",
+     "AWS"
+    ],
+    "missing": [
+     "ETL",
+     "Apache Spark",
+     "Airflow",
+     "Kafka"
+    ],
+    "explanation": "The student demonstrates SQL usage through the Online Bookstore Backend project and AWS exposure via file storage, but provides no evidence of building ETL jobs or touching Apache Spark. The resume lacks any described work involving Airflow, Kafka, or data pipeline construction.",
+    "latency": 2.5363555000003544,
+    "cached": false
+   },
+   {
+    "id": "S210",
+    "score": 9,
+    "similarity": 0.6610358953475952,
+    "matched": [
+     "AWS",
+     "Docker",
+     "CI/CD"
+    ],
+    "missing": [
+     "SQL",
+     "ETL",
+     "Apache Spark",
+     "Airflow",
+     "Kafka"
+    ],
+    "explanation": "The resume demonstrates AWS and Docker usage through projects but lacks any evidence of SQL, ETL, or Apache Spark work. The internship involved server administration without mentioning data processing pipelines.",
+    "latency": 2.531405600002472,
+    "cached": false
+   },
+   {
+    "id": "S311",
+    "score": 9,
+    "similarity": 0.6577552556991577,
+    "matched": [],
+    "missing": [
+     "SQL",
+     "ETL"
+    ],
+    "explanation": "The resume demonstrates no SQL usage or ETL job creation; projects involve only NoSQL databases (MongoDB) and web frameworks without data pipeline logic. The student lacks evidence for any must-have skills required by the role.",
+    "latency": 1.7732294000015827,
+    "cached": false
+   }
+  ],
+  "timing": {
+   "parse_s": 2.7785266999999294,
+   "retrieve_s": 0.0449759000002814,
+   "rerank_s": 45.095422499998676,
+   "rerank_per_candidate_s": 2.254771124999934,
+   "wall_s": 45.15761829999974,
+   "parse_cached": true,
+   "n_candidates": 20
+  }
+ },
+ "R08": {
+  "parsed": {
+   "role_title": "QA Engineer",
+   "must_have_skills": [
+    "Manual Testing",
+    "Selenium",
+    "API Testing"
+   ],
+   "nice_to_have_skills": [
+    "Python",
+    "Java"
+   ],
+   "min_cgpa": 6.0,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "ECE",
+    "M.Sc IT"
+   ],
+   "max_backlogs": 0,
+   "semantic_query": "A QA engineer proficient in manual testing and capable of writing automation scripts using Selenium, with experience in API testing via Postman. Ideally, the candidate should have knowledge of Python or Java."
+  },
+  "filters": {
+   "min_cgpa": 6.0,
+   "max_backlogs": 0,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "ECE",
+    "M.Sc IT"
+   ]
+  },
+  "ranked": [
+   {
+    "id": "S046",
+    "score": 100,
+    "similarity": 0.6913785934448242,
+    "matched": [
+     "Manual Testing",
+     "Selenium",
+     "API Testing"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through specific project work: manual testing via form verification across browsers, Selenium for page-object based automation scripts, and API testing with assertions in the Sales Performance Review project. No eligibility rules are violated as the CGPA (7.23) exceeds the cutoff and there are no backlogs.",
+    "latency": 2.634269199999835,
+    "cached": false
+   },
+   {
+    "id": "S489",
+    "score": 100,
+    "similarity": 0.6855407953262329,
+    "matched": [
+     "Manual Testing",
+     "Selenium",
+     "API Testing"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through specific project descriptions involving manual defect logging, browser automation with Selenium, and API payload verification. The resume shows no evidence of Python or Java usage, but these are listed as nice-to-haves rather than requirements.",
+    "latency": 2.2284018999998807,
+    "cached": false
+   },
+   {
+    "id": "S145",
+    "score": 100,
+    "similarity": 0.6830392479896545,
+    "matched": [
+     "Manual Testing",
+     "Selenium",
+     "API Testing",
+     "Python"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all required skills through specific project work: manual testing and Selenium automation for a login flow, and API testing for validating booking portal payloads. Python proficiency is evidenced by building an ETL pipeline using Spark and SQL.",
+    "latency": 2.254732100002002,
+    "cached": false
+   },
+   {
+    "id": "S483",
+    "score": 100,
+    "similarity": 0.6795660257339478,
+    "matched": [
+     "Manual Testing",
+     "Selenium",
+     "API Testing"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through specific project work: manual testing via step-by-step scenarios on an e-commerce site, Selenium for browser automation in a banking demo, and API testing by comparing service responses against contracts. The resume shows no evidence of Python or Java usage, but these are listed as nice-to-haves rather than requirements.",
+    "latency": 2.4501352999977826,
+    "cached": false
+   },
+   {
+    "id": "S358",
+    "score": 100,
+    "similarity": 0.6702272891998291,
+    "matched": [
+     "Manual Testing",
+     "Selenium",
+     "API Testing"
+    ],
+    "missing": [],
+    "explanation": "The resume demonstrates all three must-have skills through specific project descriptions involving browser automation, form verification, and endpoint load testing. No eligibility rules are violated as the CGPA (7.72) exceeds the cutoff and there are zero backlogs.",
+    "latency": 2.1778515000005427,
+    "cached": false
+   },
+   {
+    "id": "S096",
+    "score": 100,
+    "similarity": 0.6691098213195801,
+    "matched": [
+     "Manual Testing",
+     "Selenium",
+     "API Testing"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through specific project descriptions involving manual testing, Selenium-based automation, and API endpoint analysis. The internship experience further confirms practical application of these testing methodologies.",
+    "latency": 1.8423067000003357,
+    "cached": false
+   },
+   {
+    "id": "S354",
+    "score": 100,
+    "similarity": 0.6685806512832642,
+    "matched": [
+     "Manual Testing",
+     "Selenium",
+     "API Testing"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through the Release Automation Project (manual testing, Selenium, API requests) and Quality Review project (unit/integration checks). No eligibility rules are violated as the CGPA is 8.20 and there are zero backlogs.",
+    "latency": 2.125351300001057,
+    "cached": false
+   },
+   {
+    "id": "S166",
+    "score": 100,
+    "similarity": 0.6655760407447815,
+    "matched": [
+     "Manual Testing",
+     "Selenium",
+     "API Testing"
+    ],
+    "missing": [],
+    "explanation": "The resume demonstrates all must-have skills through specific projects: manual testing via 'manual qqa' and API validation in the release automation project; Selenium usage for regression suites with page-object patterns; and Postman usage to check invalid tokens and payload mismatches. The student also meets eligibility criteria with a CGPA of 8.08 and zero backlogs.",
+    "latency": 2.6784584000015457,
+    "cached": false
+   },
+   {
+    "id": "S137",
+    "score": 100,
+    "similarity": 0.6502795219421387,
+    "matched": [
+     "Manual Testing",
+     "Selenium",
+     "API Testing"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through specific project work: manual testing of a registration form, Selenium automation for login/checkout flows, and API response comparison in the Home Lab Server project. The resume also shows strong alignment with eligibility rules (7.26 CGPA, 0 backlogs, IT branch).",
+    "latency": 2.4512614000013855,
+    "cached": false
+   },
+   {
+    "id": "S309",
+    "score": 100,
+    "similarity": 0.6489959955215454,
+    "matched": [
+     "Manual Testing",
+     "Selenium",
+     "API Testing",
+     "Java",
+     "Python"
+    ],
+    "missing": [],
+    "explanation": "The resume demonstrates all must-have skills through specific projects: manual testing and API validation in the Student Result Analysis project, Selenium automation for dynamic waits in the Bug Hunt project, and Java usage across multiple built applications. The student also lists Python as a skill, though no specific project evidence is provided for it.",
+    "latency": 2.4656107000009797,
+    "cached": false
+   },
+   {
+    "id": "S093",
+    "score": 100,
+    "similarity": 0.6487675309181213,
+    "matched": [
+     "Manual Testing",
+     "Selenium",
+     "API Testing",
+     "Java"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through specific project work: manual testing via the 'Bug Hunt' project, Selenium automation via driver-based scripts in the internship, and API testing via response time measurement in a tutorial. Java proficiency is confirmed by building an object-oriented banking system.",
+    "latency": 2.5023608000010427,
+    "cached": false
+   },
+   {
+    "id": "S158",
+    "score": 100,
+    "similarity": 0.6471746563911438,
+    "matched": [
+     "Manual Testing",
+     "Selenium",
+     "API Testing",
+     "Java"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through specific project work: manual testing and regression checks in the Event Registration System, Selenium usage for automated browser tests with parallel execution, and API testing via status code verification. The internship involved adding unit/integration checks with assertions, further confirming automation capabilities.",
+    "latency": 2.457133600000816,
+    "cached": false
+   },
+   {
+    "id": "S268",
+    "score": 100,
+    "similarity": 0.6377614140510559,
+    "matched": [
+     "Manual Testing",
+     "Selenium",
+     "API Testing"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through a project involving a regression suite for a banking demo that utilized manual checks, Selenium for automated browser testing, and API validation. The resume confirms eligibility with a CGPA of 7.47 (above the 6.0 cutoff) and zero active backlogs.",
+    "latency": 2.2307706999999937,
+    "cached": false
+   },
+   {
+    "id": "S282",
+    "score": 100,
+    "similarity": 0.6375561952590942,
+    "matched": [
+     "Manual Testing",
+     "Selenium",
+     "API Testing",
+     "Agile/Scrum",
+     "JIRA",
+     "Requirements Gathering",
+     "Stakeholder Communication"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through the 'Bug Hunt' project (manual testing, Selenium scripts) and 'Library System' project (API testing). Eligibility criteria are met with a CGPA of 7.48 and zero backlogs in an ICT branch.",
+    "latency": 2.6317982000000484,
+    "cached": false
+   },
+   {
+    "id": "S400",
+    "score": 85,
+    "similarity": 0.6304697394371033,
+    "matched": [
+     "Manual Testing",
+     "Selenium",
+     "API Testing",
+     "Docker"
+    ],
+    "missing": [
+     "Python",
+     "Java"
+    ],
+    "explanation": "The student demonstrates manual testing, API testing with Postman-like payload verification, and Docker usage through internship and project descriptions. However, there is no evidence of Python or Java skills; the listed tech stack contains typos ('api testinng', 'tyescript') but no functional proof of backend scripting languages.",
+    "latency": 2.750727499998902,
+    "cached": false
+   },
+   {
+    "id": "S116",
+    "score": 60,
+    "similarity": 0.6355915069580078,
+    "matched": [
+     "Manual Testing",
+     "Selenium",
+     "API Testing",
+     "Test Automation"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Manual Testing, API Testing, and Test Automation through coursework projects; however, there is no evidence of Selenium usage despite it being listed in skills.",
+    "latency": 1.7526789000003191,
+    "cached": false
+   },
+   {
+    "id": "S212",
+    "score": 40,
+    "similarity": 0.6337430477142334,
+    "matched": [
+     "REST APIs",
+     "Java"
+    ],
+    "missing": [
+     "Manual Testing",
+     "Selenium"
+    ],
+    "explanation": "The resume demonstrates Java and REST API skills through backend development and mobile app work, but lacks evidence of manual testing or Selenium automation. The student has no described projects involving test execution, bug reporting, or script-based automation.",
+    "latency": 2.179706900002202,
+    "cached": false
+   },
+   {
+    "id": "S052",
+    "score": 10,
+    "similarity": 0.6343976259231567,
+    "matched": [
+     "REST APIs",
+     "JavaScript"
+    ],
+    "missing": [
+     "Manual Testing",
+     "Selenium",
+     "API Testing",
+     "Python",
+     "Java"
+    ],
+    "explanation": "The resume demonstrates REST API usage through coursework projects but lacks any evidence of manual testing, Selenium automation, or dedicated API testing. Additionally, the student has no demonstrated proficiency in Python or Java.",
+    "latency": 2.4643977000014274,
+    "cached": false
+   },
+   {
+    "id": "S066",
+    "score": 9,
+    "similarity": 0.6326767206192017,
+    "matched": [],
+    "missing": [
+     "Manual Testing",
+     "Selenium",
+     "API Testing"
+    ],
+    "explanation": "The resume lists JavaScript and Node.js but provides no evidence of manual testing, Selenium automation, or API testing; the described projects focus on frontend UI and basic REST endpoints without demonstrating these specific QA skills. Additionally, the student's branch (ICT) is not in the required list of CSE/IT/ECE/M.Sc IT.",
+    "latency": 2.539244999999937,
+    "cached": false
+   },
+   {
+    "id": "S208",
+    "score": 9,
+    "similarity": 0.6321351528167725,
+    "matched": [
+     "Python",
+     "JavaScript"
+    ],
+    "missing": [
+     "Manual Testing",
+     "Selenium",
+     "API Testing"
+    ],
+    "explanation": "The resume lists Python as a working skill but provides no evidence of testing, automation, or API work in the described projects. The internship is explicitly labeled as a weekend tutorial project with no mention of manual testing, Selenium, or Postman usage.",
+    "latency": 2.463198499997816,
+    "cached": false
+   }
+  ],
+  "timing": {
+   "parse_s": 2.5723573000032047,
+   "retrieve_s": 0.03670840000268072,
+   "rerank_s": 47.28039630000785,
+   "rerank_per_candidate_s": 2.3640198150003924,
+   "wall_s": 47.43139609999707,
+   "parse_cached": true,
+   "n_candidates": 20
+  }
+ },
+ "R10": {
+  "parsed": {
+   "role_title": "Security Analyst Trainee",
+   "must_have_skills": [
+    "Network Security",
+    "Linux Administration"
+   ],
+   "nice_to_have_skills": [
+    "Penetration Testing",
+    "Cryptography",
+    "Python Scripting"
+   ],
+   "min_cgpa": 7,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "ECE"
+   ],
+   "max_backlogs": 0,
+   "semantic_query": "A trainee security analyst with a solid grasp of network security principles and Linux administration, who has practical experience in penetration testing through CTFs, labs, or bug bounties, and ideally possesses knowledge of cryptography and Python scripting."
+  },
+  "filters": {
+   "min_cgpa": 7,
+   "max_backlogs": 0,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "ECE"
+   ]
+  },
+  "ranked": [
+   {
+    "id": "S002",
+    "score": 100,
+    "similarity": 0.7001975774765015,
+    "matched": [
+     "Network Security",
+     "Linux Administration",
+     "Penetration Testing"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through a home lab server project involving SSH, firewall configuration, and Linux permissions, plus an internship scanning servers for vulnerabilities. No must-have skills are missing as the resume provides concrete evidence for each requirement.",
+    "latency": 2.379283000002033,
+    "cached": false
+   },
+   {
+    "id": "S139",
+    "score": 100,
+    "similarity": 0.6877806782722473,
+    "matched": [
+     "Network Security",
+     "Linux Administration",
+     "Penetration Testing",
+     "Cryptography",
+     "Python Scripting"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all required and desirable skills through a network hardening project involving VPNs and ACLs, and an internship where they mapped findings to weakness lists. The resume explicitly confirms eligibility with a CGPA of 8.69 and zero active backlogs.",
+    "latency": 2.305604699999094,
+    "cached": false
+   },
+   {
+    "id": "S275",
+    "score": 100,
+    "similarity": 0.6820681691169739,
+    "matched": [
+     "Network Security",
+     "Linux Administration",
+     "Penetration Testing",
+     "Cryptography",
+     "Python Scripting"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all required skills through specific work: Linux and network security via the internship patch list, penetration testing via CTF writeups and incident response drills, and Python scripting via the Student Marks Service project. The resume meets all eligibility criteria with a CGPA of 8.40 and zero backlogs.",
+    "latency": 2.554066499997134,
+    "cached": false
+   },
+   {
+    "id": "S041",
+    "score": 100,
+    "similarity": 0.6820496916770935,
+    "matched": [
+     "Cryptography",
+     "Linux Administration",
+     "Network Security",
+     "Penetration Testing"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through the internship where they scanned servers and web apps, and via CTF projects involving digital signatures and vulnerability simulation. No required skills are missing.",
+    "latency": 1.8805501999995613,
+    "cached": false
+   },
+   {
+    "id": "S354",
+    "score": 100,
+    "similarity": 0.6720975637435913,
+    "matched": [
+     "Network Security",
+     "Linux Administration",
+     "Cryptography",
+     "Penetration Testing",
+     "Python Scripting (implied via CTF writeups and cipher implementation)",
+     "Test Automation"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through specific evidence: Linux administration is shown by managing a headless server, network security and penetration testing are proven via CTF writeups involving log tracing and vulnerability chaining, and cryptography is demonstrated by implementing substitution and stream ciphers. Although Python scripting is not explicitly listed in the Skills/",
+    "latency": 3.165477999998984,
+    "cached": false
+   },
+   {
+    "id": "S136",
+    "score": 100,
+    "similarity": 0.6481108665466309,
+    "matched": [
+     "Network Security",
+     "Linux Administration",
+     "Python Scripting",
+     "Cryptography"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through specific evidence: Linux administration is shown by diagnosing processes with top/ps/strace on a home lab server, and network security is proven via an incident response drill involving log tracing and address blocking. The nice-to-have skills are also clearly demonstrated through the same projects and a relevant internship where they set up a ",
+    "latency": 3.1936564999996335,
+    "cached": false
+   },
+   {
+    "id": "S397",
+    "score": 100,
+    "similarity": 0.6477394700050354,
+    "matched": [
+     "Linux Administration",
+     "Penetration Testing",
+     "Python Scripting",
+     "Network Security"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all required skills through specific project evidence: dual-booting an OS and using command-line tools proves Linux administration, while chaining vulnerabilities in a CTF event confirms penetration testing. Her use of Python for scripting and coursework involving access control lists validates the network security and scripting requirements.",
+    "latency": 2.353652099998726,
+    "cached": false
+   },
+   {
+    "id": "S006",
+    "score": 100,
+    "similarity": 0.6369589567184448,
+    "matched": [
+     "Network Security",
+     "Linux Administration",
+     "Penetration Testing",
+     "Cryptography",
+     "Python Scripting"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all required and desirable skills through specific projects, including hardening Linux routers, participating in CTFs, and building a program for digital signatures. Eligibility criteria are met with a CGPA of 9.38 and no backlogs.",
+    "latency": 2.540432800000417,
+    "cached": false
+   },
+   {
+    "id": "S401",
+    "score": 95,
+    "similarity": 0.6701596975326538,
+    "matched": [
+     "Network Security",
+     "Cryptography",
+     "Linux Administration",
+     "Penetration Testing",
+     "Python Scripting (Nice-to-have)"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all required skills through specific project work: Linux administration is shown via cron jobs for log rotation; network security and cryptography are evidenced by traffic monitoring with a sniffer and certificate chain analysis. Penetration testing is supported by top-ten placement in a CTF, while Python scripting is implied by the use of cryptography tools and automation",
+    "latency": 2.909766499997204,
+    "cached": false
+   },
+   {
+    "id": "S135",
+    "score": 95,
+    "similarity": 0.6385634541511536,
+    "matched": [
+     "Network Security",
+     "Linux Administration",
+     "Penetration Testing",
+     "Cryptography",
+     "Python Scripting"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Network Security and Linux Administration through configuring packet filtering, VLANs, and log rotation in the Incident Response Drill. Hands-on Penetration Testing is evidenced by placing in the top ten of a campus CTF.",
+    "latency": 2.187262199997349,
+    "cached": false
+   },
+   {
+    "id": "S440",
+    "score": 85,
+    "similarity": 0.6541649103164673,
+    "matched": [
+     "Cryptography",
+     "Linux Administration",
+     "Network Security",
+     "Python Scripting"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all required and desirable skills through specific project work: configuring firewalls, setting up SSH/VPNs, and implementing log rotation for Linux; analyzing algorithms and setting up access controls for Network Security; and comparing encryption schemes with Python scripting. The resume shows no evidence of hands-on penetration testing (CTFs or bug bounties), but this '",
+    "latency": 2.7762004000032903,
+    "cached": false
+   },
+   {
+    "id": "S345",
+    "score": 80,
+    "similarity": 0.6374030113220215,
+    "matched": [
+     "Network Security",
+     "Linux Administration",
+     "Penetration Testing"
+    ],
+    "missing": [
+     "Cryptography",
+     "Python Scripting"
+    ],
+    "explanation": "The student demonstrated Linux administration and penetration testing by configuring a secure server and chaining vulnerabilities in a CTF event. However, the resume lacks evidence of cryptography knowledge or Python scripting, as projects used JavaScript/React and no coding work is described.",
+    "latency": 2.208588500001497,
+    "cached": false
+   },
+   {
+    "id": "S375",
+    "score": 65,
+    "similarity": 0.648842990398407,
+    "matched": [
+     "Network Security",
+     "Linux Administration",
+     "Cryptography"
+    ],
+    "missing": [
+     "Penetration Testing",
+     "Python Scripting"
+    ],
+    "explanation": "The student demonstrates Network Security, Linux Administration, and Cryptography through specific project tasks like configuring firewalls, setting up a VPN, and using one-way functions with salts. However, there is no evidence of hands-on penetration testing or practical Python scripting beyond the implied use of cryptography concepts.",
+    "latency": 2.6197276000020793,
+    "cached": false
+   },
+   {
+    "id": "S210",
+    "score": 45,
+    "similarity": 0.6672446727752686,
+    "matched": [
+     "Linux Administration",
+     "Python Scripting (implied by 'scripting' in internship context, though specific Python code not explicitly detailed beyond general scripting)",
+     "Docker"
+    ],
+    "missing": [
+     "Network Security",
+     "Penetration Testing",
+     "Cryptography"
+    ],
+    "explanation": "The student demonstrates Linux administration through terminal management of a headless server and Docker usage via CI/CD pipelines, but lacks evidence of network security concepts or hands-on penetration testing. While the resume mentions 'scripting' in the internship, it does not explicitly confirm Python proficiency required for cryptography tasks.",
+    "latency": 3.026360799998656,
+    "cached": false
+   },
+   {
+    "id": "S449",
+    "score": 40,
+    "similarity": 0.6543606519699097,
+    "matched": [
+     "Linux Administration",
+     "Docker",
+     "CI/CD",
+     "Process Modeling",
+     "Requirements Gathering",
+     "Stakeholder Communication"
+    ],
+    "missing": [
+     "Network Security",
+     "Penetration Testing",
+     "Cryptography",
+     "Python Scripting"
+    ],
+    "explanation": "The student demonstrates Linux administration and Docker usage through deploying a headless Raspberry Pi and managing CI/CD pipelines, but lacks evidence of network security concepts, penetration testing, cryptography, or Python scripting. No projects describe hands-on security labs, bug bounties, or cryptographic implementations.",
+    "latency": 3.136135299999296,
+    "cached": false
+   },
+   {
+    "id": "S476",
+    "score": 40,
+    "similarity": 0.6407827138900757,
+    "matched": [
+     "Python Scripting",
+     "Cryptography (implied via Deep Learning/ML context)",
+     "Penetration Testing (implied via CTF/lab context)"
+    ],
+    "missing": [
+     "Network Security",
+     "Linux Administration"
+    ],
+    "explanation": "The resume demonstrates Python scripting through backend development and ML projects, but lacks evidence of network security concepts or Linux administration. No hands-on penetration testing or relevant system administration work is described in the projects.",
+    "latency": 2.437719500001549,
+    "cached": false
+   },
+   {
+    "id": "S097",
+    "score": 40,
+    "similarity": 0.6403435468673706,
+    "matched": [
+     "Linux Administration",
+     "Python Scripting"
+    ],
+    "missing": [
+     "Network Security",
+     "Penetration Testing",
+     "Cryptography"
+    ],
+    "explanation": "The student demonstrates Linux administration through debugging container logs and resource limits, and Python scripting via Django projects. However, there is no evidence of network security concepts, penetration testing, or cryptography in the described work.",
+    "latency": 2.5535161000007065,
+    "cached": false
+   },
+   {
+    "id": "S424",
+    "score": 10,
+    "similarity": 0.6396108865737915,
+    "matched": [
+     "Python Scripting",
+     "REST APIs"
+    ],
+    "missing": [
+     "Network Security",
+     "Linux Administration",
+     "Penetration Testing",
+     "Cryptography"
+    ],
+    "explanation": "The resume demonstrates Python scripting and REST API usage through backend projects but lacks evidence of network security, Linux administration, or penetration testing. No project description involves configuring servers on Linux, analyzing network traffic, or performing ethical hacking exercises.",
+    "latency": 2.590470200000709,
+    "cached": false
+   },
+   {
+    "id": "S493",
+    "score": 10,
+    "similarity": 0.6386557817459106,
+    "matched": [
+     "Python Scripting",
+     "REST APIs"
+    ],
+    "missing": [
+     "Network Security",
+     "Linux Administration",
+     "Penetration Testing",
+     "Cryptography"
+    ],
+    "explanation": "The resume demonstrates Python scripting through attendance record cleaning scripts and REST API knowledge via a student-marks service, but lacks evidence for network security, Linux administration, or penetration testing. The internship involved only basic data manipulation in a tutorial setting with no mention of security concepts or system administration.",
+    "latency": 2.8004530999969575,
+    "cached": false
+   },
+   {
+    "id": "S206",
+    "score": 9,
+    "similarity": 0.6368995904922485,
+    "matched": [],
+    "missing": [
+     "Network Security",
+     "Linux Administration"
+    ],
+    "explanation": "The resume lists only embedded systems and web development tools (Arduino, Node.js) with no projects demonstrating network security concepts or Linux administration. There is no evidence of penetration testing, cryptography, or Python scripting.",
+    "latency": 1.8552519000004395,
+    "cached": false
+   }
+  ],
+  "timing": {
+   "parse_s": 2.7484360999987985,
+   "retrieve_s": 0.04876950000107172,
+   "rerank_s": 51.474175899995316,
+   "rerank_per_candidate_s": 2.573708794999766,
+   "wall_s": 51.54073150000113,
+   "parse_cached": true,
+   "n_candidates": 20
+  }
+ },
+ "R11": {
+  "parsed": {
+   "role_title": "Embedded/IoT Trainee",
+   "must_have_skills": [
+    "C",
+    "Arduino",
+    "MQTT"
+   ],
+   "nice_to_have_skills": [
+    "Raspberry Pi",
+    "C++"
+   ],
+   "min_cgpa": 6.5,
+   "allowed_branches": [
+    "ECE",
+    "EE",
+    "CSE",
+    "Mechanical"
+   ],
+   "max_backlogs": 1,
+   "semantic_query": "A trainee with strong C programming skills who has worked with Arduino boards and implemented MQTT for device-to-cloud messaging, ideally having experience with Raspberry Pi and C++."
+  },
+  "filters": {
+   "min_cgpa": 6.5,
+   "max_backlogs": 1,
+   "allowed_branches": [
+    "ECE",
+    "EE",
+    "CSE",
+    "Mechanical"
+   ]
+  },
+  "ranked": [
+   {
+    "id": "S322",
+    "score": 100,
+    "similarity": 0.7504978179931641,
+    "matched": [
+     "C",
+     "Arduino",
+     "MQTT",
+     "Raspberry Pi",
+     "C++"
+    ],
+    "missing": [],
+    "explanation": "The resume demonstrates C proficiency through manual memory management in the Weather Station project and Arduino usage via GPIO control in the Line Following Robot. All must-have skills (C, Arduino, MQTT) are clearly evidenced by these projects.",
+    "latency": 2.2670596999996633,
+    "cached": false
+   },
+   {
+    "id": "S225",
+    "score": 100,
+    "similarity": 0.7491036653518677,
+    "matched": [
+     "C",
+     "Arduino",
+     "MQTT",
+     "Raspberry Pi",
+     "C++"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills (C, Arduino, MQTT) through described projects involving sensor interfacing and message publishing. All nice-to-have skills are also present in the resume.",
+    "latency": 1.9518473999996786,
+    "cached": false
+   },
+   {
+    "id": "S257",
+    "score": 100,
+    "similarity": 0.7452582120895386,
+    "matched": [
+     "C",
+     "Arduino",
+     "MQTT",
+     "Raspberry Pi"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through specific projects: using C for a weather station shell, Arduino for a plant watering system, and MQTT on Raspberry Pi for a smart door lock. Eligibility rules are met with a CGPA of 7.36 and zero backlogs.",
+    "latency": 2.444183100000373,
+    "cached": false
+   },
+   {
+    "id": "S189",
+    "score": 100,
+    "similarity": 0.740700364112854,
+    "matched": [
+     "C",
+     "Arduino",
+     "MQTT",
+     "Raspberry Pi",
+     "C++"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through building a campus navigator with Arduino/C and a robot using MQTT/Raspberry Pi. Her CGPA of 7.50 meets the minimum requirement, and she has zero active backlogs.",
+    "latency": 2.1489019000000553,
+    "cached": false
+   },
+   {
+    "id": "S186",
+    "score": 100,
+    "similarity": 0.7380803823471069,
+    "matched": [
+     "C",
+     "Arduino",
+     "MQTT"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through specific projects: using C and Arduino for a smart-door-lock, implementing manual memory management in C/C++, and publishing sensor data via MQTT on a Line Following Robot. The resume also lists Raspberry Pi as a working knowledge skill.",
+    "latency": 2.240300699999352,
+    "cached": false
+   },
+   {
+    "id": "S193",
+    "score": 100,
+    "similarity": 0.716606616973877,
+    "matched": [
+     "C",
+     "Arduino",
+     "MQTT",
+     "Raspberry Pi",
+     "C++"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates C, Arduino, and MQTT through their internship connecting field devices via a publish/subscribe protocol and building an inventory service with RESTful endpoints. They also show proficiency in Raspberry Pi and C++ by setting up a headless single-board computer for remote experiments and combining compiled object-oriented code in a project.",
+    "latency": 2.483684299997549,
+    "cached": false
+   },
+   {
+    "id": "S317",
+    "score": 100,
+    "similarity": 0.7127745151519775,
+    "matched": [
+     "C",
+     "Arduino",
+     "MQTT"
+    ],
+    "missing": [],
+    "explanation": "Ramya demonstrates C, Arduino (via ATmega), and MQTT through the weather station project where she programmed a line-following robot and published sensor readings. Her CGPA of 9.58 exceeds the minimum requirement, and she has no backlogs.",
+    "latency": 2.2341400000004796,
+    "cached": false
+   },
+   {
+    "id": "S206",
+    "score": 65,
+    "similarity": 0.7361196279525757,
+    "matched": [
+     "C",
+     "Arduino",
+     "C++"
+    ],
+    "missing": [
+     "MQTT"
+    ],
+    "explanation": "The student demonstrates C, Arduino, and C++ through the 'College Fest Landing Page' project where they soldered a relay board and wrote performance-sensitive simulation code. However, there is no evidence of implementing MQTT for device-to-cloud messaging in any described work.",
+    "latency": 2.3112717000003613,
+    "cached": false
+   },
+   {
+    "id": "S387",
+    "score": 65,
+    "similarity": 0.7148043513298035,
+    "matched": [
+     "C",
+     "Arduino"
+    ],
+    "missing": [
+     "MQTT"
+    ],
+    "explanation": "The student demonstrates C and Arduino skills through the Weather Station project, but there is no evidence of implementing MQTT for device-to-cloud messaging. The resume mentions REST APIs and Spring Boot, which are not required for this specific role.",
+    "latency": 2.3562668999984453,
+    "cached": false
+   },
+   {
+    "id": "S009",
+    "score": 50,
+    "similarity": 0.7308013439178467,
+    "matched": [
+     "C",
+     "Arduino"
+    ],
+    "missing": [
+     "MQTT"
+    ],
+    "explanation": "The student demonstrates C skills through low-level microcontroller programming and manual memory management, but the resume contains no evidence of Arduino usage or MQTT implementation. The embedded internship is described only as a small coursework exercise involving mutexes, which does not constitute strong proof of practical IoT messaging experience.",
+    "latency": 2.3375899999991816,
+    "cached": false
+   },
+   {
+    "id": "S052",
+    "score": 40,
+    "similarity": 0.7154396772384644,
+    "matched": [
+     "Arduino",
+     "C++"
+    ],
+    "missing": [
+     "C",
+     "MQTT"
+    ],
+    "explanation": "The student demonstrates Arduino usage through a temperature display project but lacks evidence of C proficiency, as the resume explicitly states proficiency in C++ and only mentions 'comfortable with C' without specific project backing. There is no mention of MQTT or device-to-cloud messaging in any described work.",
+    "latency": 2.5042728999978863,
+    "cached": false
+   },
+   {
+    "id": "S500",
+    "score": 10,
+    "similarity": 0.7004239559173584,
+    "matched": [
+     "Docker",
+     "REST API"
+    ],
+    "missing": [
+     "C",
+     "Arduino",
+     "MQTT",
+     "Raspberry Pi",
+     "C++"
+    ],
+    "explanation": "The resume demonstrates Docker and REST API skills through cloud-hosted services and CI/CD workflows, but lacks evidence of C programming, Arduino/MQTT usage, or Raspberry Pi work. The student's experience focuses on Android development and web services rather than embedded systems.",
+    "latency": 2.7525725000014063,
+    "cached": false
+   },
+   {
+    "id": "S192",
+    "score": 10,
+    "similarity": 0.699033260345459,
+    "matched": [
+     "Raspberry Pi",
+     "Docker",
+     "C++ (implied by Raspberry Pi usage in embedded context)",
+     "CI/CD",
+     "AWS"
+    ],
+    "missing": [
+     "C",
+     "Arduino",
+     "MQTT"
+    ],
+    "explanation": "The resume demonstrates experience with Raspberry Pi and Docker but lacks any evidence of C programming, Arduino development, or MQTT messaging. The internship description focuses on web dashboards and media servers without mentioning embedded firmware or IoT protocols.",
+    "latency": 2.5128578999974707,
+    "cached": false
+   },
+   {
+    "id": "S254",
+    "score": 9,
+    "similarity": 0.7110517024993896,
+    "matched": [],
+    "missing": [
+     "C",
+     "Arduino",
+     "MQTT"
+    ],
+    "explanation": "The resume lists Python and JavaScript but provides no evidence of C programming, Arduino hardware usage, or MQTT messaging. The described projects involve web development and machine learning models, which do not demonstrate the required embedded systems skills.",
+    "latency": 2.022825500000181,
+    "cached": false
+   },
+   {
+    "id": "S296",
+    "score": 9,
+    "similarity": 0.7100498676300049,
+    "matched": [
+     "Raspberry Pi",
+     "Docker"
+    ],
+    "missing": [
+     "C",
+     "Arduino",
+     "MQTT"
+    ],
+    "explanation": "The student has no evidence of C programming, Arduino usage, or MQTT implementation; all described projects rely on Java and Pythonic concepts. The resume demonstrates only the nice-to-have Raspberry Pi skill via a basic lab dashboard and Docker through multi-stage builds.",
+    "latency": 2.4942645999981323,
+    "cached": false
+   },
+   {
+    "id": "S458",
+    "score": 9,
+    "similarity": 0.7005249857902527,
+    "matched": [],
+    "missing": [
+     "C",
+     "Arduino",
+     "MQTT"
+    ],
+    "explanation": "The resume lists only web development and DevOps tools (Docker, CI/CD) with no evidence of C programming or embedded hardware work. The student lacks the required Arduino and MQTT skills entirely.",
+    "latency": 1.920139100002416,
+    "cached": false
+   },
+   {
+    "id": "S243",
+    "score": 0,
+    "similarity": 0.7035627365112305,
+    "matched": [
+     "C",
+     "Arduino",
+     "MQTT"
+    ],
+    "missing": [],
+    "explanation": "The resume demonstrates no evidence of C, Arduino, or MQTT skills; the listed technical projects involve only web development and data analysis tools.",
+    "latency": 2.0416478000006464,
+    "cached": false
+   },
+   {
+    "id": "S212",
+    "score": 0,
+    "similarity": 0.7025807499885559,
+    "matched": [],
+    "missing": [
+     "C",
+     "Arduino",
+     "MQTT"
+    ],
+    "explanation": "The resume demonstrates Java, Kotlin, and REST APIs but lacks any evidence of C programming, Arduino hardware usage, or MQTT messaging. The student's projects focus on Android development rather than embedded systems.",
+    "latency": 1.907076399998914,
+    "cached": false
+   },
+   {
+    "id": "S084",
+    "score": 0,
+    "similarity": 0.7017902135848999,
+    "matched": [
+     "C++",
+     "Raspberry Pi"
+    ],
+    "missing": [
+     "C",
+     "Arduino",
+     "MQTT"
+    ],
+    "explanation": "The resume demonstrates no evidence of C programming, Arduino usage, or MQTT implementation; the described projects rely on interpreted languages and web technologies. The student lacks all three must-have skills required for this Embedded/IoT trainee role.",
+    "latency": 2.3435542000006535,
+    "cached": false
+   },
+   {
+    "id": "S113",
+    "score": 0,
+    "similarity": 0.6995846033096313,
+    "matched": [],
+    "missing": [
+     "C",
+     "Arduino",
+     "MQTT"
+    ],
+    "explanation": "The resume demonstrates only web development skills (JavaScript, React, Node.js) with no evidence of C programming, Arduino usage, or MQTT implementation. The student's projects are generic web exercises that do not cover the required embedded systems or IoT technologies.",
+    "latency": 2.122956699997303,
+    "cached": false
+   }
+  ],
+  "timing": {
+   "parse_s": 2.4899456999992253,
+   "retrieve_s": 0.04980789999899571,
+   "rerank_s": 45.39741329999015,
+   "rerank_per_candidate_s": 2.2698706649995075,
+   "wall_s": 45.46507180000117,
+   "parse_cached": true,
+   "n_candidates": 20
+  }
+ },
+ "R13": {
+  "parsed": {
+   "role_title": "Java Backend Developer",
+   "must_have_skills": [
+    "Java",
+    "Spring Boot",
+    "SQL"
+   ],
+   "nice_to_have_skills": [
+    "Microservices",
+    "Kafka",
+    "Docker"
+   ],
+   "min_cgpa": 6.5,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT"
+   ],
+   "max_backlogs": 0,
+   "semantic_query": "A Java backend developer proficient in Spring Boot and SQL who has experience or exposure to microservices architecture, message brokering with Kafka, and containerization using Docker."
+  },
+  "filters": {
+   "min_cgpa": 6.5,
+   "max_backlogs": 0,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT"
+   ]
+  },
+  "ranked": [
+   {
+    "id": "S478",
+    "score": 100,
+    "similarity": 0.7640902996063232,
+    "matched": [
+     "Java",
+     "Spring Boot",
+     "SQL",
+     "Microservices",
+     "Kafka",
+     "Docker"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through specific projects: Spring Boot and SQL are used in the Hostel Complaint Portal and Inventory Management Service; Microservices, Kafka, and Docker are explicitly listed as technologies used across these built applications. The resume also meets eligibility requirements with a CGPA of 8.20 and zero backlogs.",
+    "latency": 3.032214599999861,
+    "cached": false
+   },
+   {
+    "id": "S374",
+    "score": 100,
+    "similarity": 0.7304397821426392,
+    "matched": [
+     "Java",
+     "Spring Boot",
+     "SQL",
+     "Docker"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills (Java, Spring Boot, SQL) and the edge skills (Docker) through a project description involving controllers, services, repositories, normalized tables, and containerized deployment. The resume meets all eligibility criteria with a CGPA of 7.61 and zero backlogs.",
+    "latency": 2.4918254999975034,
+    "cached": false
+   },
+   {
+    "id": "S155",
+    "score": 100,
+    "similarity": 0.7159894704818726,
+    "matched": [
+     "Java",
+     "Spring Boot",
+     "SQL"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Java, Spring Boot, and SQL through specific project descriptions involving RESTful services, token security, and relational table queries. All must-have skills are clearly evidenced by the work described.",
+    "latency": 2.079496599999402,
+    "cached": false
+   },
+   {
+    "id": "S131",
+    "score": 100,
+    "similarity": 0.7157607674598694,
+    "matched": [
+     "Java",
+     "Spring Boot",
+     "SQL"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Java, Spring Boot, and SQL through building a microservices-based backend and optimizing database queries with indexes. All must-have skills are clearly evidenced by the described projects.",
+    "latency": 2.0606135000016366,
+    "cached": false
+   },
+   {
+    "id": "S424",
+    "score": 95,
+    "similarity": 0.7416816353797913,
+    "matched": [
+     "Java",
+     "Spring Boot",
+     "SQL"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through described projects: building a backend service with Spring Boot annotations, using Java for bytecode-based object-oriented work, and applying SQL window functions in PostgreSQL. The resume shows no evidence of Microservices or Kafka usage, though these are listed as nice-to-haves rather than requirements.",
+    "latency": 2.4577992999984417,
+    "cached": false
+   },
+   {
+    "id": "S492",
+    "score": 85,
+    "similarity": 0.7000795006752014,
+    "matched": [
+     "Java",
+     "Spring Boot",
+     "SQL",
+     "Microservices",
+     "Docker"
+    ],
+    "missing": [
+     "Kafka"
+    ],
+    "explanation": "The student demonstrates Java, Spring Boot, SQL, Microservices, and Docker through the described backend project involving relational stores and cooperating services. However, there is no evidence of working with Apache Kafka in the resume text.",
+    "latency": 2.114860300000146,
+    "cached": false
+   },
+   {
+    "id": "S237",
+    "score": 80,
+    "similarity": 0.715720534324646,
+    "matched": [
+     "Java",
+     "Spring Boot",
+     "SQL",
+     "Microservices",
+     "Docker"
+    ],
+    "missing": [
+     "Kafka"
+    ],
+    "explanation": "The student demonstrates Java, Spring Boot, SQL, and Microservices through specific coursework projects involving REST APIs and service splitting. However, there is no evidence of Kafka usage; the resume mentions Spark for data engineering but does not describe any message queue implementation.",
+    "latency": 2.665249400000903,
+    "cached": false
+   },
+   {
+    "id": "S379",
+    "score": 65,
+    "similarity": 0.716060221195221,
+    "matched": [
+     "Java",
+     "Spring Boot",
+     "SQL",
+     "Microservices"
+    ],
+    "missing": [
+     "Kafka",
+     "Docker"
+    ],
+    "explanation": "The student demonstrates Java, Spring Boot, SQL, and Microservices through coursework projects involving service discovery and layered application architecture. However, there is no evidence of using Kafka or Docker; the resume only lists them as familiarity without describing specific implementation work.",
+    "latency": 2.6077498000013293,
+    "cached": false
+   },
+   {
+    "id": "S296",
+    "score": 65,
+    "similarity": 0.7052373290061951,
+    "matched": [
+     "Java",
+     "Spring Boot",
+     "SQL",
+     "Docker"
+    ],
+    "missing": [
+     "Microservices",
+     "Kafka"
+    ],
+    "explanation": "The student demonstrates Java, Spring Boot, SQL, and Docker through specific project descriptions involving microservice communication and multi-stage builds. However, there is no evidence of Kafka usage; the resume mentions message queues only in a generic context without naming the technology.",
+    "latency": 2.5814313999981096,
+    "cached": false
+   },
+   {
+    "id": "S197",
+    "score": 65,
+    "similarity": 0.6967384219169617,
+    "matched": [
+     "Java",
+     "Spring Boot",
+     "SQL",
+     "Microservices"
+    ],
+    "missing": [
+     "Kafka",
+     "Docker"
+    ],
+    "explanation": "The student demonstrates Java, Spring Boot, SQL, and Microservices through the Hostel Complaint Portal and Student Marks Service projects. However, there is no evidence of Kafka usage or Docker deployment; the resume mentions a 'virtual machine' but does not specify containerization.",
+    "latency": 2.6057036999991396,
+    "cached": false
+   },
+   {
+    "id": "S188",
+    "score": 65,
+    "similarity": 0.6931573152542114,
+    "matched": [
+     "Java",
+     "Spring Boot",
+     "SQL",
+     "Microservices"
+    ],
+    "missing": [
+     "Kafka",
+     "Docker"
+    ],
+    "explanation": "The student demonstrates Java, Spring Boot, SQL, and Microservices through building a library lending system with message queues and an online bookstore with layered architecture. However, there is no evidence of using Kafka or Docker; the resume mentions packaging as a runnable archive but does not specify containerization technology.",
+    "latency": 2.677643499999249,
+    "cached": false
+   },
+   {
+    "id": "S286",
+    "score": 45,
+    "similarity": 0.7394039630889893,
+    "matched": [
+     "Java",
+     "SQL",
+     "Docker"
+    ],
+    "missing": [
+     "Spring Boot",
+     "Microservices",
+     "Kafka"
+    ],
+    "explanation": "The student demonstrates Java, SQL, and Docker through coursework projects but lacks evidence of Spring Boot, Microservices, or Kafka usage. The resume explicitly states 'basic' proficiency for core Java and T-SQL, which does not satisfy the requirement for demonstrated mastery.",
+    "latency": 2.7332734999981767,
+    "cached": false
+   },
+   {
+    "id": "S143",
+    "score": 40,
+    "similarity": 0.7117486000061035,
+    "matched": [
+     "SQL",
+     "Docker"
+    ],
+    "missing": [
+     "Java",
+     "Spring Boot",
+     "Microservices",
+     "Kafka"
+    ],
+    "explanation": "The student demonstrates SQL through complex data aggregation and optimization projects, but has no evidence of Java or Spring Boot usage despite the internship description. The resume lacks any mention of microservices architecture or Kafka, which are required for the edge.",
+    "latency": 2.637375599999359,
+    "cached": false
+   },
+   {
+    "id": "S097",
+    "score": 40,
+    "similarity": 0.7080516219139099,
+    "matched": [
+     "Docker",
+     "SQL",
+     "CI/CD"
+    ],
+    "missing": [
+     "Java",
+     "Spring Boot",
+     "Microservices",
+     "Kafka"
+    ],
+    "explanation": "The student demonstrates Docker and SQL skills through containerizing projects and managing database records, but lacks evidence of Java or Spring Boot usage as all described work used Python/Django. Additionally, the weekend tutorial nature of the projects means Microservices and Kafka are not clearly demonstrated.",
+    "latency": 2.76363499999934,
+    "cached": false
+   },
+   {
+    "id": "S443",
+    "score": 40,
+    "similarity": 0.7060078382492065,
+    "matched": [
+     "SQL",
+     "Kafka"
+    ],
+    "missing": [
+     "Java",
+     "Spring Boot",
+     "Microservices",
+     "Docker"
+    ],
+    "explanation": "The student demonstrates SQL through complex joins and aggregations in a hostel portal project, and Kafka by building an event-driven payment notification system. However, the resume contains no evidence of Java or Spring Boot usage; all described projects utilize Python, JavaScript, or Airflow. Additionally, there is no mention of Microservices architecture (despite decoupling services) or Docker",
+    "latency": 3.194077699998161,
+    "cached": false
+   },
+   {
+    "id": "S201",
+    "score": 40,
+    "similarity": 0.7017908692359924,
+    "matched": [
+     "SQL",
+     "Java"
+    ],
+    "missing": [
+     "Spring Boot",
+     "Microservices",
+     "Kafka",
+     "Docker"
+    ],
+    "explanation": "The student demonstrates SQL through the use of PostgreSQL and Java via FastAPI, but lacks evidence for Spring Boot, Kafka, or Docker. Additionally, Microservices is not demonstrated as the projects are described as single services rather than distributed systems.",
+    "latency": 2.467118799999298,
+    "cached": false
+   },
+   {
+    "id": "S129",
+    "score": 10,
+    "similarity": 0.7031776905059814,
+    "matched": [
+     "SQL",
+     "Agile/Scrum"
+    ],
+    "missing": [
+     "Java",
+     "Spring Boot",
+     "Microservices",
+     "Kafka",
+     "Docker"
+    ],
+    "explanation": "The resume demonstrates SQL usage through window functions and ETL pipelines but lacks any evidence of Java, Spring Boot, or containerization skills. The student also has no projects involving microservices or Kafka.",
+    "latency": 2.646099499997945,
+    "cached": false
+   },
+   {
+    "id": "S204",
+    "score": 10,
+    "similarity": 0.6941950917243958,
+    "matched": [
+     "Docker",
+     "SQL"
+    ],
+    "missing": [
+     "Java",
+     "Spring Boot"
+    ],
+    "explanation": "The resume demonstrates Docker usage by packaging applications for consistent deployment and SQL knowledge through basic listing, but lacks any evidence of Java or Spring Boot development in the described projects.",
+    "latency": 1.9607046000019182,
+    "cached": false
+   },
+   {
+    "id": "S146",
+    "score": 9,
+    "similarity": 0.6906141638755798,
+    "matched": [
+     "Java",
+     "Spring Boot",
+     "SQL"
+    ],
+    "missing": [
+     "Java",
+     "Spring Boot"
+    ],
+    "explanation": "The resume demonstrates SQL usage through joins and subqueries in the Job Board project, but provides no evidence of Java or Spring Boot skills as all described projects used JavaScript/TypeScript stacks.",
+    "latency": 2.1876047999976436,
+    "cached": false
+   },
+   {
+    "id": "S023",
+    "score": 0,
+    "similarity": 0.6961691975593567,
+    "matched": [],
+    "missing": [
+     "Java",
+     "Spring Boot",
+     "SQL"
+    ],
+    "explanation": "The resume demonstrates FastAPI, PostgreSQL, Redis, and AWS but lacks any evidence of Java or Spring Boot development. While the student used SQL concepts in a project, they did not explicitly mention writing SQL queries or managing databases as a core skill.",
+    "latency": 2.3097957000027236,
+    "cached": false
+   }
+  ],
+  "timing": {
+   "parse_s": 2.41734870000073,
+   "retrieve_s": 0.03807560000132071,
+   "rerank_s": 50.274272799990285,
+   "rerank_per_candidate_s": 2.5137136399995144,
+   "wall_s": 50.352795999999216,
+   "parse_cached": true,
+   "n_candidates": 20
+  }
+ },
+ "R14": {
+  "parsed": {
+   "role_title": "NLP Engineer Trainee",
+   "must_have_skills": [
+    "Python",
+    "Natural Language Processing",
+    "Deep Learning"
+   ],
+   "nice_to_have_skills": [
+    "PyTorch",
+    "TensorFlow"
+   ],
+   "min_cgpa": 7,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "M.Sc IT"
+   ],
+   "max_backlogs": 0,
+   "semantic_query": "A trainee NLP engineer capable of building text classification models and chatbots with strong Python skills and a solid foundation in natural language processing and deep learning frameworks."
+  },
+  "filters": {
+   "min_cgpa": 7,
+   "max_backlogs": 0,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "M.Sc IT"
+   ]
+  },
+  "ranked": [
+   {
+    "id": "S388",
+    "score": 100,
+    "similarity": 0.7107990980148315,
+    "matched": [
+     "Python",
+     "Natural Language Processing",
+     "Deep Learning",
+     "TensorFlow"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through specific projects: building a review sentiment classifier using TensorFlow (Deep Learning/NLP) and an inventory service with NLP capabilities. The internship converting a model to a mobile format implies Python usage, which is also listed in the technical skills section.",
+    "latency": 2.544103799998993,
+    "cached": false
+   },
+   {
+    "id": "S476",
+    "score": 100,
+    "similarity": 0.7022596597671509,
+    "matched": [
+     "Python",
+     "Natural Language Processing",
+     "Deep Learning",
+     "PyTorch"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all required skills through specific projects: a chatbot built with NLP and PyTorch, a digit recognition model using Deep Learning, and backend services written in Python. The resume explicitly lists these technologies as 'Strong' skills and provides concrete evidence of their application.",
+    "latency": 2.358724900001107,
+    "cached": false
+   },
+   {
+    "id": "S343",
+    "score": 100,
+    "similarity": 0.7022579908370972,
+    "matched": [
+     "Python",
+     "Natural Language Processing",
+     "Deep Learning"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through building a sentiment classifier and chatbot using Python, NLP techniques, and deep learning architectures. The training experience with custom computation graphs further confirms proficiency in deep learning fundamentals.",
+    "latency": 2.122266300000774,
+    "cached": false
+   },
+   {
+    "id": "S301",
+    "score": 100,
+    "similarity": 0.6971639394760132,
+    "matched": [
+     "Python",
+     "Natural Language Processing",
+     "Deep Learning",
+     "TensorFlow"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through the AI Research Internship where she built a spam filter using NLP and fine-tuned a transformer with Deep Learning in TensorFlow. Her resume explicitly lists Python, NLP, Deep Learning, and TensorFlow as technical skills supported by this project work.",
+    "latency": 2.6276868999993894,
+    "cached": false
+   },
+   {
+    "id": "S444",
+    "score": 100,
+    "similarity": 0.6963046789169312,
+    "matched": [
+     "Python",
+     "Natural Language Processing",
+     "Deep Learning"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Python, NLP, and Deep Learning through building a sentiment classifier using fine-tuned transformers and extracting entities with sequence labeling. The internship involved GPU tensor management and mixed precision training, confirming deep learning fundamentals.",
+    "latency": 2.069164799999271,
+    "cached": false
+   },
+   {
+    "id": "S360",
+    "score": 100,
+    "similarity": 0.6907545328140259,
+    "matched": [
+     "Python",
+     "Natural Language Processing",
+     "Deep Learning",
+     "PyTorch"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through specific project work: using Python for the House Price Estimator, applying NLP fundamentals for document summarization, and utilizing Deep Learning with PyTorch (including tensor operations) for the sentiment classifier. The resume shows no eligibility violations, with a CGPA of 8.28 and zero active backlogs.",
+    "latency": 2.767746299999999,
+    "cached": false
+   },
+   {
+    "id": "S424",
+    "score": 100,
+    "similarity": 0.684920608997345,
+    "matched": [
+     "Python",
+     "Natural Language Processing",
+     "Deep Learning",
+     "TensorFlow"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills through the 'Resume Screening Assistant' project, which explicitly involves NLP, Deep Learning, and TensorFlow for building a chatbot. The resume also shows Python proficiency via backend services and general scripting tasks.",
+    "latency": 2.3108377999997174,
+    "cached": false
+   },
+   {
+    "id": "S015",
+    "score": 100,
+    "similarity": 0.68308424949646,
+    "matched": [
+     "Python",
+     "Natural Language Processing",
+     "Deep Learning"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Python, NLP, and Deep Learning through the 'Review Sentiment Classifier' project, which involved building a spam filter using convolutional and recurrent architectures on labeled data. The resume explicitly lists these skills and describes work that clearly requires them.",
+    "latency": 2.208701999999903,
+    "cached": false
+   },
+   {
+    "id": "S448",
+    "score": 100,
+    "similarity": 0.6764121055603027,
+    "matched": [
+     "Python",
+     "Natural Language Processing",
+     "Deep Learning"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Python through multiple projects and an internship, Natural Language Processing via the Customer Churn Study involving text data cleaning and classification, and Deep Learning by tuning hyperparameters and training a classifier at Lumen Softworks.",
+    "latency": 2.113494000001083,
+    "cached": false
+   },
+   {
+    "id": "S106",
+    "score": 100,
+    "similarity": 0.6753961443901062,
+    "matched": [
+     "Python",
+     "Natural Language Processing",
+     "Deep Learning",
+     "PyTorch"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all required skills through specific projects: using Python and scikit-learn for a sentiment classifier, applying transfer learning with PyTorch Lightning for custom training loops, and building an NLP model for text classification. The resume confirms eligibility with a CGPA of 8.95 and zero active backlogs.",
+    "latency": 2.6518126999981178,
+    "cached": false
+   },
+   {
+    "id": "S209",
+    "score": 100,
+    "similarity": 0.674418568611145,
+    "matched": [
+     "Python",
+     "Natural Language Processing",
+     "Deep Learning"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Python through the Student Marks Service project and NLP fundamentals via the spam filter built during the AI Research Internship. Deep learning is evidenced by the internship work where a model learned from labeled examples, which implies deep learning concepts despite the use of a random forest classifier in the description.",
+    "latency": 2.354444799999328,
+    "cached": false
+   },
+   {
+    "id": "S335",
+    "score": 100,
+    "similarity": 0.6706181168556213,
+    "matched": [
+     "Python",
+     "Natural Language Processing",
+     "Deep Learning",
+     "PyTorch"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all required skills through specific project work: building a chatbot with intent recognition using PyTorch and NLP, implementing deep learning architectures (convolutional/recurrent) for recommendation systems, and writing unit-tested Python code for microservices. Eligibility criteria are met with a CGPA of 7.92 and no active backlogs.",
+    "latency": 2.6452528000008897,
+    "cached": false
+   },
+   {
+    "id": "S389",
+    "score": 60,
+    "similarity": 0.7009563446044922,
+    "matched": [
+     "Python",
+     "Deep Learning",
+     "PyTorch"
+    ],
+    "missing": [
+     "Natural Language Processing"
+    ],
+    "explanation": "The student demonstrates Python and Deep Learning through building multi-layer models on GPUs, but the projects described (churn prediction, image tasks) do not show evidence of Natural Language Processing.",
+    "latency": 2.0757900000025984,
+    "cached": false
+   },
+   {
+    "id": "S493",
+    "score": 40,
+    "similarity": 0.6990757584571838,
+    "matched": [
+     "Python",
+     "Natural Language Processing",
+     "Deep Learning"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Python and Machine Learning fundamentals through coursework and an internship, but the resume contains no evidence of specific NLP or Deep Learning work (e.g., text classification or chatbots). The listed 'Machine Learning' projects involve tabular data and decision trees, which do not satisfy the requirement for Natural Language Processing or Deep Learning.",
+    "latency": 2.6101127000001725,
+    "cached": false
+   },
+   {
+    "id": "S274",
+    "score": 40,
+    "similarity": 0.6743068695068359,
+    "matched": [
+     "Python",
+     "Pandas",
+     "Machine Learning"
+    ],
+    "missing": [
+     "Natural Language Processing",
+     "Deep Learning"
+    ],
+    "explanation": "The student demonstrates Python and Machine Learning through building a recommendation system, but lacks evidence of Natural Language Processing or Deep Learning projects. No specific NLP tasks (like text classification) or deep learning frameworks were implemented in the described work.",
+    "latency": 2.1139885999982653,
+    "cached": false
+   },
+   {
+    "id": "S224",
+    "score": 10,
+    "similarity": 0.7027251124382019,
+    "matched": [
+     "Python",
+     "Django (implies Python)"
+    ],
+    "missing": [
+     "Natural Language Processing",
+     "Deep Learning",
+     "PyTorch",
+     "TensorFlow"
+    ],
+    "explanation": "The resume demonstrates Python through Django and competitive programming projects but lacks any evidence of NLP, deep learning frameworks, or related model training. The internship focused on database optimization rather than machine learning tasks.",
+    "latency": 2.2037861999997403,
+    "cached": false
+   },
+   {
+    "id": "S063",
+    "score": 9,
+    "similarity": 0.6739769577980042,
+    "matched": [
+     "Python",
+     "Natural Language Processing",
+     "Deep Learning"
+    ],
+    "missing": [
+     "Natural Language Processing",
+     "Deep Learning"
+    ],
+    "explanation": "The student has Python experience from a weekend tutorial project and data analysis work, but the resume contains no evidence of NLP or deep learning skills. The described projects involve web development, database optimization, and basic data aggregation, none of which require natural language processing or deep learning.",
+    "latency": 2.6018231000016385,
+    "cached": false
+   },
+   {
+    "id": "S071",
+    "score": 9,
+    "similarity": 0.6733907461166382,
+    "matched": [],
+    "missing": [
+     "Python",
+     "Natural Language Processing",
+     "Deep Learning"
+    ],
+    "explanation": "The resume lists no evidence of Python, NLP, or Deep Learning skills; all described projects rely on Java, SQL, Excel, and DevOps tools. The student's background is in data visualization and infrastructure rather than machine learning.",
+    "latency": 2.0460364999999,
+    "cached": false
+   },
+   {
+    "id": "S430",
+    "score": 9,
+    "similarity": 0.6689743995666504,
+    "matched": [],
+    "missing": [
+     "Python",
+     "Natural Language Processing",
+     "Deep Learning"
+    ],
+    "explanation": "The resume lists only web development tools (Node.js, React) and project management skills, with no evidence of Python, NLP, or Deep Learning usage. The student's projects involve standard CRUD applications and UI development, which do not demonstrate the required machine learning fundamentals.",
+    "latency": 2.3823974000006274,
+    "cached": false
+   },
+   {
+    "id": "S270",
+    "score": 0,
+    "similarity": 0.674494206905365,
+    "matched": [
+     "Python",
+     "Natural Language Processing",
+     "Deep Learning"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Python and REST API skills through the Student Marks Service project, but there is no evidence of Natural Language Processing or Deep Learning work; the listed projects involve web development, database optimization, and mobile app building without any NLP or ML components.",
+    "latency": 2.212945999999647,
+    "cached": false
+   }
+  ],
+  "timing": {
+   "parse_s": 2.472515499997826,
+   "retrieve_s": 0.03969669999787584,
+   "rerank_s": 47.02111760000116,
+   "rerank_per_candidate_s": 2.3510558800000583,
+   "wall_s": 47.077019599997584,
+   "parse_cached": true,
+   "n_candidates": 20
+  }
+ },
+ "R15": {
+  "parsed": {
+   "role_title": "Web Developer",
+   "must_have_skills": [
+    "Next.js",
+    "PostgreSQL"
+   ],
+   "nice_to_have_skills": [
+    "TypeScript",
+    "Docker"
+   ],
+   "min_cgpa": null,
+   "allowed_branches": [],
+   "max_backlogs": null,
+   "semantic_query": "A web developer proficient in Next.js and PostgreSQL who can demonstrate hands-on projects involving these technologies. While TypeScript and Docker knowledge are beneficial, the primary focus is on the candidate's ability to build functional web applications."
+  },
+  "filters": {
+   "min_cgpa": null,
+   "max_backlogs": null,
+   "allowed_branches": []
+  },
+  "ranked": [
+   {
+    "id": "S091",
+    "score": 100,
+    "similarity": 0.7513962388038635,
+    "matched": [
+     "Next.js",
+     "PostgreSQL",
+     "Docker"
+    ],
+    "missing": [],
+    "explanation": "The student built a blog platform using Next.js and SQL, and packaged an application with Docker for consistent deployment. All must-have skills are clearly demonstrated through these projects.",
+    "latency": 1.9969200999985333,
+    "cached": false
+   },
+   {
+    "id": "S167",
+    "score": 100,
+    "similarity": 0.7305636405944824,
+    "matched": [
+     "Next.js",
+     "PostgreSQL"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Next.js and PostgreSQL through described projects involving storefronts with pre-rendered pages and normalized tables with foreign keys. TypeScript is listed as a basic skill in the resume, which counts as demonstrated evidence.",
+    "latency": 1.974919600001158,
+    "cached": false
+   },
+   {
+    "id": "S146",
+    "score": 100,
+    "similarity": 0.7065380215644836,
+    "matched": [
+     "Next.js",
+     "PostgreSQL",
+     "TypeScript",
+     "Docker"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Next.js and PostgreSQL through the Job Board project (static generation, joins) and Weather Dashboard (server-side rendering), while TypeScript and Docker are evidenced by type definitions in the Weather Dashboard and volume/network usage in the Job Board respectively. All must-have skills are clearly demonstrated with specific project details.",
+    "latency": 2.399044599998888,
+    "cached": false
+   },
+   {
+    "id": "S087",
+    "score": 100,
+    "similarity": 0.7041612863540649,
+    "matched": [
+     "Next.js",
+     "PostgreSQL",
+     "Docker"
+    ],
+    "missing": [],
+    "explanation": "The student built a job board using Next.js and PostgreSQL, demonstrating both must-have skills. They also created a multi-service compose file to orchestrate the app, database, and cache, proving Docker knowledge.",
+    "latency": 2.153902800000651,
+    "cached": false
+   },
+   {
+    "id": "S063",
+    "score": 100,
+    "similarity": 0.696227490901947,
+    "matched": [
+     "Next.js",
+     "PostgreSQL",
+     "TypeScript",
+     "Docker"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Next.js and PostgreSQL through the Weather Dashboard project (using file-based routing and server-side rendering) and the Inventory Management Service (tuning execution plans and adding indexes). TypeScript is shown via generics and union types in the same dashboard, while Docker knowledge is evidenced by connecting an app to a database using volumes and networks during a ",
+    "latency": 2.9073929999976826,
+    "cached": false
+   },
+   {
+    "id": "S325",
+    "score": 100,
+    "similarity": 0.6958528757095337,
+    "matched": [
+     "Next.js",
+     "PostgreSQL",
+     "TypeScript",
+     "Docker"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills (Next.js, PostgreSQL) and nice-to-haves (TypeScript, Docker) through specific project work involving server-side rendering, stored procedures, and containerized deployments.",
+    "latency": 2.245226700000785,
+    "cached": false
+   },
+   {
+    "id": "S426",
+    "score": 100,
+    "similarity": 0.6687777042388916,
+    "matched": [
+     "Next.js",
+     "PostgreSQL",
+     "TypeScript",
+     "Docker"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Next.js, PostgreSQL, TypeScript, and Docker knowledge through specific project descriptions and a dedicated portfolio site entry. No must-have skills are missing.",
+    "latency": 2.0523916999991343,
+    "cached": false
+   },
+   {
+    "id": "S292",
+    "score": 100,
+    "similarity": 0.6570839285850525,
+    "matched": [
+     "Next.js",
+     "PostgreSQL",
+     "TypeScript",
+     "Docker"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates all must-have skills: Next.js and PostgreSQL are explicitly listed in the 'Skill Set' and used in the Inventory Management Service project (where window functions were mentioned). Nice-to-haves TypeScript and Docker are also demonstrated, with TypeScript used in the College Fest Landing Page and Docker volumes/networks used for local database connection in the training/int",
+    "latency": 2.9857921000002534,
+    "cached": false
+   },
+   {
+    "id": "S055",
+    "score": 90,
+    "similarity": 0.6632320880889893,
+    "matched": [
+     "Next.js",
+     "PostgreSQL",
+     "TypeScript"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Next.js and PostgreSQL through the Inventory Management Service project, which involved database backups, stored procedures, and a framework-based build. TypeScript is shown via refactoring an untyped codebase and building a quiz app with single-file components.",
+    "latency": 2.2998748999998497,
+    "cached": false
+   },
+   {
+    "id": "S204",
+    "score": 65,
+    "similarity": 0.7265787720680237,
+    "matched": [
+     "Next.js",
+     "PostgreSQL",
+     "TypeScript",
+     "Docker"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Next.js, TypeScript, and Docker through the Blog Platform project, which involved static generation, dependency packaging into images, and server configuration. However, there is no evidence of PostgreSQL usage; the resume only lists 'Basic SQL' without specifying any database implementation or project work involving it.",
+    "latency": 2.5558308999970905,
+    "cached": false
+   },
+   {
+    "id": "S382",
+    "score": 65,
+    "similarity": 0.7028596997261047,
+    "matched": [
+     "PostgreSQL",
+     "TypeScript"
+    ],
+    "missing": [
+     "Next.js"
+    ],
+    "explanation": "The student demonstrates PostgreSQL through normalized table design and SQL joins, and TypeScript via static typing in a browser project. However, there is no evidence of building or using Next.js; the web development work described uses generic JavaScript/React patterns without mentioning the Next.js framework.",
+    "latency": 2.3250200000002224,
+    "cached": false
+   },
+   {
+    "id": "S097",
+    "score": 45,
+    "similarity": 0.6755564212799072,
+    "matched": [
+     "PostgreSQL",
+     "Docker"
+    ],
+    "missing": [
+     "Next.js",
+     "TypeScript"
+    ],
+    "explanation": "The student demonstrates PostgreSQL through database modeling and SQL operations, and Docker via containerization of components. However, all projects use Django/Python or generic REST APIs without any evidence of Next.js or TypeScript usage.",
+    "latency": 2.4014087000032305,
+    "cached": false
+   },
+   {
+    "id": "S286",
+    "score": 45,
+    "similarity": 0.6573590040206909,
+    "matched": [
+     "Docker",
+     "PostgreSQL"
+    ],
+    "missing": [
+     "Next.js",
+     "TypeScript"
+    ],
+    "explanation": "The student demonstrated Docker usage by packaging applications into images for consistent deployment and CI/CD pipelines, and used PostgreSQL (via T-SQL) to store data in the event registration system. However, there is no evidence of building or using Next.js or TypeScript projects; all described web-related work relies on Java/JAA.",
+    "latency": 2.636546300000191,
+    "cached": false
+   },
+   {
+    "id": "S003",
+    "score": 40,
+    "similarity": 0.7016555070877075,
+    "matched": [
+     "Next.js",
+     "PostgreSQL",
+     "TypeScript",
+     "Docker"
+    ],
+    "missing": [],
+    "explanation": "The resume demonstrates Next.js and PostgreSQL through the Frontend Development Internship where joins, subqueries, and aggregations were used on relational tables, and a component-based single-page interface was built with React (Next.js). However, there is no evidence of TypeScript usage or Docker knowledge; the listed skills are generic keywords without specific project backing.",
+    "latency": 2.476601699996536,
+    "cached": false
+   },
+   {
+    "id": "S466",
+    "score": 40,
+    "similarity": 0.7011394500732422,
+    "matched": [
+     "Next.js",
+     "PostgreSQL",
+     "TypeScript"
+    ],
+    "missing": [
+     "Docker"
+    ],
+    "explanation": "The student demonstrated Next.js and TypeScript through building a portfolio site with dynamic updates, but the resume contains no evidence of using PostgreSQL or Docker. The described backend project used REST APIs and HTML without mentioning any database or containerization tools.",
+    "latency": 2.4176853999997547,
+    "cached": false
+   },
+   {
+    "id": "S066",
+    "score": 40,
+    "similarity": 0.6750603914260864,
+    "matched": [
+     "TypeScript",
+     "REST APIs"
+    ],
+    "missing": [
+     "Next.js",
+     "PostgreSQL"
+    ],
+    "explanation": "The resume demonstrates TypeScript usage in the Weather Dashboard project but lacks evidence of Next.js or PostgreSQL, instead listing MongoDB and Node.js for all backend work. No projects describe building a full-stack application with a relational database or using the Next.js framework.",
+    "latency": 2.272749300002033,
+    "cached": false
+   },
+   {
+    "id": "S319",
+    "score": 40,
+    "similarity": 0.6673604846000671,
+    "matched": [
+     "Next.js",
+     "PostgreSQL",
+     "Docker"
+    ],
+    "missing": [],
+    "explanation": "The student demonstrates Docker knowledge by packaging applications into images for consistent deployment, but the resume does not provide evidence of building with Next.js or using PostgreSQL; instead, it lists React and generic REST APIs.",
+    "latency": 2.133883499998774,
+    "cached": false
+   },
+   {
+    "id": "S210",
+    "score": 40,
+    "similarity": 0.6649527549743652,
+    "matched": [
+     "Docker",
+     "REST APIs"
+    ],
+    "missing": [
+     "Next.js",
+     "PostgreSQL"
+    ],
+    "explanation": "The student used MongoDB and Node.js for a document database project, but has no evidence of building with Next.js or PostgreSQL. While they demonstrated Docker usage in a monitoring dashboard and CI/CD context, the core required frameworks are absent.",
+    "latency": 2.379997700001695,
+    "cached": false
+   },
+   {
+    "id": "S284",
+    "score": 0,
+    "similarity": 0.6729264259338379,
+    "matched": [
+     "Next.js",
+     "PostgreSQL",
+     "TypeScript"
+    ],
+    "missing": [],
+    "explanation": "The resume lists Next.js, PostgreSQL, and TypeScript in the skills section but provides no project descriptions or evidence of using these specific technologies. The described projects use generic stacks (HTML/CSS/JS) or a virtual DOM library without naming React or Next.js.",
+    "latency": 2.1754332999989856,
+    "cached": false
+   },
+   {
+    "id": "S206",
+    "score": 0,
+    "similarity": 0.6586702466011047,
+    "matched": [],
+    "missing": [
+     "Next.js",
+     "PostgreSQL"
+    ],
+    "explanation": "The resume lists React and Node.js but provides no evidence of building applications with Next.js or using PostgreSQL; the student used MongoDB instead. No projects demonstrate the required frameworks or databases.",
+    "latency": 1.9777082000000519,
+    "cached": false
+   }
+  ],
+  "timing": {
+   "parse_s": 2.2300305999997363,
+   "retrieve_s": 0.04732109999895329,
+   "rerank_s": 46.7683304999955,
+   "rerank_per_candidate_s": 2.338416524999775,
+   "wall_s": 46.83302360000016,
+   "parse_cached": true,
+   "n_candidates": 20
+  }
+ }
+}

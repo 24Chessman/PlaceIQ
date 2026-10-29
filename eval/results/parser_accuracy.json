@@ -1,0 +1,34 @@
+{
+ "dev": {
+  "per_field": {
+   "min_cgpa": 1.0,
+   "max_backlogs": 1.0,
+   "allowed_branches": 1.0
+  },
+  "overall": 1.0,
+  "must_precision": 1.0,
+  "must_recall": 0.9333333333333333,
+  "mismatches": [
+   "R04 must_have: parsed=['SQL', 'Excel'] -> ['Excel', 'SQL'] | truth=['Excel', 'Power BI', 'SQL']",
+   "R04 nice_to_have (info): parsed=['Pandas', 'Power BI', 'Python'] truth=['Pandas', 'Python']",
+   "R12 must_have: parsed=['Requirements Gathering', 'Documentation', 'Agile/Scrum', 'Stakeholder Communication'] -> ['Agile/Scrum', 'Requirements Gathering', 'Stakeholder Communication'] | truth=['Agile/Scrum', 'Requirements Gathering', 'Stakeholder Communication'] | unnormalised=['Documentation']"
+  ]
+ },
+ "test": {
+  "per_field": {
+   "min_cgpa": 1.0,
+   "max_backlogs": 1.0,
+   "allowed_branches": 1.0
+  },
+  "overall": 1.0,
+  "must_precision": 0.9642857142857143,
+  "must_recall": 0.9310344827586207,
+  "mismatches": [
+   "R03 must_have: parsed=['Node.js', 'Express', 'React', 'MongoDB'] -> ['Express.js', 'MongoDB', 'Node.js', 'React'] | truth=['MongoDB', 'Node.js', 'React']",
+   "R06 must_have: parsed=['SQL', 'ETL'] -> ['ETL Pipelines', 'SQL'] | truth=['Apache Spark', 'ETL Pipelines', 'SQL']",
+   "R06 nice_to_have (info): parsed=['AWS', 'Airflow', 'Apache Kafka', 'Apache Spark'] truth=['AWS', 'Airflow', 'Apache Kafka']",
+   "R10 must_have: parsed=['Network Security', 'Linux Administration'] -> ['Linux', 'Network Security'] | truth=['Linux', 'Network Security', 'Penetration Testing']",
+   "R10 nice_to_have (info): parsed=['Cryptography', 'Penetration Testing', 'Python'] truth=['Cryptography', 'Python']"
+  ]
+ }
+}

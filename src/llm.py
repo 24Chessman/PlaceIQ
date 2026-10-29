@@ -29,6 +29,14 @@ def client():
     return _client
 
 
+def _bounded(schema, max_items=8):
+    out = json.loads(json.dumps(schema))
+    for prop in out.get("properties", {}).values():
+        if prop.get("type") == "array":
+            prop["maxItems"] = max_items
+    return out
+
+
 def warm_up():
     """Load the model into memory (not cached on purpose). Returns seconds taken."""
     t0 = time.perf_counter()
@@ -49,11 +57,20 @@ def chat_json(messages, schema, options=None):
     t0 = time.perf_counter()
     r = client().chat(model=MODEL, messages=messages, format=schema, think=False, options=options,
                       keep_alive=KEEP_ALIVE)
+    fallback = False
+    try:
+        result = json.loads(r.message.content)
+    except json.JSONDecodeError:
+        # Added after the freeze tag (bug fix, see docs/RESULTS.md): an unbounded array in the schema can make the
+        # model loop until the context is full. Retry once with every array capped, store under the ORIGINAL key.
+        fallback = True
+        r = client().chat(model=MODEL, messages=messages, format=_bounded(schema), think=False,
+                          options={**options, "num_predict": 700}, keep_alive=KEEP_ALIVE)
+        result = json.loads(r.message.content)
     latency = time.perf_counter() - t0
-    result = json.loads(r.message.content)
-    entry = dict(key=key, latency=latency, eval_count=r.eval_count or 0, result=result)
+    entry = dict(key=key, latency=latency, eval_count=r.eval_count or 0, result=result, fallback=fallback)
     CACHE_DIR.mkdir(exist_ok=True)
     with open(LLM_CACHE, "a", encoding="utf-8", newline="\n") as f:
         f.write(json.dumps(entry, ensure_ascii=False) + "\n")
     cache[key] = entry
-    return result, dict(latency=latency, cached=False, eval_count=entry["eval_count"])
+    return result, dict(latency=latency, cached=False, eval_count=entry["eval_count"], fallback=fallback)

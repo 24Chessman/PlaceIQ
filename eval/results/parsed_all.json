@@ -1,0 +1,370 @@
+{
+ "R01": {
+  "parsed": {
+   "role_title": "Junior Backend Engineer",
+   "must_have_skills": [
+    "Python",
+    "REST APIs",
+    "SQL"
+   ],
+   "nice_to_have_skills": [
+    "Docker",
+    "Redis"
+   ],
+   "min_cgpa": 7.0,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT"
+   ],
+   "max_backlogs": 0,
+   "semantic_query": "A Junior Backend Engineer proficient in writing server-side code with Python, capable of designing and consuming REST APIs, and experienced in querying relational databases like PostgreSQL. The candidate should also have practical experience working with containerization tools such as Docker and caching mechanisms like Redis."
+  },
+  "latency": 14.047762700000021,
+  "cached": true
+ },
+ "R02": {
+  "parsed": {
+   "role_title": "Frontend Developer",
+   "must_have_skills": [
+    "React",
+    "JavaScript",
+    "HTML",
+    "CSS"
+   ],
+   "nice_to_have_skills": [
+    "TypeScript",
+    "Figma"
+   ],
+   "min_cgpa": 6.5,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "M.Sc IT"
+   ],
+   "max_backlogs": 1,
+   "semantic_query": "A fresher frontend developer proficient in React, JavaScript, HTML, and CSS who can build responsive user interfaces, with additional knowledge of TypeScript and Figma being a plus."
+  },
+  "latency": 3.294067000002542,
+  "cached": false
+ },
+ "R03": {
+  "parsed": {
+   "role_title": "Full Stack Developer",
+   "must_have_skills": [
+    "Node.js",
+    "Express",
+    "React",
+    "MongoDB"
+   ],
+   "nice_to_have_skills": [
+    "REST APIs",
+    "Authentication",
+    "Docker"
+   ],
+   "min_cgpa": 6.5,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "M.Sc IT"
+   ],
+   "max_backlogs": 0,
+   "semantic_query": "A full stack developer proficient in building backend services with Node.js and Express, creating responsive frontends using React, and managing data with MongoDB, ideally with experience in designing REST APIs, implementing login systems, and containerizing applications with Docker."
+  },
+  "latency": 2.8814757999971334,
+  "cached": false
+ },
+ "R04": {
+  "parsed": {
+   "role_title": "Data Analyst",
+   "must_have_skills": [
+    "SQL",
+    "Excel"
+   ],
+   "nice_to_have_skills": [
+    "Power BI",
+    "Python",
+    "Pandas"
+   ],
+   "min_cgpa": 6,
+   "allowed_branches": [],
+   "max_backlogs": null,
+   "semantic_query": "A fresher data analyst proficient in SQL and Excel for data manipulation and analysis, capable of creating Power BI dashboards, with additional proficiency in Python and Pandas being a plus."
+  },
+  "latency": 2.2019128000010824,
+  "cached": true
+ },
+ "R05": {
+  "parsed": {
+   "role_title": "ML Engineer",
+   "must_have_skills": [
+    "Python",
+    "Machine Learning",
+    "scikit-learn"
+   ],
+   "nice_to_have_skills": [
+    "PyTorch",
+    "Deep Learning"
+   ],
+   "min_cgpa": 7,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "ECE",
+    "M.Sc IT"
+   ],
+   "max_backlogs": 0,
+   "semantic_query": "An ML engineer intern or fresher with strong Python skills and a solid grasp of machine learning fundamentals using scikit-learn, ideally capable of implementing deep learning models with PyTorch."
+  },
+  "latency": 2.604763899998943,
+  "cached": false
+ },
+ "R06": {
+  "parsed": {
+   "role_title": "Data Engineer",
+   "must_have_skills": [
+    "SQL",
+    "ETL"
+   ],
+   "nice_to_have_skills": [
+    "Apache Spark",
+    "Airflow",
+    "Kafka",
+    "AWS"
+   ],
+   "min_cgpa": 7,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "M.Sc IT"
+   ],
+   "max_backlogs": 0,
+   "semantic_query": "A data engineer capable of moving and preparing large datasets using SQL and building ETL pipelines, with hands-on experience in Apache Spark. Ideally, the candidate should also have exposure to Airflow, Kafka, and AWS cloud services."
+  },
+  "latency": 2.7785266999999294,
+  "cached": false
+ },
+ "R07": {
+  "parsed": {
+   "role_title": "DevOps Trainee",
+   "must_have_skills": [
+    "Linux",
+    "Docker",
+    "CI/CD"
+   ],
+   "nice_to_have_skills": [
+    "AWS",
+    "Kubernetes",
+    "Terraform"
+   ],
+   "min_cgpa": 6.5,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "ECE"
+   ],
+   "max_backlogs": 1,
+   "semantic_query": "A DevOps trainee proficient in Linux operations, containerization with Docker, and continuous integration/deployment pipelines, ideally with exposure to cloud services like AWS, orchestration tools such as Kubernetes, and infrastructure as code using Terraform."
+  },
+  "latency": 2.8271116000014445,
+  "cached": true
+ },
+ "R08": {
+  "parsed": {
+   "role_title": "QA Engineer",
+   "must_have_skills": [
+    "Manual Testing",
+    "Selenium",
+    "API Testing"
+   ],
+   "nice_to_have_skills": [
+    "Python",
+    "Java"
+   ],
+   "min_cgpa": 6.0,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "ECE",
+    "M.Sc IT"
+   ],
+   "max_backlogs": 0,
+   "semantic_query": "A QA engineer proficient in manual testing and capable of writing automation scripts using Selenium, with experience in API testing via Postman. Ideally, the candidate should have knowledge of Python or Java."
+  },
+  "latency": 2.5723573000032047,
+  "cached": false
+ },
+ "R09": {
+  "parsed": {
+   "role_title": "Mobile App Developer",
+   "must_have_skills": [
+    "React Native",
+    "JavaScript",
+    "REST API Integration"
+   ],
+   "nice_to_have_skills": [
+    "Kotlin",
+    "Android Development",
+    "Flutter"
+   ],
+   "min_cgpa": 7,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "M.Sc IT"
+   ],
+   "max_backlogs": 0,
+   "semantic_query": "A fresher mobile app developer proficient in React Native and JavaScript with experience integrating REST APIs, ideally having built cross-platform applications using Kotlin or Flutter."
+  },
+  "latency": 2.4921444000010524,
+  "cached": true
+ },
+ "R10": {
+  "parsed": {
+   "role_title": "Security Analyst Trainee",
+   "must_have_skills": [
+    "Network Security",
+    "Linux Administration"
+   ],
+   "nice_to_have_skills": [
+    "Penetration Testing",
+    "Cryptography",
+    "Python Scripting"
+   ],
+   "min_cgpa": 7,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "ECE"
+   ],
+   "max_backlogs": 0,
+   "semantic_query": "A trainee security analyst with a solid grasp of network security principles and Linux administration, who has practical experience in penetration testing through CTFs, labs, or bug bounties, and ideally possesses knowledge of cryptography and Python scripting."
+  },
+  "latency": 2.7484360999987985,
+  "cached": false
+ },
+ "R11": {
+  "parsed": {
+   "role_title": "Embedded/IoT Trainee",
+   "must_have_skills": [
+    "C",
+    "Arduino",
+    "MQTT"
+   ],
+   "nice_to_have_skills": [
+    "Raspberry Pi",
+    "C++"
+   ],
+   "min_cgpa": 6.5,
+   "allowed_branches": [
+    "ECE",
+    "EE",
+    "CSE",
+    "Mechanical"
+   ],
+   "max_backlogs": 1,
+   "semantic_query": "A trainee with strong C programming skills who has worked with Arduino boards and implemented MQTT for device-to-cloud messaging, ideally having experience with Raspberry Pi and C++."
+  },
+  "latency": 2.4899456999992253,
+  "cached": false
+ },
+ "R12": {
+  "parsed": {
+   "role_title": "Associate Business Analyst",
+   "must_have_skills": [
+    "Requirements Gathering",
+    "Documentation",
+    "Agile/Scrum",
+    "Stakeholder Communication"
+   ],
+   "nice_to_have_skills": [
+    "JIRA",
+    "SQL",
+    "Process Modelling"
+   ],
+   "min_cgpa": 7.5,
+   "allowed_branches": [],
+   "max_backlogs": 0,
+   "semantic_query": "A candidate skilled in gathering requirements and creating documentation, capable of working within Agile or Scrum frameworks, and able to communicate effectively with non-technical stakeholders."
+  },
+  "latency": 2.4825832999995328,
+  "cached": true
+ },
+ "R13": {
+  "parsed": {
+   "role_title": "Java Backend Developer",
+   "must_have_skills": [
+    "Java",
+    "Spring Boot",
+    "SQL"
+   ],
+   "nice_to_have_skills": [
+    "Microservices",
+    "Kafka",
+    "Docker"
+   ],
+   "min_cgpa": 6.5,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT"
+   ],
+   "max_backlogs": 0,
+   "semantic_query": "A Java backend developer proficient in Spring Boot and SQL who has experience or exposure to microservices architecture, message brokering with Kafka, and containerization using Docker."
+  },
+  "latency": 2.41734870000073,
+  "cached": false
+ },
+ "R14": {
+  "parsed": {
+   "role_title": "NLP Engineer Trainee",
+   "must_have_skills": [
+    "Python",
+    "Natural Language Processing",
+    "Deep Learning"
+   ],
+   "nice_to_have_skills": [
+    "PyTorch",
+    "TensorFlow"
+   ],
+   "min_cgpa": 7,
+   "allowed_branches": [
+    "CSE",
+    "IT",
+    "ICT",
+    "M.Sc IT"
+   ],
+   "max_backlogs": 0,
+   "semantic_query": "A trainee NLP engineer capable of building text classification models and chatbots with strong Python skills and a solid foundation in natural language processing and deep learning frameworks."
+  },
+  "latency": 2.472515499997826,
+  "cached": false
+ },
+ "R15": {
+  "parsed": {
+   "role_title": "Web Developer",
+   "must_have_skills": [
+    "Next.js",
+    "PostgreSQL"
+   ],
+   "nice_to_have_skills": [
+    "TypeScript",
+    "Docker"
+   ],
+   "min_cgpa": null,
+   "allowed_branches": [],
+   "max_backlogs": null,
+   "semantic_query": "A web developer proficient in Next.js and PostgreSQL who can demonstrate hands-on projects involving these technologies. While TypeScript and Docker knowledge are beneficial, the primary focus is on the candidate's ability to build functional web applications."
+  },
+  "latency": 2.2300305999997363,
+  "cached": false
+ }
+}

@@ -1,0 +1,27 @@
+﻿python.exe : 
+At line:1 char:440
++ ... | Out-Null; & .\.venv\Scripts\python.exe eval\run_all.py setup baseli ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 2417.11it/s]
+setup done: {'dev': 1.0, 'test': 1.0}
+== stage setup finished in 48s
+baselines done
+== stage baselines finished in 8s
+[b4_k20] warm-up 0.6s, 10 requirement(s) to run
+[b4_k20] R02 done in 48s (parse 3.3s, rerank 47.3s, 20 cand)
+[b4_k20] R03 done in 52s (parse 2.9s, rerank 51.4s, 20 cand)
+[b4_k20] R05 done in 52s (parse 2.6s, rerank 51.2s, 20 cand)
+[b4_k20] R06 done in 49s (parse 2.8s, rerank 49.0s, 20 cand)
+[b4_k20] R08 done in 45s (parse 2.6s, rerank 44.3s, 20 cand)
+[b4_k20] R10 done in 49s (parse 2.7s, rerank 48.2s, 20 cand)
+[b4_k20] R11 done in 46s (parse 2.5s, rerank 45.5s, 20 cand)
+[b4_k20] R13 done in 50s (parse 2.4s, rerank 49.7s, 20 cand)
+[b4_k20] R14 done in 48s (parse 2.5s, rerank 47.6s, 20 cand)
+[b4_k20] R15 done in 47s (parse 2.2s, rerank 46.6s, 20 cand)
+== stage b4 finished in 486s
+wrote docs/RESULTS.md, paper/tables/*.tex, paper/figs/*
+== stage report finished in 3s

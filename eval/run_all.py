@@ -467,7 +467,9 @@ def stage_report(D):
             "- The fairness test rescored swapped resumes by calling the re-ranker directly (same prompt, requirement text and parsed skills as `pipeline.run`) instead of passing `resume_override` to a full 20-candidate run; pool rank shifts substitute the new score into the stored 20-candidate pool.\n"
             "- Only 10 test requirements: CIs are wide and per-requirement results are noisy.\n"
             "- Temperature 0 with a 4B model: score changes after a name swap include non-name effects of the changed prompt text; the control swap (same-group name) measures that floor.\n"
-            "- The fairness test covers names only, not college prestige or other proxies.\n")
+            "- The fairness test covers names only, not college prestige or other proxies.\n"
+            "- **Bug fix after the freeze tag (src/llm.py only).** In the fairness OFF stage one swapped resume (R02 / S087, control swap) made the model loop inside the unbounded `matched_skills` array until the 4096-token context was full (finish reason `length`, invalid JSON), which crashed the stage. `chat_json` now retries once with every schema array capped at 8 items and `num_predict=700`, stored under the ORIGINAL cache key. It was needed for exactly 1 call out of 1716 cached calls; all earlier calls (every main, ablation and fairness-ON result) completed without it, so no previously successful result changed. Fairness OFF was resumed from the saved partial results (20 rows) and the final report regenerated. Prompts, schemas of normal calls, K, model and temperature are unchanged; `git diff frozen-main-config -- src` shows only this change.\n"
+            "- GPU use was checked through the Ollama API after every requirement (`size_vram == size`); it stayed 100% GPU.\n")
     if TEST:
         (ROOT / "docs" / "RESULTS.md").write_text(head + "\n".join(md) + foot, encoding="utf-8")
         print("wrote docs/RESULTS.md, paper/tables/*.tex, paper/figs/*")
