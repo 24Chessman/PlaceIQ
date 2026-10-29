@@ -1,0 +1,367 @@
+{
+  "R01": {
+    "role_family": "backend",
+    "must_have": [
+      "Python",
+      "REST APIs",
+      "SQL"
+    ],
+    "nice_to_have": [
+      "Docker",
+      "Redis"
+    ],
+    "min_cgpa": 7.0,
+    "allowed_branches": [
+      "CSE",
+      "IT",
+      "ICT"
+    ],
+    "max_backlogs": 0,
+    "text_markers": {
+      "min_cgpa": "minimum CGPA of 7.0",
+      "max_backlogs": "no active backlogs",
+      "branches": "CSE, IT or ICT branches only"
+    }
+  },
+  "R02": {
+    "role_family": "frontend",
+    "must_have": [
+      "React",
+      "JavaScript",
+      "HTML/CSS"
+    ],
+    "nice_to_have": [
+      "TypeScript",
+      "Figma"
+    ],
+    "min_cgpa": 6.5,
+    "allowed_branches": [
+      "CSE",
+      "IT",
+      "ICT",
+      "M.Sc IT"
+    ],
+    "max_backlogs": 1,
+    "text_markers": {
+      "min_cgpa": "cgpa 6.5+",
+      "max_backlogs": "1 backlog is fine but not more than that",
+      "branches": "CS/IT/ICT/MSc IT only"
+    }
+  },
+  "R03": {
+    "role_family": "fullstack",
+    "must_have": [
+      "Node.js",
+      "React",
+      "MongoDB"
+    ],
+    "nice_to_have": [
+      "REST APIs",
+      "Authentication",
+      "Docker"
+    ],
+    "min_cgpa": 6.5,
+    "allowed_branches": [
+      "CSE",
+      "IT",
+      "ICT",
+      "M.Sc IT"
+    ],
+    "max_backlogs": 0,
+    "text_markers": {
+      "min_cgpa": "6.5+ CGPA",
+      "max_backlogs": "no active backlogs",
+      "branches": "CSE / IT / ICT / M.Sc IT"
+    }
+  },
+  "R04": {
+    "role_family": "data_analysis",
+    "must_have": [
+      "SQL",
+      "Excel",
+      "Power BI"
+    ],
+    "nice_to_have": [
+      "Python",
+      "Pandas"
+    ],
+    "min_cgpa": 6.0,
+    "allowed_branches": null,
+    "max_backlogs": null,
+    "text_markers": {
+      "min_cgpa": "CGPA 6 se upar",
+      "max_backlogs": "Backlog ka koi issue nahi",
+      "branches": "Koi bhi branch chalegi"
+    }
+  },
+  "R05": {
+    "role_family": "ml",
+    "must_have": [
+      "Python",
+      "Machine Learning",
+      "scikit-learn"
+    ],
+    "nice_to_have": [
+      "Deep Learning",
+      "PyTorch"
+    ],
+    "min_cgpa": 7.0,
+    "allowed_branches": [
+      "CSE",
+      "IT",
+      "ICT",
+      "ECE",
+      "M.Sc IT"
+    ],
+    "max_backlogs": 0,
+    "text_markers": {
+      "min_cgpa": "7 CGPA minimum",
+      "max_backlogs": "zero backlogs",
+      "branches": "CSE, IT, ICT, ECE and MSc IT"
+    }
+  },
+  "R06": {
+    "role_family": "data_engineering",
+    "must_have": [
+      "SQL",
+      "ETL Pipelines",
+      "Apache Spark"
+    ],
+    "nice_to_have": [
+      "Airflow",
+      "Apache Kafka",
+      "AWS"
+    ],
+    "min_cgpa": 7.0,
+    "allowed_branches": [
+      "CSE",
+      "IT",
+      "ICT",
+      "M.Sc IT"
+    ],
+    "max_backlogs": 0,
+    "text_markers": {
+      "min_cgpa": "7 CGPA or above",
+      "max_backlogs": "No pending backlogs",
+      "branches": "(CSE/IT/ICT/MSc IT)"
+    }
+  },
+  "R07": {
+    "role_family": "devops_cloud",
+    "must_have": [
+      "Linux",
+      "Docker",
+      "CI/CD"
+    ],
+    "nice_to_have": [
+      "AWS",
+      "Kubernetes",
+      "Terraform"
+    ],
+    "min_cgpa": 6.5,
+    "allowed_branches": [
+      "CSE",
+      "IT",
+      "ICT",
+      "ECE"
+    ],
+    "max_backlogs": 1,
+    "text_markers": {
+      "min_cgpa": "CGPA >= 6.5",
+      "max_backlogs": "Max 1 active backlog accepted",
+      "branches": "CSE, IT, ICT or ECE"
+    }
+  },
+  "R08": {
+    "role_family": "qa_testing",
+    "must_have": [
+      "Manual Testing",
+      "Selenium",
+      "API Testing"
+    ],
+    "nice_to_have": [
+      "Python",
+      "Java"
+    ],
+    "min_cgpa": 6.0,
+    "allowed_branches": [
+      "CSE",
+      "IT",
+      "ICT",
+      "ECE",
+      "M.Sc IT"
+    ],
+    "max_backlogs": 0,
+    "text_markers": {
+      "min_cgpa": "6.0 CGPA cutoff",
+      "max_backlogs": "backlog allowed nahi hai",
+      "branches": "CSE/IT/ICT/ECE/M.Sc IT"
+    }
+  },
+  "R09": {
+    "role_family": "mobile",
+    "must_have": [
+      "React Native",
+      "JavaScript",
+      "REST APIs"
+    ],
+    "nice_to_have": [
+      "Android",
+      "Kotlin",
+      "Flutter"
+    ],
+    "min_cgpa": 7.0,
+    "allowed_branches": [
+      "CSE",
+      "IT",
+      "ICT",
+      "M.Sc IT"
+    ],
+    "max_backlogs": 0,
+    "text_markers": {
+      "min_cgpa": "Minimum 7 CGPA",
+      "max_backlogs": "no backlogs",
+      "branches": "only CSE/IT/ICT/MSc IT"
+    }
+  },
+  "R10": {
+    "role_family": "cybersecurity",
+    "must_have": [
+      "Network Security",
+      "Linux",
+      "Penetration Testing"
+    ],
+    "nice_to_have": [
+      "Cryptography",
+      "Python"
+    ],
+    "min_cgpa": 7.0,
+    "allowed_branches": [
+      "CSE",
+      "IT",
+      "ICT",
+      "ECE"
+    ],
+    "max_backlogs": 0,
+    "text_markers": {
+      "min_cgpa": "CGPA 7 and above",
+      "max_backlogs": "no active backlogs",
+      "branches": "CSE, IT, ICT and ECE students only"
+    }
+  },
+  "R11": {
+    "role_family": "embedded_iot",
+    "must_have": [
+      "C",
+      "Arduino",
+      "MQTT"
+    ],
+    "nice_to_have": [
+      "Raspberry Pi",
+      "C++"
+    ],
+    "min_cgpa": 6.5,
+    "allowed_branches": [
+      "ECE",
+      "EE",
+      "CSE",
+      "Mechanical"
+    ],
+    "max_backlogs": 1,
+    "text_markers": {
+      "min_cgpa": "CGPA 6.5 min",
+      "max_backlogs": "one backlog is okay",
+      "branches": "ECE, EE, CSE, Mechanical"
+    }
+  },
+  "R12": {
+    "role_family": "business_analysis",
+    "must_have": [
+      "Requirements Gathering",
+      "Agile/Scrum",
+      "Stakeholder Communication"
+    ],
+    "nice_to_have": [
+      "JIRA",
+      "SQL",
+      "Process Modeling"
+    ],
+    "min_cgpa": 7.5,
+    "allowed_branches": null,
+    "max_backlogs": 0,
+    "text_markers": {
+      "min_cgpa": "CGPA of 7.5 or higher",
+      "max_backlogs": "no active backlogs",
+      "branches": "any branch"
+    }
+  },
+  "R13": {
+    "role_family": "backend",
+    "must_have": [
+      "Java",
+      "Spring Boot",
+      "SQL"
+    ],
+    "nice_to_have": [
+      "Microservices",
+      "Apache Kafka",
+      "Docker"
+    ],
+    "min_cgpa": 6.5,
+    "allowed_branches": [
+      "CSE",
+      "IT",
+      "ICT"
+    ],
+    "max_backlogs": 0,
+    "text_markers": {
+      "min_cgpa": "6.5+ CGPA",
+      "max_backlogs": "0 backlogs",
+      "branches": "CSE/IT/ICT only"
+    }
+  },
+  "R14": {
+    "role_family": "ml",
+    "must_have": [
+      "Python",
+      "NLP",
+      "Deep Learning"
+    ],
+    "nice_to_have": [
+      "PyTorch",
+      "TensorFlow"
+    ],
+    "min_cgpa": 7.0,
+    "allowed_branches": [
+      "CSE",
+      "IT",
+      "ICT",
+      "M.Sc IT"
+    ],
+    "max_backlogs": 0,
+    "text_markers": {
+      "min_cgpa": "CGPA 7 minimum",
+      "max_backlogs": "no active backlogs",
+      "branches": "CSE, IT, ICT, MSc IT"
+    }
+  },
+  "R15": {
+    "role_family": "fullstack",
+    "must_have": [
+      "Next.js",
+      "PostgreSQL"
+    ],
+    "nice_to_have": [
+      "TypeScript",
+      "Docker"
+    ],
+    "min_cgpa": null,
+    "allowed_branches": null,
+    "max_backlogs": null,
+    "text_markers": {
+      "min_cgpa": "we dont care about cgpa",
+      "max_backlogs": "backlogs also fine",
+      "branches": "or branch"
+    }
+  }
+}

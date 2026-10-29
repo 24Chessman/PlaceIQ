@@ -1,0 +1,26 @@
+{
+  "gujarati_male": {
+    "first": ["Jay", "Kunal", "Harsh", "Dhruv", "Parth", "Yash", "Nirav", "Chirag", "Darshan", "Hardik", "Jignesh", "Kartik", "Mihir", "Nikhil", "Pranav", "Rushabh", "Smit", "Tirth", "Utsav", "Viral", "Bhavin", "Dipen", "Hitesh", "Ketan", "Mayur", "Naman", "Paras", "Rajan", "Sagar", "Tejas", "Urvil", "Vatsal", "Ankit", "Divyesh", "Falgun", "Gaurav", "Het", "Ishan", "Jainam", "Manan", "Nisarg", "Krunal", "Dhaval"],
+    "last": ["Patel", "Shah", "Desai", "Mehta", "Joshi", "Trivedi", "Parmar", "Thakkar", "Dave", "Bhatt", "Modi", "Solanki", "Vyas", "Pandya", "Raval", "Gandhi"]
+  },
+  "gujarati_female": {
+    "first": ["Aarti", "Bhumi", "Chaitali", "Dhara", "Foram", "Hetal", "Jinal", "Khushi", "Krupa", "Mansi", "Nidhi", "Priyal", "Riddhi", "Ruchi", "Shruti", "Tanvi", "Urvi", "Vidhi", "Zalak", "Disha", "Drashti", "Hiral", "Janvi", "Kinjal", "Mitali", "Nisha", "Rina", "Sneha", "Trusha", "Vaishali", "Aditi", "Bansari", "Charmi", "Dhwani", "Heer", "Jahnvi", "Khyati", "Mahi", "Niyati", "Purvi", "Hemangi", "Margi", "Shivangi"],
+    "last": ["Patel", "Shah", "Desai", "Mehta", "Joshi", "Trivedi", "Parmar", "Thakkar", "Dave", "Bhatt", "Modi", "Solanki", "Vyas", "Pandya", "Raval", "Gandhi"]
+  },
+  "north_indian_male": {
+    "first": ["Aman", "Rahul", "Rohit", "Vikas", "Ankur", "Deepak", "Sachin", "Mohit", "Nitin", "Pankaj", "Rajat", "Saurabh", "Tarun", "Varun", "Vishal", "Abhishek", "Akshay", "Ashish", "Karan", "Lakshay", "Manoj", "Piyush", "Rishabh", "Sumit", "Tushar", "Vivek", "Yogesh", "Arjun", "Harpreet", "Gurpreet", "Jaspreet", "Manpreet", "Ravinder", "Sandeep", "Siddharth", "Shubham", "Uday", "Vaibhav", "Kapil", "Lalit", "Mayank", "Rajeev", "Anuj"],
+    "last": ["Sharma", "Verma", "Gupta", "Singh", "Kumar", "Yadav", "Mishra", "Tiwari", "Chopra", "Malhotra", "Kapoor", "Bansal", "Saxena", "Agarwal", "Pandey", "Bhatia", "Arora"]
+  },
+  "north_indian_female": {
+    "first": ["Ananya", "Anjali", "Divya", "Neha", "Pallavi", "Priya", "Richa", "Shweta", "Simran", "Swati", "Tanya", "Vandana", "Aarushi", "Akanksha", "Bhavna", "Garima", "Harleen", "Ishita", "Jyoti", "Komal", "Megha", "Muskan", "Nikita", "Payal", "Pooja", "Radhika", "Rashmi", "Ritika", "Sakshi", "Shalini", "Shivani", "Sonal", "Surbhi", "Tamanna", "Vartika", "Yamini", "Anushka", "Deepika", "Gunjan", "Nandini", "Kritika", "Mehak", "Ruchika"],
+    "last": ["Sharma", "Verma", "Gupta", "Singh", "Kumar", "Yadav", "Mishra", "Tiwari", "Chopra", "Malhotra", "Kapoor", "Bansal", "Saxena", "Agarwal", "Pandey", "Bhatia", "Arora"]
+  },
+  "south_indian_male": {
+    "first": ["Arvind", "Karthik", "Suresh", "Venkat", "Harish", "Vignesh", "Ganesh", "Praveen", "Ramesh", "Sanjay", "Srinivas", "Naresh", "Mahesh", "Prasad", "Rajesh", "Balaji", "Dinesh", "Gopal", "Hari", "Lokesh", "Manikandan", "Murali", "Nagarajan", "Pradeep", "Raghav", "Santhosh", "Sathish", "Sundar", "Vijay", "Vinay", "Aravind", "Bharath", "Chandru", "Dheeraj", "Eswar", "Girish", "Jagadish", "Kishore", "Madhav", "Rakesh", "Shyam", "Yashwanth", "Anirudh"],
+    "last": ["Iyer", "Nair", "Reddy", "Rao", "Menon", "Pillai", "Naidu", "Krishnan", "Subramanian", "Raman", "Shetty", "Gowda", "Varma", "Narayanan", "Chandran", "Hegde", "Bhat"]
+  },
+  "south_indian_female": {
+    "first": ["Lakshmi", "Meena", "Kavya", "Swathi", "Anitha", "Bhavya", "Deepa", "Gayathri", "Harini", "Indira", "Janani", "Keerthi", "Madhuri", "Nithya", "Pavithra", "Ramya", "Sangeetha", "Shobha", "Sowmya", "Sudha", "Tejaswini", "Uma", "Vasudha", "Vidya", "Aishwarya", "Archana", "Chitra", "Dharani", "Eswari", "Geetha", "Hema", "Jayashree", "Kalpana", "Lavanya", "Manasa", "Namratha", "Padma", "Revathi", "Sahana", "Thara", "Yamuna", "Anusha", "Bhargavi"],
+    "last": ["Iyer", "Nair", "Reddy", "Rao", "Menon", "Pillai", "Naidu", "Krishnan", "Subramanian", "Raman", "Shetty", "Gowda", "Varma", "Narayanan", "Chandran", "Hegde", "Bhat"]
+  }
+}

@@ -1,0 +1,535 @@
+﻿req_id,student_id,requirement_text,resume_text,eligible,generated_label,my_label
+R15,S314,"startup hiring web dev: Next.js and PostgreSQL must, typescript nice to have, docker knowledge is a plus. we dont care about cgpa or branch, just show us what u built. (backlogs also fine)","Ruchi Joshi - +91 9242827519 - s314@mail.example
+
+Education
+Kaveri School of Technology - B.Tech in CSE, expected 2027. CGPA 6.67. Active backlogs: 0.
+
+Academic Projects
+* online bookstore backend - made using postgres n Pyython n js. Wrote stored procedures n triggers to keep audit history for a hostel-fee database. Implemented classic algorithms such as graph traversal and dynamic programming in an interpreted, indentation-based language during competitive practice. Made a web page interactive with event handlers, form validation and dynamic updates without reloading it.
+* personal portfolio site - made using reactjs n next js n dataframes. Used a virtual DOM based library to build a dasbhoard whose tables n charts update instantly when filters change. combined static generation with incremental rebuilds for a news site whose content changed hourly. Joined three CSV exports n produced a summary table that fed a notebook report.
+
+Interests
+Play cricket for the department team.
+
+Awards & Achievements
+Selected for the university cultural fest organising committee.
+Completed 200+ practice problems on a competitive-programming website.
+
+Experience
+data analyst intern, harbor light systems (6 months). Pulled monthly sales numbers from a relattional database for a manager, grouping by region & product. Deployed a three-tier app in a prvate network with public & private subnets.
+
+Technical Skills
+skills: pytohn3 & ec2, javascript / next.s / pd n postgres / react.js, structured query language
+
+Career Objective
+Motivated final-year student looking for a challenging opportunity with a supportive team.
+
+References available on request.
+",1,3,3
+R01,S372,"We are hiring Junior Backend Engineers for our Ahmedabad office. The ideal candidate is comfortable writing server-side code in Python, has built or consumed REST APIs and can write SQL against a relational database such as PostgreSQL. Familiarity with Docker and Redis would be an added advantage. Candidates must hold a minimum CGPA of 7.0, must have no active backlogs, and should be from CSE, IT or ICT branches only.","Sneha Dave | s372@mail.example | +91 9670065491
+
+EDUCATION
+B.E. in Mechanical Engineering (2027) from Narmada Institute of Technology; 8.61 CGPA; 0 active backlogs
+
+SKILLS
+tech i know: process modelling n micrsooft excel, requirement nalysis, sturctured query language, client communication / Data Visualization & power-bi (basic)
+
+OBJECTIVE
+Eager to contribute to real-world problems while learning from experienced colleagues.
+
+ACHIEVEMENTS
+Cleared a national-level aptitude olympiad round.
+Selected for the university cultural fest organising committee.
+
+EXTRA-CURRICULARS
+Volunteer at NSS blood donation camps.
+Languages: English, Hindi, Gujarati.
+
+PROJECTS
+– student result analysis - made using data visualization n microsoft excel n Power BI. As a small coursework exercise, designed an infographic-style dashboard summarising placement trends for the training cell. summarised thousands of survey rows with pivot summaries and charts for a club president. In a weekend tutorial project, created KPI cards, maps n trend lines for a college admissions analysis.
+– retail basket analysis - made using t-sql n use case dagrams. Used window functions n common table expressions to rank customers n compute running totals. in my main project, used decision tables and state diagrams to clarify complex business rules. modelled actors & interactions for an e-commerce ssytem with standard notation before development began.
+– hospital billing workflow redesign - made using brd n stakeholder communication. Documented functional and non-functional needs, with acceptance criteria, for a hospital app. Facilitated a review meeting where users, developers & managers agreed on priorities.
+
+I hereby declare that the information above is true to the best of my knowledge.
+",0,0,0
+R09,S049,"Mobile app developer (fresher). React Native and JavaScript required, plus REST API integration. Kotlin/Android or Flutter experience is a bonus. Minimum 7 CGPA, no backlogs, only CSE/IT/ICT/MSc IT.","Name: Padma Shetty | Email: s049@mail.example | Mobile: +91 9361259739
+
+EDUCATION
+Vindhya Engineering College - B.E. in Computer Science & Engineering, expected 2027. CGPA 8.38. 0 active backlogs.
+
+PROJECTS
+• Fee Payment Tracker: In my main project, designed endpoints with predictable URLs and standard verbs so a mobile app could create, read, update and delete orders. Added pagination, filtering and versioned routes to an HTTP service consumed by two different client applications. Fetched data from a public service with promises and displayed it in a searchable table. Across several projects, managed shared state and routing across multiple screens in a student portal built from reusable components.
+• Quiz Application UI: Wrote a library of reusable buttons, cards and forms that other team members imported in their pages. Across several projects, handled offline storage and push notifications in a hybrid mobile project. Built a small program that signs and verifies messages with digital signatures.
+
+EXTRA-CURRICULARS
+Play cricket for the department team.
+Learning the guitar in my free time.
+
+OBJECTIVE
+Eager to contribute to real-world problems while learning from experienced colleagues.
+
+INTERNSHIP
+Security Intern, Pixelnest Solutions (2 months). Set up a VPN and access control lists for a small office network as part of coursework. In a weekend tutorial project, used reconnaissance, scanning and exploitation phases with a standard methodology on a client-style test environment. As a small coursework exercise, scanned servers and web apps for known weaknesses, then ranked findings by severity and exploitability.
+
+ACHIEVEMENTS
+Awarded a merit scholarship for academic performance in semester 3.
+
+References available on request.
+",1,3,3
+R15,S369,"startup hiring web dev: Next.js and PostgreSQL must, typescript nice to have, docker knowledge is a plus. we dont care about cgpa or branch, just show us what u built. (backlogs also fine)","Komal Singh - +91 9521386434 - s369@mail.example
+
+EDUCATION
+Kaveri School of Technology - B.E. in Electrical Engineering, expected 2027. CGPA 9.19. 0 active backlogs.
+
+EXTRA-CURRICULARS
+Treasurer of the literary society.
+Volunteer at NSS blood donation camps.
+
+SKILLS
+skills: drf n postgres n pyhton3 / rest / t-slq / agile/scrum & jira tickets, requirement gathering
+
+ACHIEVEMENTS
+Selected for the university cultural fest organising committee.
+Secured first place in the inter-department quiz.
+
+PROJECTS
+– fee payment tracker - made using django rest frammework n psqql n Python. In my main project, built a blog platfomr with comments, cattegories & moderation screens using a mature model-view-template framework. In my main project, used an open-source relational server with geospatial extensions to store & look up campus locations. Automated a repetitive weekly report by writing a program that reads files, applies a few rules n emaiils the result.
+– event registration system - made using RSET n sql n agie. across several projects, added pagination, filtering and versioned routes to an HTTP service consumed by two different client applications. cleaned duplicates & fixed inconsistent recodrs inside a database using update & deete statements. maintained a priritised backlog and tracked burndown for a six-member student project.
+– library system requirements pack - made using jirat ickets n requirement analysis. generated release notes from resolved tikets automatically. Ran workhops with faculty to capture what a timetable system must do and resolved conflicting wishes.
+
+OBJECTIVE
+Seeking an entry-level role where I can apply what I have learnt and keep growing.
+
+I hereby declare that the information above is true to the best of my knowledge.
+",1,1,2
+R03,S354,"Full Stack Developer (MERN-ish)
+- Node.js + Express backend, React frontend
+- MongoDB for storage
+- REST APIs, login/auth experience and Docker are a plus
+- 6.5+ CGPA, backlog kuch nahi chahiye (no active backlogs)
+- CSE / IT / ICT / M.Sc IT","RESUME OF Het Dave (s354@mail.example, +91 9784288364)
+
+EDUCATION
+B.E. in Information and Communication Technology (2026) from Tapi Valley Institute of Engineering; 8.20 CGPA; Active backlogs: 0
+
+ACHIEVEMENTS
+Selected for the university cultural fest organising committee.
+Completed 200+ practice problems on a competitive-programming website.
+
+OBJECTIVE
+Seeking an entry-level role where I can apply what I have learnt and keep growing.
+
+EXTRA-CURRICULARS
+Volunteer at NSS blood donation camps.
+Hobbies: reading, sketching, travelling.
+
+PROJECTS
+* Release Automation Project (Linux, API Testing, Manual Testing, Selenium): Administered a headless server through the terminal, managing users, permissions and services. Built collections of requests with environments and assertions that ran before each release. Logged detailed defect reports with screenshots, severity and steps to reproduce. Ran browser tests in parallel on a grid of machines to shorten feedback time.
+* Quality Review of Ticketing App
+  Added unit and integration checks with assertions and fixtures for a small service. Reduced a two-day regression cycle to forty minutes by automating the stable flows. Implemented a substitution cipher and a stream cipher from scratch to understand how secrets are scrambled.
+  Stack: Test Automation, Cryptography
+* CTF Practice Writeups
+  Responded to a simulated intrusion by tracing logs, blocking addresses and writing an incident note. Chained a weak password, an outdated service and a misconfiguration to gain access in a capture-the-flag event. Mapped findings to well-known weakness lists and wrote remediation steps for each in a lab report.
+  Stack: Network Security, Penetration Testing, Vulnerability Assessment
+
+SKILLS
+Strong: Test Automation
+Working knowledge: API Testing, Cryptography, Linux, Manual Testing, Network Security, Penetration Testing, Selenium, Vulnerability Assessment
+",1,0,0
+R10,S354,"Position: Security Analyst Trainee
+Requirements:
+ * Working knowledge of network security concepts and Linux administration
+ * Hands-on penetration testing (CTFs, labs or bug bounty count)
+ * Cryptography basics and scripting in Python are desirable
+Eligibility: CGPA 7 and above; no active backlogs; CSE, IT, ICT and ECE students only.","RESUME OF Het Dave (s354@mail.example, +91 9784288364)
+
+EDUCATION
+B.E. in Information and Communication Technology (2026) from Tapi Valley Institute of Engineering; 8.20 CGPA; Active backlogs: 0
+
+ACHIEVEMENTS
+Selected for the university cultural fest organising committee.
+Completed 200+ practice problems on a competitive-programming website.
+
+OBJECTIVE
+Seeking an entry-level role where I can apply what I have learnt and keep growing.
+
+EXTRA-CURRICULARS
+Volunteer at NSS blood donation camps.
+Hobbies: reading, sketching, travelling.
+
+PROJECTS
+* Release Automation Project (Linux, API Testing, Manual Testing, Selenium): Administered a headless server through the terminal, managing users, permissions and services. Built collections of requests with environments and assertions that ran before each release. Logged detailed defect reports with screenshots, severity and steps to reproduce. Ran browser tests in parallel on a grid of machines to shorten feedback time.
+* Quality Review of Ticketing App
+  Added unit and integration checks with assertions and fixtures for a small service. Reduced a two-day regression cycle to forty minutes by automating the stable flows. Implemented a substitution cipher and a stream cipher from scratch to understand how secrets are scrambled.
+  Stack: Test Automation, Cryptography
+* CTF Practice Writeups
+  Responded to a simulated intrusion by tracing logs, blocking addresses and writing an incident note. Chained a weak password, an outdated service and a misconfiguration to gain access in a capture-the-flag event. Mapped findings to well-known weakness lists and wrote remediation steps for each in a lab report.
+  Stack: Network Security, Penetration Testing, Vulnerability Assessment
+
+SKILLS
+Strong: Test Automation
+Working knowledge: API Testing, Cryptography, Linux, Manual Testing, Network Security, Penetration Testing, Selenium, Vulnerability Assessment
+",1,3,3
+R13,S424,"JAVA BACKEND DEVELOPER - Bengaluru. Must: Java, Spring Boot, SQL. Microservices, Kafka and Docker will give you an edge. 6.5+ CGPA, 0 backlogs, CSE/IT/ICT only. no exceptions!!","RESUME OF Bharath Reddy (s424@mail.example, +91 9737095695)
+
+EDUCATION
+B.E. in Information and Communication Technology (2028) from Godavari Institute of Science and Technology; 8.48 CGPA; Active backlogs: 0
+
+EXTRA-CURRICULARS
+Learning the guitar in my free time.
+Organised the registration desk for the technical fest.
+
+PROJECTS
+– Online Bookstore Backend - Practised data structures in a compiled, bytecode-based object-oriented language and cleared two campus coding rounds with it. As a small coursework exercise, used JSON columns, full-text search and window functions inside a free enterprise-grade relational database. Across several projects, built a command-line tool that renames and organises thousands of downloaded files using simple scripting and the standard library. Built a service that exposes endpoints for a mobile app and persists orders in a relational store. Tech: Java, PostgreSQL, Python, REST APIs.
+– Student Marks Service
+  Built an enterprise-style service with annotations, dependency injection and auto-configuration on the JVM, without writing XML. In a weekend tutorial project, used window functions and common table expressions to rank customers and compute running totals. Experimented with convolutional and recurrent architectures, dropout and learning-rate schedules.
+  Stack: Spring Boot, SQL, Deep Learning
+– Resume Screening Assistant (Machine Learning, NLP, TensorFlow): Deployed a recommendation feature that learns from user behaviour in a small marketplace app. Created a chatbot that understands intent and fills slots to book a library seat. Used a graph-based tensor framework from a search company with callbacks and training dashboards.
+
+SKILLS
+Proficient in NLP, Python. Comfortable with Deep Learning, Java, Machine Learning, REST APIs, Spring Boot, TensorFlow. Familiar with PostgreSQL, SQL.
+
+OBJECTIVE
+Seeking an entry-level role where I can apply what I have learnt and keep growing.
+
+References available on request.
+",1,2,3
+R02,S049,"hey, need 2 frontend guys/girls asap!! react + js + html css must. typescript n figma if u know its a bonus. cgpa 6.5+ ok, 1 backlog is fine but not more than that. CS/IT/ICT/MSc IT only. fresher ok","Name: Padma Shetty | Email: s049@mail.example | Mobile: +91 9361259739
+
+EDUCATION
+Vindhya Engineering College - B.E. in Computer Science & Engineering, expected 2027. CGPA 8.38. 0 active backlogs.
+
+PROJECTS
+• Fee Payment Tracker: In my main project, designed endpoints with predictable URLs and standard verbs so a mobile app could create, read, update and delete orders. Added pagination, filtering and versioned routes to an HTTP service consumed by two different client applications. Fetched data from a public service with promises and displayed it in a searchable table. Across several projects, managed shared state and routing across multiple screens in a student portal built from reusable components.
+• Quiz Application UI: Wrote a library of reusable buttons, cards and forms that other team members imported in their pages. Across several projects, handled offline storage and push notifications in a hybrid mobile project. Built a small program that signs and verifies messages with digital signatures.
+
+EXTRA-CURRICULARS
+Play cricket for the department team.
+Learning the guitar in my free time.
+
+OBJECTIVE
+Eager to contribute to real-world problems while learning from experienced colleagues.
+
+INTERNSHIP
+Security Intern, Pixelnest Solutions (2 months). Set up a VPN and access control lists for a small office network as part of coursework. In a weekend tutorial project, used reconnaissance, scanning and exploitation phases with a standard methodology on a client-style test environment. As a small coursework exercise, scanned servers and web apps for known weaknesses, then ranked findings by severity and exploitability.
+
+ACHIEVEMENTS
+Awarded a merit scholarship for academic performance in semester 3.
+
+References available on request.
+",1,1,1
+R12,S337,"We invite applications for the position of Associate Business Analyst. The candidate should be good at requirements gathering and documentation, work in an Agile/Scrum environment, and have strong stakeholder communication with non-technical clients. Knowledge of JIRA, SQL and process modelling would be considered a plus. Applicants from any branch with a CGPA of 7.5 or higher and no active backlogs may apply.","Chaitali Modi - +91 9242597960 - s337@mail.example
+
+EDUCATION
+B.E. in Computer Science and Engineering, Tapi Valley Institute of Engineering | CGPA: 7.86/10 | Graduating 2027 | Active backlogs: 0
+
+PROJECTS
+* Customer Churn Study
+  Built a monthly budget workbook with lookup formulas, conditional formatting and a dashboard sheet. Created a what-if model for fee collection using scenario manager and data validation.
+  Stack: Excel
+* Covid Trend Report (SQL, Process Modeling): In a weekend tutorial project, used window functions and common table expressions to rank customers and compute running totals. Used decision tables and state diagrams to clarify complex business rules.
+* Process Improvement Case Study
+  Across several projects, documented functional and non-functional needs, with acceptance criteria, for a hospital app. Interviewed shopkeepers to learn what they needed from a billing application and wrote it down as prioritised user stories.
+  Stack: Requirements Gathering
+
+EXTRA-CURRICULARS
+Member of the college photography club.
+
+SKILLS
+Technical Skills: Excel, Requirements Gathering, Stakeholder Communication, Process Modeling, SQL
+
+INTERNSHIP
+Business Analysis Intern, Vertex Infosoft (2 months). Managed conflicting expectations between two departments through short, written updates and meetings. Negotiated scope with an external customer for a hackathon project and agreed on a realistic demo.
+
+OBJECTIVE
+Hardworking and punctual; I enjoy teamwork and picking up new things quickly.
+
+References available on request.
+",1,1,1
+R01,S161,"We are hiring Junior Backend Engineers for our Ahmedabad office. The ideal candidate is comfortable writing server-side code in Python, has built or consumed REST APIs and can write SQL against a relational database such as PostgreSQL. Familiarity with Docker and Redis would be an added advantage. Candidates must hold a minimum CGPA of 7.0, must have no active backlogs, and should be from CSE, IT or ICT branches only.","Vijay Menon - +91 9590205504 - s161@mail.example
+
+Academics
+B.E. in Computer Science & Engineering (2027) from Vindhya Engineering College; 7.68 CGPA; No active backlogs
+
+Things I Built
+* Inventory Management Service (Flask, Python): Hosted a simple dashboard that reads sensor readings and renders them through a minimal templating engine. Solved coding challenges daily using a high-level interpreted language known for its readable syntax. Scraped prices from several shopping sites with a short script and stored them in a file for later comparison.
+* Online Bookstore Backend
+  Designed endpoints with predictable URLs and standard verbs so a mobile app could create, read, update and delete orders. In a weekend tutorial project, wrote joins, subqueries and aggregations to answer business questions straight from relational tables. As a small coursework exercise, sent requests to endpoints with different payloads and verified status codes, headers and response bodies.
+  Stack: REST APIs, SQL, API Testing
+
+Skill Set
+Proficient in Python. Comfortable with Flask, Manual Testing, REST APIs, Selenium, Test Automation. Familiar with API Testing, SQL.
+
+Beyond the Classroom
+Languages: English, Hindi, Gujarati.
+
+About Me
+Motivated final-year student looking for a challenging opportunity with a supportive team.
+
+Training
+QA Intern, BrightPath Technologies (6 months). Explored an unfamiliar application without scripts to find edge-case failures nobody had planned for. Wrote scripts that open a browser, fill forms, click buttons and verify what appears on screen. Wrote a framework with reusable helpers, data-driven inputs and readable reports for a banking demo app.
+
+References available on request.
+",1,2,2
+R08,S371,"QA engineer ke liye 8 students chahiye. Manual testing pakka aana chahiye, Selenium se automation scripts likh sake, aur Postman se API testing bhi. Python ya Java aata ho toh bonus. 6.0 CGPA cutoff hai, backlog allowed nahi hai. CSE/IT/ICT/ECE/M.Sc IT walon ko hi bulao.","Name: Trusha Patel | Email: s371@mail.example | Mobile: +91 9552399032
+
+Academics
+B.Tech in Information Technology, Kaveri School of Technology | CGPA: 7.88/10 | Graduating 2027 | Active backlogs: 0
+
+About Me
+Seeking an entry-level role where I can apply what I have learnt and keep growing.
+
+Things I Built
+• Inventory Management Service - In a weekend tutorial project, used collections, generics and multithreading to build a ticket-booking simulator for a coursework assignment. Wrote cron jobs to rotate logs and back up folders every night. Tech: Java, Linux.
+• Test Plan for Shopping Site - While learning the basics, compared service responses against the agreed contract and reported mismatches. Wrote step-by-step scenarios with expected results and executed them by hand against each new build of an e-commerce site. Tech: API Testing, Manual Testing.
+• Bug Hunt on Booking Portal - Logged detailed defect reports with screenshots, severity and steps to reproduce. Captured screenshots on failures automatically to help debug flaky browser scripts. Tech: Manual Testing, Selenium.
+
+Skill Set
+Proficient in Manual Testing, Selenium. Comfortable with Linux. Familiar with API Testing, Java.
+
+Highlights
+Completed an NPTEL course on soft skills with an Elite certificate.
+Participated in a 24-hour hackathon organised by the college.
+
+Beyond the Classroom
+Organised the registration desk for the technical fest.
+
+Training
+QA Intern, BrightPath Technologies (3 months). Ran browser tests in parallel on a grid of machines to shorten feedback time.
+
+I hereby declare that the information above is true to the best of my knowledge.
+",1,2,2
+R13,S203,"JAVA BACKEND DEVELOPER - Bengaluru. Must: Java, Spring Boot, SQL. Microservices, Kafka and Docker will give you an edge. 6.5+ CGPA, 0 backlogs, CSE/IT/ICT only. no exceptions!!","Karthik Pillai | s203@mail.example | +91 9045680247
+
+EDUCATION
+M.Sc IT (2028) from Kaveri School of Technology; 6.63 CGPA; 1 active backlog
+
+EXTRA-CURRICULARS
+Member of the college photography club.
+Languages: English, Hindi, Gujarati.
+Learning the guitar in my free time.
+
+PROJECTS
+– Library System Requirements Pack
+  Used decision tables and state diagrams to clarify complex business rules. Interviewed shopkeepers to learn what they needed from a billing application and wrote it down as prioritised user stories.
+  Stack: Process Modeling, Requirements Gathering
+
+SKILLS
+Skills: Process Modeling • Requirements Gathering • Stakeholder Communication • Excel • SQL
+
+INTERNSHIP
+Business Analysis Intern, Orbit Digital (6 months). In my main project, wrote status emails with risks and next steps that sponsors actually read.
+
+OBJECTIVE
+Seeking an entry-level role where I can apply what I have learnt and keep growing.
+
+I hereby declare that the information above is true to the best of my knowledge.
+",0,0,0
+R09,S253,"Mobile app developer (fresher). React Native and JavaScript required, plus REST API integration. Kotlin/Android or Flutter experience is a bonus. Minimum 7 CGPA, no backlogs, only CSE/IT/ICT/MSc IT.","RESUME OF Ananya Kapoor (s253@mail.example, +91 9844128826)
+
+Education
+B.Tech in Computer Science & Engineering (2026) from Narmada Institute of Technology; 8.18 CGPA; 0 active backlogs
+
+Interests
+Member of the college photography club.
+Volunteer at NSS blood donation camps.
+
+Technical Skills
+Technical Skills: Android, Flutter, JavaScript, REST APIs, Vue.js, HTML/CSS
+
+Career Objective
+Seeking an entry-level role where I can apply what I have learnt and keep growing.
+
+Academic Projects
+– Fee Payment Tracker (REST APIs, HTML/CSS): Designed endpoints with predictable URLs and standard verbs so a mobile app could create, read, update and delete orders. As a small coursework exercise, hand-coded a responsive portfolio site with flexbox and grid that adapts to phones and laptops.
+– Weather Dashboard
+  Wrote asynchronous browser code with async/await to load weather data and update the screen. Replaced a pile of manual page updates with declarative templates in a gentle-learning-curve framework.
+  Stack: JavaScript, Vue.js
+
+Awards & Achievements
+Completed an NPTEL course on soft skills with an Elite certificate.
+
+Experience
+Mobile App Intern, BrightPath Technologies (6 weeks). Published a small app to the official store and handled reviews and crash reports. Managed app state with providers and wrote platform-specific code only where necessary.
+",1,1,1
+R15,S055,"startup hiring web dev: Next.js and PostgreSQL must, typescript nice to have, docker knowledge is a plus. we dont care about cgpa or branch, just show us what u built. (backlogs also fine)","Name: Keerthi Iyer | Email: s055@mail.example | Mobile: +91 9269701578
+
+Academics
+Vindhya Engineering College - B.Tech in Computer Science and Engineering, expected 2027. CGPA 8.79. No active backlogs.
+
+About Me
+Eager to contribute to real-world problems while learning from experienced colleagues.
+
+Training
+Web Development Intern, Pixelnest Solutions (6 weeks). Optimised images and fonts automatically in a framework built on a popular component library. Across several projects, cleaned duplicates and fixed inconsistent records inside a database using update and delete statements.
+
+Highlights
+Completed 200+ practice problems on a competitive-programming website.
+
+Beyond the Classroom
+Treasurer of the literary society.
+
+Things I Built
+- Inventory Management Service (PostgreSQL, Figma): Set up nightly backups and restores for the database behind a college event portal. Wrote stored procedures and triggers to keep audit history for a hostel-fee database. As a small coursework exercise, created wireframes and high-fidelity screens for a campus events app.
+- Personal Portfolio Site (HTML/CSS, JavaScript, React): In a weekend tutorial project, hand-coded a responsive portfolio site with flexbox and grid that adapts to phones and laptops. Across several projects, made a web page interactive with event handlers, form validation and dynamic updates without reloading it. Managed shared state and routing across multiple screens in a student portal built from reusable components.
+- Personal Portfolio Site - Refactored a large untyped codebase by gradually introducing annotations file by file. In a weekend tutorial project, built a reactive interface with single-file components and a lightweight progressive framework for a quiz app. Tech: TypeScript, Vue.js.
+
+Skill Set
+Technical Skills: JavaScript, Next.js, PostgreSQL, React, SQL, TypeScript, Figma, HTML/CSS, Vue.js
+
+I hereby declare that the information above is true to the best of my knowledge.
+",1,3,3
+R13,S187,"JAVA BACKEND DEVELOPER - Bengaluru. Must: Java, Spring Boot, SQL. Microservices, Kafka and Docker will give you an edge. 6.5+ CGPA, 0 backlogs, CSE/IT/ICT only. no exceptions!!","Smit Bhatt | s187@mail.example | +91 9163994909
+
+Academics
+B.Tech in Information Technology, Vindhya Engineering College | CGPA: 6.98/10 | Graduating 2027 | No active backlogs
+
+About Me
+Motivated final-year student looking for a challenging opportunity with a supportive team.
+
+Things I Built
+• Event Registration System
+  Built a console quiz application in a virtual-machine-based object-oriented language with exception handling and a leaderboard. In my main project, gave each module its own database and release cycle in a course project on loosely coupled architecture. Designed normalised tables with foreign keys, indexes and constraints in an open-source relational engine known for extensions.
+  Stack: Java, Microservices, PostgreSQL
+• Inventory Management Service - Across several projects, added pagination, filtering and versioned routes to an HTTP service consumed by two different client applications. Configured profiles for development and production and exposed health checks for a payroll service. Designed normalised tables for a hospital management system and wrote reports against them. Tech: REST APIs, Spring Boot, SQL.
+• Automated Deployment Setup - Pushed built images to a registry and pulled them on the college server for deployment. Documented a hospital's billing workflow with activity diagrams for a case competition. Tech: Docker, Process Modeling.
+
+Highlights
+Cleared a national-level aptitude olympiad round.
+Secured first place in the inter-department quiz.
+
+Skill Set
+Proficient in Java, Microservices, REST APIs, Spring Boot. Comfortable with Docker, PostgreSQL, Process Modeling, Requirements Gathering, SQL, Stakeholder Communication.
+
+Training
+Business Analysis Intern, Tarang Systems (2 months). Built a traceability sheet linking every stated need to a design element and a test. Presented weekly progress to a non-technical client and adjusted the plan according to their feedback.
+
+Beyond the Classroom
+Treasurer of the literary society.
+Organised the registration desk for the technical fest.
+
+References available on request.
+",1,3,3
+R14,S276,"Looking for an NLP engineer trainee to work on text classification and chatbots. Need solid Python, natural language processing fundamentals and deep learning (PyTorch or TensorFlow either is fine). Top performers only - CGPA 7 minimum, no active backlogs. CSE, IT, ICT, MSc IT.","Name: Ananya Verma | Email: s276@mail.example | Mobile: +91 9174915645
+
+Academics
+B.E. in Electronics & Communication Engineering (2027) from Sabarmati College of Engineering; 9.73 CGPA; 0 active backlogs
+
+Things I Built
+• Inventory Management Service: Added background email reminders and role-based permissions to a framework-based fee tracker. In my main project, wrote stored procedures and triggers to keep audit history for a hostel-fee database. Tuned a slow report by reading execution plans and adding the right indexes. Solved coding challenges daily using a high-level interpreted language known for its readable syntax.
+• Student Marks Service - Designed endpoints with predictable URLs and standard verbs so a mobile app could create, read, update and delete orders. Reworked cluttered graphs by removing chart junk, labelling directly and ordering categories sensibly. Summarised thousands of survey rows with pivot summaries and charts for a club president.
+• Customer Churn Study: While learning the basics, modelled relationships between tables and wrote measures to calculate year-over-year growth in a business intelligence tool. Wrote joins, subqueries and aggregations to answer business questions straight from relational tables. Pulled monthly sales numbers from a relational database for a manager, grouping by region and product.
+
+Beyond the Classroom
+Organised the registration desk for the technical fest.
+Treasurer of the literary society.
+Play cricket for the department team.
+
+Highlights
+Runner-up in a state-level paper presentation contest.
+
+About Me
+Eager to contribute to real-world problems while learning from experienced colleagues.
+
+References available on request.
+",0,0,0
+R06,S115,"Our analytics team needs someone to help move and prepare data at scale. They should be comfortable with SQL and with building ETL jobs, and have at least touched Apache Spark. Airflow or Kafka experience will be appreciated, AWS exposure even better. Preferably 7 CGPA or above. No pending backlogs please. Computer-science-related streams (CSE/IT/ICT/MSc IT) preferred.","Lokesh Rao | s115@mail.example | +91 9265213758
+
+EDUCATION
+Vindhya Engineering College - B.Tech in Electronics and Communication Engineering, expected 2026. CGPA 8.27. 0 active backlogs.
+
+SKILLS
+skills - dwh, t-sql n apache spark, data pipelines & linux shell, Penetration Testing, Vulnerability AAssessment & docker-compose (basic)
+
+PROJECTS
+* customer churn study - made using structured querry language n pyspark n data warehousing n etl pipelines. Used window functions and common table expressions to rank customers and compute running totals. rewrote a slow single-machine job as a distributed one & reduced runtime from hours to minutes. In my main project, compared row-oriented and columnar storage for analytical workloads in a case study. handled schema changes n bad records by qarantining them for review instead of failing the run.
+* automated deployment setup - made using docker containerrs n unix n peentesting n owasp. In a weekkend tutorial project, wrote a recipe file & a multi-service compose file to start an app, database & cache with one command. Diagnosed a stuck process with top, ps and strace. chaained a weak password, an outdated service and a msiconfiguration to gain accesss in a capture-the-flag event. Mapped findings to well-known weakness lists & wrote remediation steps for each in a lab report.
+
+EXTRA-CURRICULARS
+Organised the registration desk for the technical fest.
+Treasurer of the literary society.
+Member of the college photography club.
+
+OBJECTIVE
+Hardworking and punctual; I enjoy teamwork and picking up new things quickly.
+
+I hereby declare that the information above is true to the best of my knowledge.
+",0,0,0
+R12,S382,"We invite applications for the position of Associate Business Analyst. The candidate should be good at requirements gathering and documentation, work in an Agile/Scrum environment, and have strong stakeholder communication with non-technical clients. Knowledge of JIRA, SQL and process modelling would be considered a plus. Applicants from any branch with a CGPA of 7.5 or higher and no active backlogs may apply.","RESUME OF Ramya Menon (s382@mail.example, +91 9509142732)
+
+Academics
+B.E. in Information Technology, Tapi Valley Institute of Engineering | CGPA: 7.83/10 | Graduating 2027 | 0 active backlogs
+
+About Me
+Hardworking and punctual; I enjoy teamwork and picking up new things quickly.
+
+Things I Built
+* Event Registration System
+  Designed normalised tables with foreign keys, indexes and constraints in an open-source relational engine known for extensions. In a weekend tutorial project, wrote asynchronous browser code with async/await to load weather data and update the screen. In a weekend tutorial project, added static types to a growing browser codebase and caught dozens of bugs before running anything.
+  Stack: PostgreSQL, JavaScript, TypeScript
+* Sales Performance Review (SQL, Process Modeling, Requirements Gathering): Wrote joins, subqueries and aggregations to answer business questions straight from relational tables. Modelled actors and interactions for an e-commerce system with standard notation before development began. Interviewed shopkeepers to learn what they needed from a billing application and wrote it down as prioritised user stories.
+
+Highlights
+Participated in a 24-hour hackathon organised by the college.
+Runner-up in a state-level paper presentation contest.
+
+Skill Set
+Working knowledge: PostgreSQL, Process Modeling, Requirements Gathering, SQL
+Basic: JavaScript, Stakeholder Communication, TypeScript
+
+Beyond the Classroom
+Play cricket for the department team.
+Organised the registration desk for the technical fest.
+Learning the guitar in my free time.
+
+I hereby declare that the information above is true to the best of my knowledge.
+",1,1,1
+R14,S015,"Looking for an NLP engineer trainee to work on text classification and chatbots. Need solid Python, natural language processing fundamentals and deep learning (PyTorch or TensorFlow either is fine). Top performers only - CGPA 7 minimum, no active backlogs. CSE, IT, ICT, MSc IT.","Name: Geetha Reddy | Email: s015@mail.example | Mobile: +91 9084561811
+
+Education
+B.Tech in Information Technology, Vindhya Engineering College | CGPA: 8.19/10 | Graduating 2027 | 0 active backlogs
+
+Academic Projects
+– Online Bookstore Backend - Created a small game with a scoreboard using an easy general-purpose scripting language taught in the first-year course. Grouped, reshaped and resampled time-series sales data to find weekly trends. Fitted regression models and interpreted coefficients, residuals and p-values for a housing-price study. Tech: Python, Pandas, Statistics.
+– Review Sentiment Classifier - Experimented with convolutional and recurrent architectures, dropout and learning-rate schedules. Built a spam filter that learns from labelled examples instead of hand-written rules. As a small coursework exercise, extracted names, dates and organisations from news articles with a sequence-labelling model. Tech: Deep Learning, Machine Learning, NLP.
+
+Technical Skills
+Technical Skills: Deep Learning, Machine Learning, Pandas, Python, Statistics, NLP
+
+Interests
+Languages: English, Hindi, Gujarati.
+Volunteer at NSS blood donation camps.
+Treasurer of the literary society.
+
+Career Objective
+Motivated final-year student looking for a challenging opportunity with a supportive team.
+
+I hereby declare that the information above is true to the best of my knowledge.
+",1,2,2
+R11,S214,"Embedded/IoT trainee needed. Strong in C is a must, Arduino or similar boards, and MQTT for device-to-cloud messaging. Raspberry Pi and C++ are nice to have. Core branches welcome: ECE, EE, CSE, Mechanical (mechatronics interest). CGPA 6.5 min; one backlog is okay.","Name: Ankur Malhotra | Email: s214@mail.example | Mobile: +91 9491567409
+
+Education
+B.Tech in ECE (2026) from Godavari Institute of Science and Technology; 7.06 CGPA; 0 active backlogs
+
+Career Objective
+Motivated final-year student looking for a challenging opportunity with a supportive team.
+
+Interests
+Languages: English, Hindi, Gujarati.
+
+Academic Projects
+- Hostel Complaint Portal
+  While learning the basics, created a small game with a scoreboard using an easy general-purpose scripting language taught in the first-year course. Programmed a line-following robot using IR sensors and motor drivers on a hobby board. Built an automatic plant-watering system with a soil-moisture sensor, a pump and a cheap open-source board.
+  Stack: Python, Arduino
+- Line Following Robot - Used bit manipulation to pack sensor flags into a single byte. Implemented linked lists, stacks and a memory allocator by hand using pointers and manual memory management. Tech: C.
+
+Technical Skills
+Technical Skills: Arduino, C, Raspberry Pi, MQTT, Python
+
+Awards & Achievements
+Selected for the university cultural fest organising committee.
+Completed an NPTEL course on soft skills with an Elite certificate.
+
+Experience
+Embedded Systems Intern, Lumen Softworks (6 months). As a small coursework exercise, used retained messages, last-will and quality-of-service levels for unreliable networks in a smart-farm prototype. Deployed a small web dashboard for lab sensors on an inexpensive credit-card-sized computer.
+",1,2,2

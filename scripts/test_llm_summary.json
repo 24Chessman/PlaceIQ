@@ -1,0 +1,50 @@
+{
+  "model": "qwen3.5:4b-q4_K_M",
+  "calls": 18,
+  "valid_json_rate": 1.0,
+  "schema_rate": 1.0,
+  "avg_latency_s": 8.828686211111107,
+  "avg_parse_latency_s": 14.73157985555555,
+  "avg_score_latency_s": 2.925792566666663,
+  "avg_tok_per_s": 45.10719596974249,
+  "vram_baseline_mib": 755,
+  "vram_peak_mib": 4493,
+  "ollama_ps": "NAME                 ID              SIZE      PROCESSOR    CONTEXT    RUNNER      UNTIL              \nqwen3.5:4b-q4_K_M    d8b0f5e9760c    3.1 GB    100% GPU     4096       llamacpp    4 minutes from now",
+  "mean_scores": {
+    "strong": 95,
+    "paraphrased": 85,
+    "keyword_stuffed": 10
+  },
+  "score_spread_across_repeats": {
+    "strong": 0,
+    "paraphrased": 0,
+    "keyword_stuffed": 0
+  },
+  "paraphrased_beats_stuffed": true,
+  "strong_beats_stuffed": true,
+  "examples": {
+    "parse_1": {
+      "title": "Data Analyst",
+      "must_have_skills": [
+        "Python",
+        "SQL"
+      ],
+      "nice_to_have_skills": [
+        "Docker"
+      ],
+      "min_experience_years": 2,
+      "location": "Pune/Remote"
+    },
+    "score_paraphrased": {
+      "score": 85,
+      "matched_skills": [
+        "Python",
+        "SQL"
+      ],
+      "missing_skills": [
+        "Docker"
+      ],
+      "reasoning": "The candidate demonstrates strong genuine fit with 3 years of experience (exceeds the 2-year minimum) located in Pune. She explicitly uses Python libraries (pandas, numpy) for data cleaning and modeling, matching the 'Python' requirement. Her daily use of relational databases (PostgreSQL, MySQL) with joins and aggregations directly satisfies the 'SQL' requirement. While she lacks explicit mention of Docker, this is a 'nice to have' skill, not a blocker. The core technical skills and location align perfectly."
+    }
+  }
+}

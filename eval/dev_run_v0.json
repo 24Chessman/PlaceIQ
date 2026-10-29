@@ -1,0 +1,1782 @@
+{
+ "model": "qwen3.5:4b-q4_K_M",
+ "k": 20,
+ "cold_load_s": 0.753139899999951,
+ "vram_baseline_mib": 4738,
+ "vram_peak_mib": 5001,
+ "total_wall_s": 262.8797269000006,
+ "results": {
+  "R01": {
+   "parsed": {
+    "role_title": "Junior Backend Engineer",
+    "must_have_skills": [
+     "Python",
+     "REST APIs",
+     "SQL"
+    ],
+    "nice_to_have_skills": [
+     "Docker",
+     "Redis"
+    ],
+    "min_cgpa": 7.0,
+    "allowed_branches": [
+     "CSE",
+     "IT",
+     "ICT"
+    ],
+    "max_backlogs": 0,
+    "semantic_query": "A Junior Backend Engineer proficient in writing server-side code with Python, capable of designing and consuming REST APIs, and experienced in querying relational databases like PostgreSQL. The candidate should also have practical experience working with containerization tools such as Docker and caching mechanisms like Redis."
+   },
+   "filters": {
+    "min_cgpa": 7.0,
+    "max_backlogs": 0,
+    "allowed_branches": [
+     "CSE",
+     "IT",
+     "ICT"
+    ]
+   },
+   "ranked": [
+    {
+     "id": "S223",
+     "score": 95,
+     "similarity": 0.714955747127533,
+     "matched": [
+      "Python",
+      "REST APIs",
+      "SQL",
+      "Docker",
+      "Redis"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates all must-have skills through building a Django application with PostgreSQL and a Python tool using Redis for sessions, plus an internship optimizing SQL joins. All nice-to-haves are also demonstrated via packaging an app into a container image.",
+     "latency": 2.417646199999581,
+     "cached": false
+    },
+    {
+     "id": "S220",
+     "score": 92,
+     "similarity": 0.6949064135551453,
+     "matched": [
+      "Python",
+      "REST APIs",
+      "SQL",
+      "Docker"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates Python, REST APIs, and SQL through backend projects and an internship involving data pipelines. Docker is implied as a nice-to-have skill given the context of containerized deployment in modern engineering roles, though not explicitly detailed in the resume text.",
+     "latency": 2.338302800000747,
+     "cached": false
+    },
+    {
+     "id": "S146",
+     "score": 90,
+     "similarity": 0.7496463656425476,
+     "matched": [
+      "Python",
+      "REST APIs",
+      "SQL",
+      "Docker"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills: PostgreSQL usage proves SQL capability, REST API design is evident in the Hostel Complaint Portal project, and Next.js development implies Python knowledge via its server-side rendering capabilities. The resume also clearly shows Docker usage for local development volumes and networks.",
+     "latency": 2.4769971999994596,
+     "cached": false
+    },
+    {
+     "id": "S097",
+     "score": 90,
+     "similarity": 0.7458006143569946,
+     "matched": [
+      "Python",
+      "REST APIs",
+      "SQL",
+      "Docker"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates Python, REST APIs, and SQL through building a Django-based portal with normalized tables and token-secured endpoints. Docker is evidenced by isolating project components into portable runtime units using volumes and networks.",
+     "latency": 2.35034319999977,
+     "cached": false
+    },
+    {
+     "id": "S352",
+     "score": 90,
+     "similarity": 0.7324415445327759,
+     "matched": [
+      "Python",
+      "REST APIs",
+      "SQL",
+      "Redis",
+      "Docker"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through building a Django backend (Python/REST) and writing stored procedures for PostgreSQL, plus explicitly lists Redis and Docker usage. Eligibility rules are met with a CGPA of 8.11, no backlogs, and a CSE branch.",
+     "latency": 2.655501799999911,
+     "cached": false
+    },
+    {
+     "id": "S270",
+     "score": 90,
+     "similarity": 0.7156898379325867,
+     "matched": [
+      "Python",
+      "REST APIs",
+      "SQL",
+      "Docker",
+      "Redis"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates Python, REST APIs, and SQL through the Student Marks Service project involving Django, PostgreSQL, and database indexing. Although Docker and Redis are listed as nice-to-haves, they are not explicitly demonstrated in the described work.",
+     "latency": 2.183505700000751,
+     "cached": false
+    },
+    {
+     "id": "S198",
+     "score": 90,
+     "similarity": 0.7153657078742981,
+     "matched": [
+      "Python",
+      "REST APIs",
+      "SQL",
+      "Docker",
+      "Redis"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through building a Django backend with token-secured endpoints and writing SQL joins/aggregations, plus uses Redis in the bookstore project. Eligibility rules are met with a 7.40 CGPA, no backlogs, and a CSE degree.",
+     "latency": 2.6251190999992104,
+     "cached": false
+    },
+    {
+     "id": "S177",
+     "score": 90,
+     "similarity": 0.7060850262641907,
+     "matched": [
+      "Python",
+      "REST APIs",
+      "SQL",
+      "Docker",
+      "Redis"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through building a Django backend (Python/REST) and managing PostgreSQL with stored procedures, plus nice-to-haves via Redis and Docker usage. Eligibility rules are fully met with a CGPA of 7.88 and no backlogs in an IT branch.",
+     "latency": 2.3999681000004784,
+     "cached": false
+    },
+    {
+     "id": "S201",
+     "score": 90,
+     "similarity": 0.7051970362663269,
+     "matched": [
+      "Python",
+      "REST APIs",
+      "SQL",
+      "Redis"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through building a FastAPI backend with PostgreSQL and consuming Redis for sessions, plus has strong AWS knowledge. Eligibility rules are met with a CGPA of 7.67 and no backlogs in the required branch.",
+     "latency": 2.277920399999857,
+     "cached": false
+    },
+    {
+     "id": "S023",
+     "score": 85,
+     "similarity": 0.7586923837661743,
+     "matched": [
+      "Python",
+      "REST APIs",
+      "SQL",
+      "Docker",
+      "Redis"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates Python and REST API skills through FastAPI projects with dependency injection and typed request bodies, along with SQL usage via PostgreSQL for normalized tables. While Docker is listed as a skill, the resume provides no evidence of using it to package or run applications.",
+     "latency": 2.6456825000004756,
+     "cached": false
+    },
+    {
+     "id": "S424",
+     "score": 85,
+     "similarity": 0.7166864275932312,
+     "matched": [
+      "Python",
+      "REST APIs",
+      "SQL",
+      "Docker"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through building a service with REST endpoints and using PostgreSQL window functions, plus Docker via containerizing the backend. No eligibility rules are violated.",
+     "latency": 2.054536499999813,
+     "cached": false
+    },
+    {
+     "id": "S382",
+     "score": 85,
+     "similarity": 0.7024837732315063,
+     "matched": [
+      "Python",
+      "REST APIs",
+      "SQL"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates Python skills by building a service with async/await and static typing, though the language is not explicitly named in the project descriptions. SQL proficiency is clearly shown through writing joins, subqueries, and aggregations for business questions. The resume does not provide evidence of REST API consumption or production; the described projects focus on backend logic",
+     "latency": 2.594853900000089,
+     "cached": false
+    },
+    {
+     "id": "S161",
+     "score": 85,
+     "similarity": 0.6953582763671875,
+     "matched": [
+      "Python",
+      "REST APIs",
+      "SQL"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates Python, REST API design, and SQL skills through specific backend projects like the Inventory Management Service and Online Bookstore Backend. Eligibility requirements are met with a 7.68 CGPA and no backlogs in a CSE branch.",
+     "latency": 2.244900800000323,
+     "cached": false
+    },
+    {
+     "id": "S476",
+     "score": 85,
+     "similarity": 0.6922630667686462,
+     "matched": [
+      "Python",
+      "REST APIs",
+      "SQL (relational database)",
+      "Docker"
+     ],
+     "missing": [],
+     "explanation": "The student built a service persisting orders in a relational store and exposed REST endpoints for a mobile app, demonstrating Python, SQL, and API skills. While the resume mentions MongoDB, it also lists Docker as a working knowledge skill without specific project evidence; however, the strong alignment with core backend requirements justifies a high score.",
+     "latency": 13.977120800000193,
+     "cached": false
+    },
+    {
+     "id": "S286",
+     "score": 65,
+     "similarity": 0.6911415457725525,
+     "matched": [
+      "Python",
+      "REST APIs",
+      "SQL",
+      "Docker"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates Python via the JAA project and SQL through window functions and CTEs, while Docker is shown by packaging an application into a container image. However, the internship was purely in business analysis with no backend coding, and the described projects are labeled as small coursework or weekend tutorials.",
+     "latency": 2.5994578000008914,
+     "cached": false
+    },
+    {
+     "id": "S466",
+     "score": 35,
+     "similarity": 0.7140990495681763,
+     "matched": [
+      "REST APIs"
+     ],
+     "missing": [
+      "Python",
+      "SQL"
+     ],
+     "explanation": "The student demonstrated REST API skills by building an HTTP service with versioned routes and documented endpoints, but the project description explicitly states it was made using HTML rather than Python. There is no evidence of SQL usage or any backend code written in Python.",
+     "latency": 2.2848258999983955,
+     "cached": false
+    },
+    {
+     "id": "S311",
+     "score": 35,
+     "similarity": 0.711725115776062,
+     "matched": [
+      "Docker",
+      "Redis"
+     ],
+     "missing": [
+      "Python",
+      "REST APIs",
+      "SQL"
+     ],
+     "explanation": "The student demonstrates Docker and Redis usage through project descriptions but lacks evidence of Python, REST APIs, or SQL skills. The Express.js projects imply Node.js rather than Python, and the MongoDB work does not confirm PostgreSQL or SQL proficiency.",
+     "latency": 2.167370099999971,
+     "cached": false
+    },
+    {
+     "id": "S204",
+     "score": 35,
+     "similarity": 0.7054730653762817,
+     "matched": [
+      "Docker",
+      "SQL"
+     ],
+     "missing": [
+      "Python",
+      "REST APIs"
+     ],
+     "explanation": "The student demonstrates Docker usage by packaging applications for consistent deployment and shows SQL knowledge through a basic skill listing, but lacks evidence of Python or REST API development in the described projects. The candidate meets all eligibility requirements with an 8.83 CGPA, zero backlogs, and a CSE branch.",
+     "latency": 2.343348700000206,
+     "cached": false
+    },
+    {
+     "id": "S210",
+     "score": 35,
+     "similarity": 0.6945301294326782,
+     "matched": [
+      "REST APIs",
+      "Docker"
+     ],
+     "missing": [
+      "Python",
+      "SQL"
+     ],
+     "explanation": "The student demonstrated REST API skills by building HTTP services consumed by clients and Docker skills via container registry usage, but used Node.js instead of Python and MongoDB instead of PostgreSQL. No evidence of SQL usage or Python development is present in the described projects.",
+     "latency": 2.25959949999924,
+     "cached": false
+    },
+    {
+     "id": "S066",
+     "score": 10,
+     "similarity": 0.7108724117279053,
+     "matched": [],
+     "missing": [
+      "Python",
+      "REST APIs",
+      "SQL"
+     ],
+     "explanation": "The candidate is ineligible due to being in the ICT branch (requirement specifies CSE/IT) and having a CGPA of 7.90 which meets the minimum, but the resume demonstrates no Python or SQL skills; all described projects use JavaScript, Node.js, MongoDB, React, or HTML/CSS.",
+     "latency": 2.499636200000168,
+     "cached": false
+    }
+   ],
+   "timing": {
+    "parse_s": 14.047762700000021,
+    "retrieve_s": 0.2888567999998486,
+    "rerank_s": 59.39663719999953,
+    "rerank_per_candidate_s": 2.9698318599999767,
+    "wall_s": 59.711145600000236,
+    "parse_cached": true,
+    "n_candidates": 20
+   }
+  },
+  "R04": {
+   "parsed": {
+    "role_title": "Data Analyst",
+    "must_have_skills": [
+     "SQL",
+     "Excel"
+    ],
+    "nice_to_have_skills": [
+     "Power BI",
+     "Python",
+     "Pandas"
+    ],
+    "min_cgpa": 6,
+    "allowed_branches": [],
+    "max_backlogs": null,
+    "semantic_query": "A fresher data analyst proficient in SQL and Excel for data manipulation and analysis, capable of creating Power BI dashboards, with additional proficiency in Python and Pandas being a plus."
+   },
+   "filters": {
+    "min_cgpa": 6,
+    "max_backlogs": null,
+    "allowed_branches": []
+   },
+   "ranked": [
+    {
+     "id": "S063",
+     "score": 95,
+     "similarity": 0.6684750914573669,
+     "matched": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Pandas",
+      "Power BI"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates SQL and Excel through the internship and projects, while also showing strong Python/Pandas skills via data analysis tasks. Although Power BI is not explicitly mentioned, the creation of a 'Weather Dashboard' and 'Inventory Management Service' with interactive visualizations implies equivalent dashboarding capability.",
+     "latency": 2.4490901000008307,
+     "cached": false
+    },
+    {
+     "id": "S133",
+     "score": 95,
+     "similarity": 0.6575074195861816,
+     "matched": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Python",
+      "Pandas"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates strong SQL skills by joining three CSV exports to produce summary tables and shows Excel proficiency through cleaning messy attendance records into tidy summaries. She also clearly meets the CGPA 7.69 requirement with zero backlogs, exceeding the minimum of 6.",
+     "latency": 2.2406854999990173,
+     "cached": false
+    },
+    {
+     "id": "S180",
+     "score": 95,
+     "similarity": 0.6533896923065186,
+     "matched": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Pandas",
+      "Power BI"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates strong SQL skills through database normalization and data cleaning tasks, and Python via ETL pipelines using pandas. Although no specific Excel or Power BI projects are listed, the requirement for a fresher with a CGPA above 6 and no backlogs is fully met.",
+     "latency": 2.415700800000195,
+     "cached": false
+    },
+    {
+     "id": "S499",
+     "score": 92,
+     "similarity": 0.6585450172424316,
+     "matched": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Power BI"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates strong SQL skills through database normalization and report generation, and Python via automated reporting and data transformation. Although Power BI is not explicitly mentioned, the creation of dashboards for sales numbers implies its use or equivalent visualization capability.",
+     "latency": 2.33182879999913,
+     "cached": false
+    },
+    {
+     "id": "S127",
+     "score": 90,
+     "similarity": 0.770230233669281,
+     "matched": [
+      "SQL",
+      "Excel",
+      "Power BI"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates SQL and Excel through specific projects involving index optimization and budget reconciliation, plus Power BI via a year-over-year growth model. The resume explicitly states a CGPA of 6.68 with zero backlogs, satisfying all eligibility criteria.",
+     "latency": 2.3681510999995226,
+     "cached": false
+    },
+    {
+     "id": "S479",
+     "score": 90,
+     "similarity": 0.7653844356536865,
+     "matched": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Python"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills (SQL and Excel) through specific project work involving window functions, CTEs, macros, and interactive dashboards. They also show strong evidence of the nice-to-haves (Power BI and Python/Pandas) via a retail basket analysis project and SQL usage.",
+     "latency": 2.488120899999558,
+     "cached": false
+    },
+    {
+     "id": "S277",
+     "score": 90,
+     "similarity": 0.7361752986907959,
+     "matched": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Python"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills (SQL and Excel) through specific project tasks like database queries and macro automation, plus Power BI via a trend report. Although Python is listed as a nice-to-have, the resume does not provide evidence of using it for data analysis.",
+     "latency": 2.350630099999762,
+     "cached": false
+    },
+    {
+     "id": "S164",
+     "score": 90,
+     "similarity": 0.7193197011947632,
+     "matched": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Python",
+      "Pandas"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills (SQL and Excel) through specific projects involving data merging, window functions, and what-if models. They also show strong evidence of nice-to-haves (Power BI via Tableau usage in dashboard creation and Python/Pandas for data manipulation).",
+     "latency": 2.522936100000152,
+     "cached": false
+    },
+    {
+     "id": "S163",
+     "score": 90,
+     "similarity": 0.7051069736480713,
+     "matched": [
+      "SQL",
+      "Excel",
+      "Power BI"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates SQL and Excel through specific projects involving joins, aggregations, text functions, and what-if models. Power BI skills are evidenced by building a dashboard with measures and table relationships.",
+     "latency": 1.9725027000004047,
+     "cached": false
+    },
+    {
+     "id": "S249",
+     "score": 90,
+     "similarity": 0.7026925086975098,
+     "matched": [
+      "SQL",
+      "Excel",
+      "Power BI"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills (SQL and Excel) through specific project tasks like optimizing database reports and building dashboards, plus the nice-to-have Power BI skill via a college admissions dashboard. The resume confirms eligibility with a CGPA of 6.59 and zero active backlogs.",
+     "latency": 2.3601644999998825,
+     "cached": false
+    },
+    {
+     "id": "S231",
+     "score": 90,
+     "similarity": 0.7024916410446167,
+     "matched": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Pandas",
+      "Power BI"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates SQL proficiency through cleaning database records and moving data between stores, while Python and Pandas skills are clearly shown via backend scripts and ETL pipeline work. Although Power BI is not explicitly mentioned, the creation of dashboards for departmental summaries implies this capability.",
+     "latency": 2.2572373999992124,
+     "cached": false
+    },
+    {
+     "id": "S069",
+     "score": 90,
+     "similarity": 0.682833194732666,
+     "matched": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Python"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates SQL and Excel through the internship task of grouping sales data and building a live auto-refreshing report with Power BI. Although Python is not explicitly listed in the 'Skills' section, the requirement for connecting workbooks to a database and automating refreshes implies the use of Python (pandas) as described in the rules.",
+     "latency": 2.6156802999994397,
+     "cached": false
+    },
+    {
+     "id": "S259",
+     "score": 90,
+     "similarity": 0.6732468605041504,
+     "matched": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Python (pandas)",
+      "Statistics"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates SQL and Excel through specific project tasks like optimizing reports with joins and creating pivot summaries, while Power BI usage is explicitly listed in the Retail Basket Analysis project. Although Python keywords are absent, running hypothesis tests and computing confidence intervals for survey data in an internship context requires pandas or equivalent Pythonic",
+     "latency": 2.882121800001187,
+     "cached": false
+    },
+    {
+     "id": "S442",
+     "score": 90,
+     "similarity": 0.6686229109764099,
+     "matched": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Python",
+      "Pandas"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills (SQL and Excel) through the Fee Payment Tracker project, which involved joining CSV exports and producing summary tables. All nice-to-have skills are also clearly demonstrated via this same project's data visualization work and Python/Pandas usage.",
+     "latency": 2.5041307999999844,
+     "cached": false
+    },
+    {
+     "id": "S140",
+     "score": 90,
+     "similarity": 0.6679497361183167,
+     "matched": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Pandas"
+     ],
+     "missing": [
+      "Power BI"
+     ],
+     "explanation": "The student demonstrates all must-have skills (SQL and Excel) through specific project tasks like pulling data from relational databases and creating executive overviews with pivot summaries. They also clearly show the nice-to-haves (Python, Pandas) via automated reporting tools and notebook analyses, though Power BI is not evidenced in their work.",
+     "latency": 2.839646799999173,
+     "cached": false
+    },
+    {
+     "id": "S455",
+     "score": 85,
+     "similarity": 0.6904931664466858,
+     "matched": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Pandas",
+      "Power BI"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through specific work: using window functions and CTEs for SQL analysis in a hospital system project, and filtering/aggregating large datasets with Pandas in a stock forecasting exercise. The Power BI requirement is met via the creation of an infographic-style dashboard summarizing placement trends.",
+     "latency": 2.496518300000389,
+     "cached": false
+    },
+    {
+     "id": "S372",
+     "score": 85,
+     "similarity": 0.6850886344909668,
+     "matched": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Python",
+      "Pandas"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates strong SQL and Excel skills through specific coursework projects involving window functions, pivot summaries, and data visualization dashboards. Power BI usage is confirmed via a dashboard project summarizing survey data.",
+     "latency": 2.0086564000012004,
+     "cached": false
+    },
+    {
+     "id": "S391",
+     "score": 85,
+     "similarity": 0.6757563352584839,
+     "matched": [
+      "SQL",
+      "Excel",
+      "Python",
+      "Pandas",
+      "Power BI (demonstrated via Tableau)"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates SQL through joins and aggregations in a project, and Excel skills via dashboard creation and data manipulation. While the resume lists Power BI, the evidence shows work with Tableau instead, which counts as a demonstrated equivalent for this role.",
+     "latency": 2.308246300000974,
+     "cached": false
+    },
+    {
+     "id": "S349",
+     "score": 85,
+     "similarity": 0.6646212339401245,
+     "matched": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Python (implied via pandas context in project description)",
+      "Pandas (implied via exploratory notebook and data analysis)"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates SQL through relational database queries and Excel/Power BI skills via a live auto-refreshing report and interactive plots. Although the resume does not explicitly list Python or Pandas, the description of building an 'exploratory notebook' with data reconciliation implies their use of these tools.",
+     "latency": 2.728903500001252,
+     "cached": false
+    },
+    {
+     "id": "S082",
+     "score": 85,
+     "similarity": 0.6530705690383911,
+     "matched": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Python",
+      "Pandas"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills (SQL and Excel) through specific project descriptions involving data filtering, aggregation, and workbook creation. They also clearly show the nice-to-have skills using Python/Pandas for analysis and Tableau for visualization, which satisfies the Power BI requirement contextually.",
+     "latency": 2.136221700000533,
+     "cached": false
+    }
+   ],
+   "timing": {
+    "parse_s": 2.2019128000010824,
+    "retrieve_s": 0.039192299998831004,
+    "rerank_s": 48.2771739000018,
+    "rerank_per_candidate_s": 2.4138586950000898,
+    "wall_s": 48.3311948999999,
+    "parse_cached": true,
+    "n_candidates": 20
+   }
+  },
+  "R07": {
+   "parsed": {
+    "role_title": "DevOps Trainee",
+    "must_have_skills": [
+     "Linux",
+     "Docker",
+     "CI/CD"
+    ],
+    "nice_to_have_skills": [
+     "AWS",
+     "Kubernetes",
+     "Terraform"
+    ],
+    "min_cgpa": 6.5,
+    "allowed_branches": [
+     "CSE",
+     "IT",
+     "ICT",
+     "ECE"
+    ],
+    "max_backlogs": 1,
+    "semantic_query": "A DevOps trainee proficient in Linux operations, containerization with Docker, and continuous integration/deployment pipelines, ideally with exposure to cloud services like AWS, orchestration tools such as Kubernetes, and infrastructure as code using Terraform."
+   },
+   "filters": {
+    "min_cgpa": 6.5,
+    "max_backlogs": 1,
+    "allowed_branches": [
+     "CSE",
+     "IT",
+     "ICT",
+     "ECE"
+    ]
+   },
+   "ranked": [
+    {
+     "id": "S148",
+     "score": 95,
+     "similarity": 0.6458879709243774,
+     "matched": [
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "AWS",
+      "Kubernetes"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates all must-have skills through specific projects: managing virtual servers and databases (Linux), using multi-stage builds for isolation (Docker), and writing automated deployment workflows (CI/CD). She also satisfies the nice-to-haves by hosting apps on cloud providers with load balancers (AWS) and configuring horizontal autoscaling (Kubernetes). Her eligibility is ",
+     "latency": 3.039635299999645,
+     "cached": false
+    },
+    {
+     "id": "S486",
+     "score": 95,
+     "similarity": 0.6422820091247559,
+     "matched": [
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "AWS",
+      "Kubernetes",
+      "Terraform"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates all must-have skills through specific project work involving Linux, Docker containers, and CI/CD pipelines. While Terraform is not explicitly mentioned in the project descriptions, the use of 'declarative manifests' for Kubernetes deployments implies familiarity with infrastructure-as-code concepts often associated with it, though this is a weak match compared to a",
+     "latency": 3.1024813000003633,
+     "cached": false
+    },
+    {
+     "id": "S080",
+     "score": 92,
+     "similarity": 0.6484991312026978,
+     "matched": [
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "AWS",
+      "Kubernetes",
+      "Terraform"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through concrete projects: configuring rollbacks and approval gates for CI/CD, packaging apps into images for Docker, and using version-controlled configuration files with Terraform. All nice-to-have skills are also clearly evidenced by the described work.",
+     "latency": 2.762680600000749,
+     "cached": false
+    },
+    {
+     "id": "S176",
+     "score": 90,
+     "similarity": 0.7082605361938477,
+     "matched": [
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "AWS",
+      "Kubernetes",
+      "Terraform"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through specific project work: managing headless servers and running containers on a Raspberry Pi proves Linux, packaging apps into images for consistent execution proves Docker, and configuring rollbacks with approval gates proves CI/CD. While Terraform is not explicitly mentioned in the text, the description of moving a legacy service into a portable",
+     "latency": 2.945988200001011,
+     "cached": false
+    },
+    {
+     "id": "S031",
+     "score": 90,
+     "similarity": 0.6890007257461548,
+     "matched": [
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "AWS",
+      "Kubernetes",
+      "Terraform"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates all must-have skills (Linux, Docker, CI/CD) and all nice-to-haves through specific project work involving multi-stage builds, cron jobs, and managed clusters. The resume also confirms eligibility with a CGPA of 8.35 and zero active backlogs.",
+     "latency": 2.599747299998853,
+     "cached": false
+    },
+    {
+     "id": "S007",
+     "score": 90,
+     "similarity": 0.6659096479415894,
+     "matched": [
+      "Linux",
+      "Docker",
+      "CI/CD"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through projects involving Ubuntu server administration, Docker multi-stage builds, and CI/CD pipelines with lint checks and release steps. The resume also shows strong evidence of the nice-to-have AWS skill via EC2 usage and cloud resource management.",
+     "latency": 2.5321215999993,
+     "cached": false
+    },
+    {
+     "id": "S433",
+     "score": 90,
+     "similarity": 0.653082013130188,
+     "matched": [
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "AWS",
+      "Kubernetes"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through projects involving Linux-based environments, Docker containers, and CI/CD pipelines with rollback gates. All nice-to-have skills (AWS, Kubernetes) are also clearly evidenced by the described work.",
+     "latency": 2.288596000000325,
+     "cached": false
+    },
+    {
+     "id": "S097",
+     "score": 85,
+     "similarity": 0.6867330074310303,
+     "matched": [
+      "Linux",
+      "Docker",
+      "CI/CD"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates all must-have skills through specific project work: debugging crash loops by reading pod logs (Linux), isolating components into portable runtime units with volumes and networks (Docker), and deploying versions on branch changes via a workflow (CI/CD). The resume also explicitly lists Kubernetes as a skill, satisfying the nice-to-have requirement.",
+     "latency": 2.653205999999045,
+     "cached": false
+    },
+    {
+     "id": "S210",
+     "score": 85,
+     "similarity": 0.6778433322906494,
+     "matched": [
+      "Linux",
+      "Docker",
+      "CI/CD"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through the internship (headless server administration) and projects (build/test/deploy scripting, image registry usage). The resume also lists proficiency in AWS, which covers the nice-to-have requirements.",
+     "latency": 2.3214649000001373,
+     "cached": false
+    },
+    {
+     "id": "S449",
+     "score": 85,
+     "similarity": 0.6647950410842896,
+     "matched": [
+      "Linux",
+      "Docker",
+      "CI/CD"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates all must-have skills by packaging applications into images for consistent execution (Docker), running parallel tests and caching dependencies in a pipeline (CI/CD), and managing system tasks on a headless server (Linux). The resume also shows strong evidence of the nice-to-have skill of Process Modeling through stakeholder prioritization work.",
+     "latency": 2.3619482000012795,
+     "cached": false
+    },
+    {
+     "id": "S286",
+     "score": 85,
+     "similarity": 0.6599228382110596,
+     "matched": [
+      "Linux",
+      "Docker",
+      "CI/CD"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates Linux (Xshell), Docker (packaging apps and using docker-compose), and CI/CD (Jenkins with parallel tests) through specific project descriptions. They also show strong evidence of AWS usage via object storage and CDN services in their event registration system.",
+     "latency": 2.307047899999816,
+     "cached": false
+    },
+    {
+     "id": "S410",
+     "score": 65,
+     "similarity": 0.6550680994987488,
+     "matched": [
+      "Docker",
+      "Linux",
+      "CI/CD",
+      "AWS"
+     ],
+     "missing": [
+      "Terraform",
+      "Kubernetes"
+     ],
+     "explanation": "The student demonstrates Docker and Linux skills by running isolated environments and dual-booting an OS, plus CI/CD via parallel test caching in a coursework project. AWS is shown through event-triggered functions, but Terraform and Kubernetes are absent from the described work.",
+     "latency": 2.4234237000000576,
+     "cached": false
+    },
+    {
+     "id": "S177",
+     "score": 45,
+     "similarity": 0.6398686170578003,
+     "matched": [
+      "Docker",
+      "PostgreSQL (relational database design)"
+     ],
+     "missing": [
+      "Linux",
+      "CI/CD",
+      "AWS",
+      "Kubernetes",
+      "Terraform"
+     ],
+     "explanation": "The student demonstrates Docker usage by connecting apps to databases with volumes and networks, but lacks evidence of Linux command-line proficiency or CI/CD pipeline implementation. No eligibility rules were violated.",
+     "latency": 2.2299433999996836,
+     "cached": false
+    },
+    {
+     "id": "S071",
+     "score": 35,
+     "similarity": 0.657198429107666,
+     "matched": [
+      "Docker",
+      "CI/CD",
+      "Linux"
+     ],
+     "missing": [
+      "AWS",
+      "Kubernetes",
+      "Terraform"
+     ],
+     "explanation": "The student demonstrated Linux, Docker, and CI/CD skills through specific internship tasks like diagnosing processes with top/strace and configuring volumes/networks. However, the resume lacks evidence for AWS, Kubernetes, or Terraform, as the described work focused on local development and basic data analysis tools.",
+     "latency": 2.5514639999983046,
+     "cached": false
+    },
+    {
+     "id": "S143",
+     "score": 35,
+     "similarity": 0.6478341221809387,
+     "matched": [],
+     "missing": [
+      "Linux",
+      "Docker",
+      "CI/CD"
+     ],
+     "explanation": "The student lacks evidence of Linux, Docker, or CI/CD skills; their internship involved image resizing and hosting on virtual servers without mentioning containerization or pipeline automation. The resume lists AWS but provides no concrete project work demonstrating cloud infrastructure management.",
+     "latency": 2.0843294999995123,
+     "cached": false
+    },
+    {
+     "id": "S264",
+     "score": 35,
+     "similarity": 0.645969033241272,
+     "matched": [],
+     "missing": [
+      "Linux",
+      "Docker",
+      "CI/CD"
+     ],
+     "explanation": "The student has a CGPA of 8.93 with exactly one active backlog, which satisfies the eligibility rules. However, the resume lists Docker and MongoDB but provides no evidence of building or managing containers, nor any mention of Linux operations or CI/CD pipelines in the described projects.",
+     "latency": 2.1789542000005895,
+     "cached": false
+    },
+    {
+     "id": "S478",
+     "score": 35,
+     "similarity": 0.641757071018219,
+     "matched": [
+      "Docker",
+      "CI/CD (implied by nightly backups and production profiles)"
+     ],
+     "missing": [
+      "Linux",
+      "Kubernetes",
+      "Terraform",
+      "AWS"
+     ],
+     "explanation": "The student demonstrates Docker skills through multi-stage image optimization and CI/CD via nightly database backups, but lacks evidence of Linux administration or infrastructure-as-code tools like Terraform/AWS/K8s. The resume contains no described work involving the required Linux environment.",
+     "latency": 2.5263114999997924,
+     "cached": false
+    },
+    {
+     "id": "S201",
+     "score": 35,
+     "similarity": 0.6409791707992554,
+     "matched": [
+      "AWS"
+     ],
+     "missing": [
+      "Linux",
+      "Docker",
+      "CI/CD"
+     ],
+     "explanation": "The student has no demonstrated projects or experience involving Linux, Docker, or CI/CD pipelines. While they list AWS as a strong skill and mention using object storage in a project, there is no evidence of building, managing, or automating infrastructure with these tools.",
+     "latency": 2.4118814000012208,
+     "cached": false
+    },
+    {
+     "id": "S424",
+     "score": 10,
+     "similarity": 0.6490435004234314,
+     "matched": [],
+     "missing": [
+      "Linux",
+      "Docker",
+      "CI/CD"
+     ],
+     "explanation": "The student's projects are described as coursework exercises or tutorials and do not demonstrate the required Linux, Docker, or CI/CD skills. Additionally, the resume lists 0 active backlogs but states a CGPA of 8.48, which violates the eligibility rule requiring a minimum CGPA of 6.5 (assuming the stated CGPA is invalid due to the backlog count discrepancy). However, since the primary failure is ",
+     "latency": 3.19909700000062,
+     "cached": false
+    },
+    {
+     "id": "S379",
+     "score": 10,
+     "similarity": 0.6423265933990479,
+     "matched": [],
+     "missing": [
+      "Linux",
+      "Docker",
+      "CI/CD"
+     ],
+     "explanation": "The student's resume demonstrates Java and Agile skills but lacks any evidence of Linux, Docker, or CI/CD usage in projects or internships. The eligibility rule for a maximum of 1 active backlog is violated as the student has 0 backlogs (this is not a violation), but the CGPA of 6.79 meets the requirement. However, since no must-have skills are demonstrated and the resume contains only generic/low",
+     "latency": 3.1101340999994136,
+     "cached": false
+    }
+   ],
+   "timing": {
+    "parse_s": 2.8271116000014445,
+    "retrieve_s": 0.05199970000103349,
+    "rerank_s": 51.63045609999972,
+    "rerank_per_candidate_s": 2.581522804999986,
+    "wall_s": 51.723170299999765,
+    "parse_cached": true,
+    "n_candidates": 20
+   }
+  },
+  "R09": {
+   "parsed": {
+    "role_title": "Mobile App Developer",
+    "must_have_skills": [
+     "React Native",
+     "JavaScript",
+     "REST API Integration"
+    ],
+    "nice_to_have_skills": [
+     "Kotlin",
+     "Android Development",
+     "Flutter"
+    ],
+    "min_cgpa": 7,
+    "allowed_branches": [
+     "CSE",
+     "IT",
+     "ICT",
+     "M.Sc IT"
+    ],
+    "max_backlogs": 0,
+    "semantic_query": "A fresher mobile app developer proficient in React Native and JavaScript with experience integrating REST APIs, ideally having built cross-platform applications using Kotlin or Flutter."
+   },
+   "filters": {
+    "min_cgpa": 7,
+    "max_backlogs": 0,
+    "allowed_branches": [
+     "CSE",
+     "IT",
+     "ICT",
+     "M.Sc IT"
+    ]
+   },
+   "ranked": [
+    {
+     "id": "S253",
+     "score": 92,
+     "similarity": 0.7137088775634766,
+     "matched": [
+      "React Native",
+      "JavaScript",
+      "REST API Integration"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through the Mobile App Internship where they published an app and managed state with providers, and via coursework involving REST APIs and JavaScript. The resume explicitly lists React Native as a technical skill and shows evidence of API integration in the Fee Payment Tracker project.",
+     "latency": 2.309138200000234,
+     "cached": false
+    },
+    {
+     "id": "S013",
+     "score": 92,
+     "similarity": 0.7061988115310669,
+     "matched": [
+      "React Native",
+      "JavaScript",
+      "REST API Integration"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates React Native and JavaScript proficiency through building a component-based single-page interface with state hooks and an expense tracker. REST API integration is clearly shown via writing custom middleware for token checking and recording request timings on routes.",
+     "latency": 2.155402700000195,
+     "cached": false
+    },
+    {
+     "id": "S057",
+     "score": 90,
+     "similarity": 0.7582032680511475,
+     "matched": [
+      "React Native",
+      "JavaScript",
+      "REST API Integration"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through building a cross-platform app with React Native and implementing token-secured REST endpoints. The resume explicitly lists proficiency in React Native and experience handling offline storage and push notifications during an internship.",
+     "latency": 2.1315854000004038,
+     "cached": false
+    },
+    {
+     "id": "S419",
+     "score": 90,
+     "similarity": 0.7413791418075562,
+     "matched": [
+      "React Native",
+      "JavaScript",
+      "REST API Integration",
+      "Kotlin",
+      "Android Development",
+      "Flutter"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills (React Native, JavaScript, REST API) through Flutter projects that consume HTTP services and use Kotlin/Android features. The resume explicitly lists proficiency in Flutter, Kotlin, Android, and REST APIs, satisfying both skill requirements and eligibility rules.",
+     "latency": 2.60861979999936,
+     "cached": false
+    },
+    {
+     "id": "S402",
+     "score": 90,
+     "similarity": 0.7142866849899292,
+     "matched": [
+      "React Native",
+      "JavaScript",
+      "REST API Integration"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates React Native and JavaScript skills by building a hybrid mobile project with state hooks and offline storage. They also show REST API integration through designing endpoints for CRUD operations in an event registration system.",
+     "latency": 1.8809946000001219,
+     "cached": false
+    },
+    {
+     "id": "S146",
+     "score": 90,
+     "similarity": 0.7086191177368164,
+     "matched": [
+      "JavaScript",
+      "React Native (demonstrated via React component-based single-page interface with state hooks)",
+      "REST API Integration (demonstrated via designing endpoints for CRUD operations on a mobile app)"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through the Hostel Complaint Portal project, which explicitly involved building a component-based interface using React and JavaScript to interact with REST APIs designed for mobile apps. The resume also lists relevant nice-to-have tools like Docker and PostgreSQL in the context of connecting applications to databases.",
+     "latency": 2.8465845999999146,
+     "cached": false
+    },
+    {
+     "id": "S298",
+     "score": 90,
+     "similarity": 0.7072473764419556,
+     "matched": [
+      "React Native",
+      "JavaScript",
+      "REST API Integration"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through building a component-based interface with state hooks and exposing HTTP resources via REST APIs using JavaScript and React. The resume explicitly lists React Native in the skill set, satisfying the primary technical requirements.",
+     "latency": 2.239340499998434,
+     "cached": false
+    },
+    {
+     "id": "S373",
+     "score": 85,
+     "similarity": 0.7487446069717407,
+     "matched": [
+      "React Native",
+      "JavaScript",
+      "REST API Integration",
+      "Kotlin",
+      "Android Development",
+      "Flutter"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through building a published Android app that consumed an HTTP service with versioned routes, which implies React Native and JavaScript usage alongside the explicitly listed Kotlin and REST APIs. Eligibility rules are met with a CGPA of 7.21 and zero backlogs in an MSc IT program.",
+     "latency": 2.6226191999994626,
+     "cached": false
+    },
+    {
+     "id": "S066",
+     "score": 85,
+     "similarity": 0.7414774894714355,
+     "matched": [
+      "JavaScript",
+      "React Native (demonstrated via building a service exposing endpoints for a mobile app)",
+      "REST API Integration"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates JavaScript and REST API integration through the 'Fee Payment Tracker' project, which explicitly involved writing server-side code to handle uploads and serve a portal. The requirement for React Native is met by the description of building a service that exposes endpoints specifically for a mobile app, implying the necessary framework knowledge.",
+     "latency": 2.67597989999922,
+     "cached": false
+    },
+    {
+     "id": "S087",
+     "score": 85,
+     "similarity": 0.7041623592376709,
+     "matched": [
+      "JavaScript",
+      "React Native (demonstrated via React.js and component-based state hooks in browser apps)",
+      "REST API Integration (implied by building a server with PostgreSQL/JSON columns and shared type definitions for client-server communication)"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates JavaScript, React, and backend database skills through described projects involving state hooks, JSON data structures, and server-client type definitions. While the resume does not explicitly mention 'React Native' or 'REST API', the work on a browser-based interface with shared server types and a job board using Next.js strongly implies these core mobile and integration m",
+     "latency": 3.3663529999994353,
+     "cached": false
+    },
+    {
+     "id": "S465",
+     "score": 85,
+     "similarity": 0.7010685205459595,
+     "matched": [
+      "React Native",
+      "JavaScript",
+      "REST API Integration"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through building a dashboard with React and JavaScript that consumed a REST API, and deploying a cross-platform app using React Native. The resume explicitly lists proficiency in these technologies alongside evidence of their practical application.",
+     "latency": 2.1243786000013642,
+     "cached": false
+    },
+    {
+     "id": "S485",
+     "score": 45,
+     "similarity": 0.7027257680892944,
+     "matched": [
+      "REST API Integration",
+      "Kotlin"
+     ],
+     "missing": [
+      "React Native",
+      "JavaScript"
+     ],
+     "explanation": "The student demonstrated REST API integration by documenting HTTP resources for a marks service and Kotlin skills through building an Android app with coroutines. However, there is no evidence of React Native or JavaScript usage in the described projects.",
+     "latency": 2.479349400000501,
+     "cached": false
+    },
+    {
+     "id": "S096",
+     "score": 35,
+     "similarity": 0.74001544713974,
+     "matched": [
+      "JavaScript",
+      "React Native",
+      "REST API Integration"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all required skills through a weekend tutorial project involving React Native, JavaScript, and REST APIs, though the work is explicitly described as basic. The internship involved QA testing rather than native mobile development, so no bonus Kotlin or Flutter experience is present.",
+     "latency": 2.138817499999277,
+     "cached": false
+    },
+    {
+     "id": "S466",
+     "score": 35,
+     "similarity": 0.7298133373260498,
+     "matched": [
+      "JavaScript",
+      "REST API Integration"
+     ],
+     "missing": [
+      "React Native"
+     ],
+     "explanation": "The student demonstrates JavaScript and REST API integration through backend projects but lacks any evidence of React Native or mobile app development. The resume shows no Kotlin, Flutter, or Android experience.",
+     "latency": 1.9877467000005709,
+     "cached": false
+    },
+    {
+     "id": "S131",
+     "score": 35,
+     "similarity": 0.7045391798019409,
+     "matched": [
+      "JavaScript",
+      "REST API Integration"
+     ],
+     "missing": [
+      "React Native"
+     ],
+     "explanation": "The student demonstrates JavaScript and REST API integration through backend projects but lacks any evidence of React Native or mobile app development. The resume shows no Kotlin, Flutter, or Android experience.",
+     "latency": 1.9891886999994313,
+     "cached": false
+    },
+    {
+     "id": "S125",
+     "score": 35,
+     "similarity": 0.7021163105964661,
+     "matched": [
+      "JavaScript",
+      "REST API Integration"
+     ],
+     "missing": [
+      "React Native"
+     ],
+     "explanation": "The student demonstrates JavaScript and REST API integration through backend projects but lacks evidence of React Native development. The resume does not mention Kotlin, Flutter, or Android experience.",
+     "latency": 1.7497347999997146,
+     "cached": false
+    },
+    {
+     "id": "S155",
+     "score": 35,
+     "similarity": 0.701835572719574,
+     "matched": [
+      "JavaScript (via React.js usage)",
+      "REST API Integration (via Event Registration System)"
+     ],
+     "missing": [
+      "React Native",
+      "Kotlin",
+      "Android Development",
+      "Flutter"
+     ],
+     "explanation": "The student demonstrates JavaScript and REST API skills through a React.js project and a Core Java Spring project, but lacks any evidence of React Native, Kotlin, or Flutter development. The resume shows no mobile app projects, only web-based applications.",
+     "latency": 2.912287999999535,
+     "cached": false
+    },
+    {
+     "id": "S273",
+     "score": 35,
+     "similarity": 0.6987957954406738,
+     "matched": [
+      "REST API Integration",
+      "Kotlin"
+     ],
+     "missing": [
+      "React Native",
+      "JavaScript",
+      "Android Development (as a primary framework)"
+     ],
+     "explanation": "The student demonstrates REST API integration by building a service with endpoints for a mobile app and shows Kotlin skills through the Habit Tracker project, but lacks evidence of React Native or JavaScript development. The resume does not describe any work using React Native or JavaScript, which are required skills.",
+     "latency": 2.7561269999987417,
+     "cached": false
+    },
+    {
+     "id": "S204",
+     "score": 10,
+     "similarity": 0.7253085374832153,
+     "matched": [],
+     "missing": [
+      "React Native",
+      "JavaScript",
+      "REST API Integration"
+     ],
+     "explanation": "The student's eligibility is invalid due to a CGPA of 8.83 exceeding the maximum limit of 7 specified in the requirement. Additionally, the resume demonstrates no evidence of React Native, JavaScript, or REST API integration skills.",
+     "latency": 1.9839873000000807,
+     "cached": false
+    },
+    {
+     "id": "S091",
+     "score": 10,
+     "similarity": 0.7050358653068542,
+     "matched": [],
+     "missing": [
+      "React Native",
+      "JavaScript (in context of mobile app)",
+      "REST API Integration"
+     ],
+     "explanation": "The student's CGPA and branch meet eligibility rules, but the resume demonstrates only web technologies (React, Next.js) with no evidence of mobile app development or REST API usage. The described projects involve browser-based interfaces and database management, not mobile application architecture.",
+     "latency": 2.528630000000703,
+     "cached": false
+    }
+   ],
+   "timing": {
+    "parse_s": 2.4921444000010524,
+    "retrieve_s": 0.034762199999022414,
+    "rerank_s": 47.4868658999967,
+    "rerank_per_candidate_s": 2.374343294999835,
+    "wall_s": 47.537880300000324,
+    "parse_cached": true,
+    "n_candidates": 20
+   }
+  },
+  "R12": {
+   "parsed": {
+    "role_title": "Associate Business Analyst",
+    "must_have_skills": [
+     "Requirements Gathering",
+     "Documentation",
+     "Agile/Scrum",
+     "Stakeholder Communication"
+    ],
+    "nice_to_have_skills": [
+     "JIRA",
+     "SQL",
+     "Process Modelling"
+    ],
+    "min_cgpa": 7.5,
+    "allowed_branches": [],
+    "max_backlogs": 0,
+    "semantic_query": "A candidate skilled in gathering requirements and creating documentation, capable of working within Agile or Scrum frameworks, and able to communicate effectively with non-technical stakeholders."
+   },
+   "filters": {
+    "min_cgpa": 7.5,
+    "max_backlogs": 0,
+    "allowed_branches": []
+   },
+   "ranked": [
+    {
+     "id": "S439",
+     "score": 92,
+     "similarity": 0.6014178991317749,
+     "matched": [
+      "Requirements Gathering",
+      "Documentation",
+      "Agile/Scrum",
+      "Stakeholder Communication",
+      "JIRA",
+      "SQL",
+      "Process Modelling"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates all must-have skills through specific project work involving requirement documentation, stakeholder negotiation, and process modeling. Although the resume does not explicitly mention JIRA or SQL usage, the requirement for 'standard notation' in business case modeling and 'acceptance criteria' implies process modelling, while the context of hackathon projects and e-",
+     "latency": 3.443636099998912,
+     "cached": false
+    },
+    {
+     "id": "S242",
+     "score": 90,
+     "similarity": 0.6149919033050537,
+     "matched": [
+      "Requirements Gathering",
+      "Documentation",
+      "Agile/Scrum",
+      "Stakeholder Communication",
+      "Process Modelling",
+      "SQL",
+      "JIRA"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through specific project work: gathering and documenting requirements for a hospital app, communicating technical constraints to a faculty sponsor, and modeling actors/interactions. While the resume lists JIRA as a skill without explicit project evidence, it is included as a nice-to-have match due to its presence in the skills section alongside clear, ",
+     "latency": 3.5532364999999118,
+     "cached": false
+    },
+    {
+     "id": "S173",
+     "score": 90,
+     "similarity": 0.6049039363861084,
+     "matched": [
+      "Requirements Gathering",
+      "Documentation",
+      "Stakeholder Communication",
+      "JIRA",
+      "SQL",
+      "Process Modelling"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through specific project roles (handling documentation and presentations) and explicitly lists the required soft skills. All nice-to-have skills are also present in their listed technical or familiar skill sets, including process modelling via JIRA usage.",
+     "latency": 2.5319838000013988,
+     "cached": false
+    },
+    {
+     "id": "S220",
+     "score": 90,
+     "similarity": 0.5924758315086365,
+     "matched": [
+      "Requirements Gathering",
+      "Documentation",
+      "Agile/Scrum",
+      "Stakeholder Communication",
+      "SQL",
+      "JIRA"
+     ],
+     "missing": [],
+     "explanation": "The student's internship and projects demonstrate requirements gathering, documentation, stakeholder communication, SQL usage, and process modelling through data cleaning and workflow design. The resume does not explicitly mention JIRA or Agile/Scrum frameworks, but the structured project delivery and internship workflows imply these capabilities.",
+     "latency": 2.8896034000008513,
+     "cached": false
+    },
+    {
+     "id": "S447",
+     "score": 85,
+     "similarity": 0.6478085517883301,
+     "matched": [
+      "Requirements Gathering",
+      "Documentation",
+      "Agile/Scrum",
+      "Stakeholder Communication",
+      "JIRA"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates all must-have skills through specific project work, including building a traceability sheet for requirements and presenting to non-technical clients. They also explicitly list JIRA proficiency and maintain eligibility with a CGPA of 7.86 and zero backlogs.",
+     "latency": 3.44361519999984,
+     "cached": false
+    },
+    {
+     "id": "S065",
+     "score": 85,
+     "similarity": 0.6201865673065186,
+     "matched": [
+      "Agile/Scrum",
+      "Requirements Gathering",
+      "Stakeholder Communication",
+      "JIRA"
+     ],
+     "missing": [],
+     "explanation": "The student clearly demonstrates all must-have skills through specific project descriptions and internship experience. They also show the nice-to-have skill of JIRA usage by linking bugs to user stories in a weekend tutorial.",
+     "latency": 2.2118012000009912,
+     "cached": false
+    },
+    {
+     "id": "S449",
+     "score": 85,
+     "similarity": 0.6084645986557007,
+     "matched": [
+      "Requirements Gathering",
+      "Documentation",
+      "Stakeholder Communication",
+      "Process Modelling",
+      "Nice-to-have: Process Modeling"
+     ],
+     "missing": [
+      "Agile/Scrum",
+      "JIRA",
+      "SQL"
+     ],
+     "explanation": "The student demonstrates requirements gathering, documentation (diagrams), and stakeholder communication through the Weather Station project, plus process modeling via the same project. However, there is no evidence of working in an Agile/Scrum environment or using JIRA or SQL.",
+     "latency": 2.970885400000043,
+     "cached": false
+    },
+    {
+     "id": "S071",
+     "score": 85,
+     "similarity": 0.6084061861038208,
+     "matched": [
+      "Requirements Gathering",
+      "Documentation",
+      "Agile/Scrum",
+      "Stakeholder Communication",
+      "SQL",
+      "Process Modelling"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through the soft skills course (requirements gathering, documentation, stakeholder communication) and project work involving process modelling and data reconciliation. All nice-to-have skills are also clearly demonstrated via SQL usage in projects and Agile/Scrum practices implied by the DevOps internship pipeline work.",
+     "latency": 2.7540736999999353,
+     "cached": false
+    },
+    {
+     "id": "S211",
+     "score": 85,
+     "similarity": 0.6081302165985107,
+     "matched": [
+      "Requirements Gathering",
+      "Documentation",
+      "Agile/Scrum",
+      "Stakeholder Communication",
+      "JIRA"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through the Business Analysis internship (capturing requirements, resolving conflicts) and capstone project (maintaining backlogs, tracking workflows). The resume also explicitly lists JIRA as a skill and shows evidence of its use in the capstone project.",
+     "latency": 2.6636253999986366,
+     "cached": false
+    },
+    {
+     "id": "S286",
+     "score": 85,
+     "similarity": 0.6017754077911377,
+     "matched": [
+      "Requirements Gathering",
+      "Documentation",
+      "Stakeholder Communication",
+      "JIRA"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrated all must-have skills by mapping admission processes with swimlane diagrams and facilitating priority reviews with users, developers, and managers. They also showed strong evidence of JIRA usage through their project description and basic SQL knowledge via window functions in a coursework exercise.",
+     "latency": 2.4070904000000155,
+     "cached": false
+    },
+    {
+     "id": "S430",
+     "score": 85,
+     "similarity": 0.5944464206695557,
+     "matched": [
+      "Requirements Gathering",
+      "Documentation",
+      "Agile/Scrum",
+      "Stakeholder Communication",
+      "JIRA"
+     ],
+     "missing": [],
+     "explanation": "The student demonstrates all must-have skills through specific project evidence, including creating traceability sheets for requirements and using Jira boards for Agile tracking. They also show strong stakeholder communication by facilitating review meetings with users and managers.",
+     "latency": 2.5583298999990802,
+     "cached": false
+    },
+    {
+     "id": "S406",
+     "score": 65,
+     "similarity": 0.5951634645462036,
+     "matched": [
+      "Documentation",
+      "Stakeholder Communication",
+      "SQL",
+      "Process Modelling (implied by data visualization and reporting)"
+     ],
+     "missing": [
+      "Requirements Gathering",
+      "Agile/Scrum"
+     ],
+     "explanation": "The student demonstrated documentation skills by writing endpoint docs for a project and process modeling through creating visual reports, but lacks evidence of requirements gathering or Agile/Scrum participation. The resume mentions Spring Boot and SQL usage but does not describe any work involving stakeholder communication with non-technical clients.",
+     "latency": 2.9812165000003006,
+     "cached": false
+    },
+    {
+     "id": "S097",
+     "score": 35,
+     "similarity": 0.6079527139663696,
+     "matched": [
+      "SQL",
+      "Documentation"
+     ],
+     "missing": [
+      "Requirements Gathering",
+      "Agile/Scrum",
+      "Stakeholder Communication"
+     ],
+     "explanation": "The student demonstrates SQL skills through database normalization and data cleaning in their projects but lacks evidence of requirements gathering, Agile/Scrum methodology, or stakeholder communication. The resume contains no described work involving client interaction, process modelling, or project management frameworks.",
+     "latency": 2.4475490000004356,
+     "cached": false
+    },
+    {
+     "id": "S224",
+     "score": 35,
+     "similarity": 0.602721631526947,
+     "matched": [
+      "SQL",
+      "Documentation"
+     ],
+     "missing": [
+      "Requirements Gathering",
+      "Agile/Scrum",
+      "Stakeholder Communication"
+     ],
+     "explanation": "The student demonstrates SQL through index optimization and documentation via project templates, but lacks evidence of Agile/Scrum environments or stakeholder communication. Requirements gathering is not shown as the internship focused solely on performance tuning rather than eliciting needs.",
+     "latency": 2.258835299999191,
+     "cached": false
+    },
+    {
+     "id": "S206",
+     "score": 35,
+     "similarity": 0.5990467071533203,
+     "matched": [
+      "Requirements Gathering",
+      "Documentation",
+      "Stakeholder Communication"
+     ],
+     "missing": [
+      "Agile/Scrum",
+      "JIRA",
+      "SQL",
+      "Process Modelling"
+     ],
+     "explanation": "The student demonstrated requirements gathering and documentation through organizing a registration desk, but lacks evidence of Agile/Scrum methodology or process modelling. No SQL usage is shown despite MongoDB being listed, and the resume contains no mention of JIRA.",
+     "latency": 2.5852632999994967,
+     "cached": false
+    },
+    {
+     "id": "S010",
+     "score": 35,
+     "similarity": 0.5982221364974976,
+     "matched": [
+      "SQL",
+      "Documentation"
+     ],
+     "missing": [
+      "Requirements Gathering",
+      "Agile/Scrum",
+      "Stakeholder Communication"
+     ],
+     "explanation": "The student demonstrates SQL skills through optimizing database queries and building data pipelines, but lacks evidence of requirements gathering, Agile/Scrum methodology, or stakeholder communication. While the NPTEL certificate implies soft skills training, no specific project describes interacting with non-technical clients or managing stakeholder needs.",
+     "latency": 2.573819499999445,
+     "cached": false
+    },
+    {
+     "id": "S170",
+     "score": 35,
+     "similarity": 0.5970054864883423,
+     "matched": [
+      "Documentation",
+      "Process Modelling"
+     ],
+     "missing": [
+      "Requirements Gathering",
+      "Agile/Scrum",
+      "Stakeholder Communication"
+     ],
+     "explanation": "The student demonstrates documentation skills by handling project presentations and process modelling through coursework, but lacks evidence of requirements gathering, Agile/Scrum experience, or stakeholder communication. The resume contains no described work involving client interaction or project management frameworks.",
+     "latency": 2.561503200000516,
+     "cached": false
+    },
+    {
+     "id": "S088",
+     "score": 35,
+     "similarity": 0.5929207801818848,
+     "matched": [
+      "SQL",
+      "Documentation"
+     ],
+     "missing": [
+      "Requirements Gathering",
+      "Agile/Scrum",
+      "Stakeholder Communication"
+     ],
+     "explanation": "The student demonstrates SQL through the Customer Churn Study project and documentation via defect reports, but lacks evidence of Agile/Scrum environments or stakeholder communication. Requirements gathering is not shown as the projects focus on testing and automation rather than eliciting business needs.",
+     "latency": 2.468228400000953,
+     "cached": false
+    },
+    {
+     "id": "S424",
+     "score": 35,
+     "similarity": 0.5902062654495239,
+     "matched": [
+      "SQL",
+      "Documentation"
+     ],
+     "missing": [
+      "Requirements Gathering",
+      "Agile/Scrum",
+      "Stakeholder Communication"
+     ],
+     "explanation": "The student demonstrates SQL skills through specific usage of window functions and common table expressions in project descriptions, but lacks evidence for requirements gathering, Agile/Scrum, or stakeholder communication. The resume contains no described work involving non-technical clients, process modelling, or the JIRA tool.",
+     "latency": 2.859299899999314,
+     "cached": false
+    },
+    {
+     "id": "S364",
+     "score": 10,
+     "similarity": 0.6183044910430908,
+     "matched": [],
+     "missing": [
+      "Requirements Gathering",
+      "Documentation",
+      "Agile/Scrum",
+      "Stakeholder Communication"
+     ],
+     "explanation": "The student's projects are described as coursework exercises or small tutorials, which does not demonstrate the required business analysis skills. Additionally, the resume explicitly states a CGPA of 7.63 and 0 active backlogs, but the branch is Civil Engineering, violating the eligibility rule that applicants must be from any branch (implying relevant technical branches) with no mention of branch",
+     "latency": 3.3299524999983987,
+     "cached": false
+    }
+   ],
+   "timing": {
+    "parse_s": 2.4825832999995328,
+    "retrieve_s": 0.056082400000377675,
+    "rerank_s": 55.493548599997666,
+    "rerank_per_candidate_s": 2.7746774299998833,
+    "wall_s": 55.56752400000005,
+    "parse_cached": true,
+    "n_candidates": 20
+   }
+  }
+ }
+}
