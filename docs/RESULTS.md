@@ -204,7 +204,7 @@ New (uncached) re-rank calls per run in this evaluation: {"b4_k20": 200, "b4_k50
 
 ## Post-hoc exploratory (designed after seeing test results)
 
-**These two analyses were designed AFTER the test results were known. They are exploratory, were not pre-declared, and do not change any frozen main result (B1-B4, ablations, fairness).** Nothing under `src/` was modified; the code is `eval/posthoc.py`. Commit: POSTHOC_COMMIT (frozen tag `frozen-main-config` is untouched).
+**These two analyses were designed AFTER the test results were known. They are exploratory, were not pre-declared, and do not change any frozen main result (B1-B4, ablations, fairness).** Nothing under `src/` was modified; the code is `eval/posthoc.py`. Commit: d96633943f25cd2e9b560edf14c850196ce0fa04 (frozen tag `frozen-main-config` is untouched).
 
 New (uncached) LLM calls: B5 35, D1 172. Wall time of the first (uncached) run: 562 s (`eval/results/posthoc_meta.json`; log: `eval/logs/posthoc.log`; re-running only rebuilds the report from the cache).
 
