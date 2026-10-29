@@ -204,9 +204,9 @@ New (uncached) re-rank calls per run in this evaluation: {"b4_k20": 200, "b4_k50
 
 ## Post-hoc exploratory (designed after seeing test results)
 
-**These two analyses were designed AFTER the test results were known. They are exploratory, were not pre-declared, and do not change any frozen main result (B1-B4, ablations, fairness).** Nothing under `src/` was modified; the code is `eval/posthoc.py`. Commit: 87095aa4cc4888103de2d5edcfa6ea5b5b103dad (frozen tag `frozen-main-config` is untouched).
+**These two analyses were designed AFTER the test results were known. They are exploratory, were not pre-declared, and do not change any frozen main result (B1-B4, ablations, fairness).** Nothing under `src/` was modified; the code is `eval/posthoc.py`. Commit: POSTHOC_COMMIT (frozen tag `frozen-main-config` is untouched).
 
-New (uncached) LLM calls: B5 35, D1 172. Wall time of this run: 562 s (0 if everything came from the cache; see the log in `eval/logs/posthoc.log` for the original timings).
+New (uncached) LLM calls: B5 35, D1 172. Wall time of the first (uncached) run: 562 s (`eval/results/posthoc_meta.json`; log: `eval/logs/posthoc.log`; re-running only rebuilds the report from the cache).
 
 ### B5 (post-hoc exploratory): hybrid retrieval + unchanged LLM re-ranker
 
@@ -248,9 +248,9 @@ Pool = top-20 of the RRF (k=60) fusion of BM25 and dense over eligible students;
 | R13 | 18 | 9 | 10 |
 | R14 | 21 | 10 | 16 |
 | R15 | 18 | 8 | 11 |
-| Total | 190 | 81 | 111 |
+| Total | 190 | 89 | 122 |
 
-B4 pool total 81/190; B5 pool total 111/190.
+B4 pool total 89/190; B5 pool total 122/190.
 
 ### Share of qualified students in the pool by archetype, test (post-hoc exploratory)
 

@@ -153,7 +153,7 @@ def report(D, b5, d1, wall):
     b4h = {rid: metric_row(R["B4"][rid], D["qrels"][rid]) for rid in test}
     rows = [[rid, per[rid]["n_qualified"], b4h[rid]["hits20"], per[rid]["hits20"]] for rid in test]
     tot_q = sum(r[1] for r in rows)
-    rows.append(["Total", tot_q, sum(r[2] for r in rows[:-1]), sum(r[3] for r in rows[:-1])])
+    rows.append(["Total", tot_q, sum(r[2] for r in rows), sum(r[3] for r in rows)])
     sections.append(("Qualified students in the top-20 pool, test (post-hoc exploratory)",
                      ra.md_table(["Req", "Qualified", "B4 (dense pool)", "B5 (hybrid pool)"], rows)
                      + f"\n\nB4 pool total {rows[-1][2]}/{tot_q}; B5 pool total {rows[-1][3]}/{tot_q}."))
@@ -229,8 +229,8 @@ def write_results(sections, wall):
             "**These two analyses were designed AFTER the test results were known. They are exploratory, were not pre-declared, and do not "
             "change any frozen main result (B1-B4, ablations, fairness).** Nothing under `src/` was modified; the code is `eval/posthoc.py`. "
             "Commit: POSTHOC_COMMIT (frozen tag `frozen-main-config` is untouched).\n",
-            f"New (uncached) LLM calls: B5 {NEW_CALLS['b5']}, D1 {NEW_CALLS['d1']}. Wall time of this run: {wall:.0f} s "
-            "(0 if everything came from the cache; see the log in `eval/logs/posthoc.log` for the original timings).\n"]
+            f"New (uncached) LLM calls: B5 {NEW_CALLS['b5']}, D1 {NEW_CALLS['d1']}. Wall time of the first (uncached) run: {wall:.0f} s "
+            "(`eval/results/posthoc_meta.json`; log: `eval/logs/posthoc.log`; re-running only rebuilds the report from the cache).\n"]
     for title, content in sections:
         body.append(f"### {title}\n\n{content}\n")
     path.write_text(text.rstrip() + "\n" + "\n".join(body), encoding="utf-8")
@@ -243,7 +243,10 @@ def main():
     b5 = stage_b5(D, P)
     d1 = stage_d1(D, P)
     sections, _ = report(D, b5, d1, time.time() - t0)
-    write_results(sections, time.time() - t0)
+    NEW_CALLS["b5"] = sum(v["new_calls"] for v in b5.values())  # from the saved results, so a report-only rerun keeps them
+    NEW_CALLS["d1"] = sum(not r["cached"] for rows in d1.values() for r in rows)
+    meta = ra.load_json(RES / "posthoc_meta.json") or {"wall_s": time.time() - t0}
+    write_results(sections, meta["wall_s"])
     print(f"new calls: {NEW_CALLS}; total {time.time() - t0:.0f}s")
 
 
