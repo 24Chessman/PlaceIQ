@@ -55,6 +55,18 @@ def main_results():
     write_tex("main_results.tex", ["Method"] + [h for _, h in cols], rows, "lccccc")
 
 
+def ablations():
+    """Means only: four columns must fit one column of the page without \resizebox, so the CIs are left to the text/RESULTS.md."""
+    per = per_requirement()
+    variants = {"B4": "B4 main (K=20)", "B4-K50": "K=50", "B4-oracle": "Oracle filters", "B4-noFair": "No fairness instr."}
+    mean = lambda m, c: sum(per[m][c].values()) / len(per[m][c])
+    assert all(abs(mean(m, "mrr") - 1.0) < 1e-12 for m in variants if m != "B4-noFair") and abs(mean("B4-noFair", "mrr") - 0.95) < 1e-12
+    for m in variants:
+        assert all(abs(per[m]["frr10"][r] - (1 - per[m]["recall10_cap"][r])) < 1e-12 for r in per[m]["frr10"])
+    rows = [[v, f"{mean(m, 'ndcg10'):.3f}", f"{mean(m, 'recall10_cap'):.3f}", f"{mean(m, 'frr20'):.3f}"] for m, v in variants.items()]
+    write_tex("ablations.tex", ["Variant", "nDCG@10", "Recall@10 (capped)", "FRR@20"], rows, "lccc")
+
+
 def ats_rejection():
     base = json.load(open(RES / "baselines.json", encoding="utf-8"))["ats"]
     ids = sorted(base["B1"])
@@ -72,8 +84,8 @@ def ats_rejection():
         npass = [base[m][r]["passers"] for r in ids]
         rows.append([names[m].replace("\\%", "%"), f"{tot_f / tot_q:.0%} ({tot_f}/{tot_q})"] + [cell([a]) for a in keep] + [cell(other)]
                     + [f"{min(npass)}-{max(npass)} (mean {sum(npass) / len(npass):.1f})"])
-    write_tex("ats_rejection.tex", ["Method", "Overall", "standard", "paraphrased", "implied", "abbreviated\\_noisy", "sparse\\_strong",
-                                    "other (n)", "Passers per requirement"], rows, "lcccccccc")
+    write_tex("ats_rejection.tex", ["Method", "Overall", "standard", "paraphrased", "implied", "abbrev.\\ noisy", "sparse strong",
+                                    "other (n)", "Passers/req."], rows, "lcccccccc")
 
 
 def parser_accuracy():
@@ -106,7 +118,8 @@ def posthoc_b5_paired():
         w = csv.DictWriter(f, fieldnames=list(rows[0]))
         w.writeheader()
         w.writerows(rows)
-    shown = [[r["comparison"], r["metric"], r["diff_ci"], r["win_loss_tie"], r["verdict"]] for r in rows if r["metric"] != "MRR"]
+    short = {"Recall@10 (capped)": "Recall@10$^{cap}$"}  # same label as the main table; keeps the column narrow
+    shown = [[r["comparison"], short.get(r["metric"], r["metric"]), r["diff_ci"], r["win_loss_tie"], r["verdict"]] for r in rows if r["metric"] != "MRR"]
     write_tex("posthoc_b5_paired.tex", ["Comparison", "Metric", "Mean diff [CI]", "W/L/T (B5)", "Verdict"], shown, "llccc",
               "% POST-HOC EXPLORATORY (designed after seeing the test results). FRR rows: lower is better.")
 
@@ -142,6 +155,7 @@ def fig_archetype():
 
 if __name__ == "__main__":
     main_results()
+    ablations()
     ats_rejection()
     parser_accuracy()
     posthoc_b5_paired()
