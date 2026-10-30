@@ -12,7 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import streamlit as st  # noqa: E402
 
-st.set_page_config(page_title="Placement Matcher demo", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="PlaceIQ demo", layout="wide", initial_sidebar_state="expanded")
 
 import data_access as da  # noqa: E402
 import ui  # noqa: E402
@@ -240,7 +240,7 @@ with tab_evid:
     t = b5[b5.split.str.startswith("test")].set_index("metric")
     st.markdown("#### B5: hybrid retrieval + the same LLM re-ranker (post-hoc exploratory)")
     st.dataframe(ph["paired"].rename(columns=dict(comparison="Comparison", metric="Metric", diff_ci="B5 minus baseline [95% CI]",
-                                                  win_loss_tie="Win/loss/tie", verdict="Verdict")), hide_index=True, width="stretch")
+                                                  win_loss_tie="Win/loss/tie (B5 better = higher; FRR lower)", verdict="Verdict")), hide_index=True, width="stretch")
     pa = ph["arch"]
     tot_found = {m: int(pa[pa.method == m].found_in_pool.sum()) for m in pa.method.unique()}
     tot_q = int(pa[pa.method == pa.method.iloc[0]].qualified.sum())

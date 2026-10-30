@@ -1,5 +1,5 @@
 @echo off
-rem Starts the Placement Matcher demo. Everything (models, caches) stays on D:.
+rem Starts the PlaceIQ demo. Everything (models, caches) stays on D:.
 setlocal
 set OLLAMA_MODELS=D:\ai-cache\ollama
 set HF_HOME=D:\ai-cache\hf

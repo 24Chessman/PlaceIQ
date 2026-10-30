@@ -228,9 +228,22 @@ def archetype_share():
     return df
 
 
+def _fix_lower_is_better(df):
+    """posthoc_b5_paired.csv labels FRR rows as if higher were better (see the erratum in docs/RESULTS.md). Presentation fix only:
+    swap wins and losses and recompute the verdict word from the CI; the CSV is never rewritten."""
+    df = df.copy()
+    for i, r in df.iterrows():
+        if str(r["metric"]).startswith("FRR"):
+            w, l, t = str(r["win_loss_tie"]).split("/")
+            lo, hi = (float(x) for x in __import__("re").findall(r"-?\d+\.\d+", r["diff_ci"])[1:3])
+            df.at[i, "win_loss_tie"] = f"{l}/{w}/{t}"
+            df.at[i, "verdict"] = "not distinguishable" if lo <= 0 <= hi else ("better" if hi < 0 else "worse")
+    return df
+
+
 @st.cache_data
 def posthoc_tables():
-    return dict(b5=pd.read_csv(RES / "posthoc_b5_summary.csv"), paired=pd.read_csv(RES / "posthoc_b5_paired.csv"),
+    return dict(b5=pd.read_csv(RES / "posthoc_b5_summary.csv"), paired=_fix_lower_is_better(pd.read_csv(RES / "posthoc_b5_paired.csv")),
                 arch=pd.read_csv(RES / "posthoc_b5_archetype.csv"), metrics=pd.read_csv(RES / "posthoc_b5_metrics.csv"),
                 d1=pd.read_csv(RES / "posthoc_d1.csv"), d1s=pd.read_csv(RES / "posthoc_d1_summary.csv"))
 

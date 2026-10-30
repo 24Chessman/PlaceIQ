@@ -20,7 +20,7 @@ def load_css():
 
 
 def brand():
-    st.markdown(f'<div class="brand">{LOGO}<div><div class="t">Placement Matcher</div>'
+    st.markdown(f'<div class="brand">{LOGO}<div><div class="t">PlaceIQ</div>'
                 f'<div class="s">semantic shortlist demo</div></div></div>', unsafe_allow_html=True)
 
 
