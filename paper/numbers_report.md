@@ -1,8 +1,8 @@
 # Paper numbers report
 
-795 macros written to `paper/numbers.tex` by `eval/make_paper_numbers.py`.
+796 macros written to `paper/numbers.tex` by `eval/make_paper_numbers.py`.
 
-Cross-check against `docs/RESULTS.md`: 294 of 294 checked values appear verbatim there.
+Cross-check against `docs/RESULTS.md`: 291 of 291 checked values appear verbatim there.
 
 ### Discrepancies
 
@@ -340,8 +340,8 @@ none
 | `\PropVsHybridRcapVerdict` | not distinguishable | eval/results/per_requirement_metrics.csv |
 | `\PropVsHybridFrrtwentyDiff` | +0.187 | eval/results/per_requirement_metrics.csv |
 | `\PropVsHybridFrrtwentyDiffCi` | 0.187 [0.131, 0.242] | eval/results/per_requirement_metrics.csv |
-| `\PropVsHybridFrrtwentyWlt` | 10/0/0 | eval/results/per_requirement_metrics.csv |
-| `\PropVsHybridFrrtwentyVerdict` | better | eval/results/per_requirement_metrics.csv |
+| `\PropVsHybridFrrtwentyWlt` | 0/10/0 | eval/results/per_requirement_metrics.csv |
+| `\PropVsHybridFrrtwentyVerdict` | worse | eval/results/per_requirement_metrics.csv |
 | `\PropVsAtsSynNdcgDiff` | +0.111 | eval/results/per_requirement_metrics.csv |
 | `\PropVsAtsSynNdcgDiffCi` | 0.111 [0.050, 0.177] | eval/results/per_requirement_metrics.csv |
 | `\PropVsAtsSynNdcgWlt` | 9/1/0 | eval/results/per_requirement_metrics.csv |
@@ -356,8 +356,8 @@ none
 | `\PropVsAtsSynRcapVerdict` | not distinguishable | eval/results/per_requirement_metrics.csv |
 | `\PropVsAtsSynFrrtwentyDiff` | +0.162 | eval/results/per_requirement_metrics.csv |
 | `\PropVsAtsSynFrrtwentyDiffCi` | 0.162 [0.045, 0.264] | eval/results/per_requirement_metrics.csv |
-| `\PropVsAtsSynFrrtwentyWlt` | 9/1/0 | eval/results/per_requirement_metrics.csv |
-| `\PropVsAtsSynFrrtwentyVerdict` | better | eval/results/per_requirement_metrics.csv |
+| `\PropVsAtsSynFrrtwentyWlt` | 1/9/0 | eval/results/per_requirement_metrics.csv |
+| `\PropVsAtsSynFrrtwentyVerdict` | worse | eval/results/per_requirement_metrics.csv |
 | `\PropVsAtsStrictNdcgDiff` | +0.270 | eval/results/per_requirement_metrics.csv |
 | `\PropVsAtsStrictNdcgDiffCi` | 0.270 [0.099, 0.477] | eval/results/per_requirement_metrics.csv |
 | `\PropVsAtsStrictNdcgWlt` | 9/1/0 | eval/results/per_requirement_metrics.csv |
@@ -372,7 +372,7 @@ none
 | `\PropVsAtsStrictRcapVerdict` | not distinguishable | eval/results/per_requirement_metrics.csv |
 | `\PropVsAtsStrictFrrtwentyDiff` | -0.028 | eval/results/per_requirement_metrics.csv |
 | `\PropVsAtsStrictFrrtwentyDiffCi` | -0.028 [-0.219, 0.149] | eval/results/per_requirement_metrics.csv |
-| `\PropVsAtsStrictFrrtwentyWlt` | 5/4/1 | eval/results/per_requirement_metrics.csv |
+| `\PropVsAtsStrictFrrtwentyWlt` | 4/5/1 | eval/results/per_requirement_metrics.csv |
 | `\PropVsAtsStrictFrrtwentyVerdict` | not distinguishable | eval/results/per_requirement_metrics.csv |
 | `\PropKfiftyVsPropNdcgDiff` | +0.014 | eval/results/per_requirement_metrics.csv |
 | `\PropKfiftyVsPropNdcgDiffCi` | 0.014 [-0.001, 0.041] | eval/results/per_requirement_metrics.csv |
@@ -611,6 +611,7 @@ none
 | `\PoolBFiveGeneralistAveragePct` | 88 | eval/results/posthoc_b5_archetype.csv |
 | `\PoolBFiveStuffedWeakFound` | 0 | eval/results/posthoc_b5_archetype.csv |
 | `\PoolBFiveStuffedWeakPct` | 0 | eval/results/posthoc_b5_archetype.csv |
+| `\AtsSynRejPctExact` | 41 | paper/recheck_report.md (independent recheck: exact taxonomy aliases only, no substring mapping of 'Linux Administration'); typed here, not computed by this script |
 | `\ArchParaphrasedQualified` | 51 | eval/results/archetype_table.csv |
 | `\ParserDevMinCgpa` | 100 | eval/results/parser_accuracy.json |
 | `\ParserDevMaxBacklogs` | 100 | eval/results/parser_accuracy.json |
@@ -669,8 +670,8 @@ none
 | `\BFiveVsPropRcapWlt` | 6/1/3 | eval/results/posthoc_b5_paired.csv |
 | `\BFiveVsPropRcapVerdict` | not distinguishable | eval/results/posthoc_b5_paired.csv |
 | `\BFiveVsPropFrrtwentyDiffCi` | -0.187 [-0.242, -0.131] | eval/results/posthoc_b5_paired.csv |
-| `\BFiveVsPropFrrtwentyWlt` | 0/10/0 | eval/results/posthoc_b5_paired.csv |
-| `\BFiveVsPropFrrtwentyVerdict` | worse | eval/results/posthoc_b5_paired.csv |
+| `\BFiveVsPropFrrtwentyWlt` | 10/0/0 | eval/results/posthoc_b5_paired.csv (corrected from the CSV: lower is better) |
+| `\BFiveVsPropFrrtwentyVerdict` | better | eval/results/posthoc_b5_paired.csv (corrected from the CSV: lower is better) |
 | `\BFiveVsHybridNdcgDiffCi` | 0.053 [0.000, 0.107] | eval/results/posthoc_b5_paired.csv |
 | `\BFiveVsHybridNdcgWlt` | 6/2/2 | eval/results/posthoc_b5_paired.csv |
 | `\BFiveVsHybridNdcgVerdict` | better | eval/results/posthoc_b5_paired.csv |
@@ -681,8 +682,8 @@ none
 | `\BFiveVsHybridRcapWlt` | 5/0/5 | eval/results/posthoc_b5_paired.csv |
 | `\BFiveVsHybridRcapVerdict` | better | eval/results/posthoc_b5_paired.csv |
 | `\BFiveVsHybridFrrtwentyDiffCi` | 0.000 [0.000, 0.000] | eval/results/posthoc_b5_paired.csv |
-| `\BFiveVsHybridFrrtwentyWlt` | 0/0/10 | eval/results/posthoc_b5_paired.csv |
-| `\BFiveVsHybridFrrtwentyVerdict` | not distinguishable | eval/results/posthoc_b5_paired.csv |
+| `\BFiveVsHybridFrrtwentyWlt` | 0/0/10 | eval/results/posthoc_b5_paired.csv (corrected from the CSV: lower is better) |
+| `\BFiveVsHybridFrrtwentyVerdict` | not distinguishable | eval/results/posthoc_b5_paired.csv (corrected from the CSV: lower is better) |
 | `\BFiveVsAtsSynNdcgDiffCi` | 0.133 [0.073, 0.194] | eval/results/posthoc_b5_paired.csv |
 | `\BFiveVsAtsSynNdcgWlt` | 9/1/0 | eval/results/posthoc_b5_paired.csv |
 | `\BFiveVsAtsSynNdcgVerdict` | better | eval/results/posthoc_b5_paired.csv |
@@ -693,8 +694,8 @@ none
 | `\BFiveVsAtsSynRcapWlt` | 7/1/2 | eval/results/posthoc_b5_paired.csv |
 | `\BFiveVsAtsSynRcapVerdict` | better | eval/results/posthoc_b5_paired.csv |
 | `\BFiveVsAtsSynFrrtwentyDiffCi` | -0.024 [-0.123, 0.052] | eval/results/posthoc_b5_paired.csv |
-| `\BFiveVsAtsSynFrrtwentyWlt` | 3/2/5 | eval/results/posthoc_b5_paired.csv |
-| `\BFiveVsAtsSynFrrtwentyVerdict` | not distinguishable | eval/results/posthoc_b5_paired.csv |
+| `\BFiveVsAtsSynFrrtwentyWlt` | 2/3/5 | eval/results/posthoc_b5_paired.csv (corrected from the CSV: lower is better) |
+| `\BFiveVsAtsSynFrrtwentyVerdict` | not distinguishable | eval/results/posthoc_b5_paired.csv (corrected from the CSV: lower is better) |
 | `\DOnePosScore` | 81.3 | eval/results/posthoc_d1_summary.csv |
 | `\DOneNegScore` | 29.5 | eval/results/posthoc_d1_summary.csv |
 | `\DOneStuffedScore` | 42.8 | eval/results/posthoc_d1_summary.csv |

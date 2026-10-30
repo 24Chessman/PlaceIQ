@@ -1,0 +1,38 @@
+\appendices
+\section{Additional Tables}
+These tables hold detail that the main text summarises with the numbers in \texttt{numbers.tex}. The B5 tables are post-hoc exploratory: B5 and D1 were designed after the test results were known.
+
+\begin{table*}[h]
+\caption{Share of qualified students inside the top-20 pool, by resume style (counts in brackets), pooled over the test requirements.}
+\label{tab:archetype}
+\centering\small
+\resizebox{\textwidth}{!}{\input{tables/archetype_found}}
+\end{table*}
+
+\begin{table*}[h]
+\caption{Post-hoc exploratory: B5 (hybrid retrieval plus the same re-ranker), mean with 95\% bootstrap CI over requirements (dev and test shown separately).}
+\label{tab:b5}
+\centering\small
+\resizebox{\textwidth}{!}{\input{tables/posthoc_b5}}
+\end{table*}
+
+\begin{table*}[h]
+\caption{Post-hoc exploratory: share of qualified students inside the candidate pool, for the dense pool (B4), the hybrid ranking (B3b) and the hybrid pool (B5).}
+\label{tab:b5arch}
+\centering\small
+\resizebox{\textwidth}{!}{\input{tables/posthoc_b5_archetype}}
+\end{table*}
+
+\begin{table}[h]
+\caption{Post-hoc exploratory: D1, scoring paraphrased resumes with retrieval bypassed (per requirement).}
+\label{tab:d1}
+\centering\scriptsize
+\resizebox{\columnwidth}{!}{\input{tables/posthoc_d1}}
+\end{table}
+
+\begin{table}[h]
+\caption{Name-swap test: control (same-group name) versus cross-group names, with the fairness instruction on and off.}
+\label{tab:fair}
+\centering\scriptsize
+\resizebox{\columnwidth}{!}{\input{tables/fairness}}
+\end{table}

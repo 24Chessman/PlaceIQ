@@ -56,8 +56,8 @@ def add_ci(prefix, vals, src, check=True, digits=3):
     return m, lo, hi
 
 
-def add_paired(prefix, a, b, src, check_metric=True):
-    p = paired(a, b)
+def add_paired(prefix, a, b, src, check_metric=True, lower=False):
+    p = paired(a, b, lower_is_better=lower)
     s = fmt_ci(p["diff"], p["lo"], p["hi"])
     add(prefix + "Diff", f"{p['diff']:+.3f}", src)
     add(prefix + "DiffCi", s, src, check=s if check_metric else None)
@@ -105,7 +105,7 @@ def main():
     add("PropMrrOneTotal", len(test), src)
     for other in ("B3", "B3b", "B1c", "B1"):
         for c in ("ndcg10", "mrr", "recall10_cap", "frr20"):
-            add_paired(f"PropVs{METHOD[other]}{METRIC[c]}", vec("B4", c), vec(other, c), src, check_metric=c != "frr20")
+            add_paired(f"PropVs{METHOD[other]}{METRIC[c]}", vec("B4", c), vec(other, c), src, check_metric=c != "frr20", lower=c == "frr20")
     for m in ("B4-K50", "B4-oracle", "B4-noFair"):
         add_paired(f"{METHOD[m]}VsProp" + "Ndcg", vec(m, "ndcg10"), vec("B4", "ndcg10"), src)
 
@@ -153,6 +153,7 @@ def main():
             add(f"PoolBFive{ARCH(r['archetype'])}Found", r["found_in_pool"], "eval/results/posthoc_b5_archetype.csv")
             add(f"PoolBFive{ARCH(r['archetype'])}Pct", f"{100 * share:.0f}", "eval/results/posthoc_b5_archetype.csv",
                 check=f"{share:.0%} ({r['found_in_pool']}/{r['qualified']})")
+    add("AtsSynRejPctExact", 41, "paper/recheck_report.md (independent recheck: exact taxonomy aliases only, no substring mapping of 'Linux Administration'); typed here, not computed by this script")
     add("ArchParaphrasedQualified", next(int(r["qualified"]) for r in at if r["archetype"] == "paraphrased"), "eval/results/archetype_table.csv")
 
     # ---------------------------------------------------------------- parser accuracy
@@ -197,9 +198,16 @@ def main():
         other = {"B4": "Prop", "B3b": "Hybrid", "B1c": "AtsSyn"}[r["comparison"].split()[-1]]
         met = {"nDCG@10": "Ndcg", "MRR": "Mrr", "Recall@10 (capped)": "Rcap", "FRR@20": "Frrtwenty"}[r["metric"]]
         pre = f"BFiveVs{other}{met}"
+        w, l, tt = r["win_loss_tie"].split("/")
+        wlt, verdict, note = r["win_loss_tie"], r["verdict"], ""
+        if met.startswith("Frr"):  # lower is better: swap wins and losses, recompute the verdict word from the CI
+            lo_, hi_ = (float(x) for x in re.findall(r"-?\d+\.\d+", r["diff_ci"])[1:3])
+            wlt = f"{l}/{w}/{tt}"
+            verdict = "not distinguishable" if lo_ <= 0 <= hi_ else ("better" if hi_ < 0 else "worse")
+            note = " (corrected from the CSV: lower is better)"
         add(pre + "DiffCi", r["diff_ci"], "eval/results/posthoc_b5_paired.csv", check=r["diff_ci"])
-        add(pre + "Wlt", r["win_loss_tie"], "eval/results/posthoc_b5_paired.csv", check=r["win_loss_tie"])
-        add(pre + "Verdict", r["verdict"], "eval/results/posthoc_b5_paired.csv")
+        add(pre + "Wlt", wlt, "eval/results/posthoc_b5_paired.csv" + note, check=None if note else r["win_loss_tie"])
+        add(pre + "Verdict", verdict, "eval/results/posthoc_b5_paired.csv" + note)
     d1s = {r["metric"]: r["value"] for r in csv.DictReader(open(RES / "posthoc_d1_summary.csv", encoding="utf-8"))}
     src = "eval/results/posthoc_d1_summary.csv"
     for k, name in (("Mean score, paraphrased-qualified (pooled)", "DOnePosScore"), ("Mean score, non-qualified (pooled)", "DOneNegScore"),

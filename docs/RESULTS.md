@@ -285,3 +285,21 @@ Candidate set per test requirement: every eligible, qualified `paraphrased` stud
 | ROC AUC, mean of per-requirement AUCs [95% CI over requirements] | 0.886 [0.844, 0.928] |
 | ROC AUC, all candidates pooled | 0.879 |
 | Paraphrased-qualified in the top 10 of their candidate set | 49/51 (96%) |
+
+## Erratum (2026-10-30): inverted win/loss/tie counts and verdict words for lower-is-better metrics
+
+**Cause.** `eval/stats.py::paired` counted a "win" when `a - b > 0` and called the CI "better" when it lay above 0. That is right for nDCG, MRR, Recall and P@10 (higher is better) but inverted for FRR@10/FRR@20 (lower is better). The mean difference and its CI were always correct; only the W/L/T counts and the verdict word of FRR rows were wrong. `paired` now takes `lower_is_better=True` for FRR (wins = lower value, "better" when the CI is below 0).
+
+**Wrong labels, exactly (all in the post-hoc B5 paired table; FRR@20 rows only):**
+
+| Row | Printed (wrong) | Correct |
+|---|---|---|
+| B5 vs B4, FRR@20, diff -0.187 [-0.242, -0.131] | W/L/T 0/10/0, verdict "worse" | W/L/T 10/0/0, verdict "better" (B5 has the lower FRR@20 on all 10 requirements) |
+| B5 vs B1c, FRR@20, diff -0.024 [-0.123, 0.052] | W/L/T 3/2/5, "not distinguishable" | W/L/T 2/3/5, "not distinguishable" (verdict unchanged) |
+| B5 vs B3b, FRR@20, diff 0.000 [0.000, 0.000] | 0/0/10, "not distinguishable" | unchanged (all ties) |
+
+**Where the wrong labels appeared:** the paired table in the "Post-hoc exploratory" section of this file; `eval/results/posthoc_b5_paired.csv` (left unchanged, as a record); `paper/tables/posthoc_b5_paired.tex` (regenerated); the paper macros `\BFiveVs{Prop,Hybrid,AtsSyn}Frrtwenty{Wlt,Verdict}` and `\PropVs{Dense,Hybrid,AtsSyn,AtsStrict}Frrtwenty{Wlt,Verdict}` in `paper/numbers.tex` (regenerated); and the Evidence tab of the demo app (now corrected at display time). The corrected rows are in `paper/corrected/posthoc_b5_paired_corrected.csv` (with the original labels beside them). The statement in the chat summary "FRR@20 falls by 0.187 on all 10 requirements" was already correct.
+
+**Main results were not affected.** The paired differences B4 vs B3, B3b, B1c and B1 (nDCG@10, MRR, Recall@10 capped) are higher-is-better metrics, so their W/L/T counts and verdicts were right. The ablation differences (nDCG@10) and the fairness cross-minus-control comparisons (all "not distinguishable") were also unaffected. FRR comparisons of B4 against baselines were never printed in this file or in a table; they existed only as paper macros (now corrected).
+
+**Not re-run.** `eval/posthoc.py` now passes `lower_is_better` for FRR, but I did not re-run it (it would overwrite the original CSVs); the Post-hoc section above still shows the old labels, and this erratum supersedes them.

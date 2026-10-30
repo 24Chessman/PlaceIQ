@@ -59,7 +59,7 @@ def jl(p):
 numbers = {m.group(1): m.group(2) for m in re.finditer(r"\\newcommand\{\\([A-Za-z]+)\}\{(.*)\}$", (P / "numbers.tex").read_text(encoding="utf-8"), re.M)}
 render = lambda v: v.replace("\\%", "%").replace("\\_", "_").replace("\\&", "&").replace("\\#", "#")
 outline = (P / "OUTLINE.md").read_text(encoding="utf-8")
-main_tex = (P / "main.tex").read_text(encoding="utf-8")
+main_tex = (P / "main.tex").read_text(encoding="utf-8") + "\n" + (P / "appendix.tex").read_text(encoding="utf-8")
 
 students, truth, reqs = jl(DATA / "students.jsonl"), {t["id"]: t for t in jl(DATA / "students_truth.jsonl")}, jl(DATA / "requirements.jsonl")
 split = {r["id"]: r["split"] for r in reqs}
@@ -213,8 +213,8 @@ for tf in sorted((P / "tables").glob("*.tex")):
     else:
         env, cap, lab = "(not placed)", "none", "none"
     macros_md.append(f"| {tf.name} | {lab} | {env} | {'; '.join(cols).replace('|', '/')} | {cap} |")
-axes = {"fig_ndcg10": "x: method (B1..B4); y: nDCG@10 mean with 95% CI error bars",
-        "fig_archetype": "x: resume archetype; y: share of qualified students in the top-20; grouped bars by method",
+axes = {"fig_ndcg10": "x: seven methods (B1, B1b, B1c, B2, B3, B3b, B4); y: nDCG@10 mean with 95% CI error bars",
+        "fig_archetype": "x: resume style with n (five archetypes plus merged other); y: share of qualified students in the top-20; grouped bars for seven methods, legend below",
         "fig_fairness": "x: instruction ON/OFF x control/cross-group; y: mean absolute score change (points), 95% CI"}
 macros_md += ["", "## Figures in paper/figs", "", "| file | label | axes | caption in main.tex |", "|---|---|---|---|"]
 for ff in sorted((P / "figs").glob("*.pdf")):

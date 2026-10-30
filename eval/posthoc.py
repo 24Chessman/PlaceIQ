@@ -142,7 +142,7 @@ def report(D, b5, d1, wall):
     prow = []
     for other in ("B4", "B3b", "B1c"):
         for c, cname in (("ndcg10", "nDCG@10"), ("mrr", "MRR"), ("recall10_cap", "Recall@10 (capped)"), ("frr20", "FRR@20")):
-            p = paired([per[r][c] for r in test], [ref[other][r][c] for r in test])
+            p = paired([per[r][c] for r in test], [ref[other][r][c] for r in test], lower_is_better=c.startswith("frr"))
             prow.append([f"B5 vs {other}", cname, fmt_ci(p["diff"], p["lo"], p["hi"]), f"{p['wins']}/{p['losses']}/{p['ties']}", p["verdict"]])
     ra.save_csv(RES / "posthoc_b5_paired.csv", [dict(comparison=r[0], metric=r[1], diff_ci=r[2], win_loss_tie=r[3], verdict=r[4]) for r in prow])
     sections.append(("B5 paired differences on test (post-hoc exploratory; B5 minus baseline; FRR: negative = B5 better)",
