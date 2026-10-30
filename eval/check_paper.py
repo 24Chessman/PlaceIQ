@@ -28,7 +28,7 @@ for grp in re.findall(r"\\cite\{([^}]+)\}", outline + source):
             errs.append(f"cite key {k.strip()} not in refs.bib")
 body = re.sub(r"^\s*%.*$", "", source, flags=re.M)
 for m in sorted(set(re.findall(r"\\([A-Z][A-Za-z]+)(?![A-Za-z])", body))):
-    if m not in macros and not m.startswith("IEEE") and m not in ("LaTeX",):
+    if m not in macros and not m.startswith("IEEE") and m not in ("LaTeX", "FloatBarrier"):  # FloatBarrier: placeins
         errs.append(f"main/appendix uses undefined macro \\{m}")
 print("macros:", len(macros), "| bib entries:", len(keys), "| outline macros used:", len(used))
 print("static check:", "OK" if not errs else "\n".join(errs))
