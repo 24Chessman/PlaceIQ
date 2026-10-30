@@ -24,11 +24,11 @@ Retrieval mode: the default is the **hybrid post-hoc variant** (BM25 + dense), l
 
 **0:00 Set the scene.** "Placement cells filter resumes by keywords. We ask whether a local model can read what a student actually did." Point at the sidebar: on-device badge, nothing leaves the laptop.
 
-**0:30 Pick "Recommended demo: Associate Business Analyst (R12)", press Run** (instant, cached). Notice the funnel (500 students, about 295 eligible, 20, 10), the "As understood by the system" panel (the messy text became must-have chips and eligibility facts) and the cards: score colour bars, green matched and red missing chips, a two-sentence explanation. Open one resume to show the evidence behind a score. Switch on "Reveal synthetic ground truth" and show the Qualified badges.
+**0:30 Pick "Recommended demo: Junior Backend Engineer (R01)", press Run** (instant, cached). Notice the funnel (500 students, 218 eligible, 20, 10), the "As understood by the system" panel (the messy text became must-have chips and eligibility facts) and the cards: score colour bars, green matched and red missing chips, a two-sentence explanation. Open one resume to show the evidence behind a score. Switch on "Reveal synthetic ground truth" and show the Qualified badges.
 
-**1:45 Open "Keyword ATS vs Ours".** Say: "The strict keyword filter passes nobody for this request. All ten of our candidates are marked as rescued, and each card says which keywords it could not find." The audience should notice that those students describe the work in other words.
+**1:45 Open "Keyword ATS vs Ours".** Say: "The strict keyword filter passes only 12 of 218 eligible students, and 4 of our top 10 are marked as rescued; each card says which keywords it could not find." The audience should notice that those students describe the work in other words. Read the note on the tab: "This ATS uses the keywords our parser extracted from the requirement. A real ATS may extract keywords differently."
 
-**2:45 Pick the full-stack request (R03), Run, go to the same tab.** "Different style, same story: the ATS passes 3 of 297 eligible students and rejects 7 of our top 10."
+**2:45 Pick the WhatsApp-style frontend request (R02), Run, go to the same tab.** "Informal wording, same story: the ATS passes 15 of 319 eligible students and rejects 4 of our top 10."
 
 **3:30 Pick the data-analyst request (R04), Run.** "Here the keyword filter does fine: it passes 37 students and rejects none of our top 10. The method is not always better; it helps when the wording differs from the keywords."
 
@@ -52,16 +52,18 @@ The badge shows "offline (samples only)". All 15 sample requirements still run i
 
 ## Disclosure about the demo examples
 
-The four recommended examples were chosen from cached outputs **where the strict keyword ATS visibly struggles** (R03, R12, R05: at least 3 of our top 10 rejected by the ATS in both retrieval modes) plus **one where it does well** (R04: 0 of our top 10 rejected). They are not typical: across all 15 requirements the ATS rejects 0 to 10 of our top 10. The Evidence tab holds the complete numbers, including the cases where our method is not distinguishable from simpler baselines.
+The four recommended examples were chosen from cached outputs **where the strict keyword ATS visibly struggles** (R01, R02, R05: at least 3 of our top 10 rejected by the ATS in both retrieval modes) plus **one where it does well** (R04: 0 of our top 10 rejected). Only requirements whose parsed must-have skills match the intended ones were considered for the "struggles" examples. They are not typical: across all 15 requirements the ATS rejects 0 to 10 of our top 10. The Evidence tab holds the complete numbers, including the cases where our method is not distinguishable from simpler baselines.
+
+**ATS disclosure:** This ATS uses the keywords our parser extracted from the requirement. A real ATS may extract keywords differently.  The same note is shown on the "Keyword ATS vs Ours" tab.
+
+Note on R04: its parser output demotes Power BI from must-have to nice-to-have, so the ATS looks somewhat better there than it would with the intended keywords.
 
 | Example | Style | ATS passes (of eligible) | Our top 10 rejected by ATS (hybrid / dense) |
 |---|---|---|---|
-| R03 | bullet list | 3 of 297 | 7 / 8 |
-| R12 | formal paragraph | 0 of 295 | 10 / 10 |
+| R01 | formal paragraph | 12 of 218 | 4 / 4 |
+| R02 | WhatsApp style | 15 of 319 | 4 / 8 |
 | R05 | typos, informal | 12 of 323 | 3 / 4 |
 | R04 | Hinglish | 37 of 488 | 0 / 0 (contrast case) |
-
-Other requirements: R09, R10, R14 (ATS passes nobody, 10/10), R01 4/4, R13 5/4, R02 4/8, R06 2/5, R07 2/3, R11 2/5, R08 0/1, R15 1/3.
 
 ## Tests
 

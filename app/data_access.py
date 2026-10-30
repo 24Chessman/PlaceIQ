@@ -35,10 +35,10 @@ OLLAMA_URL = "http://127.0.0.1:11434/api/tags"
 
 # Chosen from cached outputs only (hybrid mode, strict ATS): see docs/DEMO.md for the numbers.
 DEMO_EXAMPLES = {
-    "R03": "Bullet-style full-stack request: the strict filter passes 3 of 297 eligible students and rejects 7 of our top 10",
-    "R12": "Formal business-analyst paragraph: the strict filter passes nobody, all 10 of our top 10 are rejected",
+    "R01": "Formal backend request: 4 of our top 10 would be rejected by the strict keyword filter",
+    "R02": "WhatsApp-style frontend request: informal wording, 4 of our top 10 rejected",
     "R05": "Typo-laden ML request: keywords miss spelling variants, 3 of our top 10 rejected",
-    "R04": "Hinglish data-analyst request: the keyword filter does well here (0 of our top 10 rejected), a fair contrast case",
+    "R04": "Hinglish data-analyst request: the keyword filter does well here (0 of our top 10 rejected), a contrast case",
 }
 
 

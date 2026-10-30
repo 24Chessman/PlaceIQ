@@ -172,7 +172,7 @@ with tab_ats:
             extra = f"<small>Ground truth: this requirement has {nq} qualified students; the strict ATS rejects {nrej} of them.</small>"
         st.markdown(f'<div class="summary">{line}{extra}</div>', unsafe_allow_html=True)
         ui.notice("info", "The strict ATS is baseline B1 from the paper: a student passes only if every must-have skill, exactly as the system "
-                          "understood it, appears word for word in the resume (case-insensitive, no synonyms).")
+                          "understood it, appears word for word in the resume (case-insensitive, no synonyms). This ATS uses the keywords our parser extracted from the requirement. A real ATS may extract keywords differently.")
         left, right = st.columns(2, gap="large")
         with left:
             st.markdown("### Strict keyword ATS")
