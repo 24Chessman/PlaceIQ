@@ -48,6 +48,10 @@ The app opens at http://localhost:8501. Wait for "Local LLM: ready" in the sideb
 
 Synthetic data only: students, resumes and requirements are generated, and the labels come from the same generator. Results on the 10 test requirements have wide intervals and say nothing about real placement outcomes. The tool is decision support; a person reviews every shortlist. The fairness test covers names only.
 
+## Paper
+
+"PlaceIQ: Explainable Semantic Shortlisting for Campus Placement" by Naitik Sutariya, Parth Maharaja and Vatsal Kamani, guided by Dr. Brajesh Dhiman: [docs/PlaceIQ_paper.pdf](docs/PlaceIQ_paper.pdf) (LaTeX sources in `paper/`).
+
 ## Authors
 
 Naitik Sutariya, Parth Maharaja, Vatsal Kamani (M.Sc. IT, DA-IICT, Gandhinagar). Guided by Dr. Brajesh Dhiman.

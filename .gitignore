@@ -10,9 +10,19 @@ ai-cache/
 eval/logs/
 brag-output/
 .impeccable/
-docs/PlaceIQ_paper.pdf
 
 # models and secrets (never commit)
 *.gguf
 *.safetensors
 .streamlit/secrets.toml
+
+# LaTeX build files (sources only are tracked)
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
