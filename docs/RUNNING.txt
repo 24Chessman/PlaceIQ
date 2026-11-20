@@ -1,0 +1,4 @@
+$env:OLLAMA_MODELS = "D:\ai-cache\ollama"
+ollama serve
+
+.\scripts\run_demo.bat

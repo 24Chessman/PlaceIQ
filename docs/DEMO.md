@@ -38,6 +38,22 @@ Retrieval mode: the default is the **hybrid post-hoc variant** (BM25 + dense), l
 
 **Optional (needs Ollama ready, about 50 s):** paste a new requirement under "Custom requirement" and watch the progress bar ("Scoring candidate i/20").
 
+## Prototype extensions (v2.0): full list and Student view
+
+Two extra tabs, added after "Keyword ATS vs Ours". They are prototype extensions and are **not evaluated**; the quick Top-10 button, the Shortlist tab and the demo examples are unchanged (details and measured numbers: `docs/EXTENSIONS.md`).
+
+**All suited candidates (company view)**
+1. Pick a requirement in the sidebar (try the formal backend example, R01, or the WhatsApp-style frontend example, R02).
+2. Press **Run full list (about 2 min)**. A progress bar shows "candidate i of N", elapsed time and time left. Repeat runs are instant.
+3. Read the headline ("N suited of M eligible; pool of 50"), the Top 10 table and the "Also suited (N)" table. Move the **threshold slider** (default 60): the groups relabel without re-scoring. Download the full list as CSV.
+4. Say: "The Top 10 here can differ from the Shortlist tab, because this view uses a hybrid pool. Students outside the 50-candidate pool are not scored."
+
+**Student view**
+1. Pick a student (ID and name) and a requirement (a benchmark requirement or free text), then press **Check fit**.
+2. Show the fit score with matched and missing skills, the eligibility table (a failed rule is not fixable by editing the resume) and the gap list.
+3. Press **Get suggestions** (one extra model call, a few seconds): "If you have done X, add a bullet describing it; if not, learn X by ...".
+4. Tick **Assume I gain: ...** for a missing skill and press **Re-score**. Say clearly: "Projection only. It assumes the student genuinely has these skills." Point out that the score may not rise: the re-ranker credits demonstrated work, not a bare skills line.
+
 ## If Ollama is down
 
 The badge shows "offline (samples only)". All 15 sample requirements still run in both modes because every model call is cached; custom requirements are disabled with a message. Start `ollama serve` and the badge recovers by itself (the page re-checks every few seconds).

@@ -5,3 +5,14 @@ __pycache__/
 .cache/
 .env
 ai-cache/
+
+# local-only / regenerable
+eval/logs/
+brag-output/
+.impeccable/
+docs/PlaceIQ_paper.pdf
+
+# models and secrets (never commit)
+*.gguf
+*.safetensors
+.streamlit/secrets.toml
