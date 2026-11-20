@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from src import extensions as ex  # noqa: E402
+from src import revision as rv  # noqa: E402
 from src import student_view as sv  # noqa: E402
 from src.hybrid import Bm25Index, eligible_ids, rrf_scores  # noqa: E402
 
@@ -112,28 +113,6 @@ class Student(unittest.TestCase):
         self.assertEqual(sv.coverage_text(sv.coverage(parsed, scored, ["D"]))[0], "Currently 3 of 5 required skills; if you gain D: 4 of 5.")
         three = sv.coverage_text(sv.coverage(dict(must_have_skills=list("ABCD"), nice_to_have_skills=[]), dict(matched_skills=["A"]), ["B", "C", "D"]))
         self.assertIn("if you gain B, C and D: 4 of 4", three[0])
-
-    def test_what_if_text_assembly(self):
-        t = sv.what_if_text("Resume line\n", ["SQL", "Docker"])
-        self.assertTrue(t.startswith("Resume line\n\n- Project (hypothetical):"))
-        lines = t.strip().split("\n")
-        self.assertEqual(lines[0], "Resume line")
-        self.assertEqual(lines[2], "- Project (hypothetical): built and deployed a small application using SQL, with hands-on use of SQL.")
-        self.assertEqual(lines[3], "- Project (hypothetical): built and deployed a small application using Docker, with hands-on use of Docker.")
-        self.assertEqual(len(lines), 4)  # one bullet per skill, original text untouched
-        self.assertNotIn("assumed acquired", t)
-
-    def test_what_if_rescores_the_modified_text(self):
-        seen = []
-        out = sv.what_if("req", PARSED, "R", ["SQL"], score_fn=lambda t, p, r: seen.append(r) or dict(score=80))
-        self.assertIn("Project (hypothetical): built and deployed a small application using SQL", seen[0])
-        self.assertEqual(out["scored"]["score"], 80)
-
-    def test_position_text(self):
-        self.assertIn("at or above the threshold of 60", sv.position_vs(60, 60))
-        self.assertIn("below it", sv.position_vs(70, 60, top10_cutoff=85))
-        self.assertEqual(sv.top10_cutoff(dict(ranked=[dict(score=i) for i in range(12, 0, -1)], top_n=10)), 3)
-        self.assertIsNone(sv.top10_cutoff(dict(ranked=[dict(score=1)], top_n=10)))
 
     def good(self, skill, **over):
         item = dict(skill=skill,
@@ -247,6 +226,159 @@ class Student(unittest.TestCase):
         self.assertEqual(len(calls), 2)
         self.assertTrue(out[0]["ok"])
         self.assertEqual(sv.suggest_improvements("req", PARSED, "h\nbody", [], [], chat=chat), [])
+
+
+RESUME = ("Priya Shah | priya@mail.example | +91 9000000000\n\nEducation\nB.E. CSE\n\nProjects\n"
+          "- Quiz Application: Built a quiz with HTML, CSS and JavaScript.\n- Fee Tracker: Built a REST service in Python and SQL.\n")
+
+
+def bullet(skill="TypeScript", project="Quiz Application", text=None):
+    return dict(skill=skill, extends_project=project,
+                bullet=text or f"Extended the Quiz Application with {skill} interfaces for its question and score data.")
+
+
+class Revision(unittest.TestCase):
+    body = sv.resume_body(RESUME)
+
+    def test_bullet_validator_accepts_a_real_extension(self):
+        self.assertEqual(rv.validate_bullet(bullet(), "TypeScript", self.body), [])
+        self.assertEqual(rv.validate_bullet(bullet(project="quiz application"), "TypeScript", self.body), [])  # copied title, any case
+
+    def test_bullet_validator_rejections(self):
+        v = lambda item, skill="TypeScript": rv.validate_bullet(item, skill, self.body)
+        self.assertTrue(any("project title" in p for p in v(bullet(project="Chat Server"))))  # not a project in the resume
+        self.assertTrue(any("never names the skill" in p for p in v(bullet(text="Extended the Quiz Application with typed interfaces for its data."))))
+        self.assertIn("bullet contains a number", v(bullet(text="Extended the Quiz Application with TypeScript across 3 modules of its code.")))
+        for word in ("reduced", "improved", "faster", "boosted", "optimised"):
+            self.assertTrue(any("outcome" in p for p in v(bullet(text=f"Extended the Quiz Application with TypeScript and {word} its code."))), word)
+        self.assertTrue(v(bullet(text="Extended the Quiz Application with TypeScript, see https://example.com for details.")))
+        self.assertTrue(v(bullet(text="Extended the Quiz Application with TypeScript for X and more ...")))
+        self.assertTrue(v(bullet(text="Used TypeScript.")))  # too short
+        self.assertTrue(v(bullet(skill="Figma")))  # wrong skill
+        self.assertTrue(v(dict(skill="TypeScript")))  # fields missing
+
+    def test_skill_must_be_named_as_a_whole_word(self):
+        body = "- Quiz Application: Built a quiz with HTML, CSS and JavaScript using a reactive single-file framework."
+        reactive = dict(skill="React", extends_project="Quiz Application", bullet="Built a reactive interface with single-file components for the Quiz Application.")
+        self.assertIn("bullet never names the skill", rv.validate_bullet(reactive, "React", body))
+        named = dict(reactive, bullet="Rebuilt the interface of the Quiz Application with React components.")
+        self.assertEqual(rv.validate_bullet(named, "React", body), [])
+        self.assertTrue(sv.mentions("uses C++ and Node.js", "C++"))
+        self.assertFalse(sv.mentions("a reactive app", "React"))
+
+    def test_digits_inside_the_skill_name_are_not_a_number(self):
+        ok = bullet(skill="HTML5", text="Extended the Quiz Application with semantic HTML5 sections and html5 form controls.")
+        self.assertEqual(rv.validate_bullet(ok, "HTML5", self.body), [])
+
+    def test_generate_bullets_prompt_has_no_identity_and_one_call_when_valid(self):
+        seen = []
+
+        def chat(messages, schema):
+            seen.append(messages)
+            return dict(bullets=[bullet("TypeScript"), bullet("Docker", "Fee Tracker", "Packaged the Fee Tracker REST service in Docker with its Python and SQL setup.")]), {}
+
+        out = rv.generate_bullets(RESUME, ["TypeScript", "Docker"], chat=chat)
+        self.assertEqual([(o["skill"], o["ok"]) for o in out], [("TypeScript", True), ("Docker", True)])
+        self.assertEqual(len(seen), 1)
+        joined = " ".join(m["content"] for m in seen[0])
+        for secret in ("Priya", "Shah", "priya@mail", "9000000000"):
+            self.assertNotIn(secret, joined)
+        self.assertIn("Quiz Application", joined)
+
+    def test_generate_bullets_retries_once_then_gives_no_bullet(self):
+        calls = []
+
+        def chat(messages, schema):
+            calls.append(messages[1]["content"])
+            return dict(bullets=[bullet("TypeScript"), bullet("Docker", "Chat Server", "Built the Chat Server and packaged it with Docker for the team.")]), {}
+
+        out = rv.generate_bullets(RESUME, ["TypeScript", "Docker"], chat=chat)
+        self.assertEqual(len(calls), 2)
+        self.assertIn("rejected", calls[1])
+        self.assertTrue(out[0]["ok"])
+        self.assertEqual((out[1]["ok"], out[1]["error"]), (False, "Could not write a bullet for Docker"))
+        self.assertEqual(rv.generate_bullets(RESUME, [], chat=chat), [])
+
+    def test_build_revised_text_keeps_header_and_original_and_style(self):
+        bullets = rv.generate_bullets(RESUME, ["TypeScript"], chat=lambda m, s: (dict(bullets=[bullet()]), {}))
+        text, added = rv.build_revised_text(RESUME, bullets)
+        self.assertTrue(text.startswith(RESUME.rstrip()))  # header and body untouched
+        self.assertEqual(added, ["- Quiz Application: Extended the Quiz Application with TypeScript interfaces for its question and score data."])
+        self.assertTrue(text.rstrip().endswith(added[0]))
+        dotted = RESUME.replace("\n- ", "\n• ")
+        self.assertTrue(rv.build_revised_text(dotted, bullets)[1][0].startswith("• "))  # the resume's own marker
+        failed = [dict(skill="Docker", ok=False, error="x")]
+        self.assertEqual(rv.build_revised_text(RESUME, failed), (RESUME, []))
+
+    def test_added_lines_highlights_additions_and_edits_only(self):
+        revised = RESUME.rstrip() + "\n\n- Quiz Application: Extended it.\n"
+        self.assertEqual(rv.added_lines(RESUME, revised), ["- Quiz Application: Extended it."])
+        edited = revised.replace("Extended it.", "Extended it with types.")
+        self.assertEqual(rv.added_lines(RESUME, edited), ["- Quiz Application: Extended it with types."])
+        self.assertEqual(rv.added_lines(RESUME, RESUME), [])
+
+    # ---- retrieval effect: in memory, read-only
+    def fixtures(self):
+        import numpy as np
+        students = {s: dict(id=s, cgpa=7.0, branch="CSE", active_backlogs=0, resume_text=t)
+                    for s, t in [("A", "plays chess"), ("B", "plays chess"), ("C", "plays chess"), ("D", "plays chess"), ("E", "plays chess"), ("F", "plays cricket")]}
+        parsed = dict(min_cgpa=None, allowed_branches=[], max_backlogs=None, semantic_query="kafka streaming")
+        sims = dict(A=0.9, B=0.8, C=0.7, D=0.6, E=0.5, F=0.4)
+
+        class NoWrite:
+            def __getattr__(self, name):
+                raise AssertionError(f"index write attempted: {name}")
+
+        class FakeRetriever:
+            col = NoWrite()
+
+            def query_text(self, parsed):
+                return parsed["semantic_query"]
+
+            def retrieve(self, parsed, k=20, filters_override=None):
+                return [dict(id=s, similarity=v) for s, v in sorted(sims.items(), key=lambda kv: -kv[1])][:k], {}
+
+        embed = lambda texts: np.array([[1.0, 0.0], [0.95, (1 - 0.95 ** 2) ** 0.5]])  # query, revised text: cosine 0.95
+        return students, parsed, FakeRetriever(), embed
+
+    def test_retrieval_effect_ranks_before_and_after_without_touching_the_index(self):
+        students, parsed, retr, embed = self.fixtures()
+        before_students = {k: dict(v) for k, v in students.items()}
+        e = rv.retrieval_effect(parsed, "F", "kafka kafka streaming pipelines", students, retr, embed=embed, k_pool=2)
+        self.assertTrue(e["eligible"])
+        self.assertEqual((e["dense_rank_before"], e["dense_rank_after"]), (6, 1))
+        self.assertAlmostEqual(e["sim_before"], 0.4)
+        self.assertAlmostEqual(e["sim_after"], 0.95)
+        self.assertEqual((e["bm25_rank_before"], e["bm25_rank_after"]), (6, 1))  # no document mentions kafka before; ties by id
+        self.assertEqual((e["hybrid_rank_before"], e["hybrid_rank_after"]), (6, 1))
+        self.assertEqual((e["in_pool_before"], e["in_pool_after"]), (False, True))
+        self.assertGreater(e["rrf_after"], e["rrf_before"])
+        self.assertEqual(students, before_students)  # student data unchanged (the revised text is only used inside the call)
+        self.assertEqual(e["eligible_count"], 6)
+
+    def test_retrieval_effect_ineligible_student(self):
+        students, parsed, retr, embed = self.fixtures()
+        students["F"]["cgpa"] = 5.0
+        e = rv.retrieval_effect(dict(parsed, min_cgpa=6.0), "F", "kafka", students, retr, embed=embed)
+        self.assertEqual(e, dict(eligible=False))
+
+    def test_place_in_full_list(self):
+        full = dict(ranked=[dict(id=f"S{i}", score=100 - i * 5, rrf=1.0 / (i + 1)) for i in range(12)])  # scores 100 .. 45
+        stay = dict(in_pool_before=True, in_pool_after=True, rrf_after=0.5)
+        p = rv.place_in_full_list(full, "S3", 98, stay, threshold=60)  # replaces S3's old entry (85)
+        self.assertEqual((p["rank"], p["group"], p["pool_size"], p["top10_cutoff"]), (2, "Top 10", 12, 55))
+        low = rv.place_in_full_list(full, "S3", 40, stay, threshold=60)
+        self.assertEqual((low["group"], low["at_or_above_threshold"]), ("Below threshold", False))
+        mid = rv.place_in_full_list(full, "S3", 48, stay, threshold=45)
+        self.assertEqual((mid["rank"], mid["group"]), (11, "Also suited"))  # rank 11: below the cached Top-10 cutoff of 55, above the threshold
+        enter = rv.place_in_full_list(full, "S99", 80, dict(in_pool_before=False, in_pool_after=True, rrf_after=0.4), threshold=60)
+        self.assertTrue(enter["entered_pool"])
+        self.assertEqual(enter["pool_size"], 13)
+        out = rv.place_in_full_list(full, "S3", 90, dict(in_pool_before=True, in_pool_after=False, rrf_after=0.1), threshold=60)
+        self.assertEqual((out["rank"], out["left_pool"]), (None, True))
+        self.assertIn("outside the pool of 50", rv.placement_text(out, 90))
+        self.assertIn("would enter the pool", rv.placement_text(enter, 80))
+        self.assertIn("Top-10 cutoff of the cached list is 55", rv.placement_text(p, 98))
 
 
 class Hybrid(unittest.TestCase):

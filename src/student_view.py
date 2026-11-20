@@ -1,10 +1,8 @@
 """Prototype extension, student view (not evaluated; the paper's evaluation covers the frozen top-10 pipeline only):
-eligibility table, skill gaps, improvement suggestions (one extra LLM call) and a what-if re-score. The re-ranker
-(prompt, schema, Qwen3.5 4B via Ollama, temperature 0, thinking off) is reused unchanged.
+eligibility table, skill gaps, improvement suggestions (one extra LLM call, validated) and a deterministic coverage projection.
+The simulated resume update, re-score and retrieval effect are in src/revision.py. The re-ranker (prompt, schema, Qwen3.5 4B via Ollama,
+temperature 0, thinking off) is reused unchanged.
 """
-from .extensions import TOP_N
-
-HYPOTHETICAL_TEMPLATE = "Project (hypothetical): built and deployed a small application using {skill}, with hands-on use of {skill}."
 
 
 def eligibility_table(parsed, student):
@@ -120,6 +118,12 @@ REQUIRED_WORDS = r"(?i)\b(mandatory|required|requires|must[- ]have|essential|com
 OPTIONAL_WORDS = r"(?i)\b(bonus|nice[- ]to[- ]have|optional|desirable|preferred|a plus)\b"
 
 
+def mentions(text, skill):
+    """True if `skill` occurs in `text` as a whole word or phrase, case-insensitive ('React' does not match 'reactive')."""
+    import re
+    return re.search(r"(?<![A-Za-z0-9])" + re.escape(skill.strip()) + r"(?![A-Za-z0-9])", text, flags=re.I) is not None
+
+
 def validate_suggestion(item, skill, kind=None):
     """Returns a list of problems (empty = valid): placeholder patterns, URLs, course names, wrong skill, too-short or generic text,
     result/outcome claims or numbers in the bullet (the skill name itself is removed before the digit check), and wording that
@@ -158,7 +162,7 @@ def validate_suggestion(item, skill, kind=None):
     if kind == "Required" and re.search(OPTIONAL_WORDS, text):
         problems.append("calls a required skill optional or a bonus")
     tokens = [t for t in re.split(r"[^a-z0-9+#.]+", skill.lower()) if len(t) > 1]
-    if tokens and not any(t in (item["what_to_build"] + " " + item["resume_bullet_example"]).lower() for t in tokens):
+    if tokens and not any(mentions(item["what_to_build"] + " " + item["resume_bullet_example"], t) for t in tokens):
         problems.append("what_to_build and the bullet never mention the skill (generic text)")
     return problems
 
@@ -203,33 +207,3 @@ def suggest_improvements(requirement, parsed, resume_text, must_gaps, nice_gaps,
                 results[g] = item
     return [dict(results[g], ok=True, kind=kinds[g]) if g in results
             else dict(skill=g, ok=False, kind=kinds[g], error=f"Could not generate a specific suggestion for {g}") for g in gaps]
-
-
-def what_if_text(resume_text, assumed_skills):
-    """Resume with one short hypothetical project bullet per assumed skill appended (the re-ranker credits described work, not a
-    bare skills line). Every added line starts with 'Project (hypothetical):'; the original text is untouched."""
-    bullets = "\n".join("- " + HYPOTHETICAL_TEMPLATE.format(skill=s) for s in assumed_skills)
-    return resume_text.rstrip() + "\n\n" + bullets + "\n"
-
-
-def position_vs(score, threshold, top10_cutoff=None):
-    """Plain-language position of a score against the threshold and (if known) the Top-10 cutoff (score of rank 10)."""
-    s = f"Score {score} is {'at or above' if score >= threshold else 'below'} the threshold of {threshold}."
-    if top10_cutoff is not None:
-        s += f" The Top-10 cutoff for this requirement is {top10_cutoff}: this score would be {'at or above' if score >= top10_cutoff else 'below'} it."
-    return s
-
-
-def what_if(requirement, parsed, resume_text, assumed_skills, score_fn=None):
-    """Re-scores the resume with the assumed skills appended, using the same re-ranker. Returns dict(text, scored)."""
-    if score_fn is None:
-        from .rerank import score_candidate
-        score_fn = lambda t, p, r: score_candidate(t, p, r, True)[0]
-    text = what_if_text(resume_text, assumed_skills)
-    return dict(text=text, scored=score_fn(requirement, parsed, text))
-
-
-def top10_cutoff(full):
-    """Score of the 10th candidate in a full list, or None."""
-    r = full["ranked"] if full else []
-    return r[full.get("top_n", TOP_N) - 1]["score"] if len(r) >= full.get("top_n", TOP_N) else None

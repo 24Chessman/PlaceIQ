@@ -11,9 +11,7 @@ from src import student_view as sv
 TOP10_NOTE = "Top 10 here may differ from the Shortlist tab, which uses a dense-only pool; this view uses a hybrid pool."
 SUITED_NOTE = ("Suited = re-ranker score at or above the threshold, among the 50 best candidates from hybrid retrieval. "
                "Students outside the pool are not scored.")
-PROJECTION_NOTE = "Projection only. It assumes the student genuinely does this work. Not a guarantee."
 COVERAGE_NOTE = "This is arithmetic on the skill lists, not a predicted score or rank."
-EXPERIMENTAL_NOTE = "The small model's score can go down when text is added; do not read this as a prediction."
 
 
 def _table(rows, students):
@@ -90,6 +88,105 @@ def _suggestion_card(item):
         f'<p class="expl"><i>{e(item["resume_bullet_example"])}</i></p></div>', unsafe_allow_html=True)
 
 
+REVISION_LABEL = "Simulated bullets, not the student's work. The student must do the work and write it themselves."
+NOISE_NOTE = "A small model's score is noisy and rewards added text; do not read this as a prediction."
+RETRIEVAL_NOTE = ("Retrieval figures are computed in memory with the same embedding model and a rebuilt BM25 index; "
+                  "the vector index and the student data are not changed.")
+
+
+def _rescore(state, req, parsed, stu, chosen, full, students, edited):
+    """Button callback (runs before the page is drawn). Generates bullets for the ticked skills (first click) or takes the edited text,
+    re-scores it with the same re-ranker, and computes the retrieval effect and the placement in the cached full list."""
+    try:
+        from src import revision as rev
+        from src.pipeline import retriever
+        from src.rerank import score_candidate
+        if edited:
+            old = state["revision"]
+            bullets, revised = old["bullets"], st.session_state["sv_revised_text"]
+        else:
+            bullets = rev.generate_bullets(stu["resume_text"], chosen)
+            revised, _ = rev.build_revised_text(stu["resume_text"], bullets)
+            st.session_state["sv_revised_text"] = revised
+        scored_after = score_candidate(req, parsed, revised, True)[0]
+        effect = rev.retrieval_effect(parsed, stu["id"], revised, students, retriever())
+        saved = full if (full and "error" not in full and full.get("requirement", "").strip() == req.strip()) else ex.load_full_list(req)
+        threshold = st.session_state.get("threshold", ex.THRESHOLD)
+        place = rev.place_in_full_list(saved, stu["id"], scored_after["score"], effect, threshold) if (saved and effect["eligible"]) else None
+        state["revision"] = dict(skills=chosen, bullets=bullets, original=stu["resume_text"], revised=revised, scored=scored_after,
+                                 effect=effect, place=place, edited=edited, error=None)
+    except Exception as e:
+        state["revision"] = dict(error=str(e)[:300])
+
+
+def _revised_html(original, revised):
+    from src import revision as rev
+    new = set(rev.added_lines(original, revised))
+    rows = []
+    for line in revised.split("\n"):
+        style = ' style="background:#e7f6ec;border-left:4px solid #15803d;padding:0 .4rem"' if line in new else ""
+        rows.append(f"<div{style}>{html.escape(line) or '&nbsp;'}</div>")
+    return '<div class="expl" style="font-family:monospace;font-size:.82rem;white-space:pre-wrap">' + "".join(rows) + "</div>"
+
+
+def _revision_panel(state, parsed, before):
+    from src import revision as rev
+    r = state["revision"]
+    if r.get("error"):
+        ui.notice("err", "The re-score could not be completed: " + html.escape(r["error"]) + "<br>Start <b>ollama serve</b> if the local LLM is offline.")
+        return
+    st.markdown(f'<div class="notice warn"><b>{REVISION_LABEL}</b></div>', unsafe_allow_html=True)
+    for b in r["bullets"]:
+        if not b["ok"]:
+            ui.notice("err", html.escape(b["error"]) + ": no bullet was added for this skill.")
+    left, right = st.columns(2, gap="large")
+    with left:
+        st.markdown("**Original resume**")
+        st.text(r["original"])
+    with right:
+        st.markdown("**Revised resume** (additions highlighted)")
+        st.markdown(_revised_html(r["original"], r["revised"]), unsafe_allow_html=True)
+    st.text_area("Edit the revised resume (then re-score the edited text)", key="sv_revised_text", height=260)
+    st.button("Re-score edited text", key="sv_rescore_edit", on_click=_rescore,
+              args=(state, st.session_state["sv"]["text"], parsed, st.session_state["_sv_stu"], r["skills"], st.session_state.get("_sv_full"),
+                    st.session_state["_sv_students"], True))
+
+    after = r["scored"]
+    st.markdown("#### Before and after (model re-score)")
+    b, a = st.columns(2, gap="large")
+    with b:
+        st.markdown("**Before**")
+        _score_block(before)
+    with a:
+        st.markdown("**After** (revised resume" + (", edited" if r["edited"] else "") + ")")
+        _score_block(after)
+    cb, ca = sv.coverage(parsed, before), sv.coverage(parsed, after)
+    st.write(f"Required skills matched by the re-ranker: {cb['must']['before']} of {cb['must']['total']} before, "
+             f"{ca['must']['before']} of {ca['must']['total']} after. Nice-to-have: {cb['nice']['before']} of {cb['nice']['total']} before, "
+             f"{ca['nice']['before']} of {ca['nice']['total']} after.")
+    if after["score"] <= before["score"]:
+        st.caption("The score did not improve.")
+    st.caption(NOISE_NOTE)
+
+    st.markdown("#### Retrieval effect of the revised text")
+    e = r["effect"]
+    if not e["eligible"]:
+        st.write("This student fails an eligibility rule for this requirement, so they are never retrieved.")
+    else:
+        st.dataframe(pd.DataFrame([
+            {"Measure": "Dense similarity to the query", "Before": f"{e['sim_before']:.3f}", "After": f"{e['sim_after']:.3f}"},
+            {"Measure": f"Dense rank among {e['eligible_count']} eligible", "Before": e["dense_rank_before"], "After": e["dense_rank_after"]},
+            {"Measure": "BM25 rank", "Before": e["bm25_rank_before"], "After": e["bm25_rank_after"]},
+            {"Measure": "Hybrid rank (BM25 + dense, RRF k=60)", "Before": e["hybrid_rank_before"], "After": e["hybrid_rank_after"]},
+            {"Measure": f"In the pool of {e['pool']}", "Before": "yes" if e["in_pool_before"] else "no", "After": "yes" if e["in_pool_after"] else "no"},
+        ]), hide_index=True, width="stretch")
+        if r["place"]:
+            st.write(rev.placement_text(r["place"], after["score"]))
+        else:
+            st.caption("Run the full list for this requirement to also see where the new score would land (Top-10 cutoff and threshold).")
+        st.caption(RETRIEVAL_NOTE)
+
+
 def student_tab(students, req_texts, req_label, full):
     st.markdown("### Student view")
     st.caption("Prototype, not evaluated. A student's fit for a requirement, what is missing, and a what-if projection.")
@@ -152,6 +249,10 @@ def student_tab(students, req_texts, req_label, full):
     st.markdown("#### What if the student gains a skill?")
     gaps = must + [g for g in nice if g not in must]
     chosen = [g for g in gaps if st.checkbox(f"Assume I gain this skill: {g}", key=f"sv_assume_{g}")]
+    st.session_state.update(_sv_stu=stu, _sv_full=full, _sv_students=students)
+    st.button("Re-score with updated resume", type="primary", key="sv_rescore", disabled=not chosen, on_click=_rescore,
+              args=(state, req, parsed, stu, chosen, full, students, False))
+    st.caption(REVISION_LABEL)
     cov = sv.coverage(parsed, scored, chosen)
     c1, c2 = st.columns(2, gap="large")
     c1.metric("Required skills matched", f"{cov['must']['before']} of {cov['must']['total']}",
@@ -161,33 +262,5 @@ def student_tab(students, req_texts, req_label, full):
     for line in sv.coverage_text(cov):
         st.write(line)
     st.caption(COVERAGE_NOTE)
-
-    with st.expander("Experimental: re-score with the model", expanded=False):
-        st.caption(EXPERIMENTAL_NOTE)
-        if st.button("Re-score", key="sv_rescore", disabled=not chosen):
-            try:
-                state["whatif"] = dict(skills=chosen, **sv.what_if(req, parsed, stu["resume_text"], chosen))
-            except Exception as e:
-                ui.notice("err", "Re-scoring failed: " + html.escape(str(e)[:200]))
-        w = state.get("whatif")
-        if w:
-            threshold = st.session_state.get("threshold", ex.THRESHOLD)
-            saved = full if (full and "error" not in full and full.get("requirement", "").strip() == req.strip()) else ex.load_full_list(req)
-            cutoff = sv.top10_cutoff(saved) if saved else None
-            before, after = scored, w["scored"]
-            st.markdown(f'<div class="notice warn"><b>{PROJECTION_NOTE}</b></div>', unsafe_allow_html=True)
-            b, a = st.columns(2, gap="large")
-            with b:
-                st.markdown("**Before**")
-                _score_block(before)
-            with a:
-                st.markdown(f"**After** (assumed: {html.escape(', '.join(w['skills']))})")
-                _score_block(after)
-            st.write(sv.position_vs(after["score"], threshold, cutoff))
-            if after["score"] <= before["score"]:
-                st.caption("The score did not improve. The added bullets are generic and the 4B model's scores can vary between resume "
-                           "versions, so a projection can move for reasons unrelated to the added work.")
-            if cutoff is None:
-                st.caption("Run the full list for this requirement to also compare with the Top-10 cutoff.")
-            st.markdown("**Resume text used for the re-score**")  # no nested expander: Streamlit does not allow it
-            st.text(w["text"])
+    if state.get("revision"):
+        _revision_panel(state, parsed, scored)
