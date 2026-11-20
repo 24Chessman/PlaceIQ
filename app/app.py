@@ -17,6 +17,8 @@ st.set_page_config(page_title="PlaceIQ demo", layout="wide", initial_sidebar_sta
 import data_access as da  # noqa: E402
 import ui  # noqa: E402
 from stats import paired  # noqa: E402
+from src import extensions as ex  # noqa: E402  (prototype extensions: full list, student view)
+from src import student_view as sv  # noqa: E402
 
 MODE_LABELS = {"hybrid": "Hybrid (BM25 + dense), post-hoc variant", "dense": "Dense only (paper main configuration)"}
 ui.load_css()
@@ -80,6 +82,9 @@ with st.sidebar:
         st.caption("Enter a requirement to enable Run.")
     elif source == "Custom requirement":
         st.caption("A live run scores 20 candidates and takes about 50 seconds.")
+    run_full = st.button("Run full list (about 2 min)", width="stretch", disabled=custom_blocked, key="run_full")
+    st.caption("Prototype: scores the 50 best hybrid-retrieval candidates and lists all that are suited. Shown in the "
+               "'All suited candidates' tab.")
 
 # ------------------------------------------------------------------ run
 st.markdown("## Find the right students, not just the right keywords")
@@ -98,11 +103,27 @@ if run:
     st.session_state["result"] = result
     progress_slot.empty()
 
+if run_full:
+    bar = progress_slot.progress(0.0, text="Starting full list")
+
+    def on_full_progress(i, n, elapsed, eta):
+        left = "estimating..." if eta is None else f"about {eta:.0f} s left"
+        bar.progress(min(1.0, i / max(n, 1)), text=f"Scoring candidate {min(i + 1, n)} of {n} · {elapsed:.0f} s elapsed · {left}")
+
+    try:
+        full = ex.shortlist_full(text, progress=on_full_progress)
+    except Exception as e:  # LLM offline, parser failure, ...
+        full = dict(error=str(e)[:300])
+    full.update(requirement=text, source=source, req_id=sample_id)
+    st.session_state["full"] = full
+    progress_slot.empty()
+
 result = st.session_state.get("result")
 res = da.resources()
 students = res["students"]
 
-tab_short, tab_ats, tab_evid, tab_fair = st.tabs(["Shortlist", "Keyword ATS vs Ours", "Evidence", "Fairness and limits"])
+tab_short, tab_ats, tab_full, tab_student, tab_evid, tab_fair = st.tabs(
+    ["Shortlist", "Keyword ATS vs Ours", "All suited candidates", "Student view", "Evidence", "Fairness and limits"])
 
 
 def need_result():
@@ -286,3 +307,12 @@ with tab_fair:
                 '<li><b>Small test set.</b> 10 test requirements, so intervals are wide and many differences are not distinguishable.</li>'
                 '<li><b>Decision support only.</b> A human reviews every shortlist; the score is not a hiring decision.</li>'
                 '</ul>', unsafe_allow_html=True)
+
+# ------------------------------------------------------------------ prototype extensions (new tabs)
+import extension_tabs  # noqa: E402
+
+with tab_full:
+    extension_tabs.full_tab(st.session_state.get("full"), students)
+
+with tab_student:
+    extension_tabs.student_tab(students, {i: texts[i] for i in ids}, lambda i: sample_label(i, texts), st.session_state.get("full"))

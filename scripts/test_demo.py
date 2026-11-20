@@ -41,7 +41,7 @@ def main():
     n0 = cache_entries()
     at = new_app().run()
     check(not at.exception, "app loads without exception")
-    check(len(at.tabs) == 4, f"4 tabs render ({[t.label for t in at.tabs]})")
+    check(len(at.tabs) == 6, f"6 tabs render, 4 original + 2 prototype extensions ({[t.label for t in at.tabs]})")
     check("Local LLM" in md_text(at), "status badge is shown")
     check("No requirement run yet" in md_text(at), "empty state before the first run")
     check("Recommended demo" in at.sidebar.selectbox(key="sample").options[0] or True, "picker built")
