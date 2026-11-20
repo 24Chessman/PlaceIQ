@@ -52,7 +52,8 @@ Two extra tabs, added after "Keyword ATS vs Ours". They are prototype extensions
 1. Pick a student (ID and name) and a requirement (a benchmark requirement or free text), then press **Check fit**.
 2. Show the fit score with matched and missing skills, the eligibility table (a failed rule is not fixable by editing the resume) and the gap list.
 3. Press **Get suggestions** (one extra model call, a few seconds): "If you have done X, add a bullet describing it; if not, learn X by ...".
-4. Tick **Assume I gain: ...** for a missing skill and press **Re-score**. Each ticked skill adds a short hypothetical project bullet to the resume text. Say clearly: "Projection only. It assumes the student genuinely does this work." Point out that the score may not rise (in our example it fell): the 4B re-ranker is not a reliable predictor here, so present it as an illustration (see `docs/EXTENSIONS.md`).
+4. Tick **Assume I gain this skill: ...** for one or two missing skills. The tab immediately shows required and nice-to-have skills matched now and after, e.g. "Currently 0 of 2 nice-to-have skills; if you gain TypeScript and Figma: 2 of 2." Say clearly: "This is arithmetic on the skill lists, not a predicted score or rank."
+5. Optional: open **Experimental: re-score with the model** and press **Re-score**. It adds a short hypothetical project bullet per skill and asks the model again. Say: "Projection only. The small model's score can go down when text is added; do not read this as a prediction." (In our example it fell; see `docs/EXTENSIONS.md`.)
 
 ## If Ollama is down
 

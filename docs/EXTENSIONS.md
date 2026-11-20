@@ -20,7 +20,8 @@ Suited = re-ranker score at or above the threshold, among the 50 best candidates
 `src/student_view.py`: current fit (existing re-ranker), eligibility table (CGPA, branch, backlogs: required vs student, pass/fail; not fixable by editing the resume), gap list (missing must-have and nice-to-have skills), suggestions and a what-if.
 
 - **Suggestions:** one new model call (JSON schema, temperature 0). The prompt forbids inventing experience or claiming skills the student lacks, asks for "If you have done X, add a bullet describing it; if not, learn X by ...", and asks to name a technology explicitly when the resume only describes it indirectly. The resume is sent without its header line (name, email, phone); no demographic information is sent. The model's learning suggestions are free text and can name resources that do not exist; a person should check them.
-- **What-if:** each ticked skill appends one short hypothetical project bullet to the resume text, from a fixed template ("Project (hypothetical): built and deployed a small application using X, with hands-on use of X."), and the same re-ranker re-scores it. (An earlier version appended a single "Additional skills (assumed acquired): ..." line, which the re-ranker did not credit.) The result is labelled "Projection only. It assumes the student genuinely does this work. Not a guarantee."
+- **What-if, main part: skill-coverage projection (deterministic, no LLM call).** One checkbox per missing skill ("Assume I gain this skill"). From the re-ranker's matched list and the parsed requirement, the tab shows must-have and nice-to-have skills matched now and after the ticked skills, for example "Currently 3 of 5 required skills; if you gain TypeScript and Figma: 5 of 5." It is arithmetic on the skill lists, not a predicted score or rank, and the tab says so (`src/student_view.py::coverage`, unit-tested).
+- **What-if, experimental part: re-score with the model** (collapsed expander "Experimental: re-score with the model"). Each ticked skill appends one short hypothetical project bullet to the resume text, from a fixed template ("Project (hypothetical): built and deployed a small application using X, with hands-on use of X."), and the same re-ranker re-scores it. Labelled "Projection only. It assumes the student genuinely does this work. Not a guarantee." plus "The small model's score can go down when text is added; do not read this as a prediction." (An earlier version appended a single "Additional skills (assumed acquired)" line, which the re-ranker did not credit.)
 
 ## Parameters
 
@@ -42,6 +43,8 @@ Suited = re-ranker score at or above the threshold, among the 50 best candidates
 
 ### What-if examples (S216 against R02; one student, one requirement: examples, not measurements)
 
+These examples are the reason the model re-score is experimental and not the headline: it is unreliable on this model.
+
 Before: score 85, matched React, JavaScript, HTML, CSS; missing TypeScript, Figma. The Top-10 cutoff for R02 is 100.
 
 | Assumed skill(s) | Appended text | Score after | Missing after |
@@ -52,7 +55,7 @@ Before: score 85, matched React, JavaScript, HTML, CSS; missing TypeScript, Figm
 | TypeScript and Figma | same template, two bullets | 40 | TypeScript, Figma |
 | TypeScript, Figma | variant without the word "(hypothetical)" (not adopted) | 80, 60, 60 | TypeScript, Figma |
 
-In none of these runs did the re-ranker move a skill from missing to matched, and every score went down. The model's explanations say the hypothetical project is "not part of the described work evidence" and shift attention to a React-versus-Vue point in the same resume, so the drop is partly unrelated to the added bullet (temperature 0 does not make the 4B model stable across resume versions). Removing the word "(hypothetical)" gave smaller drops but no credit either, and it would hide that the text is assumed, so the template keeps it. Conclusion for this prototype: the what-if shows how the re-ranker reacts to added text; it should not be presented as a reliable prediction of a student's score. The UI says so when the score does not improve.
+In none of these runs did the re-ranker move a skill from missing to matched, and every score went down. The model's explanations say the hypothetical project is "not part of the described work evidence" and shift attention to a React-versus-Vue point in the same resume, so the drop is partly unrelated to the added bullet (temperature 0 does not make the 4B model stable across resume versions). Removing the word "(hypothetical)" gave smaller drops but no credit either, and it would hide that the text is assumed, so the template keeps it. Conclusion for this prototype: the model re-score shows how the re-ranker reacts to added text and is not a reliable prediction of a student's score, so the Student view leads with the deterministic coverage projection. For S216 against R02 the coverage projection reads: required skills 4 of 4 now (the re-ranker lists no missing required skill), nice-to-have skills 0 of 2 now and 2 of 2 if TypeScript and Figma are gained.
 
 In both live checks more than 10 candidates scored 100, so the Top 10 inside that group is decided by the fusion-score tie-break.
 

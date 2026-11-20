@@ -12,6 +12,8 @@ TOP10_NOTE = "Top 10 here may differ from the Shortlist tab, which uses a dense-
 SUITED_NOTE = ("Suited = re-ranker score at or above the threshold, among the 50 best candidates from hybrid retrieval. "
                "Students outside the pool are not scored.")
 PROJECTION_NOTE = "Projection only. It assumes the student genuinely does this work. Not a guarantee."
+COVERAGE_NOTE = "This is arithmetic on the skill lists, not a predicted score or rank."
+EXPERIMENTAL_NOTE = "The small model's score can go down when text is added; do not read this as a prediction."
 
 
 def _table(rows, students):
@@ -131,31 +133,43 @@ def student_tab(students, req_texts, req_label, full):
 
     st.markdown("#### What if the student gains a skill?")
     gaps = must + [g for g in nice if g not in must]
-    chosen = [g for g in gaps if st.checkbox(f"Assume I gain: {g}", key=f"sv_assume_{g}")]
-    if st.button("Re-score", key="sv_rescore", disabled=not chosen):
-        try:
-            state["whatif"] = dict(skills=chosen, **sv.what_if(req, parsed, stu["resume_text"], chosen))
-        except Exception as e:
-            ui.notice("err", "Re-scoring failed: " + html.escape(str(e)[:200]))
-    w = state.get("whatif")
-    if w:
-        threshold = st.session_state.get("threshold", ex.THRESHOLD)
-        saved = full if (full and "error" not in full and full.get("requirement", "").strip() == req.strip()) else ex.load_full_list(req)
-        cutoff = sv.top10_cutoff(saved) if saved else None
-        before, after = scored, w["scored"]
-        st.markdown(f'<div class="notice warn"><b>{PROJECTION_NOTE}</b></div>', unsafe_allow_html=True)
-        b, a = st.columns(2, gap="large")
-        with b:
-            st.markdown("**Before**")
-            _score_block(before)
-        with a:
-            st.markdown(f"**After** (assumed: {html.escape(', '.join(w['skills']))})")
-            _score_block(after)
-        st.write(sv.position_vs(after["score"], threshold, cutoff))
-        if after["score"] <= before["score"]:
-            st.caption("The score did not improve. The added bullets are generic and the 4B model's scores can vary between resume "
-                       "versions, so a projection can move for reasons unrelated to the added work.")
-        if cutoff is None:
-            st.caption("Run the full list for this requirement to also compare with the Top-10 cutoff.")
-        with st.expander("Resume text used for the re-score"):
+    chosen = [g for g in gaps if st.checkbox(f"Assume I gain this skill: {g}", key=f"sv_assume_{g}")]
+    cov = sv.coverage(parsed, scored, chosen)
+    c1, c2 = st.columns(2, gap="large")
+    c1.metric("Required skills matched", f"{cov['must']['before']} of {cov['must']['total']}",
+              delta=f"{cov['must']['after'] - cov['must']['before']} if gained" if chosen else None)
+    c2.metric("Nice-to-have skills matched", f"{cov['nice']['before']} of {cov['nice']['total']}",
+              delta=f"{cov['nice']['after'] - cov['nice']['before']} if gained" if chosen else None)
+    for line in sv.coverage_text(cov):
+        st.write(line)
+    st.caption(COVERAGE_NOTE)
+
+    with st.expander("Experimental: re-score with the model", expanded=False):
+        st.caption(EXPERIMENTAL_NOTE)
+        if st.button("Re-score", key="sv_rescore", disabled=not chosen):
+            try:
+                state["whatif"] = dict(skills=chosen, **sv.what_if(req, parsed, stu["resume_text"], chosen))
+            except Exception as e:
+                ui.notice("err", "Re-scoring failed: " + html.escape(str(e)[:200]))
+        w = state.get("whatif")
+        if w:
+            threshold = st.session_state.get("threshold", ex.THRESHOLD)
+            saved = full if (full and "error" not in full and full.get("requirement", "").strip() == req.strip()) else ex.load_full_list(req)
+            cutoff = sv.top10_cutoff(saved) if saved else None
+            before, after = scored, w["scored"]
+            st.markdown(f'<div class="notice warn"><b>{PROJECTION_NOTE}</b></div>', unsafe_allow_html=True)
+            b, a = st.columns(2, gap="large")
+            with b:
+                st.markdown("**Before**")
+                _score_block(before)
+            with a:
+                st.markdown(f"**After** (assumed: {html.escape(', '.join(w['skills']))})")
+                _score_block(after)
+            st.write(sv.position_vs(after["score"], threshold, cutoff))
+            if after["score"] <= before["score"]:
+                st.caption("The score did not improve. The added bullets are generic and the 4B model's scores can vary between resume "
+                           "versions, so a projection can move for reasons unrelated to the added work.")
+            if cutoff is None:
+                st.caption("Run the full list for this requirement to also compare with the Top-10 cutoff.")
+            st.markdown("**Resume text used for the re-score**")  # no nested expander: Streamlit does not allow it
             st.text(w["text"])

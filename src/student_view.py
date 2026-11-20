@@ -31,6 +31,39 @@ def skill_gaps(parsed, scored):
     return must, nice
 
 
+def coverage(parsed, scored, assumed=()):
+    """Deterministic skill-coverage projection (no LLM call): how many must-have / nice-to-have skills are matched now, and how many
+    would be if the assumed skills were gained. Arithmetic on the skill lists only, not a predicted score or rank.
+    Skills outside the parsed requirement are ignored."""
+    matched = {m.strip().lower() for m in scored["matched_skills"]}
+    gained = {a.strip().lower() for a in assumed}
+    out = {}
+    for kind, skills in (("must", parsed.get("must_have_skills", [])), ("nice", parsed.get("nice_to_have_skills", []))):
+        keys = [s.strip().lower() for s in skills]
+        before = sum(k in matched for k in keys)
+        after = sum(k in matched or k in gained for k in keys)
+        out[kind] = dict(total=len(keys), before=before, after=after,
+                         gained=[s for s in skills if s.strip().lower() in gained and s.strip().lower() not in matched])
+    return out
+
+
+def coverage_text(cov):
+    """One sentence per skill group, e.g. 'Currently 3 of 5 required skills; if you gain TypeScript and Figma: 5 of 5.'"""
+    def join(items):
+        return items[0] if len(items) == 1 else ", ".join(items[:-1]) + " and " + items[-1]
+
+    lines = []
+    for kind, label in (("must", "required"), ("nice", "nice-to-have")):
+        c = cov[kind]
+        if c["total"] == 0:
+            lines.append(f"No {label} skills listed in the requirement.")
+        elif c["gained"]:
+            lines.append(f"Currently {c['before']} of {c['total']} {label} skills; if you gain {join(c['gained'])}: {c['after']} of {c['total']}.")
+        else:
+            lines.append(f"Currently {c['before']} of {c['total']} {label} skills.")
+    return lines
+
+
 def resume_body(resume_text):
     """Resume without its header line (name, email, phone): used for the suggestion call so no identity reaches the prompt."""
     return "\n".join(resume_text.split("\n")[1:]).strip()

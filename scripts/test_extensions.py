@@ -89,6 +89,30 @@ class Student(unittest.TestCase):
         must, nice = sv.skill_gaps(PARSED, dict(matched_skills=["python"], missing_skills=["SQL"]))
         self.assertEqual((must, nice), (["SQL"], ["Docker"]))
 
+    def test_coverage_arithmetic(self):
+        parsed = dict(must_have_skills=["React", "JavaScript", "HTML/CSS", "TypeScript", "Figma"], nice_to_have_skills=["Docker", "Redis"])
+        scored = dict(matched_skills=["react", "JavaScript", "Docker"], missing_skills=["HTML/CSS", "TypeScript", "Figma"])
+        now = sv.coverage(parsed, scored)
+        self.assertEqual((now["must"]["before"], now["must"]["after"], now["must"]["total"]), (2, 2, 5))
+        self.assertEqual((now["nice"]["before"], now["nice"]["total"]), (1, 2))
+        both = sv.coverage(parsed, scored, ["TypeScript", "figma", "Redis", "Kubernetes"])  # unknown skill ignored, case-insensitive
+        self.assertEqual((both["must"]["before"], both["must"]["after"]), (2, 4))
+        self.assertEqual((both["nice"]["before"], both["nice"]["after"]), (1, 2))
+        self.assertEqual(both["must"]["gained"], ["TypeScript", "Figma"])
+        already = sv.coverage(parsed, scored, ["React"])  # already matched: nothing gained
+        self.assertEqual((already["must"]["after"], already["must"]["gained"]), (2, []))
+
+    def test_coverage_text(self):
+        parsed = dict(must_have_skills=["A", "B", "C", "D", "E"], nice_to_have_skills=[])
+        scored = dict(matched_skills=["A", "B", "C"], missing_skills=["D", "E"])
+        lines = sv.coverage_text(sv.coverage(parsed, scored, ["D", "E"]))
+        self.assertEqual(lines[0], "Currently 3 of 5 required skills; if you gain D and E: 5 of 5.")
+        self.assertEqual(lines[1], "No nice-to-have skills listed in the requirement.")
+        self.assertEqual(sv.coverage_text(sv.coverage(parsed, scored))[0], "Currently 3 of 5 required skills.")
+        self.assertEqual(sv.coverage_text(sv.coverage(parsed, scored, ["D"]))[0], "Currently 3 of 5 required skills; if you gain D: 4 of 5.")
+        three = sv.coverage_text(sv.coverage(dict(must_have_skills=list("ABCD"), nice_to_have_skills=[]), dict(matched_skills=["A"]), ["B", "C", "D"]))
+        self.assertIn("if you gain B, C and D: 4 of 4", three[0])
+
     def test_what_if_text_assembly(self):
         t = sv.what_if_text("Resume line\n", ["SQL", "Docker"])
         self.assertTrue(t.startswith("Resume line\n\n- Project (hypothetical):"))
