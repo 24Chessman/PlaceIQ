@@ -91,13 +91,18 @@ class Student(unittest.TestCase):
 
     def test_what_if_text_assembly(self):
         t = sv.what_if_text("Resume line\n", ["SQL", "Docker"])
-        self.assertTrue(t.startswith("Resume line"))
-        self.assertTrue(t.endswith("Additional skills (assumed acquired): SQL, Docker\n"))
+        self.assertTrue(t.startswith("Resume line\n\n- Project (hypothetical):"))
+        lines = t.strip().split("\n")
+        self.assertEqual(lines[0], "Resume line")
+        self.assertEqual(lines[2], "- Project (hypothetical): built and deployed a small application using SQL, with hands-on use of SQL.")
+        self.assertEqual(lines[3], "- Project (hypothetical): built and deployed a small application using Docker, with hands-on use of Docker.")
+        self.assertEqual(len(lines), 4)  # one bullet per skill, original text untouched
+        self.assertNotIn("assumed acquired", t)
 
     def test_what_if_rescores_the_modified_text(self):
         seen = []
         out = sv.what_if("req", PARSED, "R", ["SQL"], score_fn=lambda t, p, r: seen.append(r) or dict(score=80))
-        self.assertIn("Additional skills (assumed acquired): SQL", seen[0])
+        self.assertIn("Project (hypothetical): built and deployed a small application using SQL", seen[0])
         self.assertEqual(out["scored"]["score"], 80)
 
     def test_position_text(self):

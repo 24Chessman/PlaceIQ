@@ -11,7 +11,7 @@ from src import student_view as sv
 TOP10_NOTE = "Top 10 here may differ from the Shortlist tab, which uses a dense-only pool; this view uses a hybrid pool."
 SUITED_NOTE = ("Suited = re-ranker score at or above the threshold, among the 50 best candidates from hybrid retrieval. "
                "Students outside the pool are not scored.")
-PROJECTION_NOTE = "Projection only. It assumes the student genuinely has these skills. Not a guarantee."
+PROJECTION_NOTE = "Projection only. It assumes the student genuinely does this work. Not a guarantee."
 
 
 def _table(rows, students):
@@ -153,8 +153,8 @@ def student_tab(students, req_texts, req_label, full):
             _score_block(after)
         st.write(sv.position_vs(after["score"], threshold, cutoff))
         if after["score"] <= before["score"]:
-            st.caption("The score did not improve. The re-ranker judges demonstrated work, so a line that only lists assumed skills "
-                       "may not be credited; the 4B model's scores can also vary between resume versions.")
+            st.caption("The score did not improve. The added bullets are generic and the 4B model's scores can vary between resume "
+                       "versions, so a projection can move for reasons unrelated to the added work.")
         if cutoff is None:
             st.caption("Run the full list for this requirement to also compare with the Top-10 cutoff.")
         with st.expander("Resume text used for the re-score"):

@@ -4,7 +4,7 @@ eligibility table, skill gaps, improvement suggestions (one extra LLM call) and 
 """
 from .extensions import TOP_N
 
-WHAT_IF_LABEL = "Additional skills (assumed acquired):"
+HYPOTHETICAL_TEMPLATE = "Project (hypothetical): built and deployed a small application using {skill}, with hands-on use of {skill}."
 
 
 def eligibility_table(parsed, student):
@@ -69,8 +69,10 @@ def suggest_improvements(requirement, parsed, resume_text, must_gaps, nice_gaps,
 
 
 def what_if_text(resume_text, assumed_skills):
-    """Resume with one clearly marked line appended; the original text is untouched."""
-    return resume_text.rstrip() + f"\n\n{WHAT_IF_LABEL} {', '.join(assumed_skills)}\n"
+    """Resume with one short hypothetical project bullet per assumed skill appended (the re-ranker credits described work, not a
+    bare skills line). Every added line starts with 'Project (hypothetical):'; the original text is untouched."""
+    bullets = "\n".join("- " + HYPOTHETICAL_TEMPLATE.format(skill=s) for s in assumed_skills)
+    return resume_text.rstrip() + "\n\n" + bullets + "\n"
 
 
 def position_vs(score, threshold, top10_cutoff=None):
