@@ -72,6 +72,24 @@ def _score_block(scored):
         f'<p class="expl">{html.escape(scored["explanation"])}</p></div>', unsafe_allow_html=True)
 
 
+def _suggestion_card(item):
+    """One small card per missing skill; a failed generation shows a plain message, never a template."""
+    e = html.escape
+    # the Required / Nice-to-have label comes from the parsed requirement (item["kind"]), rendered here, never written by the model
+    head = f'<div class="name">{e(item["skill"])} {ui.chips([item["kind"]], "must" if item["kind"] == "Required" else "nice")}</div>'
+    if not item.get("ok"):
+        st.markdown(f'<div class="card">{head}<p class="expl">{e(item["error"])}</p></div>', unsafe_allow_html=True)
+        return
+    steps = "".join(f"<li>{e(s)}</li>" for s in item["how_to_learn"])
+    st.markdown(
+        f'<div class="card">{head}'
+        f'<div class="rowlabel">Why it matters</div><p class="expl">{e(item["why_it_matters"])}</p>'
+        f'<div class="rowlabel">What to build</div><p class="expl">{e(item["what_to_build"])}</p>'
+        f'<div class="rowlabel">How to learn</div><ol class="expl">{steps}</ol>'
+        f'<div class="rowlabel">Resume bullet example (use only after you have done the work)</div>'
+        f'<p class="expl"><i>{e(item["resume_bullet_example"])}</i></p></div>', unsafe_allow_html=True)
+
+
 def student_tab(students, req_texts, req_label, full):
     st.markdown("### Student view")
     st.caption("Prototype, not evaluated. A student's fit for a requirement, what is missing, and a what-if projection.")
@@ -127,7 +145,7 @@ def student_tab(students, req_texts, req_label, full):
         except Exception as e:
             ui.notice("err", "Suggestions could not be generated: " + html.escape(str(e)[:200]))
     for item in state.get("suggestions") or []:
-        st.markdown(f"- **{html.escape(item['gap'])}**: {html.escape(item['suggestion'])}")
+        _suggestion_card(item)
     if not (must or nice):
         st.write("No missing skills to suggest for.")
 

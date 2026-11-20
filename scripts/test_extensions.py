@@ -135,21 +135,118 @@ class Student(unittest.TestCase):
         self.assertEqual(sv.top10_cutoff(dict(ranked=[dict(score=i) for i in range(12, 0, -1)], top_n=10)), 3)
         self.assertIsNone(sv.top10_cutoff(dict(ranked=[dict(score=1)], top_n=10)))
 
-    def test_suggestion_prompt_has_no_identity(self):
-        seen = {}
+    def good(self, skill, **over):
+        item = dict(skill=skill,
+                    why_it_matters=f"This requirement lists {skill} next to React, so frontend work here depends on it.",
+                    what_to_build=f"Extend your quiz application so that its score board is rebuilt with {skill}, keeping the existing JavaScript and HTML.",
+                    how_to_learn=[f"Read the getting-started section of the official {skill} documentation.",
+                                  f"Convert one small module of your project to {skill} and fix every error the tooling reports."],
+                    resume_bullet_example=f"Extended the quiz application by rebuilding its score board with {skill} and the existing JavaScript.")
+        item.update(over)
+        return item
+
+    def test_validator_accepts_a_specific_entry(self):
+        self.assertEqual(sv.validate_suggestion(self.good("TypeScript"), "TypeScript"), [])
+        self.assertEqual(sv.validate_suggestion(self.good("typescript"), "TypeScript"), [])  # skill match is case-insensitive
+
+    def test_validator_rejects_placeholders_urls_and_courses(self):
+        bad = {
+            "X placeholder": dict(what_to_build="Build a small application that uses X together with the stack you already have."),
+            "ellipsis": dict(what_to_build="Build a small application that uses TypeScript, then learn it by ... and more."),
+            "template wording": dict(why_it_matters="If you have done TypeScript work, add a bullet describing it for this requirement."),
+            "url": dict(how_to_learn=["Read the guide at https://example.com/typescript for the basics.", "Convert one small module of your project to it."]),
+            "course name": dict(how_to_learn=["Complete the official 'TypeScript for Beginners' course on a learning site.", "Convert one small module of your project to it."]),
+            "number in bullet": dict(resume_bullet_example="Rebuilt the score board with TypeScript and cut load time by 40 percent."),
+            "brackets": dict(what_to_build="Build a small application that uses [tool] together with TypeScript and your stack."),
+        }
+        for name, over in bad.items():
+            self.assertTrue(sv.validate_suggestion(self.good("TypeScript", **over), "TypeScript"), name)
+
+    def test_validator_rejects_short_generic_or_wrong_skill(self):
+        self.assertTrue(sv.validate_suggestion(self.good("TypeScript", why_it_matters="Important skill."), "TypeScript"))
+        self.assertTrue(sv.validate_suggestion(self.good("TypeScript", how_to_learn=["Read the docs."]), "TypeScript"))
+        self.assertTrue(sv.validate_suggestion(self.good("TypeScript", how_to_learn=["a" * 30] * 4), "TypeScript"))
+        self.assertTrue(sv.validate_suggestion(self.good("Figma"), "TypeScript"))
+        generic = self.good("TypeScript", what_to_build="Build a small application with the tools you already know and show it to a friend.",
+                            resume_bullet_example="Built a small application with the tools I already know and showed it to a friend.")
+        self.assertIn("never mention the skill", " ".join(sv.validate_suggestion(generic, "TypeScript")))
+        self.assertTrue(sv.validate_suggestion({}, "TypeScript"))
+
+    def test_suggestions_valid_first_try_and_prompt_has_no_identity(self):
+        seen = []
 
         def chat(messages, schema):
-            seen["user"] = messages[1]["content"]
-            seen["system"] = messages[0]["content"]
-            return dict(suggestions=[dict(gap="SQL", suggestion="If you have done it, add a bullet.")]), {}
+            seen.append(messages)
+            return dict(suggestions=[self.good("SQL"), self.good("Docker")]), {}
 
         resume = "Priya Shah | priya@mail.example | +91 9000000000\nBuilt endpoints over a relational store."
         out = sv.suggest_improvements("req text", PARSED, resume, ["SQL"], ["Docker"], chat=chat)
-        self.assertEqual(out[0]["gap"], "SQL")
+        self.assertEqual([(o["skill"], o["ok"]) for o in out], [("SQL", True), ("Docker", True)])
+        self.assertEqual(len(seen), 1)  # one call when everything validates
+        joined = " ".join(m["content"] for m in seen[0])
         for secret in ("Priya", "Shah", "priya@mail", "9000000000"):
-            self.assertNotIn(secret, seen["user"])
-        self.assertIn("Built endpoints over a relational store.", seen["user"])
-        self.assertIn("Never invent experience", seen["system"])
+            self.assertNotIn(secret, joined)
+        self.assertIn("Built endpoints over a relational store.", joined)
+        self.assertIn("Never invent experience", seen[0][0]["content"])
+
+    def test_one_retry_for_rejected_skills_then_fallback_message(self):
+        calls = []
+
+        def chat(messages, schema):
+            calls.append(messages[1]["content"])
+            if len(calls) == 1:  # first answer: SQL good, Docker is the copied template
+                return dict(suggestions=[self.good("SQL"), self.good("Docker", what_to_build="If you have done X, add a bullet describing it; if not, learn X by ...")]), {}
+            return dict(suggestions=[self.good("Docker", what_to_build="still ... a placeholder")]), {}  # retry also invalid
+
+        out = sv.suggest_improvements("req", PARSED, "h\nbody", ["SQL"], ["Docker"], chat=chat)
+        self.assertEqual(len(calls), 2)  # exactly one retry
+        self.assertIn("rejected", calls[1])
+        self.assertTrue(out[0]["ok"])
+        self.assertFalse(out[1]["ok"])
+        self.assertEqual(out[1]["error"], "Could not generate a specific suggestion for Docker")
+
+    def test_validator_rejects_outcome_claims_in_the_bullet(self):
+        for word in ("reduced", "improved", "increased", "faster", "fewer", "eliminated", "boosted", "optimised", "optimized", "improvement"):
+            bullet = f"Rebuilt the score board of the quiz application with TypeScript and {word} the loading code."
+            self.assertTrue(any("outcome" in p for p in sv.validate_suggestion(self.good("TypeScript", resume_bullet_example=bullet), "TypeScript")), word)
+        ok = "Rebuilt the score board of the quiz application with TypeScript, typing its data models and event handlers."
+        self.assertEqual(sv.validate_suggestion(self.good("TypeScript", resume_bullet_example=ok), "TypeScript"), [])
+
+    def test_digit_check_ignores_digits_inside_the_skill_name(self):
+        ok = self.good("HTML5", resume_bullet_example="Rebuilt the portfolio page of the quiz application using semantic HTML5 elements and html5 forms.")
+        self.assertEqual(sv.validate_suggestion(ok, "HTML5"), [])
+        bad = self.good("HTML5", resume_bullet_example="Rebuilt the portfolio page of the quiz application using HTML5 across 3 pages.")
+        self.assertIn("bullet contains a number", sv.validate_suggestion(bad, "HTML5"))
+
+    def test_required_label_is_not_contradicted_by_free_text(self):
+        mandatory = self.good("TypeScript", why_it_matters="This requirement lists TypeScript as a mandatory skill for the frontend role here.")
+        self.assertTrue(any("nice-to-have" in p for p in sv.validate_suggestion(mandatory, "TypeScript", "Nice-to-have")))
+        self.assertEqual(sv.validate_suggestion(mandatory, "TypeScript", "Required"), [])  # matches the label
+        self.assertEqual(sv.validate_suggestion(mandatory, "TypeScript"), [])  # no label given: not checked
+        bonus = self.good("Figma", why_it_matters="This requirement lists Figma as a bonus skill that helps design-to-code work in the role.")
+        self.assertTrue(any("required skill optional" in p for p in sv.validate_suggestion(bonus, "Figma", "Required")))
+        self.assertEqual(sv.validate_suggestion(bonus, "Figma", "Nice-to-have"), [])
+
+    def test_kind_label_comes_from_the_gap_lists_not_the_model(self):
+        def chat(messages, schema):
+            return dict(suggestions=[self.good("SQL", kind="Nice-to-have"), self.good("Docker", kind="Required")]), {}  # model-supplied kind is ignored
+
+        out = sv.suggest_improvements("req", PARSED, "h\nbody", ["SQL"], ["Docker"], chat=chat)
+        self.assertEqual([(o["skill"], o["kind"]) for o in out], [("SQL", "Required"), ("Docker", "Nice-to-have")])
+        failed = sv.suggest_improvements("req", PARSED, "h\nbody", [], ["Docker"], chat=lambda m, s: (dict(suggestions=[]), {}))
+        self.assertEqual((failed[0]["ok"], failed[0]["kind"]), (False, "Nice-to-have"))
+
+    def test_retry_can_recover(self):
+        calls = []
+
+        def chat(messages, schema):
+            calls.append(1)
+            return dict(suggestions=[self.good("SQL", resume_bullet_example="Short.")] if len(calls) == 1 else [self.good("SQL")]), {}
+
+        out = sv.suggest_improvements("req", PARSED, "h\nbody", ["SQL"], [], chat=chat)
+        self.assertEqual(len(calls), 2)
+        self.assertTrue(out[0]["ok"])
+        self.assertEqual(sv.suggest_improvements("req", PARSED, "h\nbody", [], [], chat=chat), [])
 
 
 class Hybrid(unittest.TestCase):
