@@ -381,6 +381,73 @@ class Revision(unittest.TestCase):
         self.assertIn("Top-10 cutoff of the cached list is 55", rv.placement_text(p, 98))
 
 
+R02_PARSED = dict(role_title="Frontend Developer", must_have_skills=["React", "JavaScript", "HTML", "CSS"], nice_to_have_skills=["TypeScript", "Figma"],
+                  min_cgpa=6.5, allowed_branches=["CSE", "IT", "ICT", "M.Sc IT"], max_backlogs=1, semantic_query="frontend react javascript")
+
+
+class Banner(unittest.TestCase):
+    def rows(self, cgpa=8.0, branch="CSE", backlogs=0):
+        return sv.eligibility_table(R02_PARSED, dict(cgpa=cgpa, branch=branch, active_backlogs=backlogs))
+
+    def test_no_banner_for_an_eligible_student(self):
+        rows = self.rows()
+        self.assertIsNone(sv.eligibility_banner(rows))
+        self.assertTrue(sv.rescore_available(rows))
+        self.assertEqual(sv.failed_rules(rows), [])
+
+    def test_banner_names_every_failed_rule_and_the_hard_filter_message(self):
+        text = sv.eligibility_banner(self.rows(cgpa=6.47))
+        self.assertTrue(text.startswith("Not eligible for this requirement: CGPA (student 6.47, required at least 6.5)."))
+        self.assertIn("These are hard filters and cannot be fixed by editing the resume; this student would not be shortlisted whatever the skills.", text)
+        self.assertNotIn("Branch", text)
+        both = sv.eligibility_banner(self.rows(cgpa=6.0, branch="ECE", backlogs=2))
+        for rule in ("CGPA", "Branch (student ECE", "Active backlogs (student 2, required at most 1)"):
+            self.assertIn(rule, both)
+
+    def test_rescore_is_unavailable_for_any_failed_rule(self):
+        for kw in (dict(cgpa=6.0), dict(branch="ECE"), dict(backlogs=2), dict(cgpa=6.0, branch="ECE")):
+            self.assertFalse(sv.rescore_available(self.rows(**kw)), kw)
+        self.assertEqual(sv.RESCORE_BLOCKED_NOTE, "Not available: the student is excluded by the eligibility filters.")
+
+    def run_view(self, student):
+        """Drives the real Streamlit page with a mocked parser and re-ranker (no Ollama call is needed)."""
+        from unittest import mock
+        from streamlit.testing.v1 import AppTest
+        scored = dict(matched_skills=["JavaScript", "HTML", "CSS"], missing_skills=["React", "TypeScript", "Figma"], explanation="Shows plain web skills.", score=77)
+        with mock.patch("src.parser.parse_requirement", lambda t: (R02_PARSED, {})), \
+                mock.patch("src.rerank.score_candidate", lambda *a, **k: (scored, {})):
+            at = AppTest.from_file(str(ROOT / "app" / "app.py"), default_timeout=120).run()
+            at.selectbox(key="sv_student").select(student)
+            at.selectbox(key="sv_req").select("R02")
+            at.button(key="sv_go").click().run()
+            for key in [c.key for c in at.checkbox if c.key.startswith("sv_assume_")]:
+                at.checkbox(key=key).check()
+            at.run()
+        body = "\n".join([m.value for m in at.markdown] + [c.value for c in at.caption])
+        return at, body
+
+    def test_view_for_an_ineligible_student(self):
+        at, body = self.run_view("S003")  # CGPA 6.47 < 6.5
+        self.assertFalse(at.exception)
+        self.assertIn("Not eligible for this requirement: CGPA", body)
+        self.assertNotIn("Current fit score", body)  # no numeric score
+        self.assertNotIn("77", " ".join(m.value for m in at.markdown if "score-box" in m.value))
+        self.assertIn("Skill match, ignoring eligibility", body)
+        self.assertIn("Currently 3 of 4 required skills", body)  # coverage panel is still shown
+        self.assertTrue(at.button(key="sv_rescore").disabled)
+        self.assertIn("Not available: the student is excluded by the eligibility filters.", body)
+        self.assertFalse(at.button(key="sv_sugg").disabled)  # suggestions stay available
+
+    def test_view_for_an_eligible_student_is_unchanged(self):
+        at, body = self.run_view("S253")  # CGPA 8.18, CSE, no backlogs
+        self.assertFalse(at.exception)
+        self.assertNotIn("Not eligible for this requirement", body)
+        self.assertIn("Current fit score", body)
+        self.assertNotIn("Skill match, ignoring eligibility", body)
+        self.assertFalse(at.button(key="sv_rescore").disabled)  # boxes are ticked
+        self.assertNotIn("Not available: the student is excluded", body)
+
+
 class Hybrid(unittest.TestCase):
     def test_rrf_and_bm25_ranking(self):
         self.assertAlmostEqual(rrf_scores([["a", "b"], ["b", "a"]])["a"], 1 / 61 + 1 / 62)

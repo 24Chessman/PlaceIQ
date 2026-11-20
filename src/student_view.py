@@ -21,6 +21,29 @@ def eligibility_table(parsed, student):
     return rows
 
 
+RESCORE_BLOCKED_NOTE = "Not available: the student is excluded by the eligibility filters."
+
+
+def failed_rules(rows):
+    """Rows of eligibility_table that fail."""
+    return [r for r in rows if not r["passed"]]
+
+
+def eligibility_banner(rows):
+    """Text of the red banner when the student fails ANY hard rule, else None."""
+    fails = failed_rules(rows)
+    if not fails:
+        return None
+    detail = "; ".join(f"{r['rule']} (student {r['student']}, required {r['required']})" for r in fails)
+    return (f"Not eligible for this requirement: {detail}. These are hard filters and cannot be fixed by editing the resume; "
+            "this student would not be shortlisted whatever the skills.")
+
+
+def rescore_available(rows):
+    """The model re-score of an updated resume is only offered to students who pass every hard rule."""
+    return not failed_rules(rows)
+
+
 def skill_gaps(parsed, scored):
     """(missing must-haves, missing nice-to-haves): parsed skills the re-ranker did not list as matched."""
     matched = {m.strip().lower() for m in scored["matched_skills"]}

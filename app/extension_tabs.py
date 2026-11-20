@@ -60,7 +60,13 @@ def full_tab(full, students):
     st.caption("Decision support only: a person reviews every list. Students and resumes are synthetic.")
 
 
-def _score_block(scored):
+def _score_block(scored, eligible=True):
+    if not eligible:  # excluded by the hard filters: no numeric score, skills only
+        st.markdown(
+            f'<div class="card"><div class="cand-head"><div class="who"><div class="name">Skill match, ignoring eligibility</div></div></div>'
+            f'<div class="chips">{ui.chips(scored["matched_skills"], "ok", "Matched")}{ui.chips(scored["missing_skills"], "miss", "Missing")}</div></div>',
+            unsafe_allow_html=True)
+        return
     c = ui.score_color(scored["score"])
     st.markdown(
         f'<div class="card"><div class="cand-head"><div class="who"><div class="name">Current fit score</div></div>'
@@ -216,13 +222,17 @@ def student_tab(students, req_texts, req_label, full):
         ui.notice("err", "The check could not be completed: " + html.escape(state["error"]) + "<br>Start <b>ollama serve</b> if the local LLM is offline.")
         return
     stu, parsed, scored, req = students[state["sid"]], state["parsed"], state["scored"], state["text"]
+    rows = sv.eligibility_table(parsed, stu)
+    banner = sv.eligibility_banner(rows)
+    eligible = banner is None
+    if banner:
+        ui.notice("err", "<b>" + html.escape(banner) + "</b>")
     st.markdown(f"**{html.escape(stu['name'])} ({stu['id']}, {stu['branch']})** against the requirement: *{html.escape(parsed['role_title'])}*")
-    _score_block(scored)
+    _score_block(scored, eligible)
     with st.expander("Show resume"):
         st.text(stu["resume_text"])
 
     st.markdown("#### Eligibility")
-    rows = sv.eligibility_table(parsed, stu)
     st.dataframe(pd.DataFrame([{"Rule": r["rule"], "Required": r["required"], "Student": r["student"],
                                 "Result": "Pass" if r["passed"] else "Fail", "Note": "" if r["passed"] else r["note"]} for r in rows]),
                  hide_index=True, width="stretch")
@@ -250,9 +260,14 @@ def student_tab(students, req_texts, req_label, full):
     gaps = must + [g for g in nice if g not in must]
     chosen = [g for g in gaps if st.checkbox(f"Assume I gain this skill: {g}", key=f"sv_assume_{g}")]
     st.session_state.update(_sv_stu=stu, _sv_full=full, _sv_students=students)
-    st.button("Re-score with updated resume", type="primary", key="sv_rescore", disabled=not chosen, on_click=_rescore,
-              args=(state, req, parsed, stu, chosen, full, students, False))
-    st.caption(REVISION_LABEL)
+    st.button("Re-score with updated resume", type="primary", key="sv_rescore", disabled=not chosen or not sv.rescore_available(rows),
+              on_click=_rescore, args=(state, req, parsed, stu, chosen, full, students, False))
+    if not sv.rescore_available(rows):
+        st.caption(sv.RESCORE_BLOCKED_NOTE)
+    else:
+        st.caption(REVISION_LABEL)
+    if not eligible:
+        st.caption("Skill match, ignoring eligibility")
     cov = sv.coverage(parsed, scored, chosen)
     c1, c2 = st.columns(2, gap="large")
     c1.metric("Required skills matched", f"{cov['must']['before']} of {cov['must']['total']}",
@@ -262,5 +277,5 @@ def student_tab(students, req_texts, req_label, full):
     for line in sv.coverage_text(cov):
         st.write(line)
     st.caption(COVERAGE_NOTE)
-    if state.get("revision"):
+    if state.get("revision") and eligible:
         _revision_panel(state, parsed, scored)
